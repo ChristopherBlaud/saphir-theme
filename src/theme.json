@@ -1,0 +1,23 @@
+{
+  "label": "Saphir",
+  "custom_fonts": [ "./fonts/Onest-Variable.ttf"],
+  "preview_path": "./templates/home.html",
+  "screenshot_path": "./images/template-previews/home.png",
+  "enable_domain_stylesheets": true,
+  "responsive_breakpoints": [
+    {
+      "name": "mobile",
+      "mediaQuery": "@media (max-width: 767px)",
+      "previewWidth": {
+        "value": 477,
+        "units" : "px"
+      }
+    }
+  ],
+  "version" : "1",
+  "author" : {
+      "name" : "Christopher BLAUD",
+      "email" : "contact@cblaud.com",
+      "url" : "https://cblaud.com/"
+  }  
+}

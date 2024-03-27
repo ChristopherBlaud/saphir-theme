@@ -1,0 +1,19 @@
+.container-fluid:not(.header-container) .dnd-section > .row-fluid {
+    max-width: 100%;
+    margin: auto;
+    {{ theme.layout.xs.sections.spacing.css }}
+}
+
+@media (min-width: 768px) {
+    .container-fluid:not(.header-container) .dnd-section > .row-fluid {
+        max-width: {{ theme.layout.md.max_width ~ 'px' }};
+        {{ theme.layout.md.sections.spacing.css }}
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-fluid:not(.header-container) .dnd-section > .row-fluid {
+        max-width: {{ theme.layout.xl.max_width ~ 'px' }};
+        {{ theme.layout.xl.sections.spacing.css }}
+    }
+}

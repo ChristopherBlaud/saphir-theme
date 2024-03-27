@@ -1,0 +1,30 @@
+<!--
+templateType: page
+isAvailableForNewContent: false
+-->
+
+{% macro generateClass(module_html, module_style) %}
+    {%- set h1_classes = "font-display" ~ (module_style.h1_size != "default" ? " text-" ~ module_style.h1_size : " text-h1") -%}
+    {%- set h2_classes = "font-display" ~ (module_style.h2_size != "default" ? " text-" ~ module_style.h2_size : " text-h2") -%}
+    {%- set h3_classes = "font-display" ~ (module_style.h3_size != "default" ? " text-" ~ module_style.h3_size : " text-h3") -%}        
+    {%- set h4_classes = "font-display" ~ (module_style.h4_size != "default" ? " text-" ~ module_style.h4_size : " text-h4") -%}
+    {%- set h5_classes = "font-display" ~ (module_style.h5_size != "default" ? " text-" ~ module_style.h5_size : " text-h5") -%} 
+    {%- set h6_classes = "font-display" ~ (module_style.h6_size != "default" ? " text-" ~ module_style.h6_size : " text-h6") -%}  
+    {%- set body_classes = "font-base" ~ (module_style.body_size != "default" ? " text-" ~ module_style.body_size : " text-h4") -%}                             
+    
+    {% set html = module_html
+      |replace('<h1', h1_classes ? '<h1 class="' ~ h1_classes ~ '"' : '<h1')
+      |replace('<h2', h2_classes ? '<h2 class="' ~ h2_classes ~ '"' : '<h2')
+      |replace('<h3', h3_classes ? '<h3 class="' ~ h3_classes ~ '"' : '<h3')
+      |replace('<h4', h4_classes ? '<h4 class="' ~ h4_classes ~ '"' : '<h4')
+      |replace('<h5', h5_classes ? '<h5 class="' ~ h5_classes ~ '"' : '<h5')
+      |replace('<h6', h6_classes ? '<h6 class="' ~ h6_classes ~ '"' : '<h6')
+      |replace('<p ', body_classes ? '<p class="' ~ body_classes ~ '"' : '<p ')
+      |replace('<p>', body_classes ? '<p class="' ~ body_classes ~ '">' : '<p>')
+      |replace('<ul', body_classes ? '<ul class="' ~ body_classes ~ '"' : '<ul')
+      |replace('<blockquote', body_classes ? '<blockquote class="' ~ body_classes ~ '"' : '<blockquote')
+      |replace('<pre', body_classes ? '<pre class="' ~ body_classes ~ '"' : '<pre')
+    %}    
+    
+    {% rich_text field="html" value="{{ html }}" %}    
+{% endmacro %}

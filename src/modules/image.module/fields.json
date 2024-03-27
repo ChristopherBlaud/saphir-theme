@@ -1,0 +1,17 @@
+[ {
+  "id" : "0abff4d5-ba45-7ecc-fc78-b1ba5a2aba96",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+} ]

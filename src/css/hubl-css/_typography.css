@@ -1,0 +1,9 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: {{ theme.fonts.secondary.font_family.font ~ ',' ~ theme.fonts.secondary.font_family.fallback }};
+    color: {{ theme.colors.black.color }};
+}
+
+.hs-menu-wrapper a {
+    font-family: {{ theme.fonts.primary.font_family.font ~ ',' ~ theme.fonts.primary.font_family.fallback }};
+    color: {{ theme.colors.body_color.color }};
+}

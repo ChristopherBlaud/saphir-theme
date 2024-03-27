@@ -1,0 +1,28 @@
+<div id="{{ name }}" class="menu flex justify-end items-center overflow-hidden lg:justify-between">
+    <div class="menu__menu-wrapper flex max-lg:absolute max-lg:z-20 max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:h-full max-lg:translate-x-full max-lg:duration-500 max-lg:ease-in-out">
+        {% menu id="{{ module.menu_field }}" class="mymenu"%}    
+    </div>
+    <div class="menu__icon-container flex relative z-30 lg:hidden">
+        <svg class="w-6" width="46" height="36" viewBox="0 0 46 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3H43M3 18H43M3 33H43" stroke="#02040F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>        
+    </div>   
+</div>
+{% require_css%}
+<style>
+    #{{ name }} li.hs-item-has-children > a::after {
+        color: {{ theme.colors.primary.color }};
+    }
+
+    @media (max-width: 1024px) {
+        #{{ name }} .hs-menu-wrapper ul {
+            flex-flow: column;
+            height: 100dvh;
+            row-gap: 2rem;
+            align-items: flex-end;
+            background-color: {{ theme.colors.white_accent.color }};
+            {{ theme.layout.md.spacing.css }}
+        }
+    }
+</style>
+{% end_require_css %}

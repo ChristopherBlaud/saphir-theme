@@ -1,0 +1,48 @@
+<!--
+  templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title %}<title>{{ page_meta.html_title }}</title>{% endif %}
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    {% if theme.fonts.primary.font_family.font_set == "GOOGLE" || theme.fonts.seconday.font_set == "GOOGLE" %}
+    {% set count = 0 %}
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?{% for font in theme.fonts %}{% if font.font_family.font_set == "GOOGLE" %}{% set count = count + 1 %}{% if count > 0 %}&{% endif %}family={{ font.font_family.font|urlencode }}:wght@{{ font.font_weight.variant }};{{ font.medium_variation.variant }};{{ font.bold_variation.variant }};{{ font.extra_bold_variation.variant }};{{ font.black_variation.variant }}{% endif %}{% endfor %}&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    {% endif %}    
+    {{ standard_header_includes }}
+    {% require_css %}
+      <style>
+        {% include '../css/hubl-css/_spacing.css' %}
+        {% include '../css/hubl-css/_typography.css' %}
+        {% include '../css/hubl-css/partials/_header.css' %}  
+      </style>
+    {% end_require_css %}
+    {{ require_css(get_asset_url("../css/main.css")) }}
+  </head>
+  <body>
+    <div class="text-base antialiased text-gray-700 font-body {{ builtin_body_classes }}">
+    <header id="header">
+      {% block header %}
+        {% global_partial path='../templates/partials/header.html' %}
+      {% endblock header %}    
+    </header>
+
+      {% block body %}
+      {% endblock body %}
+
+      <footer id="footer">
+        {% block footer %}
+          {% global_partial path='../templates/partials/footer.html' %}
+        {% endblock footer %}      
+      </footer>
+    </div>
+    {{ require_js(get_asset_url('../js/main.js')) }}
+    {{ standard_footer_includes }}
+  </body>
+</html>
