@@ -1,0 +1,21 @@
+[ {
+  "id" : "display_icon",
+  "name" : "display_icon",
+  "display_width" : null,
+  "label" : "Display icon",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "a391c94d-a0af-5ca7-d683-9e8001b3e6af",
+  "name" : "icon_field",
+  "display_width" : null,
+  "label" : "Icon",
+  "required" : false,
+  "locked" : false,
+  "icon_set" : "fontawesome-5.14.0",
+  "type" : "icon",
+  "default" : { }
+} ]

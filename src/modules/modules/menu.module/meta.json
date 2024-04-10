@@ -1,11 +1,11 @@
 {
-  "extra_classes" : "search",
+  "extra_classes" : "custom-menu",
   "global" : false,
   "content_types" : [ "QUOTE_TEMPLATE", "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "inline_help_text" : "Use this module to display a search field.",
+  "inline_help_text" : "Use this module to display a menu.",
   "icon" : "fontawesome-5.14.0:Envelope%20Open-text:SOLID",
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING", "QUOTE" ],
-  "module_id" : 97703389932,
-  "label" : "Search",
+  "module_id" : 99339875061,
+  "label" : "Menu",
   "is_available_for_new_content" : true
 }

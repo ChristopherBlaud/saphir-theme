@@ -9,6 +9,14 @@ body {
     display: flex;
 }
 
+.dnd-section[class*="vertical-alignment"] .dnd-column {
+    justify-content: center;
+}
+
+.dnd-section .dnd-column {
+    flex-flow: column;
+}
+
 .dnd-section .row-fluid:has([class*="span"]) {
     justify-content: space-between;
 }
