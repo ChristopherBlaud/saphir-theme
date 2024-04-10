@@ -7,7 +7,7 @@ label: Header
     {% dnd_section vertical_alignment="MIDDLE" %}
         {% dnd_column %}
         {% dnd_row %}
-            {% dnd_column vertical_alignment="MIDDLE" width="5" %}
+            {% dnd_column width="5" %}
                 {% dnd_row %}
                     {% dnd_column width="3" %}
                         {% dnd_row %}
@@ -22,7 +22,7 @@ label: Header
                         {% end_dnd_row %}
                     {% end_dnd_column %}
                     {% dnd_column width="9" offset="3" %}
-                        {% dnd_row vertical_alignment="MIDDLE" %}
+                        {% dnd_row %}
                             {% dnd_module path="../../modules/menu" %}
                             {% end_dnd_module %}
                         {% end_dnd_row %}
@@ -31,12 +31,30 @@ label: Header
             {% end_dnd_column%}
             {% dnd_column width="5" offset="7"%}
                 {% dnd_row %}
-                    {% dnd_column width="12" %}
-                        {% dnd_row vertical_alignment="MIDDLE" %}
+                    {% dnd_column width="7" %}
+                        {% dnd_row  %}
                             {% dnd_module path="../../modules/search" %}
                             {% end_dnd_module %}
                         {% end_dnd_row %}                
                     {% end_dnd_column %}
+                    {% dnd_column width="5" offset="7"%}
+                        {% dnd_row %}
+                            {% dnd_module 
+                                path="../../modules/buttons" 
+                                button=[
+                                    {
+                                        'text': 'Contact us',
+                                        'url': {
+                                            'url' : {
+                                                'href': 'https://www.example.com'
+                                            }
+                                        }
+                                    }
+                                ]
+                            %}
+                            {% end_dnd_module %}
+                        {% end_dnd_row%}
+                    {% end_dnd_column%}
                 {% end_dnd_row %}
             {% end_dnd_column%}
         {% end_dnd_row %}

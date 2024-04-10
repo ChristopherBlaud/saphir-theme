@@ -1,0 +1,16 @@
+<div id="{{ name }}" class="buttons">
+  <div class="buttons__inner flex">
+    {% for item in module.button %}
+    {% set href = item.url.url.href %}
+    {% if item.url.url.type is equalto "EMAIL_ADDRESS" %}
+    {% set href = "mailto:" + href %}
+    {% endif %}
+    <a class="button" href="{{ href|escape_url }}"
+       {% if item.url.open_in_new_tab %}target="_blank"{% endif %}
+       {% if item.url.rel %}rel="{{ item.url.rel|escape_attr }}"{% endif %}
+       >
+      {{ item.text }}
+    </a>
+    {% endfor %}
+  </div>
+</div>

@@ -20,11 +20,13 @@
 @media (min-width: 768px) {
     #header {
         max-width: {{ theme.layout.md.max_width ~ 'px' }};
+        {{ theme.header.layout.md.container_spacing.css }}
     }
 }
 
 @media (min-width: 1024px) {
     #header {
         max-width: {{ theme.layout.xl.max_width ~ 'px' }};
+        {{ theme.header.layout.xl.container_spacing.css }}
     }
 }

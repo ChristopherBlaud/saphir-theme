@@ -120,7 +120,7 @@
           "default": {
             "color": "#FCFCFD"
           }
-        }                                  
+        }                         
       ]
     },
     {
@@ -426,19 +426,19 @@
                   "default": {
                     "padding": {
                       "top": {
-                        "value": 24,
+                        "value": 12,
                         "units": "px"
                       },
                       "right": {
-                        "value": 16,
-                        "units": "px"
-                      },
-                      "bottom": {
                         "value": 24,
                         "units": "px"
                       },
+                      "bottom": {
+                        "value": 12,
+                        "units": "px"
+                      },
                       "left": {
-                        "value": 16,
+                        "value": 24,
                         "units": "px"
                       }
                     }              
@@ -1320,23 +1320,92 @@
             [
               "{{ theme.colors.white.color }}",
               "White"
+            ],
+            [
+              "gradient",
+              "Gradient"
+            ]
+          ],
+          "display": "select",
+          "default": "gradient"
+        },
+        {
+          "label": "Text color",
+          "name": "text_color",
+          "type": "choice",
+          "choices": [
+            [
+              "transparent",
+              "None"
+            ],
+            [
+              "{{ theme.colors.first.color }}",
+              "First color"
+            ],
+            [
+              "{{ theme.colors.second.color }}",
+              "Second color"
+            ],
+            [
+              "{{ theme.colors.third.color }}",
+              "Third color"
+            ],
+            [
+              "{{ theme.colors.fourth.color }}",
+              "Fourth color"
+            ],
+            [
+              "{{ theme.colors.fifth.color }}",
+              "Fifth color"
+            ],
+            [
+              "{{ theme.colors.default.color }}",
+              "Body (default) color"
+            ],
+            [
+              "{{ theme.colors.black.color }}",
+              "Black"
+            ],
+            [
+              "{{ theme.colors.grey.color }}",
+              "Grey"
+            ],
+            [
+              "{{ theme.colors.white.color }}",
+              "White"
             ]
           ],
           "display": "select",
           "default": "{{ theme.colors.white.color }}"
         },
         {
-          "label": "Text color",
-          "name": "text_color",
-          "type": "color",
-          "visibility": {
-            "hidden_subfields": {
-              "opacity": true
-            }
-          },
-          "default": {
-            "color": "#FFFFFF"
-          }
+          "label": "Font weight",
+          "name": "font_weight",
+          "type": "choice",
+          "choices": [
+            [
+              "300",
+              "Light"
+            ],
+            [
+              "400",
+              "Regular"
+            ],
+            [
+              "500",
+              "Medium"
+            ],
+            [
+              "600",
+              "Semi-bold"
+            ],
+            [
+              "700",
+              "Bold"
+            ]
+          ],
+          "display": "select",
+          "default": "500"
         },
         {
           "label": "Border width",
@@ -1345,48 +1414,96 @@
           "display": "slider",
           "max": 20,
           "min": 0,
-          "default": 1
+          "default": 0
         },
         {
           "label": "Border color",
           "name": "border_color",
-          "type": "color",
-          "visibility": {
-            "hidden_subfields": {
-              "opacity": true
-            }
-          },
-          "inherited_value": {
-            "default_value_path": "theme.colors.primary"
-          }
+          "type": "choice",
+          "choices": [
+            [
+              "transparent",
+              "None"
+            ],
+            [
+              "{{ theme.colors.first.color }}",
+              "First color"
+            ],
+            [
+              "{{ theme.colors.second.color }}",
+              "Second color"
+            ],
+            [
+              "{{ theme.colors.third.color }}",
+              "Third color"
+            ],
+            [
+              "{{ theme.colors.fourth.color }}",
+              "Fourth color"
+            ],
+            [
+              "{{ theme.colors.fifth.color }}",
+              "Fifth color"
+            ],
+            [
+              "{{ theme.colors.default.color }}",
+              "Body (default) color"
+            ],
+            [
+              "{{ theme.colors.black.color }}",
+              "Black"
+            ],
+            [
+              "{{ theme.colors.grey.color }}",
+              "Grey"
+            ],
+            [
+              "{{ theme.colors.white.color }}",
+              "White"
+            ]
+          ],
+          "display": "select",
+          "default": "{{ theme.colors.grey.color }}"
         },
         {
-          "label": "Corner radius",
+          "label": "Border radius",
           "name": "border_radius",
           "type": "number",
           "display": "slider",
           "max": 100,
           "min": 0,
-          "default": 6
+          "default": 4
         },
         {
-          "label": "Horizontal padding",
-          "name": "horizontal_padding",
-          "type": "number",
-          "display": "slider",
-          "max": 100,
-          "min": 0,
-          "default": 53
-        },
-        {
-          "label": "Vertical padding",
-          "name": "vertical_padding",
-          "type": "number",
-          "display": "slider",
-          "max": 100,
-          "min": 0,
-          "default": 15
-        }
+          "label": "Spacing",
+          "name": "spacing",
+          "type": "spacing",
+          "visibility": {
+            "hidden_subfields": {
+              "margin": true
+            }
+          },
+          "default": {
+            "padding": {
+              "top": {
+                "value": 12,
+                "units": "px"
+              },
+              "right": {
+                "value": 32,
+                "units": "px"
+              },
+              "bottom": {
+                "value": 12,
+                "units": "px"
+              },
+              "left": {
+                "value": 32,
+                "units": "px"
+              }
+            }              
+          }
+        }   
       ]
     },
     {

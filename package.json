@@ -16,7 +16,7 @@
     "tailwind:dev": "npx tailwindcss -i ./src/css/main.css -o ./src/css/main.min.css --watch",
     "upload": "hs upload dist saphir",
     "fetch": "rm -rf src && hs fetch --overwrite --portal=\"$npm_package_config_portal\" \"$npm_package_config_hs_theme\" src",
-    "fetch-modules": "rm -rf src/modules && hs fetch --overwrite --portal=\"$npm_package_config_portal\" \"$npm_package_config_hs_theme\" src/modules"
+    "fetch-modules": "rm -rf src/modules && hs fetch --overwrite --portal=\"$npm_package_config_portal\" \"$npm_package_config_hs_theme/modules\" src/modules"
   },
   "devDependencies": {
     "@hubspot/cli": "^3.0.6",

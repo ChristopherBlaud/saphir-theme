@@ -9,13 +9,78 @@
   "type" : "boolean",
   "default" : true
 }, {
+  "id" : "d5cd490a-270d-e8ac-1988-022660c36598",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c486b0a8-734e-304f-a2c1-5ca403a8dffe",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "53731e4f-1266-7110-3e7d-ecae23c20e8d",
+      "name" : "width",
+      "display_width" : null,
+      "label" : "Width",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 1,
+      "max" : 100,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 20
+    }, {
+      "id" : "style.background_color",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "inline_help_text" : "Set the header background color here.",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "transparent", "None" ], [ "{{ theme.colors.Primary.color }}", "Primary color" ], [ "{{ theme.colors.secondary.color }}", "Secondary color" ], [ "{{ theme.colors.body_color.color }}", "Body (default) color" ], [ "{{ theme.colors.black.color }}", "Black" ], [ "{{ theme.colors.grey.color }}", "Grey" ], [ "{{ theme.colors.white.color }}", "White" ], [ "{{ theme.colors.white_accent.color }}", "White accent" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "{{ theme.colors.body_color.color }}"
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "width" : 20,
+      "color" : "{{ theme.colors.body_color.color }}"
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon" : {
+      "width" : 20,
+      "color" : "{{ theme.colors.body_color.color }}"
+    }
+  }
+}, {
   "id" : "a391c94d-a0af-5ca7-d683-9e8001b3e6af",
   "name" : "icon_field",
   "display_width" : null,
   "label" : "Icon",
   "required" : false,
   "locked" : false,
-  "icon_set" : "fontawesome-5.14.0",
+  "icon_set" : "fontawesome-6.4.2",
   "type" : "icon",
-  "default" : { }
+  "default" : {
+    "name" : "Magnifying Glass",
+    "unicode" : "f002",
+    "type" : "SOLID"
+  }
 } ]

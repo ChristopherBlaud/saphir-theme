@@ -1,5 +1,26 @@
 <div id="{{ name }}" class="search">
-  <div class="search__inner">
+  <div class="search__inner flex items-center gap-x-4">
+  <button class="search__inner__icon-container flex shrink-0">
+    {% if module.display_icon %}
+    {% icon
+      name="{{ module.icon_field.name }}"
+      style="{{ module.icon_field.type }}"
+      unicode="{{ module.icon_field.unicode }}"
+      icon_set="{{ module.icon_field.icon_set }}"
+    %}
+    {% endif %}
+  </button>
     <input type="text" name="search" id="{{ name }}--field" class="search__inner__input">
     </div>
 </div>
+{% require_css %}
+  <style>
+    #{{ name }} .search__inner__icon-container svg {
+      width: {{ module.style.icon.width ~ 'px' }};
+    }
+
+    #{{ name }} .search__inner__icon-container svg path {
+      fill: {{ module.style.icon.color }};
+    }
+  </style>
+{% end_require_css %}
