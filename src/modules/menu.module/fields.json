@@ -1,4 +1,65 @@
 [ {
+  "id" : "d736b165-db76-7591-fb88-b43206fbda71",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "362a787e-a04b-f9bb-49b9-8d0429516f1d",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 16,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 16,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 16,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 16,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 16,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 16,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 16,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 16,
+          "units" : "px"
+        }
+      }
+    }
+  }
+}, {
   "id" : "f8244854-486f-9173-2276-1b0862ca5948",
   "name" : "menu_field",
   "display_width" : null,

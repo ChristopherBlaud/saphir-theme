@@ -1,0 +1,14 @@
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.dnd-section .row-fluid:has([class*="span"]),
+.dnd-section .dnd-column,
+.dnd-section .row-fluid > [class*="span"] {
+    display: flex;
+}
+
+.dnd-section .row-fluid:has([class*="span"]) {
+    justify-content: space-between;
+}

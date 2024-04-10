@@ -11,18 +11,17 @@
     border: {{ theme.header.border_width ~ 'px' }} solid {{ theme.header.border_color }};
     border-radius: {{ theme.header.border_radius ~ 'px' }};
     {% endif %}
+    margin-inline: auto;
 }
 
 @media (min-width: 768px) {
     .header-container > .row-fluid-wrapper > .row-fluid {
         max-width: {{ theme.layout.md.max_width ~ 'px' }};
-        margin-inline: auto;
     }
 }
 
 @media (min-width: 1024px) {
     .header-container > .row-fluid-wrapper > .row-fluid {
         max-width: {{ theme.layout.xl.max_width ~ 'px' }};
-        margin-inline: auto;
     }
 }

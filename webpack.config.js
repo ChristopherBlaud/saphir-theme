@@ -8,8 +8,7 @@ module.exports = ({ portal, autoupload }) => ({
   mode: "production",
 
   entry:  [
-    "./src/js/main.js",
-    "./src/js/header.js"
+    "./src/js/main.js"
   ],
 
   output: {

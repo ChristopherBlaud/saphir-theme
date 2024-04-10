@@ -1,5 +1,5 @@
 <div id={{ name }} class="image flex relative z-30">
-  <picture class="image__inner max-md:shrink-0">
+  <picture class="image__inner">
     {% if module.image_field.src %}
     {% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}"' %}
     {% if module.image_field.size_type == 'auto' %}

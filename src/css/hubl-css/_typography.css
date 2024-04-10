@@ -7,3 +7,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: {{ theme.fonts.primary.font_family.font ~ ',' ~ theme.fonts.primary.font_family.fallback }};
     color: {{ theme.colors.body_color.color }};
 }
+
+h1 {
+    font-size: {{ theme.typography.xl.heading_two.size ~ theme.typography.xl.heading_two.size_unit }};
+}

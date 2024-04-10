@@ -1,15 +1,1 @@
-.hs_cos_wrapper_type_menu {
-    width: 100%;
-}
-
-.hs-menu-wrapper,
-.hs-menu-wrapper ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.hs-menu-wrapper ul {
-    column-gap: 1rem;
-}
+.hs_cos_wrapper_type_menu{width:100%}.hs-menu-wrapper,.hs-menu-wrapper ul{align-items:center;display:flex;justify-content:center;width:100%}.hs-menu-wrapper ul{column-gap:1rem}.menu__menu-wrapper.active{transform:translateX(0);transition:.5s ease-in-out}

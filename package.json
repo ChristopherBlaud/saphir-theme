@@ -12,9 +12,11 @@
     "build": "rm -rf dist && webpack --mode production",
     "deploy": "rm -rf dist && webpack --mode production && hs upload dist saphir",
     "dev": "rm -rf dist && webpack --watch --mode production --env autoupload",
-    "tailwind": "npx tailwindcss -i ./src/css/main.css -o ./src/css/main.min.css --watch --minify",
+    "tailwind:prod": "npx tailwindcss -i ./src/css/main.css -o ./src/css/main.min.css --watch --minify",
+    "tailwind:dev": "npx tailwindcss -i ./src/css/main.css -o ./src/css/main.min.css --watch",
     "upload": "hs upload dist saphir",
-    "fetch": "rm -rf src && hs fetch --overwrite --portal=\"$npm_package_config_portal\" \"$npm_package_config_hs_theme\" src"
+    "fetch": "rm -rf src && hs fetch --overwrite --portal=\"$npm_package_config_portal\" \"$npm_package_config_hs_theme\" src",
+    "fetch-modules": "rm -rf src/modules && hs fetch --overwrite --portal=\"$npm_package_config_portal\" \"$npm_package_config_hs_theme\" src/modules"
   },
   "devDependencies": {
     "@hubspot/cli": "^3.0.6",

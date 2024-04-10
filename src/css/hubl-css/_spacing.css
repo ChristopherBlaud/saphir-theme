@@ -1,19 +1,112 @@
-.container-fluid:not(.header-container) .dnd-section > .row-fluid {
-    max-width: 100%;
-    margin: auto;
-    {{ theme.layout.xs.sections.spacing.css }}
+:root {
+    --gradient: linear-gradient(18deg, rgba(176,22,227,1) 0%, rgba(123,14,154,1) 100%);
+    --span1-width: 8.333%;
+    --span2-width: 16.666%;
+    --span3-width: 25%;
+    --span4-width: 33.333%;
+    --span5-width: 41.666%;
+    --span6-width: 50%;
+    --span7-width: 58.333%;
+    --span8-width: 66.666%;
+    --span9-width: 75%;
+    --span10-width: 83.333%;
+    --span11-width: 91.666%;
+    --span12-width: 100%;    
+}
+
+.span1 { 
+    flex: 0 0 var(--span1-width); 
+    width: var(--span1-width); 
+}
+
+.span2 { 
+    flex: 0 0 var(--span2-width); 
+    width: var(--span2-width); 
+}
+
+.span3 { 
+    flex: 0 0 var(--span3-width); 
+    width: var(--span3-width); 
+}
+
+.span4 { 
+    flex: 0 0 var(--span4-width); 
+    width: var(--span4-width); 
+}
+
+.span5 { 
+    flex: 0 0 var(--span5-width); 
+    width: var(--span5-width); 
+}
+
+.span6 { 
+    flex: 0 0 var(--span6-width); 
+    width: var(--span6-width); 
+}
+
+.span7 { 
+    flex: 0 0 var(--span7-width); 
+    width: var(--span7-width); 
+}
+
+.span8 { 
+    flex: 0 0 var(--span8-width); 
+    width: var(--span8-width); 
+}
+
+.span9 { 
+    flex: 0 0 var(--span9-width); 
+    width: var(--span9-width); 
+}
+.span10 { 
+    flex: 0 0 var(--span10-width); 
+    width: var(--span10-width); 
+}
+.span11 { 
+    flex: 0 0 var(--span11-width); 
+    width: var(--span11-width); 
+}
+.span12 { 
+    flex: 0 0 var(--span12-width); 
+    width: var(--span12-width); 
+}
+
+.dnd-section > .row-fluid {
+    margin-inline: auto;
+}
+
+.dnd-section .row-fluid > [class*="span"] {
+    padding-left: {{ theme.layout.xl.columns_gap ~ 'px' }};
+    padding-right: {{ theme.layout.xl.columns_gap ~ 'px' }};
+}
+
+.dnd-section .dnd-row > .row-fluid {
+    margin-left: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
+    margin-right: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
 }
 
 @media (min-width: 768px) {
+    .container-fluid:not(.header-container) .dnd-section {
+        {{ theme.layout.md.sections.spacing.css }}
+    }
     .container-fluid:not(.header-container) .dnd-section > .row-fluid {
         max-width: {{ theme.layout.md.max_width ~ 'px' }};
-        {{ theme.layout.md.sections.spacing.css }}
     }
 }
 
 @media (min-width: 1024px) {
     .container-fluid:not(.header-container) .dnd-section > .row-fluid {
         max-width: {{ theme.layout.xl.max_width ~ 'px' }};
+
+    }
+    .container-fluid:not(.header-container) .dnd-section {
         {{ theme.layout.xl.sections.spacing.css }}
+    }
+}
+
+@media (max-width: 1024px) {
+    .span1, .span2, .span3, .span4, .span5, .span6,
+    .span7, .span8, .span9, .span10, .span11, .span12 {
+        width: 100%;
     }
 }

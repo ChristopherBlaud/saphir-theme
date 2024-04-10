@@ -1,0 +1,10 @@
+.container-fluid input {
+    border-color: {{ theme.forms.field.border_color }};
+    border-top-width: {{ theme.forms.field.borders_width.top ~ 'px' }};
+    border-bottom-width: {{ theme.forms.field.borders_width.bottom ~ 'px' }};
+    border-left-width: {{ theme.forms.field.borders_width.left ~ 'px' }};
+    border-right-width: {{ theme.forms.field.borders_width.right ~ 'px' }};
+    border-radius: {{ theme.forms.field.border_radius ~ 'px' }};
+    background-color: {{ theme.forms.field.background_color }};
+    {{ theme.forms.field.spacing.css }}
+}
