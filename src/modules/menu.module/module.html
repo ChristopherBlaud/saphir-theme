@@ -13,6 +13,10 @@
     #{{ name }} li.hs-item-has-children > a::after {
         color: {{ theme.colors.primary.color }};
     }
+    
+    .dnd-module:has(#{{ name }}) {
+      justify-content: {{ module.style.horizontal_alignment }};
+    }    
   
     @media (max-width: 1024px) {
       #{{ name }} .hs-menu-wrapper ul {

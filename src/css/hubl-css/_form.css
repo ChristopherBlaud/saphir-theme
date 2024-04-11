@@ -7,4 +7,5 @@
     border-radius: {{ theme.forms.field.border_radius ~ 'px' }};
     background-color: {{ theme.forms.field.background_color }};
     {{ theme.forms.field.spacing.css }}
+    max-height: 40px;
 }

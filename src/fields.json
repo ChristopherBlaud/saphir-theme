@@ -430,7 +430,7 @@
                         "units": "px"
                       },
                       "right": {
-                        "value": 24,
+                        "value": 0,
                         "units": "px"
                       },
                       "bottom": {
@@ -438,7 +438,7 @@
                         "units": "px"
                       },
                       "left": {
-                        "value": 24,
+                        "value": 0,
                         "units": "px"
                       }
                     }              
@@ -460,7 +460,7 @@
                         "units": "px"
                       },
                       "right": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       },
                       "bottom": {
@@ -468,7 +468,7 @@
                         "units": "px"
                       },
                       "left": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       }
                     }              
@@ -497,7 +497,7 @@
                         "units": "px"
                       },
                       "right": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       },
                       "bottom": {
@@ -505,7 +505,7 @@
                         "units": "px"
                       },
                       "left": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       }
                     }              
@@ -527,7 +527,7 @@
                         "units": "px"
                       },
                       "right": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       },
                       "bottom": {
@@ -535,7 +535,7 @@
                         "units": "px"
                       },
                       "left": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       }
                     }              
@@ -564,7 +564,7 @@
                         "units": "px"
                       },
                       "right": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       },
                       "bottom": {
@@ -572,7 +572,7 @@
                         "units": "px"
                       },
                       "left": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       }
                     }              
@@ -594,7 +594,7 @@
                         "units": "px"
                       },
                       "right": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       },
                       "bottom": {
@@ -602,7 +602,7 @@
                         "units": "px"
                       },
                       "left": {
-                        "value": 16,
+                        "value": 0,
                         "units": "px"
                       }
                     }              

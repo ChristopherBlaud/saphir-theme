@@ -17,6 +17,11 @@
     {% endif %}
 }
 
+#header .dnd-row .row-fluid [class*="span"] {
+    flex: 0 0 auto;
+    width: auto;
+}
+
 @media (min-width: 768px) {
     #header {
         max-width: {{ theme.layout.md.max_width ~ 'px' }};

@@ -1,4 +1,8 @@
-<div id="{{ name }}" class="buttons">
+<div id="{{ name }}" class="buttons{{ ' is-hidden' if module.style.hide_on_desktop == 'true' || module.style.hide_on_tablet == 'true' || module.style.hide_on_mobile == 'true'}}"
+data-hide-on-desktop="{{ module.style.hide_on_desktop}}"
+data-hide-on-tablet="{{ module.style.hide_on_tablet}}"
+data-hide-on-mobile="{{ module.style.hide_on_mobile}}"
+>
   <div class="buttons__inner flex">
     {% for item in module.button %}
     {% set href = item.url.url.href %}
@@ -14,3 +18,25 @@
     {% endfor %}
   </div>
 </div>
+{% require_css %}
+<style>
+  #{{ name }} {
+    justify-content: {{ module.style.mobile.horizontal_alignment }};
+    {{ module.style.mobile.spacing.css }}
+  }
+
+  @media (min-width: 768px) {
+    #{{ name }} {
+      justify-content: {{ module.style.tablet.horizontal_alignment }};
+      {{ module.style.tablet.spacing.css }}
+    }  
+  }
+  
+  @media (min-width: 1024px) {
+    #{{ name }} {
+      justify-content: {{ module.style.desktop.horizontal_alignment }};
+      {{ module.style.desktop.spacing.css }}
+    }  
+  }  
+</style>
+{% end_require_css %}

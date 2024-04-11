@@ -17,6 +17,29 @@ body {
     flex-flow: column;
 }
 
-.dnd-section .row-fluid:has([class*="span"]) {
+.dnd-section .row-fluid {
+    flex-flow: row wrap;
     justify-content: space-between;
+}
+
+.dnd-section .dnd-module {
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .dnd-section .dnd-column .hide-on-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dnd-section .dnd-column .hide-on-tablet {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dnd-section .dnd-column .hide-on-desktop {
+        display: none;
+    }
 }

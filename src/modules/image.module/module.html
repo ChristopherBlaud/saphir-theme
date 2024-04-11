@@ -1,4 +1,4 @@
-<div id={{ name }} class="image flex relative z-30">
+<div id="{{ name }}" class="image flex relative z-30">
   <picture class="image__inner">
     {% if module.image_field.src %}
     {% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}"' %}
@@ -12,3 +12,10 @@
     {% endif %}  
   </picture>
 </div>
+{% require_css %}
+  <style>
+    .dnd-module:has(#{{ name }}) {
+      justify-content: {{ module.style.horizontal_alignment }};
+    }
+  </style>
+{% end_require_css %}
