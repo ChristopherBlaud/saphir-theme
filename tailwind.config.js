@@ -9,13 +9,11 @@ module.exports = {
       'display': ['Onest', 'Arial', 'sans-serif'],
       'body': ['Poppins', 'Arial', 'sans-serif']
     },
-    fontSize: {
-      base: ['16px', '24px'],
-      small: '10px',
-      sm: ['13px', '21px'],
-      'h1': ['61px', '78px'],
-      'h2': ['39px', '47px']
-    }
+    screens: {
+      'md': '769px',
+      'lg': '1025px',
+      'xl': '1280px',
+    },    
   },
   plugins: [],
 };

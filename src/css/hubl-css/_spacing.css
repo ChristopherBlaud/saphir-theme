@@ -1,5 +1,4 @@
 :root {
-    --gradient: linear-gradient(18deg, rgba(176,22,227,1) 0%, rgba(123,14,154,1) 100%);
     --span1-width: 8.333%;
     --span2-width: 16.666%;
     --span3-width: 25%;
@@ -75,55 +74,59 @@
     margin-inline: auto;
 }
 
+
 .dnd-section .row-fluid > [class*="span"] {
+    flex-flow: column;
+    row-gap: {{ theme.layout.xl.rows_gap ~ 'px' }};
     padding-left: {{ theme.layout.xl.columns_gap ~ 'px' }};
     padding-right: {{ theme.layout.xl.columns_gap ~ 'px' }};
 }
-
+    
 .dnd-section .dnd-row > .row-fluid {
+    row-gap: {{ theme.layout.xl.rows_gap ~ 'px' }};
     margin-left: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
     margin-right: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
 }
+    
+.container-fluid:not(.header-container) .dnd-section:first-of-type {
+    {{ theme.layout.xl.first_section.spacing.css }}
+}
 
+.container-fluid:not(.header-container) .dnd-section > .row-fluid {
+    max-width: {{ theme.layout.xl.max_width ~ 'px' }};
+}
+
+.container-fluid:not(.header-container) .dnd-section {
+    {{ theme.layout.xl.sections.spacing.css }}
+}            
 @media (max-width: 1024px) {
-    :root {
-        --span1-width: 100%;
-        --span2-width: 100%;
-        --span3-width: 100%;
-        --span4-width: 100%;
-        --span5-width: 100%;
-        --span6-width: 100%;
-        --span7-width: 100%;
-        --span8-width: 100%;
-        --span9-width: 100%;
-        --span10-width: 100%;
-        --span11-width: 100%;
-        --span12-width: 100%;    
-    }
+:root {
+    --span1-width: 100%;
+    --span2-width: 100%;
+    --span3-width: 100%;
+    --span4-width: 100%;
+    --span5-width: 100%;
+    --span6-width: 100%;
+    --span7-width: 100%;
+    --span8-width: 100%;
+    --span9-width: 100%;
+    --span10-width: 100%;
+    --span11-width: 100%;
+    --span12-width: 100%;    
+}
+.container-fluid:not(.header-container) .dnd-section:first-of-type {
+    {{ theme.layout.md.first_section.spacing.css }}
+}    
+.container-fluid:not(.header-container) .dnd-section {
+    {{ theme.layout.md.sections.spacing.css }}
+}
+.container-fluid:not(.header-container) .dnd-section > .row-fluid {
+    max-width: {{ theme.layout.md.max_width ~ 'px' }};
+}
 }
 
-@media (min-width: 768px) {
-    .container-fluid:not(.header-container) .dnd-section {
-        {{ theme.layout.md.sections.spacing.css }}
-    }
-    .container-fluid:not(.header-container) .dnd-section > .row-fluid {
-        max-width: {{ theme.layout.md.max_width ~ 'px' }};
-    }
-}
-
-@media (min-width: 1024px) {
-    .container-fluid:not(.header-container) .dnd-section > .row-fluid {
-        max-width: {{ theme.layout.xl.max_width ~ 'px' }};
-
-    }
-    .container-fluid:not(.header-container) .dnd-section {
-        {{ theme.layout.xl.sections.spacing.css }}
-    }
-}
-
-@media (max-width: 1024px) {
-    .span1, .span2, .span3, .span4, .span5, .span6,
-    .span7, .span8, .span9, .span10, .span11, .span12 {
-        width: 100%;
-    }
+@media (max-width: 768px) {
+.container-fluid:not(.header-container) .dnd-section:first-of-type {
+    {{ theme.layout.xs.first_section.spacing.css }}
+}    
 }

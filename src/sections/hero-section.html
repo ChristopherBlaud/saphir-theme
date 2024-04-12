@@ -2,7 +2,7 @@
 templateType: section
 isAvailableForNewContent: true
 label: Hero section
-description: A section displaying a text with buttons on a background.
+description: A section displaying a text with and button with an image on right side.
 -->
 
 {% dnd_section vertical_alignment="MIDDLE"  %}
@@ -18,6 +18,25 @@ description: A section displaying a text with buttons on a background.
                     {% end_module_attribute %}
                     {% end_dnd_module %}
                 {% end_dnd_row %}        
+                {% dnd_row %}
+                    {% dnd_module 
+                        path='../modules/buttons'
+                        style={{ context.buttons.style ?
+                            context.buttons.style : {
+                                'desktop': {
+                                    'horizontal_alignment': 'flex-start'
+                                },
+                                'tablet': {
+                                    'horizontal_alignment': 'flex-start'
+                                },
+                                'mobile': {
+                                    'horizontal_alignment': 'flex-start'
+                                }                                
+                            }
+                        }}
+                    %}
+                    {% end_dnd_module %}
+                {% end_dnd_row %}
             {% end_dnd_column %}
             {% dnd_column width="6" offset="6" %}
                 {% dnd_row %}

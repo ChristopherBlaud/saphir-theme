@@ -132,36 +132,6 @@
     "default" : {
       "horizontal_alignment" : "flex-end"
     }
-  }, {
-    "id" : "5412e497-5878-a42b-4615-1b5c403c3d6e",
-    "name" : "hide_on_desktop",
-    "display_width" : null,
-    "label" : "Hide on desktop",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : false
-  }, {
-    "id" : "340aa85d-7ce7-249f-4102-3fc5a6f0a65d",
-    "name" : "hide_on_tablet",
-    "display_width" : null,
-    "label" : "Hide on tablet",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : false
-  }, {
-    "id" : "e3547613-de65-0f9b-314c-502393f777e7",
-    "name" : "hide_on_mobile",
-    "display_width" : null,
-    "label" : "Hide on mobile",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : false
   } ],
   "tab" : "STYLE",
   "expanded" : false,

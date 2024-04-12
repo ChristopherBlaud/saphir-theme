@@ -1,15 +1,11 @@
 button, .button {
     display: inline-flex;
-    {% if  theme.buttons.background_color == "gradient" %}
-        background: var(--{{ theme.buttons.background_color }});
-    {% else %}
-        background-color: {{ theme.buttons.background_color }};
-    {% endif %}
+    background: {{ theme.buttons.background_color }};
     {% if theme.buttons.border_width > 0 %}
-        border: {{ theme.buttons.border_width ~ 'px' }} solid {{ theme.buttons.border_color }};
+    border: {{ theme.buttons.border_width ~ 'px' }} solid {{ theme.buttons.border_color }};
     {% endif %}
     {% if theme.buttons.border_radius > 0 %}
-        border-radius: {{ theme.buttons.border_radius ~ 'px' }};
+    border-radius: {{ theme.buttons.border_radius ~ 'px' }};
     {% endif %}
     color: {{ theme.buttons.text_color }};
     font-weight: {{ theme.buttons.font_weight }};

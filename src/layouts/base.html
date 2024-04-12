@@ -29,16 +29,14 @@
     {{ require_css(get_asset_url("../css/main.css")) }}
   </head>
   <body>
-    <div class="text-base antialiased text-gray-700 font-body {{ builtin_body_classes }}">
+    <div class="{{ builtin_body_classes }}">
     <header id="header">
       {% block header %}
         {% global_partial path='../templates/partials/header.html' %}
       {% endblock header %}    
     </header>
-
       {% block body %}
       {% endblock body %}
-
       <footer id="footer">
         {% block footer %}
           {% global_partial path='../templates/partials/footer.html' %}

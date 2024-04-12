@@ -1,8 +1,4 @@
-<div id="{{ name }}" class="buttons{{ ' is-hidden' if module.style.hide_on_desktop == 'true' || module.style.hide_on_tablet == 'true' || module.style.hide_on_mobile == 'true'}}"
-data-hide-on-desktop="{{ module.style.hide_on_desktop}}"
-data-hide-on-tablet="{{ module.style.hide_on_tablet}}"
-data-hide-on-mobile="{{ module.style.hide_on_mobile}}"
->
+<div id="{{ name }}" class="buttons">
   <div class="buttons__inner flex">
     {% for item in module.button %}
     {% set href = item.url.url.href %}

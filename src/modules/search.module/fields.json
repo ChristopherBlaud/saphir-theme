@@ -127,36 +127,6 @@
       "horizontal_alignment" : "flex-end"
     }
   }, {
-    "id" : "5412e497-5878-a42b-4615-1b5c403c3d6e",
-    "name" : "hide_on_desktop",
-    "display_width" : null,
-    "label" : "Hide on desktop",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : false
-  }, {
-    "id" : "340aa85d-7ce7-249f-4102-3fc5a6f0a65d",
-    "name" : "hide_on_tablet",
-    "display_width" : null,
-    "label" : "Hide on tablet",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : false
-  }, {
-    "id" : "e3547613-de65-0f9b-314c-502393f777e7",
-    "name" : "hide_on_mobile",
-    "display_width" : null,
-    "label" : "Hide on mobile",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : false
-  }, {
     "id" : "c486b0a8-734e-304f-a2c1-5ca403a8dffe",
     "name" : "icon",
     "display_width" : null,
@@ -186,19 +156,19 @@
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "transparent", "None" ], [ "{{ theme.colors.Primary.color }}", "Primary color" ], [ "{{ theme.colors.secondary.color }}", "Secondary color" ], [ "{{ theme.colors.body_color.color }}", "Body (default) color" ], [ "{{ theme.colors.black.color }}", "Black" ], [ "{{ theme.colors.grey.color }}", "Grey" ], [ "{{ theme.colors.white.color }}", "White" ], [ "{{ theme.colors.white_accent.color }}", "White accent" ] ],
+      "choices" : [ [ "transparent", "None" ], [ "{{ theme.colors.Primary.color }}", "Primary color" ], [ "{{ theme.colors.secondary.color }}", "Secondary color" ], [ "{{ theme.colors.body_default.color }}", "Body (default) color" ], [ "{{ theme.colors.black.color }}", "Black" ], [ "{{ theme.colors.grey.color }}", "Grey" ], [ "{{ theme.colors.white.color }}", "White" ], [ "{{ theme.colors.white_accent.color }}", "White accent" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "{{ theme.colors.body_color.color }}"
+      "default" : "{{ theme.colors.body_default.color }}"
     } ],
     "tab" : "STYLE",
     "expanded" : false,
     "type" : "group",
     "default" : {
       "width" : 20,
-      "color" : "{{ theme.colors.body_color.color }}"
+      "color" : "{{ theme.colors.body_default.color }}"
     }
   } ],
   "tab" : "STYLE",
@@ -207,7 +177,7 @@
   "default" : {
     "icon" : {
       "width" : 20,
-      "color" : "{{ theme.colors.body_color.color }}"
+      "color" : "{{ theme.colors.body_default.color }}"
     }
   }
 }, {

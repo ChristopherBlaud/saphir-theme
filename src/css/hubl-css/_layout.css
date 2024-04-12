@@ -38,6 +38,12 @@ body {
     }
 }
 
+@media (max-width: 1024px) {
+    .dnd-section .row-fluid > [class*="-hidden"]  {
+        display: none;
+    }
+}
+
 @media (min-width: 1024px) {
     .dnd-section .dnd-column .hide-on-desktop {
         display: none;

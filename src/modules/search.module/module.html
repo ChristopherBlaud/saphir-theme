@@ -1,8 +1,4 @@
-<div id="{{ name }}" class="search{{ ' is-hidden' if module.style.hide_on_desktop == 'true' || module.style.hide_on_tablet == 'true' || module.style.hide_on_mobile == 'true'}}" 
-  data-hide-on-desktop="{{ module.style.hide_on_desktop}}"
-  data-hide-on-tablet="{{ module.style.hide_on_tablet}}"
-  data-hide-on-mobile="{{ module.style.hide_on_mobile}}"
-  >
+<div id="{{ name }}" class="search">
   <div class="search__inner flex items-center gap-x-4">
   <button class="search__inner__icon-container flex shrink-0">
     {% if module.display_icon %}
@@ -41,7 +37,6 @@
   
     @media (min-width: 1024px) {
       #{{ name }} {
-        {{ 'display: none;' if module.style.hide_on_desktop }}
         justify-content: {{ module.style.desktop.horizontal_alignment }};
         {{ module.style.desktop.spacing.css }}
       }  

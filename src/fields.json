@@ -84,7 +84,7 @@
         },        
         {
           "label": "Body",
-          "name": "body_color",
+          "name": "body_default",
           "type": "color",
           "visibility": {
             "hidden_subfields": {
@@ -120,7 +120,34 @@
           "default": {
             "color": "#FCFCFD"
           }
-        }                         
+        },                         
+        {
+          "label": "Gradient",
+          "name": "gradient",
+          "required": false,
+          "type": "gradient",
+          "default": {
+              "colors": [{
+                  "color": {
+                      "r": 176,
+                      "g": 22,
+                      "b": 227,
+                      "a": 1
+                  }
+              }, {
+                  "color": {
+                      "r": 133,
+                      "g": 14,
+                      "b": 154,
+                      "a": 1
+                  }
+              }],
+              "side_or_corner": {
+                  "verticalSide": null,
+                  "horizontalSide": "RIGHT"
+              }
+          }
+        }        
       ]
     },
     {
@@ -617,40 +644,48 @@
           "name": "background_color",
           "inline_help_text": "Set the header background color here.",
           "type": "choice",
-          "choices": [
-            [
-              "transparent",
-              "None"
+            "choices": [
+              [
+                "transparent",
+                "None"
+              ],
+              [
+                "{{ theme.colors.primary.color }}",
+                "Primary color"
+              ],
+              [
+                "{{ theme.colors.secondary.color }}",
+                "Secondary color"
+              ],
+              [
+                "{{ theme.colors.black.color }}",
+                "Black"
+              ],
+              [
+                "{{ theme.colors.grey.color }}",
+                "Grey"
+              ],
+              [
+                "{{ theme.colors.grey_accent.color }}",
+                "Grey accent"
+              ],   
+              [
+                "{{ theme.colors.grey_dark.color }}",
+                "Grey dark"
+              ],    
+              [
+                "{{ theme.colors.body_default.color }}",
+                "Body color"
+              ],                                               
+              [
+                "{{ theme.colors.white.color }}",
+                "White"
+              ],
+              [
+                "{{ theme.colors.white_accent.color }}",
+                "White accent"
+              ]
             ],
-            [
-              "{{ theme.colors.Primary.color }}",
-              "Primary color"
-            ],
-            [
-              "{{ theme.colors.secondary.color }}",
-              "Secondary color"
-            ],
-            [
-              "{{ theme.colors.body_color.color }}",
-              "Body (default) color"
-            ],
-            [
-              "{{ theme.colors.black.color }}",
-              "Black"
-            ],
-            [
-              "{{ theme.colors.grey.color }}",
-              "Grey"
-            ],
-            [
-              "{{ theme.colors.white.color }}",
-              "White"
-            ],
-            [
-              "{{ theme.colors.white_accent.color }}",
-              "White accent"
-            ]
-          ],
           "display": "select",
           "default": "{{ theme.colors.white_accent.color }}"
         },
@@ -659,40 +694,48 @@
           "name": "border_color",
           "inline_help_text": "Set the header border color here.",
           "type": "choice",
-          "choices": [
-            [
-              "transparent",
-              "None"
+            "choices": [
+              [
+                "transparent",
+                "None"
+              ],
+              [
+                "{{ theme.colors.primary.color }}",
+                "Primary color"
+              ],
+              [
+                "{{ theme.colors.secondary.color }}",
+                "Secondary color"
+              ],
+              [
+                "{{ theme.colors.black.color }}",
+                "Black"
+              ],
+              [
+                "{{ theme.colors.grey.color }}",
+                "Grey"
+              ],
+              [
+                "{{ theme.colors.grey_accent.color }}",
+                "Grey accent"
+              ],   
+              [
+                "{{ theme.colors.grey_dark.color }}",
+                "Grey dark"
+              ],    
+              [
+                "{{ theme.colors.body_default.color }}",
+                "Body color"
+              ],                                               
+              [
+                "{{ theme.colors.white.color }}",
+                "White"
+              ],
+              [
+                "{{ theme.colors.white_accent.color }}",
+                "White accent"
+              ]
             ],
-            [
-              "{{ theme.colors.Primary.color }}",
-              "Primary color"
-            ],
-            [
-              "{{ theme.colors.secondary.color }}",
-              "Secondary color"
-            ],
-            [
-              "{{ theme.colors.body_color.color }}",
-              "Body (default) color"
-            ],
-            [
-              "{{ theme.colors.black.color }}",
-              "Black"
-            ],
-            [
-              "{{ theme.colors.grey.color }}",
-              "Grey"
-            ],
-            [
-              "{{ theme.colors.white.color }}",
-              "White"
-            ],
-            [
-              "{{ theme.colors.white_accent.color }}",
-              "White accent"
-            ]
-          ],
           "display": "select",
           "default": "{{ theme.colors.grey.color }}"
         },
@@ -782,158 +825,762 @@
           "type": "group",
           "inline_help_text": "Define font styles for desktop here.",
           "children": [
-          {
-            "label": "Body",
-            "name": "default",
-            "type": "font",
-            "visibility": {
-              "hidden_subfields": {
-                "styles": true
-              }
+            {
+              "label": "Body",
+              "name": "body_default",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.body_default.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 16
+                },
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 27.2
+                }
+              ]
+            },      
+            {
+              "label": "Heading one (H1)",
+              "name": "h1",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 46
+                },
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 55.2
+                }
+              ]
             },
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.primary.color",
-                "fallback": "theme.fonts.primary.font_family.fallback",
-                "font": "theme.fonts.primary.font_family.font",
-                "font_set": "theme.fonts.primary.font_family.font_set"
-              }
+            {
+              "label": "Heading two (H2)",
+              "name": "h2",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 24,
-              "size_unit": "px"
-            }
-          },            
-          {
-            "label": "Heading one (H1)",
-            "name": "heading_one",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading three (H3)",
+              "name": "h3",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 46,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading two (H2)",
-            "name": "heading_two",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading four (H4)",
+              "name": "h4",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 36,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading three (H3)",
-            "name": "heading_three",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading five (H5)",
+              "name": "h5",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 30,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading four (H4)",
-            "name": "heading_four",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "size": 24,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          },
-          {
-            "label": "Heading five (H5)",
-            "name": "heading_five",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "color": "#000000",
-              "size": 16,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          },
-          {
-            "label": "Heading six (H6)",
-            "name": "heading_six",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "size": 14,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          }
+            {
+              "label": "Heading six (H6)",
+              "name": "h6",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
+            }            
           ]    
         },
         {
@@ -965,28 +1612,6 @@
               "size_unit": "px"
             }
           },               
-          {
-            "label": "Heading one (H1)",
-            "name": "heading_one",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "size": 46,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
           {
             "label": "Heading two (H2)",
             "name": "heading_two",
@@ -1280,54 +1905,54 @@
           "label": "Background color",
           "name": "background_color",
           "type": "choice",
-          "choices": [
-            [
-              "transparent",
-              "None"
-            ],
-            [
-              "{{ theme.colors.first.color }}",
-              "First color"
-            ],
-            [
-              "{{ theme.colors.second.color }}",
-              "Second color"
-            ],
-            [
-              "{{ theme.colors.third.color }}",
-              "Third color"
-            ],
-            [
-              "{{ theme.colors.fourth.color }}",
-              "Fourth color"
-            ],
-            [
-              "{{ theme.colors.fifth.color }}",
-              "Fifth color"
-            ],
-            [
-              "{{ theme.colors.default.color }}",
-              "Body (default) color"
-            ],
-            [
-              "{{ theme.colors.black.color }}",
-              "Black"
-            ],
-            [
-              "{{ theme.colors.grey.color }}",
-              "Grey"
-            ],
-            [
-              "{{ theme.colors.white.color }}",
-              "White"
-            ],
-            [
-              "gradient",
-              "Gradient"
-            ]
-          ],
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
           "display": "select",
-          "default": "gradient"
+          "default": "{{ theme.colors.gradient.css }}"
         },
         {
           "label": "Text color",
@@ -1634,7 +2259,7 @@
                   "Secondary color"
                 ],
                 [
-                  "{{ theme.colors.body_color.color }}",
+                  "{{ theme.colors.body_default.color }}",
                   "Body (default) color"
                 ],
                 [
@@ -1675,7 +2300,7 @@
                   "Secondary color"
                 ],
                 [
-                  "{{ theme.colors.body_color.color }}",
+                  "{{ theme.colors.body_default.color }}",
                   "Body (default) color"
                 ],
                 [
@@ -1716,7 +2341,7 @@
                   "Secondary color"
                 ],
                 [
-                  "{{ theme.colors.body_color.color }}",
+                  "{{ theme.colors.body_default.color }}",
                   "Body (default) color"
                 ],
                 [
@@ -1887,6 +2512,43 @@
           "type": "group",
           "children": [
             {
+              "label": "First section",
+              "name": "first_section",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 128,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
+            },             
+            {
               "label": "Sections",
               "name": "sections",
               "type": "group",
@@ -1960,6 +2622,43 @@
           "type": "group",
           "children": [
             {
+              "label": "First section",
+              "name": "first_section",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 128,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 32,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
+            },               
+            {
               "label": "Sections",
               "name": "sections",
               "type": "group",
@@ -2022,8 +2721,8 @@
               "type": "number",
               "display": "slider",
               "max": 2500,
-              "min": 900,
-              "default": 960
+              "min": 500,
+              "default": 520
             }
           ]
         },
@@ -2032,6 +2731,43 @@
           "name": "xs",
           "type": "group",
           "children": [
+            {
+              "label": "First section",
+              "name": "first_section",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 128,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 32,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
+            },               
             {
               "label": "Sections",
               "name": "sections",
@@ -2049,7 +2785,7 @@
                   "default": {
                     "padding": {
                       "top": {
-                        "value": 64,
+                        "value": 32,
                         "units": "px"
                       },
                       "right": {
@@ -2057,7 +2793,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 64,
+                        "value": 32,
                         "units": "px"
                       },
                       "left": {
