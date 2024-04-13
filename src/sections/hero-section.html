@@ -44,7 +44,9 @@ description: A section displaying a text with and button with an image on right 
                         path='../modules/image' 
                         image_field={{ context.image.image_field ?
                             context.image.image_field : {
-                                'src': get_asset_url('../images/visuals/heros.svg')
+                                'src': get_asset_url('../images/visuals/heros.svg'),
+                                'loading': 'eager',
+                                'alt': 'illustration of man and women'
                             }
                         }}
                     %}

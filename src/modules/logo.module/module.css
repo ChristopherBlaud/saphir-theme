@@ -1,0 +1,8 @@
+.logo-slider {
+    overflow: visible;
+}
+.logo__inner__item__image{display:flex;margin:auto}.logo__inner__item__image img{max-width:100%}
+.logo-slider__inner {
+    align-items: center;
+    transition-timing-function: linear;
+}

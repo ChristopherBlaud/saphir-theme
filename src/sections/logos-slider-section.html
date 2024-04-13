@@ -5,7 +5,11 @@ label: Logos slider section
 description: A section displaying a text with many logos in a slider below.
 -->
 
-{% dnd_section vertical_alignment="MIDDLE"  %}
+{% dnd_section vertical_alignment="MIDDLE"  
+    background_color={{ context.section.background_color ? 
+        context.section.background_color : theme.colors.white_accent.color
+    }}
+%}
     {% dnd_column  %}
         {% dnd_row %}
             {% dnd_module 
@@ -23,8 +27,7 @@ description: A section displaying a text with many logos in a slider below.
                         'mobile': {
                             'horizontal_alignment': 'center',
                             'text_alignment': 'center'
-                        },
-                        'body_display': 'default'                            
+                        }                   
                     }
                 }}
             %}
@@ -36,6 +39,64 @@ description: A section displaying a text with many logos in a slider below.
         {% dnd_row %}
             {% dnd_module 
                 path='../modules/logo' 
+                logo={{ context.logos.logo ?
+                    context.logos.logo : [
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/logo/apple.svg'),
+                                'loading': 'lazy',
+                                'alt': 'apple logo'
+                            },
+                            'device_variant': {
+                                'tablet': {
+                                    'image_field': {
+                                        'src': get_asset_url('../images/logo/apple-md.svg')
+                                    }
+                                },
+                                'mobile': {
+                                    'image_field': {
+                                        'src': get_asset_url('../images/logo/apple-xs.svg')
+                                    }                            
+                                }                            
+                            }
+                        },
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/logo/netflix.svg'),
+                                'loading': 'lazy',
+                                'alt': 'netflix logo'
+                            }
+                        },
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/logo/lotus.svg'),
+                                'loading': 'lazy',
+                                'alt': 'lotus logo'
+                            }
+                        },
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/logo/amazon.svg'),
+                                'loading': 'lazy',
+                                'alt': 'amazon logo'
+                            }
+                        },
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/logo/samsung.svg'),
+                                'loading': 'lazy',
+                                'alt': 'samsung logo'
+                            }
+                        },
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/logo/logitech.svg'),
+                                'loading': 'lazy',
+                                'alt': 'logitech logo'
+                            }
+                        }                                                                                                                        
+                    ]
+                }}
             %}
             {% end_dnd_module %}           
         {% end_dnd_row %}         

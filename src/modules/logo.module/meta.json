@@ -3,9 +3,19 @@
   "global" : false,
   "content_types" : [ "QUOTE_TEMPLATE", "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "inline_help_text" : "Use this module to display a slider of logos.",
-  "icon" : "fontawesome-5.14.0:Envelope%20Open-text:SOLID",
+  "icon" : "fontawesome-5.14.0:Images:SOLID",
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING", "QUOTE" ],
   "module_id" : 99652089822,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/lib/swiper-bundle.min.css",
+    "name" : "swiper-bundle.min.css"
+  } ],
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/lib/swiper-bundle.min.js",
+    "name" : "swiper-bundle.min.js"
+  } ],
   "label" : "Logo",
   "is_available_for_new_content" : true
 }

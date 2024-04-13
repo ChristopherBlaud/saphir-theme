@@ -1,19 +1,166 @@
 [ {
-  "id" : "0abff4d5-ba45-7ecc-fc78-b1ba5a2aba96",
-  "name" : "image_field",
+  "id" : "116431c8-8fb7-498e-743c-82f6f70ee1ca",
+  "name" : "logo",
   "display_width" : null,
-  "label" : "Image",
+  "label" : "Logo",
   "required" : false,
   "locked" : false,
-  "responsive" : true,
-  "resizable" : true,
-  "show_loading" : false,
-  "type" : "image",
-  "default" : {
-    "src" : "",
-    "alt" : null,
-    "loading" : "lazy"
-  }
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "0abff4d5-ba45-7ecc-fc78-b1ba5a2aba96",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple.svg",
+      "alt" : "apple logo",
+      "loading" : "lazy",
+      "width" : 175,
+      "height" : 60,
+      "max_width" : 175,
+      "max_height" : 60
+    }
+  }, {
+    "id" : "23864f90-909d-c343-cefe-84275055a026",
+    "name" : "device_variant",
+    "display_width" : null,
+    "label" : "Device variant",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "5a4ad3de-763d-34f0-f5ca-55a60aa027b8",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "c844e335-7662-d6fa-8745-37ea470ac6b6",
+        "name" : "image_field",
+        "display_width" : null,
+        "label" : "Image",
+        "required" : false,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
+          "alt" : "apple-1",
+          "loading" : "lazy",
+          "width" : 88,
+          "height" : 30,
+          "max_width" : 88,
+          "max_height" : 30
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
+          "alt" : "apple-1",
+          "loading" : "lazy",
+          "width" : 88,
+          "height" : 30,
+          "max_width" : 88,
+          "max_height" : 30
+        }
+      }
+    }, {
+      "id" : "1f2d0973-182d-3816-ce0b-2dccd547d8ef",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "1e4b0c66-8170-a5e0-ac98-60945cbda8c3",
+        "name" : "image_field",
+        "display_width" : null,
+        "label" : "Image",
+        "required" : false,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
+          "alt" : "apple-1",
+          "loading" : "lazy",
+          "width" : 88,
+          "height" : 30,
+          "max_width" : 88,
+          "max_height" : 30
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
+          "alt" : "apple-1",
+          "loading" : "lazy",
+          "width" : 88,
+          "height" : 30,
+          "max_width" : 88,
+          "max_height" : 30
+        }
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "tablet" : {
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
+          "alt" : "apple-1",
+          "loading" : "lazy",
+          "width" : 88,
+          "height" : 30,
+          "max_width" : 88,
+          "max_height" : 30
+        }
+      },
+      "mobile" : {
+        "image_field" : {
+          "size_type" : "auto",
+          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
+          "alt" : "apple-1",
+          "loading" : "lazy",
+          "width" : 88,
+          "height" : 30,
+          "max_width" : 88,
+          "max_height" : 30
+        }
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ ]
 }, {
   "id" : "d5cd490a-270d-e8ac-1988-022660c36598",
   "name" : "style",
@@ -51,12 +198,26 @@
       "locked" : false,
       "type" : "spacing",
       "default" : { }
+    }, {
+      "id" : "6dca33df-af8c-6984-efae-d04df286410d",
+      "name" : "items_spacing",
+      "display_width" : null,
+      "label" : "Items spacing",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 48
     } ],
     "tab" : "STYLE",
     "expanded" : false,
     "type" : "group",
     "default" : {
-      "horizontal_alignment" : "flex-end"
+      "horizontal_alignment" : "flex-end",
+      "spacing" : { },
+      "items_spacing" : 48
     }
   }, {
     "id" : "7acaaf5a-73f1-2110-062e-f4819c9160c4",
@@ -88,12 +249,26 @@
       "locked" : false,
       "type" : "spacing",
       "default" : { }
+    }, {
+      "id" : "7c9928bc-42a6-c913-3af0-9e536b561a2a",
+      "name" : "items_spacing",
+      "display_width" : null,
+      "label" : "Items spacing",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 48
     } ],
     "tab" : "STYLE",
     "expanded" : false,
     "type" : "group",
     "default" : {
-      "horizontal_alignment" : "flex-end"
+      "horizontal_alignment" : "flex-end",
+      "spacing" : { },
+      "items_spacing" : 32
     }
   }, {
     "id" : "847f7adc-e4ce-9fc0-bcbc-0f1de046d2f7",
@@ -125,18 +300,46 @@
       "locked" : false,
       "type" : "spacing",
       "default" : { }
+    }, {
+      "id" : "2bb45eb7-6982-01d9-abc5-391e53fb6082",
+      "name" : "items_spacing",
+      "display_width" : null,
+      "label" : "Items spacing",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 16
     } ],
     "tab" : "STYLE",
     "expanded" : false,
     "type" : "group",
     "default" : {
-      "horizontal_alignment" : "flex-end"
+      "horizontal_alignment" : "flex-end",
+      "spacing" : { },
+      "items_spacing" : 32
     }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
   "type" : "group",
   "default" : {
-    "horizontal_alignment" : "flex-end"
+    "desktop" : {
+      "horizontal_alignment" : "flex-end",
+      "spacing" : { },
+      "items_spacing" : 48
+    },
+    "tablet" : {
+      "horizontal_alignment" : "flex-end",
+      "spacing" : { },
+      "items_spacing" : 48
+    },
+    "mobile" : {
+      "horizontal_alignment" : "flex-end",
+      "spacing" : { },
+      "items_spacing" : 32
+    }
   }
 } ]

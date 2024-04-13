@@ -323,7 +323,7 @@
     "preset" : null,
     "type" : "choice",
     "default" : "default"
-  },{
+  }, {
     "id" : "cb2baf3f-c621-1f99-215c-a402f32f19b7",
     "name" : "h2_display",
     "display_width" : null,
@@ -407,7 +407,7 @@
     "preset" : null,
     "type" : "choice",
     "default" : "default"
-  }  ],
+  } ],
   "tab" : "STYLE",
   "expanded" : false,
   "type" : "group",
