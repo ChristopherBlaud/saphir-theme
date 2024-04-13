@@ -3,14 +3,14 @@ templateType: page
 isAvailableForNewContent: false
 -->
 
-{% macro generateClass(module_html, module_style) %}
-    {%- set h1_classes = "font-display" ~ (module_style.h1_size != "default" ? " text-" ~ module_style.h1_size : " text-h1") -%}
-    {%- set h2_classes = "font-display" ~ (module_style.h2_size != "default" ? " text-" ~ module_style.h2_size : " text-h2") -%}
-    {%- set h3_classes = "font-display" ~ (module_style.h3_size != "default" ? " text-" ~ module_style.h3_size : " text-h3") -%}        
-    {%- set h4_classes = "font-display" ~ (module_style.h4_size != "default" ? " text-" ~ module_style.h4_size : " text-h4") -%}
-    {%- set h5_classes = "font-display" ~ (module_style.h5_size != "default" ? " text-" ~ module_style.h5_size : " text-h5") -%} 
-    {%- set h6_classes = "font-display" ~ (module_style.h6_size != "default" ? " text-" ~ module_style.h6_size : " text-h6") -%}  
-    {%- set body_classes = "font-base" ~ (module_style.body_size != "default" ? " text-" ~ module_style.body_size : " text-h4") -%}                             
+{% macro generateClass(module_html, module_id, module_style) %}
+    {% set h1_classes = module_style.h1_display != 'default' ? module_style.h1_display ~ '-display' : "" %}
+    {% set h2_classes = module_style.h2_display != 'default' ? module_style.h2_display ~ '-display' : "" %}
+    {% set h3_classes = module_style.h3_display != 'default' ? module_style.h3_display ~ '-display' : "" %}
+    {% set h4_classes = module_style.h4_display != 'default' ? module_style.h4_display ~ '-display' : "" %}
+    {% set h5_classes = module_style.h5_display != 'default' ? module_style.h5_display ~ '-display' : "" %}
+    {% set h6_classes = module_style.h6_display != 'default' ? module_style.h6_display ~ '-display' : "" %}
+    {% set body_classes = module_style.body_display != 'default' ? module_style.body_display ~ '-display' : "" %}                          
     
     {% set html = module_html
       |replace('<h1', h1_classes ? '<h1 class="' ~ h1_classes ~ '"' : '<h1')
@@ -26,5 +26,28 @@ isAvailableForNewContent: false
       |replace('<pre', body_classes ? '<pre class="' ~ body_classes ~ '"' : '<pre')
     %}    
     
-    {% rich_text field="html" value="{{ html }}" %}    
+    {% rich_text field="html" value="{{ html }}" %}
+    {% require_css %}    
+      <style>
+        #{{ module_id }} .custom-text__inner {
+          justify-content: {{ module_style.desktop.horizontal_alignment }};
+          text-align: {{ module_style.desktop.text_alignment }};
+        }
+
+        @media (max-width: 1024px) {
+          #{{ module_id }} .custom-text__inner {
+            justify-content: {{ module_style.tablet.horizontal_alignment }};
+            text-align: {{ module_style.tablet.text_alignment }};
+          }
+        }        
+
+        @media (max-width: 768px) {
+          #{{ module_id }} .custom-text__inner {
+            justify-content: {{ module_style.mobile.horizontal_alignment }};
+            text-align: {{ module_style.mobile.text_alignment }};
+          }
+        }
+        
+      </style>
+    {% end_require_css %}
 {% endmacro %}

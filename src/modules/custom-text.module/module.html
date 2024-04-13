@@ -1,7 +1,7 @@
 {% import '../../macros/_style.html' %}
 
 <div id="{{ name }}" class="custom-text">
-    <div class="custom-text__inner">
-        {{ generateClass(module.html, module.style) }}
+    <div class="custom-text__inner flex">
+        {{ generateClass(module.html, name, module.style) }}
     </div>
 </div>

@@ -2097,7 +2097,7 @@
           "display": "slider",
           "max": 100,
           "min": 0,
-          "default": 4
+          "default": 100
         },
         {
           "label": "Spacing",
