@@ -97,6 +97,28 @@ description: A section displaying a text with many logos in a slider below.
                         }                                                                                                                        
                     ]
                 }}
+                style={{ context.logos.style ? 
+                    context.logos.style : {
+                        'desktop': {
+                            'slides_per_view': 5,
+                            'items_spacing': 0,
+                            'images_max_height': 45,
+                            'animation_duration': 7000
+                        },
+                        'tablet': {
+                            'slides_per_view': 4,
+                            'items_spacing': 0,
+                            'images_max_height': 40,
+                            'animation_duration': 7000
+                        },
+                        'mobile': {
+                            'slides_per_view': 3,
+                            'items_spacing': 12,
+                            'images_max_height': 30,
+                            'animation_duration': 7000
+                        }                                                
+                    }
+                }}
             %}
             {% end_dnd_module %}           
         {% end_dnd_row %}         

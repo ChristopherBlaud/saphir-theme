@@ -5,6 +5,9 @@
   data-items-spacing-xl="{{ module.style.desktop.items_spacing }}"
   data-items-spacing-md="{{ module.style.tablet.items_spacing }}"
   data-items-spacing-xs="{{ module.style.mobile.items_spacing }}"
+  data-slider-animation-duration-xl="{{ module.style.desktop.animation_duration }}"
+  data-slider-animation-duration-md="{{ module.style.tablet.animation_duration }}"
+  data-slider-animation-duration-xs="{{ module.style.mobile.animation_duration }}"
   >
   <ul class="logo-slider__inner swiper-wrapper">
     {% for item in module.logo %}
@@ -31,3 +34,22 @@
     {% endfor %}
   </ul>
 </div>
+{% require_css %}
+  <style>
+    #{{ name }} .logo-slider__inner__item__image img {
+      max-height: {{ module.style.desktop.images_max_height ~ 'px' }};
+    }
+
+    @media (max-width: 1024px) {
+      #{{ name }} .logo-slider__inner__item__image img {
+        max-height: {{ module.style.tablet.images_max_height ~ 'px' }};
+      }    
+    }
+
+    @media (max-width: 768px) {
+      #{{ name }} .logo-slider__inner__item__image img {
+        max-height: {{ module.style.mobile.images_max_height ~ 'px' }};
+      }    
+    }    
+  </style>
+{% end_require_css %}

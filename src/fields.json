@@ -2536,7 +2536,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 64,
+                        "value": 0,
                         "units": "px"
                       },
                       "left": {
@@ -2646,7 +2646,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 32,
+                        "value": 0,
                         "units": "px"
                       },
                       "left": {
@@ -2756,7 +2756,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 32,
+                        "value": 0,
                         "units": "px"
                       },
                       "left": {
