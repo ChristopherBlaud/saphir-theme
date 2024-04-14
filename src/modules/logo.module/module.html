@@ -1,39 +1,32 @@
 {% import '../../macros/_style.html' %}
 
-<div id="{{ name }}" class="logo-slider swiper{{ ' animated' if module.style.animated_module }}" 
-  data-slides-per-view-xl="{{ module.style.desktop.slides_per_view }}"
-  data-slides-per-view-md="{{ module.style.tablet.slides_per_view }}"
-  data-slides-per-view-xs="{{ module.style.mobile.slides_per_view }}"
-  data-items-spacing-xl="{{ module.style.desktop.items_spacing }}"
-  data-items-spacing-md="{{ module.style.tablet.items_spacing }}"
-  data-items-spacing-xs="{{ module.style.mobile.items_spacing }}"
-  data-slider-animation-duration-xl="{{ module.style.desktop.animation_duration }}"
-  data-slider-animation-duration-md="{{ module.style.tablet.animation_duration }}"
-  data-slider-animation-duration-xs="{{ module.style.mobile.animation_duration }}"
-  {{ setAnimationAttr(module.style) }}
-  >
-  <ul class="logo-slider__inner swiper-wrapper">
-    {% for item in module.logo %}
-      <li class="logo-slider__inner__item swiper-slide">
-        <picture class="logo-slider__inner__item__image">
-          {% if item.device_variant.mobile.image_field.src %}
-          <source media="(max-width: 768px)" srcset="{{ item.device_variant.mobile.image_field.src }}">
-          {% endif %}
-          {% if item.device_variant.tablet.image_field.src %}
-          <source media="(max-width: 1024px)" srcset="{{ item.device_variant.tablet.image_field.src }}">
-          {% endif %}    
-          {% if item.image_field.src %}
-          {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
-          {% if item.image_field.size_type == 'auto' %}
-          {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-          {% elif item.image_field.size_type == 'auto_custom_max' %}
-          {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-          {% endif %}
-          {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-          <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-          {% endif %}
-        </picture>      
-      </li>
-    {% endfor %}
-  </ul>
+<div id="{{ name }}" class="logo-slider">
+  <div class="logo-slider__inner swiper{{ ' animated' if module.style.animated_module }}"
+  {{ setSliderAttr(module.style) }}
+  {{ setAnimationAttr(module.style) }}> 
+    <ul class="logo-slider__inner__container swiper-wrapper">
+      {% for item in module.logo %}
+        <li class="logo-slider__inner__container__item swiper-slide">
+          <picture class="logo-slider__inner__container__item__image">
+            {% if item.device_variant.mobile.image_field.src %}
+            <source media="(max-width: 768px)" srcset="{{ item.device_variant.mobile.image_field.src }}">
+            {% endif %}
+            {% if item.device_variant.tablet.image_field.src %}
+            <source media="(max-width: 1024px)" srcset="{{ item.device_variant.tablet.image_field.src }}">
+            {% endif %}    
+            {% if item.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+            {% if item.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+            <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </picture>      
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

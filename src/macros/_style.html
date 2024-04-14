@@ -55,7 +55,25 @@ isAvailableForNewContent: false
 {% macro setAnimationAttr(module_style) %}
 {% if module_style.animated_module %}
 {{ 'data-y-position="{{ module.style.animation_settings.position_on_y }}"' if module.style.animation_settings.position_on_y != 0 }}
+{{ ' data-x-position="{{ module.style.animation_settings.position_on_x }}"' if module.style.animation_settings.position_on_x != 0 }}
+{{ ' data-scale="{{ module.style.animation_settings.scale }}"' if module.style.animation_settings.scale != 1 }}
+{{ ' data-rotate="{{ module.style.animation_settings.rotate }}"' if module.style.animation_settings.rotate != 0 }}
+{{ ' data-skew-x="{{ module.style.animation_settings.skew_x }}"' if module.style.animation_settings.skew_x != 0 }}
+{{ ' data-skew-y="{{ module.style.animation_settings.skew_y }}"' if module.style.animation_settings.skew_y != 0 }}
 {{ ' data-opacity="{{ module.style.animation_settings.opacity }}"' if module.style.animation_settings.opacity != 1 }}
+{{ ' data-bind-on-scroll="{{ module.style.animation_settings.bind_animation_on_scroll }}"' }}
 {{ ' data-animation-delay="{{ module_style.animation_settings.animation_delay }}"' if module_style.animation_settings.animation_delay != 0 }}
 {% endif %}
+{% endmacro %}
+
+{% macro setSliderAttr(module_style) %}
+  {{ 'data-slides-per-view-xl="{{ module_style.desktop.slides_per_view }}"' }}
+  {{ ' data-slides-per-view-md="{{ module_style.tablet.slides_per_view }}"' }}
+  {{ ' data-slides-per-view-xs="{{ module_style.mobile.slides_per_view }}"' }}
+  {{ ' data-items-spacing-xl="{{ module_style.desktop.items_spacing }}"' }}
+  {{ ' data-items-spacing-md="{{ module_style.tablet.items_spacing }}"' }}
+  {{ ' data-items-spacing-xs="{{ module_style.mobile.items_spacing }}"' }}
+  {{ ' data-slider-animation-duration-xl="{{ module_style.desktop.animation_duration }}"' }}
+  {{ ' data-slider-animation-duration-md="{{ module_style.tablet.animation_duration }}"' }}
+  {{ ' data-slider-animation-duration-xs="{{ module_style.mobile.animation_duration }}"' }}
 {% endmacro %}

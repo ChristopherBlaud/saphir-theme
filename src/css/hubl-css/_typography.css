@@ -2,7 +2,7 @@
     font-family: {{ theme.fonts.secondary.font_family.font ~ ',' ~ theme.fonts.secondary.font_family.fallback }};
 }
     
-body .hs-page, .body-display {
+body .hs-page, .hs-page .body-display {
     font-family: {{ theme.fonts.primary.font_family.font ~ ',' ~ theme.fonts.primary.font_family.fallback }};
     font-size: {{ theme.typography.xl.body_default.font_size ~ 'px' }};
     line-height: {{ theme.typography.xl.body_default.line_height ~ 'px' }};
@@ -12,7 +12,7 @@ body .hs-page, .body-display {
     color: {{ theme.typography.xl.body_default.color }};
 }
 
-.hs-page h1, .h1-display {
+.hs-page h1, .hs-page .h1-display {
     font-size: {{ theme.typography.xl.h1.font_size ~ 'px' }};
     line-height: {{ theme.typography.xl.h1.line_height ~ 'px' }};
     {% if theme.typography.xl.h1.text_transform != 'none' %}
@@ -21,7 +21,7 @@ body .hs-page, .body-display {
     color: {{ theme.typography.xl.h1.color }};
 }
 
-.hs-page h2, .h2-display {
+.hs-page h2, .hs-page .h2-display {
     font-size: {{ theme.typography.xl.h2.font_size ~ 'px' }};
     line-height: {{ theme.typography.xl.h2.line_height ~ 'px' }};
     {% if theme.typography.xl.h2.text_transform != 'none' %}
@@ -30,7 +30,7 @@ body .hs-page, .body-display {
     color: {{ theme.typography.xl.h2.color }};
 }
 
-.hs-page h3, .h3-display {
+.hs-page h3, .hs-page .h3-display {
     font-size: {{ theme.typography.xl.h3.font_size ~ 'px' }};
     line-height: {{ theme.typography.xl.h3.line_height ~ 'px' }};
     {% if theme.typography.xl.h3.text_transform != 'none' %}
@@ -39,7 +39,7 @@ body .hs-page, .body-display {
     color: {{ theme.typography.xl.h3.color }};
 }
 
-.hs-page h4, .h4-display {
+.hs-page h4, .hs-page .h4-display {
     font-size: {{ theme.typography.xl.h4.font_size ~ 'px' }};
     line-height: {{ theme.typography.xl.h4.line_height ~ 'px' }};
     {% if theme.typography.xl.h4.text_transform != 'none' %}
@@ -48,7 +48,7 @@ body .hs-page, .body-display {
     color: {{ theme.typography.xl.h4.color }};
 }
 
-.hs-page h5, .h5-display {
+.hs-page h5, .hs-page .h5-display {
     font-size: {{ theme.typography.xl.h5.font_size ~ 'px' }};
     line-height: {{ theme.typography.xl.h5.line_height ~ 'px' }};
     {% if theme.typography.xl.h5.text_transform != 'none' %}
@@ -57,7 +57,7 @@ body .hs-page, .body-display {
     color: {{ theme.typography.xl.h5.color }};
 }
 
-.hs-page h6, .h6-display {
+.hs-page h6, .hs-page .h6-display {
     font-size: {{ theme.typography.xl.h6.font_size ~ 'px' }};
     line-height: {{ theme.typography.xl.h6.line_height ~ 'px' }};
     {% if theme.typography.xl.h6.text_transform != 'none' %}

@@ -1,167 +1,4 @@
 [ {
-  "id" : "116431c8-8fb7-498e-743c-82f6f70ee1ca",
-  "name" : "logo",
-  "display_width" : null,
-  "label" : "Logo",
-  "required" : false,
-  "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : null,
-    "default" : null
-  },
-  "children" : [ {
-    "id" : "0abff4d5-ba45-7ecc-fc78-b1ba5a2aba96",
-    "name" : "image_field",
-    "display_width" : null,
-    "label" : "Image",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : true,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple.svg",
-      "alt" : "apple logo",
-      "loading" : "lazy",
-      "width" : 175,
-      "height" : 60,
-      "max_width" : 175,
-      "max_height" : 60
-    }
-  }, {
-    "id" : "23864f90-909d-c343-cefe-84275055a026",
-    "name" : "device_variant",
-    "display_width" : null,
-    "label" : "Device variant",
-    "required" : false,
-    "locked" : false,
-    "children" : [ {
-      "id" : "5a4ad3de-763d-34f0-f5ca-55a60aa027b8",
-      "name" : "tablet",
-      "display_width" : null,
-      "label" : "Tablet",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "c844e335-7662-d6fa-8745-37ea470ac6b6",
-        "name" : "image_field",
-        "display_width" : null,
-        "label" : "Image",
-        "required" : false,
-        "locked" : false,
-        "responsive" : true,
-        "resizable" : true,
-        "show_loading" : false,
-        "type" : "image",
-        "default" : {
-          "size_type" : "auto",
-          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-          "alt" : "apple-1",
-          "loading" : "lazy",
-          "width" : 88,
-          "height" : 30,
-          "max_width" : 88,
-          "max_height" : 30
-        }
-      } ],
-      "tab" : "CONTENT",
-      "expanded" : false,
-      "type" : "group",
-      "default" : {
-        "image_field" : {
-          "size_type" : "auto",
-          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-          "alt" : "apple-1",
-          "loading" : "lazy",
-          "width" : 88,
-          "height" : 30,
-          "max_width" : 88,
-          "max_height" : 30
-        }
-      }
-    }, {
-      "id" : "1f2d0973-182d-3816-ce0b-2dccd547d8ef",
-      "name" : "mobile",
-      "display_width" : null,
-      "label" : "Mobile",
-      "required" : false,
-      "locked" : false,
-      "children" : [ {
-        "id" : "1e4b0c66-8170-a5e0-ac98-60945cbda8c3",
-        "name" : "image_field",
-        "display_width" : null,
-        "label" : "Image",
-        "required" : false,
-        "locked" : false,
-        "responsive" : true,
-        "resizable" : true,
-        "show_loading" : false,
-        "type" : "image",
-        "default" : {
-          "size_type" : "auto",
-          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-          "alt" : "apple-1",
-          "loading" : "lazy",
-          "width" : 88,
-          "height" : 30,
-          "max_width" : 88,
-          "max_height" : 30
-        }
-      } ],
-      "tab" : "CONTENT",
-      "expanded" : false,
-      "type" : "group",
-      "default" : {
-        "image_field" : {
-          "size_type" : "auto",
-          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-          "alt" : "apple-1",
-          "loading" : "lazy",
-          "width" : 88,
-          "height" : 30,
-          "max_width" : 88,
-          "max_height" : 30
-        }
-      }
-    } ],
-    "tab" : "CONTENT",
-    "expanded" : false,
-    "type" : "group",
-    "default" : {
-      "tablet" : {
-        "image_field" : {
-          "size_type" : "auto",
-          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-          "alt" : "apple-1",
-          "loading" : "lazy",
-          "width" : 88,
-          "height" : 30,
-          "max_width" : 88,
-          "max_height" : 30
-        }
-      },
-      "mobile" : {
-        "image_field" : {
-          "size_type" : "auto",
-          "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-          "alt" : "apple-1",
-          "loading" : "lazy",
-          "width" : 88,
-          "height" : 30,
-          "max_width" : 88,
-          "max_height" : 30
-        }
-      }
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group",
-  "default" : [ ]
-}, {
   "id" : "d5cd490a-270d-e8ac-1988-022660c36598",
   "name" : "style",
   "display_width" : null,
@@ -633,4 +470,181 @@
   "default" : {
     "items_spacing" : 16
   }
+}, {
+  "id" : "61240721-a494-c7cf-acc3-ad68f5c98edd",
+  "name" : "service",
+  "display_width" : null,
+  "label" : "Service",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "69f26afb-66f2-3ce7-06d2-6ac269d35585",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span>Highlight <br>your services with a simple click</span>"
+  }, {
+    "id" : "921a529e-949e-c72d-4bab-5687630119de",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "79e45b16-8883-520c-0c52-c355f829660d",
+    "name" : "display_link",
+    "display_width" : null,
+    "label" : "Display link",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "51fb112f-a230-1919-fad6-389bf015b8d6",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "service.display_link",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "bbff8244-b255-d723-266e-b712ee03dc22",
+      "name" : "url",
+      "display_width" : null,
+      "label" : "URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "2f011a83-c916-d205-dceb-b4bb95e4aabb",
+      "name" : "icon_field",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : { }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "url" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "icon_field" : { }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "description" : "<span>Highlight <br>your services with a simple click</span>",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "display_link" : true,
+    "link" : {
+      "url" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "icon_field" : { }
+    }
+  }, {
+    "description" : "<span>Highlight <br>your services with a simple click</span>",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "display_link" : true,
+    "link" : {
+      "url" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "icon_field" : { }
+    }
+  }, {
+    "description" : "<span>Highlight <br>your services with a simple click</span>",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "display_link" : true,
+    "link" : {
+      "url" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "icon_field" : { }
+    }
+  } ]
 } ]
