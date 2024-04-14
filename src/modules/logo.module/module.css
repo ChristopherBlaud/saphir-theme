@@ -1,13 +1,1 @@
-.logo-slider__inner {
-    align-items: center;
-    transition-timing-function: linear;
-}
-.logo-slider__inner__item__image {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-.logo-slider__inner__item__image img {
-    max-height: 40px;
-    max-width: 100%;
-}
+.logo-slider__inner{align-items:center;transition-timing-function:linear}.logo-slider__inner__item__image{align-items:center;display:flex;justify-content:center}.logo-slider__inner__item__image img{max-height:40px;max-width:100%}

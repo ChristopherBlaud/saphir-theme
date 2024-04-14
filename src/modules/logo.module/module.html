@@ -1,4 +1,6 @@
-<div id="{{ name }}" class="logo-slider swiper" 
+{% import '../../macros/_style.html' %}
+
+<div id="{{ name }}" class="logo-slider swiper{{ ' animated' if module.style.animated_module }}" 
   data-slides-per-view-xl="{{ module.style.desktop.slides_per_view }}"
   data-slides-per-view-md="{{ module.style.tablet.slides_per_view }}"
   data-slides-per-view-xs="{{ module.style.mobile.slides_per_view }}"
@@ -8,6 +10,7 @@
   data-slider-animation-duration-xl="{{ module.style.desktop.animation_duration }}"
   data-slider-animation-duration-md="{{ module.style.tablet.animation_duration }}"
   data-slider-animation-duration-xs="{{ module.style.mobile.animation_duration }}"
+  {{ setAnimationAttr(module.style) }}
   >
   <ul class="logo-slider__inner swiper-wrapper">
     {% for item in module.logo %}
@@ -34,22 +37,3 @@
     {% endfor %}
   </ul>
 </div>
-{% require_css %}
-  <style>
-    #{{ name }} .logo-slider__inner__item__image img {
-      max-height: {{ module.style.desktop.images_max_height ~ 'px' }};
-    }
-
-    @media (max-width: 1024px) {
-      #{{ name }} .logo-slider__inner__item__image img {
-        max-height: {{ module.style.tablet.images_max_height ~ 'px' }};
-      }    
-    }
-
-    @media (max-width: 768px) {
-      #{{ name }} .logo-slider__inner__item__image img {
-        max-height: {{ module.style.mobile.images_max_height ~ 'px' }};
-      }    
-    }    
-  </style>
-{% end_require_css %}

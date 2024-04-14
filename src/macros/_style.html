@@ -51,3 +51,11 @@ isAvailableForNewContent: false
       </style>
     {% end_require_css %}
 {% endmacro %}
+
+{% macro setAnimationAttr(module_style) %}
+{% if module_style.animated_module %}
+{{ 'data-y-position="{{ module.style.animation_settings.position_on_y }}"' if module.style.animation_settings.position_on_y != 0 }}
+{{ ' data-opacity="{{ module.style.animation_settings.opacity }}"' if module.style.animation_settings.opacity != 1 }}
+{{ ' data-animation-delay="{{ module_style.animation_settings.animation_delay }}"' if module_style.animation_settings.animation_delay != 0 }}
+{% endif %}
+{% endmacro %}
