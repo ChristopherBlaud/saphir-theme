@@ -628,6 +628,10 @@ video {
   height: 100% !important;
 }
 
+.h-\[30px\] {
+  height: 30px !important;
+}
+
 .min-h-\[472px\] {
   min-height: 472px !important;
 }
@@ -642,6 +646,10 @@ video {
 
 .w-full {
   width: 100% !important;
+}
+
+.w-\[30px\] {
+  width: 30px !important;
 }
 
 .min-w-\[240px\] {
@@ -682,12 +690,33 @@ video {
        column-gap: 0.5rem !important;
 }
 
+.gap-y-4 {
+  row-gap: 1rem !important;
+}
+
+.gap-x-3 {
+  -moz-column-gap: 0.75rem !important;
+       column-gap: 0.75rem !important;
+}
+
 .overflow-hidden {
   overflow: hidden !important;
 }
 
 .rounded-2xl {
   border-radius: 1rem !important;
+}
+
+.rounded-full {
+  border-radius: 9999px !important;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.rounded-\[50px\] {
+  border-radius: 50px !important;
 }
 
 .rounded-bl-lg {
@@ -717,6 +746,11 @@ video {
   background-color: rgb(176 22 227 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-\[red\] {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity)) !important;
+}
+
 .object-cover {
   -o-object-fit: cover !important;
      object-fit: cover !important;
@@ -724,6 +758,10 @@ video {
 
 .p-2 {
   padding: 0.5rem !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
 }
 
 .px-6 {
@@ -734,6 +772,10 @@ video {
 .py-4 {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
+}
+
+.pr-3 {
+  padding-right: 0.75rem !important;
 }
 
 .text-start {

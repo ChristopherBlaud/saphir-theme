@@ -75,17 +75,29 @@
     margin-inline: auto;
 }
 
+.dnd-section.small .row-fluid {
+    row-gap: {{ theme.layout.xl.small_sections.rows_gap ~ 'px' }};
+}
+
 .dnd-section .row-fluid > [class*="span"] {
     flex-flow: column;
     row-gap: {{ theme.layout.xl.rows_gap ~ 'px' }};
     padding-left: {{ theme.layout.xl.columns_gap ~ 'px' }};
     padding-right: {{ theme.layout.xl.columns_gap ~ 'px' }};
 }
+
+.dnd-section.small .row-fluid > [class*="span"] {
+    row-gap: {{ theme.layout.xl.small_sections.rows_gap ~ 'px' }};
+}
     
 .dnd-section .dnd-row > .row-fluid {
     row-gap: {{ theme.layout.xl.rows_gap ~ 'px' }};
     margin-left: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
     margin-right: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
+}
+
+.dnd-section.small .dnd-row > .row-fluid {
+    row-gap: {{ theme.layout.xl.small_sections.rows_gap ~ 'px' }};
 }
     
 .container-fluid:not(.header-container) .dnd-section:first-of-type {
@@ -98,7 +110,11 @@
 
 .container-fluid:not(.header-container) .dnd-section {
     {{ theme.layout.xl.sections.spacing.css }}
-}            
+}   
+
+.container-fluid:not(.header-container) .dnd-section.small {
+    {{ theme.layout.xl.small_sections.spacing.css }}
+}           
 @media (max-width: 1024px) {
     :root {
         --span1-width: 100%;
@@ -120,12 +136,19 @@
     .container-fluid:not(.header-container) .dnd-section {
         {{ theme.layout.md.sections.spacing.css }}
     }
+    .container-fluid:not(.header-container) .dnd-section.small {
+        {{ theme.layout.md.small_sections.spacing.css }}
+    }               
     .container-fluid:not(.header-container) .dnd-section > .row-fluid {
         max-width: {{ theme.layout.md.max_width ~ 'px' }};
     }
     .dnd-section .row-fluid {
         row-gap: {{ theme.layout.md.rows_gap ~ 'px' }};
-    }        
+    }       
+    
+    .dnd-section.small .row-fluid {
+        row-gap: {{ theme.layout.md.small_sections.rows_gap ~ 'px' }};
+    }            
 }
 
 @media (max-width: 768px) {
@@ -135,7 +158,13 @@
     .container-fluid:not(.header-container) .dnd-section {
         {{ theme.layout.xs.sections.spacing.css }}
     }
+    .container-fluid:not(.header-container) .dnd-section.small {
+        {{ theme.layout.xs.small_sections.spacing.css }}
+    }               
     .dnd-section .row-fluid {
         row-gap: {{ theme.layout.xs.rows_gap ~ 'px' }};
     }    
+    .dnd-section.small .row-fluid {
+        row-gap: {{ theme.layout.xs.small_sections.rows_gap ~ 'px' }};
+    }           
 }

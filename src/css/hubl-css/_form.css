@@ -5,7 +5,7 @@
     border-left-width: {{ theme.forms.field.borders_width.left ~ 'px' }};
     border-right-width: {{ theme.forms.field.borders_width.right ~ 'px' }};
     border-radius: {{ theme.forms.field.border_radius ~ 'px' }};
-    background-color: {{ theme.forms.field.background_color }};
+    background: {{ theme.forms.field.background_color }};
     {{ theme.forms.field.spacing.css }}
     max-height: 40px;
 }

@@ -1,8 +1,8 @@
-.hs-page h1, .hs-page h2, .hs-page h3, .hs-page h4, .hs-page h5, .hs-page h6 {
+body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: {{ theme.fonts.secondary.font_family.font ~ ',' ~ theme.fonts.secondary.font_family.fallback }};
 }
     
-body .hs-page, .hs-page .body-display {
+body, body .body-display {
     font-family: {{ theme.fonts.primary.font_family.font ~ ',' ~ theme.fonts.primary.font_family.fallback }};
     font-size: {{ theme.typography.xl.body_default.font_size ~ 'px' }};
     font-weight: {{ theme.typography.xl.body_default.font_weight }};
@@ -13,11 +13,26 @@ body .hs-page, .hs-page .body-display {
     color: {{ theme.typography.xl.body_default.color }};
 }
 
-.body .hs-page b, .body .hs-page strong {
+.body body b, .body body strong {
     font-weight: {{ theme.typography.xl.body_default.font_weight_bold }};
 }
 
-.hs-page h1, .hs-page .h1-display {
+body .body-small-display {
+    font-size: {{ theme.typography.xl.body_small.font_size ~ 'px' }};
+    font-weight: {{ theme.typography.xl.body_small.font_weight }};
+    line-height: {{ theme.typography.xl.body_small.line_height ~ 'px' }};
+    {% if theme.typography.xl.body_small.text_transform != 'none' %}
+    text-transform: {{ theme.typography.xl.body_small.text_transform }};
+    {% endif %}
+    color: {{ theme.typography.xl.body_small.color }};
+}
+
+body .body-small-display b,
+body .body-small-display strong {
+    font-weight: {{ theme.typography.xl.body_small.font_weight_bold }};
+}
+
+body h1, body .h1-display {
     font-size: {{ theme.typography.xl.h1.font_size ~ 'px' }};
     font-weight: {{ theme.typography.xl.h1.font_weight }};
     line-height: {{ theme.typography.xl.h1.line_height ~ 'px' }};
@@ -27,12 +42,12 @@ body .hs-page, .hs-page .body-display {
     color: {{ theme.typography.xl.h1.color }};
 }
 
-.hs-page h1 b, .hs-page .h1-display b,
-.hs-page h1 strong, .hs-page .h1-display strong {
+body h1 b, body .h1-display b,
+body h1 strong, body .h1-display strong {
     font-weight: {{ theme.typography.xl.h1.font_weight_bold }};
 }
 
-.hs-page h2, .hs-page .h2-display {
+body h2, body .h2-display {
     font-size: {{ theme.typography.xl.h2.font_size ~ 'px' }};
     font-weight: {{ theme.typography.xl.h2.font_weight }};
     line-height: {{ theme.typography.xl.h2.line_height ~ 'px' }};
@@ -42,12 +57,12 @@ body .hs-page, .hs-page .body-display {
     color: {{ theme.typography.xl.h2.color }};
 }
 
-.hs-page h2 b, .hs-page .h2-display b,
-.hs-page h2 strong, .hs-page .h2-display strong {
+body h2 b, body .h2-display b,
+body h2 strong, body .h2-display strong {
     font-weight: {{ theme.typography.xl.h2.font_weight_bold }};
 }
 
-.hs-page h3, .hs-page .h3-display {
+body h3, body .h3-display {
     font-size: {{ theme.typography.xl.h3.font_size ~ 'px' }};
     font-weight: {{ theme.typography.xl.h3.font_weight }};
     line-height: {{ theme.typography.xl.h3.line_height ~ 'px' }};
@@ -57,12 +72,12 @@ body .hs-page, .hs-page .body-display {
     color: {{ theme.typography.xl.h3.color }};
 }
 
-.hs-page h3 b, .hs-page .h3-display b,
-.hs-page h3 strong, .hs-page .h3-display strong {
+body h3 b, body .h3-display b,
+body h3 strong, body .h3-display strong {
     font-weight: {{ theme.typography.xl.h3.font_weight_bold }};
 }
 
-.hs-page h4, .hs-page .h4-display {
+body h4, body .h4-display {
     font-size: {{ theme.typography.xl.h4.font_size ~ 'px' }};
     font-weight: {{ theme.typography.xl.h4.font_weight }};
     line-height: {{ theme.typography.xl.h4.line_height ~ 'px' }};
@@ -72,12 +87,12 @@ body .hs-page, .hs-page .body-display {
     color: {{ theme.typography.xl.h4.color }};
 }
 
-.hs-page h4 b, .hs-page .h4-display b,
-.hs-page h4 strong, .hs-page .h4-display strong {
+body h4 b, body .h4-display b,
+body h4 strong, body .h4-display strong {
     font-weight: {{ theme.typography.xl.h4.font_weight_bold }};
 }
 
-.hs-page h5, .hs-page .h5-display {
+body h5, body .h5-display {
     font-size: {{ theme.typography.xl.h5.font_size ~ 'px' }};
     font-weight: {{ theme.typography.xl.h5.font_weight }};
     line-height: {{ theme.typography.xl.h5.line_height ~ 'px' }};
@@ -87,12 +102,12 @@ body .hs-page, .hs-page .body-display {
     color: {{ theme.typography.xl.h5.color }};
 }
 
-.hs-page h5 b, .hs-page .h5-display b,
-.hs-page h5 strong, .hs-page .h5-display strong {
+body h5 b, body .h5-display b,
+body h5 strong, body .h5-display strong {
     font-weight: {{ theme.typography.xl.h5.font_weight_bold }};
 }
 
-.hs-page h6, .hs-page .h6-display {
+body h6, body .h6-display {
     font-size: {{ theme.typography.xl.h6.font_size ~ 'px' }};
     font-weight: {{ theme.typography.xl.h6.font_weight }};
     line-height: {{ theme.typography.xl.h6.line_height ~ 'px' }};
@@ -102,7 +117,7 @@ body .hs-page, .hs-page .body-display {
     color: {{ theme.typography.xl.h6.color }};
 }
 
-.hs-page h6 b, .hs-page .h6-display b,
-.hs-page h6 strong, .hs-page .h6-display strong {
+body h6 b, body .h6-display b,
+body h6 strong, body .h6-display strong {
     font-weight: {{ theme.typography.xl.h6.font_weight_bold }};
 }

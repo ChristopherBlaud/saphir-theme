@@ -10,7 +10,7 @@
 #header .header-container {
     {{ theme.header.layout.xs.spacing.css }}   
     {% if theme.header.background_color != "none" %}
-    background-color: {{ theme.header.background_color }};
+    background: {{ theme.header.background_color }};
     {% endif %}    
     {{ theme.header.layout.xs.container_spacing.css }}
     {% if theme.header.border_color != "none" %}
@@ -32,7 +32,7 @@
 @media (max-width: 1024px) {
     #header {
         {% if theme.header.background_color != "none" %}
-        background-color: {{ theme.header.background_color }};
+        background: {{ theme.header.background_color }};
         {% endif %}    
         {% if theme.header.border_color != "none" %}
         border-bottom: {{ theme.header.border_width ~ 'px' }} solid {{ theme.header.border_color }};

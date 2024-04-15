@@ -30,21 +30,30 @@ isAvailableForNewContent: false
     {% require_css %}    
       <style>
         #{{ module_id }} .custom-text__inner {
-          justify-content: {{ module_style.desktop.horizontal_alignment }};
+          align-items: {{ module_style.desktop.horizontal_alignment }};
           text-align: {{ module_style.desktop.text_alignment }};
+          {% if module.display_label %}
+          row-gap: {{ module.style.desktop.label_margin ~ 'px' }};
+          {% endif %}
         }
 
         @media (max-width: 1024px) {
           #{{ module_id }} .custom-text__inner {
-            justify-content: {{ module_style.tablet.horizontal_alignment }};
+            align-items: {{ module_style.tablet.horizontal_alignment }};
             text-align: {{ module_style.tablet.text_alignment }};
+            {% if module.display_label %}
+            row-gap: {{ module.style.tablet.label_margin ~ 'px' }};
+            {% endif %}            
           }
         }        
 
         @media (max-width: 768px) {
           #{{ module_id }} .custom-text__inner {
-            justify-content: {{ module_style.mobile.horizontal_alignment }};
+            align-items: {{ module_style.mobile.horizontal_alignment }};
             text-align: {{ module_style.mobile.text_alignment }};
+            {% if module.display_label %}
+            row-gap: {{ module.style.mobile.label_margin ~ 'px' }};
+            {% endif %}             
           }
         }
         

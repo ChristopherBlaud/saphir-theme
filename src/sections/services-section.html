@@ -10,11 +10,8 @@ description: A section displaying a text with a slider to display your services.
         {% dnd_row %}
             {% dnd_module 
                 path='../modules/custom-text'
-                style={{ context.text.style ?
-                    context.text.style : {
-                        
-                    }
-                }} 
+                display_label={{ context.text.display_label ? context.text.display_label : true }}
+                label_text={{ context.text.label ? context.text.display_label : 'Our services' }}
             %}
             {% module_attribute "html" %}
                 {{ context.text.content ? context.text.content : '<h2><b>Communicate <span style="color: {{ theme.colors.secondary.color }}">effectively</span> with your customers</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti nullam.</p>' }}
