@@ -1,3 +1,7 @@
+body {
+    text-wrap: balance;
+}
+
 body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: {{ theme.fonts.secondary.font_family.font ~ ',' ~ theme.fonts.secondary.font_family.fallback }};
 }
@@ -120,4 +124,26 @@ body h6, body .h6-display {
 body h6 b, body .h6-display b,
 body h6 strong, body .h6-display strong {
     font-weight: {{ theme.typography.xl.h6.font_weight_bold }};
+}
+
+@media (max-width: 1024px) {
+    body h1, body .h1-display {
+        font-size: {{ theme.typography.md.h1.font_size ~ 'px' }};
+        line-height: {{ theme.typography.md.h1.line_height ~ 'px' }};
+        {% if theme.typography.md.h1.text_transform != 'none' %}
+        text-transform: {{ theme.typography.md.h1.text_transform }};
+        {% endif %}
+        color: {{ theme.typography.md.h1.color }};
+    }
+}
+
+@media (max-width: 768px) {
+    body h1, body .h1-display {
+        font-size: {{ theme.typography.xs.h1.font_size ~ 'px' }};
+        line-height: {{ theme.typography.xs.h1.line_height ~ 'px' }};
+        {% if theme.typography.xs.h1.text_transform != 'none' %}
+        text-transform: {{ theme.typography.xs.h1.text_transform }};
+        {% endif %}
+        color: {{ theme.typography.xs.h1.color }};
+    }
 }

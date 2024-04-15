@@ -23,6 +23,34 @@ description: A section displaying a text with a slider to display your services.
         {% dnd_row %}
             {% {% dnd_module 'name'
                 path='../modules/services'
+                style={{ context.services.style ? 
+                    context.services.style : {
+                        'desktop': {
+                            'slides_per_view': 2,
+                            'items_spacing': 16,
+                            'images_max_height': 45,
+                            'animation_duration': 1000,
+                            'autoplay': false,
+                            'autoplay_delay': 0
+                        },
+                        'tablet': {
+                            'slides_per_view': 1,
+                            'items_spacing': 24,
+                            'images_max_height': 40,
+                            'animation_duration': 2000,
+                            'autoplay': true,
+                            'autoplay_delay': 2000                            
+                        },
+                        'mobile': {
+                            'slides_per_view': 1,
+                            'items_spacing': 16,
+                            'images_max_height': 30,
+                            'animation_duration': 2000,
+                            'autoplay': true,
+                            'autoplay_delay': 2000                            
+                        }
+                    }
+                }}                
             %}
             {% end_dnd_module %}%}
         {% end_dnd_row %}

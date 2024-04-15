@@ -374,7 +374,7 @@
                 }
               },
               "default": {
-                "variant": "400",
+                "variant": "500",
                 "styles": {
                   "text-decoration": "none"
                 }
@@ -500,7 +500,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 64,
+                        "value": 0,
                         "units": "px"
                       },
                       "left": {
@@ -632,7 +632,7 @@
               "display": "slider",
               "max": 2500,
               "min": 900,
-              "default": 1216
+              "default": 1280
             }
           ]
         },
@@ -1324,7 +1324,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 46
+                  "default": 58
                 },
                 {
                   "label": "Font weight",
@@ -1357,7 +1357,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 55.2
+                  "default": 69.6
                 }
               ]
             },
@@ -3418,7 +3418,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 46
+                  "default": 36
                 },
                 {
                   "label": "Font weight",
@@ -3451,7 +3451,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 55.2
+                  "default": 47
                 }
               ]
             },

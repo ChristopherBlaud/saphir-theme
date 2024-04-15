@@ -25,6 +25,7 @@
             slidesPerView: slidesPerViewXS,
             spaceBetween: itemsSpacingXS, 
             loop: true,
+            freeMode: false,
             speed: speedXS,
             autoplay: autoplayXS && { delay: autoplayDelayXS },
             navigation: {
