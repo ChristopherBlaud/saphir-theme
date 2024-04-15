@@ -25,6 +25,10 @@
     width: auto;
 }
 
+#header .header-container .dnd-column {
+    justify-content: center;
+}
+
 @media (max-width: 1024px) {
     #header {
         {% if theme.header.background_color != "none" %}

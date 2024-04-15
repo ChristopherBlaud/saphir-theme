@@ -1,6 +1,6 @@
 {% import '../../macros/_style.html' %}
 
-<div id="{{ name }}" class="services">
+<div id="{{ name }}" class="services relative">
   <div class="services__inner swiper{{ ' animated' if module.style.animated_module }}"
   {{ setSliderAttr(module.style) }}
   {{ setAnimationAttr(module.style) }}>
@@ -18,7 +18,6 @@
             >
           </a>
         {% endif %}
-
         <picture class="services__inner__container__item__image-container flex absolute z-10 w-full h-full top-0 left-O">
           {% if item.image_field.src %}
             {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
@@ -31,10 +30,8 @@
             <img class="w-full h-full object-cover" src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
           {% endif %}        
         </picture>
-
-        <div class="services__inner__container__item__description flex relative z-20 min-w-[240px] px-6 py-4 h3-display">{{ item.description }}</div>
-
-        <div class="services__inner__container__item__icon-container flex justify-center items-center absolute z-20 w-[35px] h-[35px] top-0 right-0 p-2 bg-purple-950 rounded-bl-lg">
+        <div class="services__inner__container__item__description flex relative z-20 min-w-[240px] px-6 py-4">{{ item.description }}</div>
+        <div class="services__inner__container__item__icon-container flex justify-center items-center absolute z-20 w-[35px] h-[35px] top-0 right-0 p-2 bg-purple rounded-bl-lg">
           {% icon
             name="{{ item.link.icon_field.name }}"
             style="{{ item.link.icon_field.type }}"
@@ -44,11 +41,18 @@
         </div>
         </li>
       {% endfor %}
-    </ul>
-  </div>
-</div> 
+      </ul>
+      </div>
+  <div class="swiper-button-prev left-[-64px]"></div>
+  <div class="swiper-button-next right-[-64px]"></div>
+  <div class="swiper-pagination bottom-[-32px] flex left-0 text-start gap-x-2"></div>
+  </div> 
 {% require_css %}
   <style>
+  #{{ name }} {
+    {{ module.style.desktop.spacing.css }}
+  }
+  
   #{{ name }} .services__inner__container__item::after {
     content: "";
     display: flex;
@@ -68,6 +72,42 @@
 
   #{{ name }} .services__inner__container__item__icon-container svg path {
     fill: white;
+  }
+
+  #{{ name }} .swiper-button-prev,
+  #{{ name }} .swiper-button-next {
+      color: {{ theme.colors.grey.color }};
+  }
+
+  #{{ name }} .swiper-button-prev:hover,
+  #{{ name }} .swiper-button-next:hover {
+    color: {{ theme.colors.grey_dark.color }};
+  }  
+
+  #{{ name }} .swiper-pagination-bullet {
+    background-color: {{ theme.colors.grey_night.color }};
+  }
+
+  #{{ name }} .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: {{ theme.colors.grey_dark.color }};
+  }
+
+  @media (max-width: 1024px) {
+    #{{ name }} {
+      {{ module.style.tablet.spacing.css }}
+    }
+  }
+
+  @media (max-width: 768px) {
+    #{{ name }} {
+      {{ module.style.mobile.spacing.css }}      
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #{{ name }} .services__inner {
+      padding-right: 64px;
+    }
   }
   </style>
 {% end_require_css %}

@@ -132,7 +132,9 @@
     .container-fluid:not(.header-container) .dnd-section:first-of-type {
         {{ theme.layout.xs.first_section.spacing.css }}
     }    
-
+    .container-fluid:not(.header-container) .dnd-section {
+        {{ theme.layout.xs.sections.spacing.css }}
+    }
     .dnd-section .row-fluid {
         row-gap: {{ theme.layout.xs.rows_gap ~ 'px' }};
     }    

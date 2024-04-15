@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             speed: speedXS,
             autoplay: autoplayXS && { delay: autoplayDelayXS },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true        
+            }, 
             breakpoints: {
                 1024: {
                     slidesPerView: slidesPerViewXL,

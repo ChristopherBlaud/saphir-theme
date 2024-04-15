@@ -83,6 +83,32 @@
           }
         },
         {
+          "label": "Grey medium",
+          "name": "grey_medium",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "default": {
+            "color": "#F9F9FB"
+          }
+        },              
+        {
+          "label": "Grey night",
+          "name": "grey_night",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "default": {
+            "color": "#4d4d5b"
+          }
+        },   
+        {
           "label": "Grey dark",
           "name": "grey_dark",
           "type": "color",
@@ -94,7 +120,7 @@
           "default": {
             "color": "#7D7D91"
           }
-        },        
+        },   
         {
           "label": "Body",
           "name": "body_default",
@@ -440,50 +466,20 @@
       ]
     },
     {
-      "label": "Header",
-      "name": "header",
+      "label": "Layout",
+      "name": "layout",
       "type": "group",
       "children": [
         {
-          "label": "Layout",
-          "name": "layout",
+          "label": "Desktop",
+          "name": "xl",
           "type": "group",
           "children": [
             {
-              "label": "Desktop",
-              "name": "xl",
+              "label": "First section",
+              "name": "first_section",
               "type": "group",
               "children": [
-                {
-                  "label": "Container spacing",
-                  "name": "container_spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 12,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 12,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                },                
                 {
                   "label": "Spacing",
                   "name": "spacing",
@@ -496,7 +492,7 @@
                   "default": {
                     "padding": {
                       "top": {
-                        "value": 24,
+                        "value": 128,
                         "units": "px"
                       },
                       "right": {
@@ -504,74 +500,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 24,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                }                                 
-              ]
-            },
-            {
-              "label": "Tablet",
-              "name": "md",
-              "type": "group",
-              "children": [
-                {
-                  "label": "Container spacing",
-                  "name": "container_spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 24,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 24,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                },                
-                {
-                  "label": "Spacing",
-                  "name": "spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 24,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 24,
+                        "value": 64,
                         "units": "px"
                       },
                       "left": {
@@ -582,42 +511,12 @@
                   }
                 }                
               ]
-            },
+            },             
             {
-              "label": "Mobile",
-              "name": "xs",
+              "label": "Sections",
+              "name": "sections",
               "type": "group",
               "children": [
-                {
-                  "label": "Container spacing",
-                  "name": "container_spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 24,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 24,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                },                
                 {
                   "label": "Spacing",
                   "name": "spacing",
@@ -630,7 +529,7 @@
                   "default": {
                     "padding": {
                       "top": {
-                        "value": 24,
+                        "value": 64,
                         "units": "px"
                       },
                       "right": {
@@ -638,7 +537,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 24,
+                        "value": 64,
                         "units": "px"
                       },
                       "left": {
@@ -649,184 +548,252 @@
                   }
                 }                
               ]
+            }, {
+              "label": "Rows gap",
+              "name": "rows_gap",
+              "type": "number",
+              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 48
+            },
+            {
+              "label": "Columns gap",
+              "name": "columns_gap",
+              "type": "number",
+              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 16
+            }, {
+              "label": "Maximum content width",
+              "name": "max_width",
+              "type": "number",
+              "display": "slider",
+              "max": 2500,
+              "min": 900,
+              "default": 1216
             }
           ]
-        },        
+        },
         {
-          "label": "Background color",
-          "name": "background_color",
-          "inline_help_text": "Set the header background color here.",
-          "type": "choice",
-            "choices": [
-              [
-                "transparent",
-                "None"
-              ],
-              [
-                "{{ theme.colors.primary.color }}",
-                "Primary color"
-              ],
-              [
-                "{{ theme.colors.secondary.color }}",
-                "Secondary color"
-              ],
-              [
-                "{{ theme.colors.black.color }}",
-                "Black"
-              ],
-              [
-                "{{ theme.colors.grey.color }}",
-                "Grey"
-              ],
-              [
-                "{{ theme.colors.grey_accent.color }}",
-                "Grey accent"
-              ],   
-              [
-                "{{ theme.colors.grey_dark.color }}",
-                "Grey dark"
-              ],    
-              [
-                "{{ theme.colors.body_default.color }}",
-                "Body color"
-              ],                                               
-              [
-                "{{ theme.colors.white.color }}",
-                "White"
-              ],
-              [
-                "{{ theme.colors.white_accent.color }}",
-                "White accent"
+          "label": "Tablet",
+          "name": "md",
+          "type": "group",
+          "children": [
+            {
+              "label": "First section",
+              "name": "first_section",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 128,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
               ]
-            ],
-          "display": "select",
-          "default": "{{ theme.colors.white_accent.color }}"
-        },
-        {
-          "label": "Border color",
-          "name": "border_color",
-          "inline_help_text": "Set the header border color here.",
-          "type": "choice",
-            "choices": [
-              [
-                "transparent",
-                "None"
-              ],
-              [
-                "{{ theme.colors.primary.color }}",
-                "Primary color"
-              ],
-              [
-                "{{ theme.colors.secondary.color }}",
-                "Secondary color"
-              ],
-              [
-                "{{ theme.colors.black.color }}",
-                "Black"
-              ],
-              [
-                "{{ theme.colors.grey.color }}",
-                "Grey"
-              ],
-              [
-                "{{ theme.colors.grey_accent.color }}",
-                "Grey accent"
-              ],   
-              [
-                "{{ theme.colors.grey_dark.color }}",
-                "Grey dark"
-              ],    
-              [
-                "{{ theme.colors.body_default.color }}",
-                "Body color"
-              ],                                               
-              [
-                "{{ theme.colors.white.color }}",
-                "White"
-              ],
-              [
-                "{{ theme.colors.white_accent.color }}",
-                "White accent"
+            },               
+            {
+              "label": "Sections",
+              "name": "sections",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
               ]
-            ],
-          "display": "select",
-          "default": "{{ theme.colors.grey.color }}"
-        },
-        {
-          "label": "Border width",
-          "name": "border_width",
-          "type": "number",
-          "display": "slider",
-          "max": 20,
-          "min": 0,
-          "default": 1
-        },
-        {
-          "label": "Border radius",
-          "name": "border_radius",
-          "type": "number",
-          "display": "slider",
-          "max": 50,
-          "min": 0,
-          "default": 8
-        },
-        {
-          "label": "Link color",
-          "name": "link_color",
-          "type": "color",
-          "visibility": {
-            "hidden_subfields": {
-              "opacity": true
+            }, {
+              "label": "Rows gap",
+              "name": "rows_gap",
+              "type": "number",
+              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 48
+            }, {
+              "label": "Column gap",
+              "name": "column_gap",
+              "type": "number",
+              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 16
+            }, 
+            {
+              "label": "Maximum content width",
+              "name": "max_width",
+              "type": "number",
+              "display": "slider",
+              "max": 2500,
+              "min": 500,
+              "default": 520
             }
-          },
-          "inherited_value": {
-            "property_value_paths": {
-              "color": "theme.colors.black.color"
-            }
-          }
+          ]
         },
         {
-          "label": "Spacing",
-          "name": "spacing",
-          "type": "spacing",
-          "visibility": {
-            "hidden_subfields": {
-              "margin": true
-            }
-          },
-          "default": {
-            "padding": {
-              "top": {
-                "value": 12,
-                "units": "px"
-              },
-              "right": {
-                "value": 24,
-                "units": "px"
-              },
-              "bottom": {
-                "value": 12,
-                "units": "px"
-              },
-              "left": {
-                "value": 24,
-                "units": "px"
-              }
+          "label": "Mobile",
+          "name": "xs",
+          "type": "group",
+          "children": [
+            {
+              "label": "First section",
+              "name": "first_section",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 128,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
+            },               
+            {
+              "label": "Sections",
+              "name": "sections",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
+            }, {
+              "label": "Rows gap",
+              "name": "rows_gap",
+              "type": "number",
+              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 24
             },
-            "margin": {
-              "top": {
-                "value": 0,
-                "units": "px"
-              },
-              "bottom": {
-                "value": 0,
-                "units": "px"
-              }
-            }              
-          }
-        }        
+            {
+              "label": "Column gap",
+              "name": "column_gap",
+              "type": "number",
+              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 16
+            }
+          ]
+        }
       ]
-    },
+    },    
     {
       "label": "Typography",
       "name": "typography",
@@ -933,6 +900,28 @@
                   "suffix": "px",
                   "default": 16
                 },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
                 {
                   "label": "Line height",
                   "name": "line_height",
@@ -1042,6 +1031,28 @@
                   "default": 46
                 },
                 {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
+                {
                   "label": "Line height",
                   "name": "line_height",
                   "type": "number",
@@ -1149,6 +1160,28 @@
                   "suffix": "px",
                   "default": 36
                 },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },  
                 {
                   "label": "Line height",
                   "name": "line_height",
@@ -1258,6 +1291,28 @@
                   "default": 23
                 },
                 {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                
+                {
                   "label": "Line height",
                   "name": "line_height",
                   "type": "number",
@@ -1365,6 +1420,28 @@
                   "suffix": "px",
                   "default": 36
                 },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
                 {
                   "label": "Line height",
                   "name": "line_height",
@@ -1474,6 +1551,28 @@
                   "default": 36
                 },
                 {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },  
+                {
                   "label": "Line height",
                   "name": "line_height",
                   "type": "number",
@@ -1582,6 +1681,28 @@
                   "default": 36
                 },
                 {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },   
+                {
                   "label": "Line height",
                   "name": "line_height",
                   "type": "number",
@@ -1602,136 +1723,916 @@
           "type": "group",
           "inline_help_text": "Define font styles for tablet here.",
           "children": [
-          {
-            "label": "Body",
-            "name": "default",
-            "type": "font",
-            "visibility": {
-              "hidden_subfields": {
-                "styles": true
-              }
+            {
+              "label": "Body",
+              "name": "body_default",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.body_default.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 16
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 27.2
+                }
+              ]
+            },      
+            {
+              "label": "Heading one (H1)",
+              "name": "h1",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 46
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 55.2
+                }
+              ]
             },
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.primary.color",
-                "fallback": "theme.fonts.primary.font_family.fallback",
-                "font": "theme.fonts.primary.font_family.font",
-                "font_set": "theme.fonts.primary.font_family.font_set"
-              }
+            {
+              "label": "Heading two (H2)",
+              "name": "h2",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 24,
-              "size_unit": "px"
-            }
-          },               
-          {
-            "label": "Heading two (H2)",
-            "name": "heading_two",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading three (H3)",
+              "name": "h3",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 23
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 29
+                }
+              ]
             },
-            "default": {
-              "size": 36,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading three (H3)",
-            "name": "heading_three",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading four (H4)",
+              "name": "h4",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 30,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading four (H4)",
-            "name": "heading_four",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading five (H5)",
+              "name": "h5",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 24,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          },
-          {
-            "label": "Heading five (H5)",
-            "name": "heading_five",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "color": "#000000",
-              "size": 16,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          },
-          {
-            "label": "Heading six (H6)",
-            "name": "heading_six",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "size": 14,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          }
+            {
+              "label": "Heading six (H6)",
+              "name": "h6",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },   
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
+            }      
           ]    
         },    
         {
@@ -1740,158 +2641,916 @@
           "type": "group",
           "inline_help_text": "Define font styles for mobile here.",
           "children": [
-          {
-            "label": "Body",
-            "name": "default",
-            "type": "font",
-            "visibility": {
-              "hidden_subfields": {
-                "styles": true
-              }
+            {
+              "label": "Body",
+              "name": "body_default",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.body_default.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 16
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 27.2
+                }
+              ]
+            },      
+            {
+              "label": "Heading one (H1)",
+              "name": "h1",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 46
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 55.2
+                }
+              ]
             },
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.primary.color",
-                "fallback": "theme.fonts.primary.font_family.fallback",
-                "font": "theme.fonts.primary.font_family.font",
-                "font_set": "theme.fonts.primary.font_family.font_set"
-              }
+            {
+              "label": "Heading two (H2)",
+              "name": "h2",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 24,
-              "size_unit": "px"
-            }
-          },               
-          {
-            "label": "Heading one (H1)",
-            "name": "heading_one",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading three (H3)",
+              "name": "h3",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 23
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 29
+                }
+              ]
             },
-            "default": {
-              "size": 46,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading two (H2)",
-            "name": "heading_two",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading four (H4)",
+              "name": "h4",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },                  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 36,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading three (H3)",
-            "name": "heading_three",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
+            {
+              "label": "Heading five (H5)",
+              "name": "h5",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },  
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
             },
-            "default": {
-              "size": 30,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              },
-              "variant": "700"
-            }
-          },
-          {
-            "label": "Heading four (H4)",
-            "name": "heading_four",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "size": 24,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          },
-          {
-            "label": "Heading five (H5)",
-            "name": "heading_five",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "color": "#000000",
-              "size": 16,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          },
-          {
-            "label": "Heading six (H6)",
-            "name": "heading_six",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.colors.secondary.color",
-                "fallback": "theme.fonts.secondary.font_family.fallback",
-                "font": "theme.fonts.secondary.font_family.font",
-                "font_set": "theme.fonts.secondary.font_family.font_set"
-              }
-            },
-            "default": {
-              "size": 14,
-              "size_unit": "px",
-              "styles": {
-                "text-decoration": "none"
-              }
-            }
-          }
+            {
+              "label": "Heading six (H6)",
+              "name": "h6",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "{{ theme.colors.primary.color }}",
+                      "Primary color"
+                    ],
+                    [
+                      "{{ theme.colors.secondary.color }}",
+                      "Secondary color"
+                    ],
+                    [
+                      "{{ theme.colors.black.color }}",
+                      "Black"
+                    ],
+                    [
+                      "{{ theme.colors.grey.color }}",
+                      "Grey"
+                    ],
+                    [
+                      "{{ theme.colors.grey_accent.color }}",
+                      "Grey accent"
+                    ],   
+                    [
+                      "{{ theme.colors.grey_dark.color }}",
+                      "Grey dark"
+                    ],    
+                    [
+                      "{{ theme.colors.body_default.color }}",
+                      "Body color"
+                    ],                                               
+                    [
+                      "{{ theme.colors.white.color }}",
+                      "White"
+                    ],
+                    [
+                      "{{ theme.colors.white_accent.color }}",
+                      "White accent"
+                    ],
+                   [
+                      "{{ theme.colors.gradient.css }}",
+                      "Gradient"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "{{ theme.colors.black.color }}"
+                },
+                {
+                  "label": "Text transform",
+                  "name": "text_transform",
+                  "type": "choice",
+                  "inline_help_text": "Select an option below to change the display on element.",
+                  "choices": [
+                    [
+                      "none",
+                      "None"
+                    ],
+                    [
+                      "capitalize",
+                      "Capitalize"
+                    ],
+                    [
+                      "uppercase",
+                      "Uppercase"
+                    ],
+                    [
+                      "lowercase",
+                      "Lowercase"
+                    ]
+                  ],
+                  "display": "select",
+                  "default": "none"
+                },
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 36
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },
+                {
+                  "label": "Font weight bold",
+                  "name": "font_weight_bold",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 600
+                },   
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 48
+                }
+              ]
+            }      
           ]    
         },          
         {
@@ -2515,20 +4174,50 @@
       ]
     },
     {
-      "label": "Layout",
-      "name": "layout",
+      "label": "Header",
+      "name": "header",
       "type": "group",
       "children": [
         {
-          "label": "Desktop",
-          "name": "xl",
+          "label": "Layout",
+          "name": "layout",
           "type": "group",
           "children": [
             {
-              "label": "First section",
-              "name": "first_section",
+              "label": "Desktop",
+              "name": "xl",
               "type": "group",
               "children": [
+                {
+                  "label": "Container spacing",
+                  "name": "container_spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 12,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 12,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                },                
                 {
                   "label": "Spacing",
                   "name": "spacing",
@@ -2541,7 +4230,7 @@
                   "default": {
                     "padding": {
                       "top": {
-                        "value": 128,
+                        "value": 24,
                         "units": "px"
                       },
                       "right": {
@@ -2549,7 +4238,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 0,
+                        "value": 24,
                         "units": "px"
                       },
                       "left": {
@@ -2558,87 +4247,44 @@
                       }
                     }              
                   }
-                }                
+                }                                 
               ]
-            },             
-            {
-              "label": "Sections",
-              "name": "sections",
-              "type": "group",
-              "children": [
-                {
-                  "label": "Spacing",
-                  "name": "spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 64,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 64,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                }                
-              ]
-            }, {
-              "label": "Rows gap",
-              "name": "rows_gap",
-              "type": "number",
-              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 48
             },
             {
-              "label": "Columns gap",
-              "name": "columns_gap",
-              "type": "number",
-              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 16
-            }, {
-              "label": "Maximum content width",
-              "name": "max_width",
-              "type": "number",
-              "display": "slider",
-              "max": 2500,
-              "min": 900,
-              "default": 1216
-            }
-          ]
-        },
-        {
-          "label": "Tablet",
-          "name": "md",
-          "type": "group",
-          "children": [
-            {
-              "label": "First section",
-              "name": "first_section",
+              "label": "Tablet",
+              "name": "md",
               "type": "group",
               "children": [
+                {
+                  "label": "Container spacing",
+                  "name": "container_spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 24,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 24,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                },                
                 {
                   "label": "Spacing",
                   "name": "spacing",
@@ -2651,7 +4297,7 @@
                   "default": {
                     "padding": {
                       "top": {
-                        "value": 128,
+                        "value": 24,
                         "units": "px"
                       },
                       "right": {
@@ -2659,7 +4305,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 0,
+                        "value": 24,
                         "units": "px"
                       },
                       "left": {
@@ -2670,179 +4316,251 @@
                   }
                 }                
               ]
-            },               
-            {
-              "label": "Sections",
-              "name": "sections",
-              "type": "group",
-              "children": [
-                {
-                  "label": "Spacing",
-                  "name": "spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 32,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 32,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                }                
-              ]
-            }, {
-              "label": "Rows gap",
-              "name": "rows_gap",
-              "type": "number",
-              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 48
-            }, {
-              "label": "Column gap",
-              "name": "column_gap",
-              "type": "number",
-              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 16
-            }, 
-            {
-              "label": "Maximum content width",
-              "name": "max_width",
-              "type": "number",
-              "display": "slider",
-              "max": 2500,
-              "min": 500,
-              "default": 520
-            }
-          ]
-        },
-        {
-          "label": "Mobile",
-          "name": "xs",
-          "type": "group",
-          "children": [
-            {
-              "label": "First section",
-              "name": "first_section",
-              "type": "group",
-              "children": [
-                {
-                  "label": "Spacing",
-                  "name": "spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 128,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                }                
-              ]
-            },               
-            {
-              "label": "Sections",
-              "name": "sections",
-              "type": "group",
-              "children": [
-                {
-                  "label": "Spacing",
-                  "name": "spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 32,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 32,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                }                
-              ]
-            }, {
-              "label": "Rows gap",
-              "name": "rows_gap",
-              "type": "number",
-              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 24
             },
             {
-              "label": "Column gap",
-              "name": "column_gap",
-              "type": "number",
-              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 16
+              "label": "Mobile",
+              "name": "xs",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Container spacing",
+                  "name": "container_spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 24,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 24,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                },                
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 24,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 24,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
             }
           ]
-        }
+        },        
+        {
+          "label": "Background color",
+          "name": "background_color",
+          "inline_help_text": "Set the header background color here.",
+          "type": "choice",
+            "choices": [
+              [
+                "transparent",
+                "None"
+              ],
+              [
+                "{{ theme.colors.primary.color }}",
+                "Primary color"
+              ],
+              [
+                "{{ theme.colors.secondary.color }}",
+                "Secondary color"
+              ],
+              [
+                "{{ theme.colors.black.color }}",
+                "Black"
+              ],
+              [
+                "{{ theme.colors.grey.color }}",
+                "Grey"
+              ],
+              [
+                "{{ theme.colors.grey_accent.color }}",
+                "Grey accent"
+              ],   
+              [
+                "{{ theme.colors.grey_dark.color }}",
+                "Grey dark"
+              ],    
+              [
+                "{{ theme.colors.body_default.color }}",
+                "Body color"
+              ],                                               
+              [
+                "{{ theme.colors.white.color }}",
+                "White"
+              ],
+              [
+                "{{ theme.colors.white_accent.color }}",
+                "White accent"
+              ]
+            ],
+          "display": "select",
+          "default": "{{ theme.colors.white_accent.color }}"
+        },
+        {
+          "label": "Border color",
+          "name": "border_color",
+          "inline_help_text": "Set the header border color here.",
+          "type": "choice",
+            "choices": [
+              [
+                "transparent",
+                "None"
+              ],
+              [
+                "{{ theme.colors.primary.color }}",
+                "Primary color"
+              ],
+              [
+                "{{ theme.colors.secondary.color }}",
+                "Secondary color"
+              ],
+              [
+                "{{ theme.colors.black.color }}",
+                "Black"
+              ],
+              [
+                "{{ theme.colors.grey.color }}",
+                "Grey"
+              ],
+              [
+                "{{ theme.colors.grey_accent.color }}",
+                "Grey accent"
+              ],   
+              [
+                "{{ theme.colors.grey_dark.color }}",
+                "Grey dark"
+              ],    
+              [
+                "{{ theme.colors.body_default.color }}",
+                "Body color"
+              ],                                               
+              [
+                "{{ theme.colors.white.color }}",
+                "White"
+              ],
+              [
+                "{{ theme.colors.white_accent.color }}",
+                "White accent"
+              ]
+            ],
+          "display": "select",
+          "default": "{{ theme.colors.grey.color }}"
+        },
+        {
+          "label": "Border width",
+          "name": "border_width",
+          "type": "number",
+          "display": "slider",
+          "max": 20,
+          "min": 0,
+          "default": 1
+        },
+        {
+          "label": "Border radius",
+          "name": "border_radius",
+          "type": "number",
+          "display": "slider",
+          "max": 50,
+          "min": 0,
+          "default": 8
+        },
+        {
+          "label": "Link color",
+          "name": "link_color",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "theme.colors.black.color"
+            }
+          }
+        },
+        {
+          "label": "Spacing",
+          "name": "spacing",
+          "type": "spacing",
+          "visibility": {
+            "hidden_subfields": {
+              "margin": true
+            }
+          },
+          "default": {
+            "padding": {
+              "top": {
+                "value": 12,
+                "units": "px"
+              },
+              "right": {
+                "value": 24,
+                "units": "px"
+              },
+              "bottom": {
+                "value": 12,
+                "units": "px"
+              },
+              "left": {
+                "value": 24,
+                "units": "px"
+              }
+            },
+            "margin": {
+              "top": {
+                "value": 0,
+                "units": "px"
+              },
+              "bottom": {
+                "value": 0,
+                "units": "px"
+              }
+            }              
+          }
+        }        
       ]
-    },
+    },    
     {
       "label": "Footer",
       "name": "footer",
