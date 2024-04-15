@@ -60,6 +60,7 @@ module.exports = ({ portal, autoupload }) => ({
         { from: 'src/css/hubl-css', to: 'css/hubl-css' },
         { from: 'src/css/lib', to: 'css/lib' },
         { from: 'src/js/lib', to: 'js/lib' },
+        { from: 'src/js/utils', to: 'js/utils' },
         { from: "src/images", to: "images" },
         { from: "src/templates", to: "templates" },
         { from: "src/layouts", to: "layouts" },

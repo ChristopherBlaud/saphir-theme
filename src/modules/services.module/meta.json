@@ -15,6 +15,10 @@
     "autoload" : true,
     "path" : "../../js/lib/swiper-bundle.min.js",
     "name" : "swiper-bundle.min.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../js/utils/initSliders.js",
+    "name" : "initSliders.js"
   } ],
   "label" : "Services",
   "is_available_for_new_content" : true
