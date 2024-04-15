@@ -227,6 +227,47 @@
       "suffix" : "ms",
       "type" : "number",
       "default" : 6
+    }, {
+      "id" : "e8f4f3af-9282-8506-0bce-8d5af292ca9f",
+      "name" : "autoplay",
+      "display_width" : null,
+      "label" : "Autoplay",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "df086faa-abec-02e6-0bbb-a22ed426f60d",
+      "name" : "autoplay_delay",
+      "display_width" : null,
+      "label" : "Autoplay delay",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "style.desktop.autoplay",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "text",
+      "min" : 0,
+      "max" : 60000,
+      "step" : 1,
+      "suffix" : "ms",
+      "type" : "number",
+      "default" : 3000
+    }, {
+      "id" : "61c74884-05dd-7759-ffd3-4bfed9ae6146",
+      "name" : "spacing",
+      "display_width" : null,
+      "label" : "Spacing",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : { }
     } ],
     "tab" : "STYLE",
     "expanded" : false,
@@ -296,7 +337,48 @@
       "suffix" : "ms",
       "type" : "number",
       "default" : 6
-    } ],
+    }, {
+      "id" : "e8f4f3af-9282-8506-0bce-8d5af292ca9g",
+      "name" : "autoplay",
+      "display_width" : null,
+      "label" : "Autoplay",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "df086faa-abec-02e6-0bbb-a22ed426f60a",
+      "name" : "autoplay_delay",
+      "display_width" : null,
+      "label" : "Autoplay delay",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "style.tablet.autoplay",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "text",
+      "min" : 0,
+      "max" : 60000,
+      "step" : 1,
+      "suffix" : "ms",
+      "type" : "number",
+      "default" : 3000
+    }, {
+      "id" : "61c74884-05dd-7759-ffd3-4bfed9ae6147",
+      "name" : "spacing",
+      "display_width" : null,
+      "label" : "Spacing",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : { }
+    }],
     "tab" : "STYLE",
     "expanded" : false,
     "type" : "group",
@@ -365,6 +447,66 @@
       "suffix" : "ms",
       "type" : "number",
       "default" : 6
+    }, {
+      "id" : "e8f4f3af-9282-8506-0bce-8d5af292ca9h",
+      "name" : "autoplay",
+      "display_width" : null,
+      "label" : "Autoplay",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "df086faa-abec-02e6-0bbb-a22ed426f60b",
+      "name" : "autoplay_delay",
+      "display_width" : null,
+      "label" : "Autoplay delay",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "style.mobile.autoplay",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "text",
+      "min" : 0,
+      "max" : 60000,
+      "step" : 1,
+      "suffix" : "ms",
+      "type" : "number",
+      "default" : 3000
+    }, {
+      "id" : "61c74884-05dd-7759-ffd3-4bfed9ae6148",
+      "name" : "spacing",
+      "display_width" : null,
+      "label" : "Spacing",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
     } ],
     "tab" : "STYLE",
     "expanded" : false,
