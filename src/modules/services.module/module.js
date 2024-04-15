@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const logosSliders = document.querySelectorAll('.logo-slider__inner');
+    const logosSliders = document.querySelectorAll('.services__inner');
 
     logosSliders && logosSliders.forEach(slider => {
         const itemsSpacingXL = slider.dataset.itemsSpacingXl,
@@ -10,7 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerViewXS = slider.dataset.slidesPerViewXs,
             speedXL = slider.dataset.sliderAnimationDurationXl,
             speedMD = slider.dataset.sliderAnimationDurationMd,
-            speedXS = slider.dataset.sliderAnimationDurationXs;
+            speedXS = slider.dataset.sliderAnimationDurationXs,
+            autoplayXL = JSON.parse(slider.dataset.autoplayXl),
+            autoplayMD = JSON.parse(slider.dataset.autoplayMd),
+            autoplayXS = JSON.parse(slider.dataset.autoplayXs),
+            autoplayDelayXL = slider.dataset.autoplayDelayXl,
+            autoplayDelayMD = slider.dataset.autoplayDelayMd,
+            autoplayDelayXS = slider.dataset.autoplayDelayXs;            
         
 
         const swiper = new Swiper(slider, {
@@ -19,19 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
             spaceBetween: itemsSpacingXS, 
             loop: true,
             speed: speedXS,
-            autoplay: {
-                delay: 0
-            },
+            autoplay: autoplayXS && { delay: autoplayDelayXS },
             breakpoints: {
                 1024: {
                     slidesPerView: slidesPerViewXL,
                     spaceBetween: itemsSpacingXL,
-                    speed: speedXL
+                    speed: speedXL,
+                    autoplay: autoplayXL && { delay: autoplayDelayXL },
                 },
                 768: {
                     slidesPerView: slidesPerViewMD,
                     spaceBetween: itemsSpacingMD,
-                    speed: speedMD
+                    speed: speedMD,
+                    autoplay: autoplayMD && { delay: autoplayDelayMD },
                 }
             }            
         });

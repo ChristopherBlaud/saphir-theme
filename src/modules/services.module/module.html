@@ -1,23 +1,25 @@
 {% import '../../macros/_style.html' %}
 
 <div id="{{ name }}" class="services">
-  <div class="services__inner">
-    <ul class="services__inner__container">
+  <div class="services__inner swiper{{ ' animated' if module.style.animated_module }}"
+  {{ setSliderAttr(module.style) }}
+  {{ setAnimationAttr(module.style) }}>
+    <ul class="services__inner__container swiper-wrapper flex">
     {% for item in module.service %}
-      <li class="services__inner__container__item">
+      <li class="services__inner__container__item swiper-slide flex flex-col justify-end min-h-[472px] relative overflow-hidden border border-solid border-purple-950 rounded-2xl">
         {% if item.display_link %}
           {% set href = item.link.url.url.href %}
           {% if item.link.url.url.type is equalto "EMAIL_ADDRESS" %}
             {% set href = "mailto:" + href %}
           {% endif %}
-          <a href="{{ href|escape_url }}"
+          <a class="inline-flex absolute z-30 w-full h-full top-0 left-O"href="{{ href|escape_url }}"
             {% if item.link.url.open_in_new_tab %}target="_blank"{% endif %}
             {% if item.link.url.rel %}rel="{{ item.link.url.rel|escape_attr }}"{% endif %}
             >
           </a>
         {% endif %}
 
-        <picture class="services__inner__container__item__image-container">
+        <picture class="services__inner__container__item__image-container flex absolute z-10 w-full h-full top-0 left-O">
           {% if item.image_field.src %}
             {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
             {% if item.image_field.size_type == 'auto' %}
@@ -26,13 +28,13 @@
               {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
             {% endif %}
               {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-            <img src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            <img class="w-full h-full object-cover" src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
           {% endif %}        
         </picture>
 
-        <div class="services__inner__container__item__description">{{ item.description }}</div>
+        <div class="services__inner__container__item__description flex relative z-20 min-w-[240px] px-6 py-4 h3-display">{{ item.description }}</div>
 
-        <div class="services__inner__container__item__icon-container">
+        <div class="services__inner__container__item__icon-container flex justify-center items-center absolute z-20 w-[35px] h-[35px] top-0 right-0 p-2 bg-purple-950 rounded-bl-lg">
           {% icon
             name="{{ item.link.icon_field.name }}"
             style="{{ item.link.icon_field.type }}"
@@ -44,4 +46,28 @@
       {% endfor %}
     </ul>
   </div>
-</div>
+</div> 
+{% require_css %}
+  <style>
+  #{{ name }} .services__inner__container__item::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    z-index: 15;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px -189px 120px -99px #02040F inset;
+    opacity: 0.4;
+  }
+
+  #{{ name }} .services__inner__container__item__icon-container svg {
+    transform: rotate(45deg);
+  }
+
+  #{{ name }} .services__inner__container__item__icon-container svg path {
+    fill: white;
+  }
+  </style>
+{% end_require_css %}

@@ -31,6 +31,19 @@
           }
         },
         {
+          "label": "Secondary 950",
+          "name": "secondary_950",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "default": {
+            "color": "#440055"
+          }
+        },        
+        {
           "label": "Black",
           "name": "black",
           "type": "color",
@@ -1242,7 +1255,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 36
+                  "default": 23
                 },
                 {
                   "label": "Line height",
@@ -1253,7 +1266,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 48
+                  "default": 29
                 }
               ]
             },

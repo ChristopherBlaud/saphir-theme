@@ -76,4 +76,10 @@ isAvailableForNewContent: false
   {{ ' data-slider-animation-duration-xl="{{ module_style.desktop.animation_duration }}"' }}
   {{ ' data-slider-animation-duration-md="{{ module_style.tablet.animation_duration }}"' }}
   {{ ' data-slider-animation-duration-xs="{{ module_style.mobile.animation_duration }}"' }}
+  {{ ' data-autoplay-xl="{{ module_style.desktop.autoplay }}"' }}
+  {{ ' data-autoplay-md="{{ module_style.tablet.autoplay }}"' }}
+  {{ ' data-autoplay-xs="{{ module_style.mobile.autoplay }}"' }}
+  {{ ' data-autoplay-delay-xl="{{ module_style.desktop.autoplay_delay }}"' if module_style.desktop.autoplay }}
+  {{ ' data-autoplay-delay-md="{{ module_style.tablet.autoplay_delay }}"' if module_style.tablet.autoplay }}
+  {{ ' data-autoplay-delay-xs="{{ module_style.mobile.autoplay_delay }}"' if module_style.mobile.autoplay }}
 {% endmacro %}
