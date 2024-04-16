@@ -5,11 +5,11 @@
     {% if item.url.url.type is equalto "EMAIL_ADDRESS" %}
     {% set href = "mailto:" + href %}
     {% endif %}
-    <a class="button" href="{{ href|escape_url }}"
+    <a class="button inline-flex relative" href="{{ href|escape_url }}"
        {% if item.url.open_in_new_tab %}target="_blank"{% endif %}
        {% if item.url.rel %}rel="{{ item.url.rel|escape_attr }}"{% endif %}
        >
-      {{ item.text }}
+      <span class="relative z-10">{{ item.text }}</span>
     </a>
     {% endfor %}
   </div>

@@ -1,0 +1,36 @@
+<!--
+templateType: section
+isAvailableForNewContent: true
+label: Reviews section
+description: A section displaying a text with a slider to display many reviews of your customers.
+-->
+
+{% dnd_section vertical_alignment="TOP" 
+    background_color={{ context.section.background_color ? context.section.background_color : theme.colors.grey_medium.color }}
+    class={{ context.section.class ? context.section.class : 'rounded-section' }}
+%}
+    {% dnd_column %}
+        {% dnd_row %}
+            {% dnd_module 
+                path='../modules/custom-text'
+                display_label={{ context.text.display_label ? context.text.display_label : true }}
+                label_text={{ context.text.label ? context.text.display_label : 'Reviews' }}
+                style={{ context.text.style ?
+                    context.text.style : {
+                        'label_field': {
+                            'background_color': 'white_accent'
+                        },
+                        'desktop': {
+                            'text_alignment': 'center',
+                            'horizontal_alignment': 'center'
+                        }
+                    }
+                }}
+            %}
+            {% module_attribute "html" %}
+                {{ context.text.content ? context.text.content : '<h2><b>What <span style="color: {{ theme.colors.secondary.color }}">our customers</span> say about us</b></h2>' }}
+            {% end_module_attribute %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}        
+    {% end_dnd_column %}       
+{% end_dnd_section %}

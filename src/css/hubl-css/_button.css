@@ -1,5 +1,4 @@
 button, .button {
-    display: inline-flex;
     background: {{ theme.buttons.background_color }};
     {% if theme.buttons.border_width > 0 %}
     border: {{ theme.buttons.border_width ~ 'px' }} solid {{ theme.buttons.border_color }};
@@ -10,5 +9,33 @@ button, .button {
     color: {{ theme.buttons.text_color }};
     font-weight: {{ theme.buttons.font_weight }};
     white-space: nowrap;
+    overflow: hidden;
     {{ theme.buttons.spacing.css }}
+}
+
+.button::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 25%;
+    height: 300%;
+    top: 50%;
+    transform: translate(400%, -50%) skew(-45deg);
+    background-color: {{ theme.colors.white.color }};
+    filter: blur(4px);
+    opacity: 0.4;
+}
+
+.button:hover::after {
+    animation: bright 600ms ease-in-out both;
+}
+
+@keyframes bright {
+    from {
+        transform: translate(400%, -50%) skew(-45deg);
+    }
+    to {
+        transform: translate(-400%, -50%) skew(-45deg);
+    }
 }

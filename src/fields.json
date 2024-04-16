@@ -1358,7 +1358,19 @@
                   "step": 1,
                   "suffix": "px",
                   "default": 69.6
-                }
+                },
+                {
+                  "label": "Letter spacing",
+                  "name": "letter_spacing",
+                  "type": "number",
+                  "inline_help_text": "Set the element letter spacing here.",
+                  "display": "slider",
+                  "max": 20,
+                  "min": -10,
+                  "step": 0.01,
+                  "suffix": "px",
+                  "default": -1.74
+                }                     
               ]
             },
             {
@@ -1488,7 +1500,19 @@
                   "step": 1,
                   "suffix": "px",
                   "default": 48
-                }
+                },
+                {
+                  "label": "Letter spacing",
+                  "name": "letter_spacing",
+                  "type": "number",
+                  "inline_help_text": "Set the element letter spacing here.",
+                  "display": "slider",
+                  "max": 20,
+                  "min": -10,
+                  "step": 0.01,
+                  "suffix": "px",
+                  "default": -1.08
+                } 
               ]
             },
             {
@@ -1618,7 +1642,19 @@
                   "step": 1,
                   "suffix": "px",
                   "default": 29
-                }
+                },
+                {
+                  "label": "Letter spacing",
+                  "name": "letter_spacing",
+                  "type": "number",
+                  "inline_help_text": "Set the element letter spacing here.",
+                  "display": "slider",
+                  "max": 20,
+                  "min": -10,
+                  "step": 0.01,
+                  "suffix": "px",
+                  "default": -0.69
+                } 
               ]
             },
             {
@@ -2405,7 +2441,19 @@
                   "step": 1,
                   "suffix": "px",
                   "default": 55.2
-                }
+                },
+                {
+                  "label": "Letter spacing",
+                  "name": "letter_spacing",
+                  "type": "number",
+                  "inline_help_text": "Set the element letter spacing here.",
+                  "display": "slider",
+                  "max": 20,
+                  "min": -10,
+                  "step": 0.01,
+                  "suffix": "px",
+                  "default": -1.38
+                }                 
               ]
             },
             {
@@ -2535,7 +2583,19 @@
                   "step": 1,
                   "suffix": "px",
                   "default": 48
-                }
+                },
+                {
+                  "label": "Letter spacing",
+                  "name": "letter_spacing",
+                  "type": "number",
+                  "inline_help_text": "Set the element letter spacing here.",
+                  "display": "slider",
+                  "max": 20,
+                  "min": -10,
+                  "step": 0.01,
+                  "suffix": "px",
+                  "default": -1.08
+                } 
               ]
             },
             {
@@ -2665,7 +2725,19 @@
                   "step": 1,
                   "suffix": "px",
                   "default": 29
-                }
+                },
+                {
+                  "label": "Letter spacing",
+                  "name": "letter_spacing",
+                  "type": "number",
+                  "inline_help_text": "Set the element letter spacing here.",
+                  "display": "slider",
+                  "max": 20,
+                  "min": -10,
+                  "step": 0.01,
+                  "suffix": "px",
+                  "default": -0.69
+                }                 
               ]
             },
             {
