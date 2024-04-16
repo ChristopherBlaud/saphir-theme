@@ -34,6 +34,20 @@
     "type" : "choice",
     "default" : "--black"
   }, {
+    "id" : "b2c3609c-a923-d6d2-702d-ec6821981ac4",
+    "name" : "hover_border_color",
+    "display_width" : null,
+    "label" : "Hover border color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "--secondary-color"
+  }, {
     "id" : "85bdf0d3-d006-dbbc-d3e0-08bc85d69fe3",
     "name" : "header_color",
     "display_width" : null,
@@ -48,6 +62,20 @@
     "type" : "choice",
     "default" : "--black"
   }, {
+    "id" : "2d538095-b23d-9b6b-2f9b-0a3be1b59a60",
+    "name" : "hover_header_color",
+    "display_width" : null,
+    "label" : "Hover header color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "--secondary-color"
+  }, {
     "id" : "2837327e-8aed-bd6c-25c5-5f4e7ebdc034",
     "name" : "content_color",
     "display_width" : null,
@@ -60,7 +88,21 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--white"
+    "default" : "--black"
+  }, {
+    "id" : "43801e57-e0f6-e8a8-fa9d-b457af41bb07",
+    "name" : "hover_content_color",
+    "display_width" : null,
+    "label" : "Hover content color",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "--black"
   }, {
     "id" : "3d30cff2-3ad1-822f-eadd-7c9f058177c3",
     "name" : "border_radius",
@@ -72,7 +114,7 @@
     "step" : 1,
     "suffix" : "px",
     "type" : "number",
-    "default": 8
+    "default" : 8
   }, {
     "id" : "3c9f7735-6566-210b-f0a8-bfa82745adc5",
     "name" : "desktop",
@@ -134,11 +176,7 @@
     "expanded" : false,
     "type" : "group",
     "default" : {
-      "images_max_height" : 45,
       "items_per_row" : 2,
-      "animation_duration" : 1500,
-      "autoplay" : false,
-      "autoplay_delay" : 3000,
       "spacing" : { },
       "items_spacing" : {
         "padding" : {
@@ -222,11 +260,7 @@
     "expanded" : false,
     "type" : "group",
     "default" : {
-      "images_max_height" : 45,
       "items_per_row" : 1,
-      "animation_duration" : 1000,
-      "autoplay" : true,
-      "autoplay_delay" : 3000,
       "spacing" : { },
       "items_spacing" : {
         "padding" : {
@@ -329,11 +363,7 @@
     "expanded" : false,
     "type" : "group",
     "default" : {
-      "images_max_height" : 45,
       "items_per_row" : 1,
-      "animation_duration" : 2000,
-      "autoplay" : true,
-      "autoplay_delay" : 3000,
       "spacing" : {
         "padding" : {
           "top" : {
@@ -552,14 +582,14 @@
   "default" : {
     "background_color" : "--white",
     "border_color" : "--black",
+    "hover_border_color" : "--secondary-color",
     "header_color" : "--black",
-    "content_color" : "--white",
+    "hover_header_color" : "--secondary-color",
+    "content_color" : "--black",
+    "hover_content_color" : "--black",
+    "border_radius" : 8,
     "desktop" : {
-      "images_max_height" : 45,
       "items_per_row" : 2,
-      "animation_duration" : 1500,
-      "autoplay" : false,
-      "autoplay_delay" : 3000,
       "spacing" : { },
       "items_spacing" : {
         "padding" : {
@@ -583,11 +613,7 @@
       }
     },
     "tablet" : {
-      "images_max_height" : 45,
       "items_per_row" : 1,
-      "animation_duration" : 1000,
-      "autoplay" : true,
-      "autoplay_delay" : 3000,
       "spacing" : { },
       "items_spacing" : {
         "padding" : {
@@ -611,11 +637,7 @@
       }
     },
     "mobile" : {
-      "images_max_height" : 45,
       "items_per_row" : 1,
-      "animation_duration" : 2000,
-      "autoplay" : true,
-      "autoplay_delay" : 3000,
       "spacing" : {
         "padding" : {
           "top" : {
@@ -657,13 +679,6 @@
         }
       }
     },
-    "h1_display" : "default",
-    "h2_display" : "default",
-    "h3_display" : "default",
-    "h4_display" : "default",
-    "h5_display" : "default",
-    "h6_display" : "default",
-    "body_display" : "default",
     "animated_module" : true,
     "animation_settings" : {
       "position_on_x" : 0,
@@ -730,6 +745,80 @@
     "items_spacing" : 16
   }
 }, {
+  "id" : "accb2b71-65da-2c8c-6ade-5732423c326a",
+  "name" : "get_google_reviews",
+  "display_width" : null,
+  "label" : "Get Google reviews",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "9c598f41-3eb1-0fb4-f8f8-5f6e9474928a",
+  "name" : "item_to_display",
+  "display_width" : null,
+  "label" : "Item to display",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "get_google_reviews",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "display" : "slider",
+  "min" : 1,
+  "max" : 100,
+  "step" : 1,
+  "type" : "number",
+  "default" : 4
+}, {
+  "id" : "ca575aac-e7d8-d127-3c06-bcb9575e3b7b",
+  "name" : "google_place_id",
+  "display_width" : null,
+  "label" : "Google Place ID",
+  "help_text" : "To find your place id <a href=\"https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder\">click here</a>",
+  "inline_help_text" : "",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "get_google_reviews",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : ""
+}, {
+  "id" : "1ce0ad68-288e-86cf-ab34-ba75c865456d",
+  "name" : "google_api_key",
+  "display_width" : null,
+  "label" : "Google API Key",
+  "help_text" : "To get your API Key <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">click here</a>",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "get_google_reviews",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : ""
+}, {
   "id" : "a738385a-750c-d343-a381-fa94dca4d286",
   "name" : "review",
   "display_width" : null,
@@ -741,6 +830,14 @@
     "max" : null,
     "sorting_label_field" : null,
     "default" : 3
+  },
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "get_google_reviews",
+    "controlling_value_regex" : "false",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
   },
   "children" : [ {
     "id" : "5ade9006-e3a8-af74-b310-6e0891a38967",

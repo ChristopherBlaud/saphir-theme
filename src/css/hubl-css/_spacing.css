@@ -76,7 +76,6 @@
 }
     
 .dnd-section .dnd-row > .row-fluid {
-    row-gap: {{ theme.layout.xl.rows_gap ~ 'px' }};
     margin-left: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
     margin-right: calc({{ theme.layout.xl.columns_gap ~ 'px' }} * -1);
 }
@@ -101,20 +100,6 @@
     {{ theme.layout.xl.small_sections.spacing.css }}
 }           
 @media (max-width: 1024px) {
-    :root {
-        --span1-width: 100%;
-        --span2-width: 100%;
-        --span3-width: 100%;
-        --span4-width: 100%;
-        --span5-width: 100%;
-        --span6-width: 100%;
-        --span7-width: 100%;
-        --span8-width: 100%;
-        --span9-width: 100%;
-        --span10-width: 100%;
-        --span11-width: 100%;
-        --span12-width: 100%;    
-    }
     .container-fluid:not(.header-container) .dnd-section:first-of-type {
         {{ theme.layout.md.first_section.spacing.css }}
     }    
