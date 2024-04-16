@@ -1,0 +1,58 @@
+{% import '../../macros/_style.html' %}
+
+<div id="{{ name }}" class="reviews">
+    <div class="reviews__inner row-fluid justify-center gap-x-8">
+    {% for review in module.review%}
+        <article class="reviews__inner_item span3 relative max-w-xs items-center">
+            {% if module.display_quote %}
+            <div class="reviews__inner_item__quotes absolute top-[-1rem] left-6">
+                <svg width="64" height="39" viewBox="0 0 64 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8064 35.2546C10.9736 36.8391 12.1322 38.7075 13.9806 38.7075C14.6996 38.7075 15.379 38.4068 15.8491 37.8838C18.4823 34.9501 27.117 24.7101 28.0188 15.6974C28.0753 15.2077 28.1104 14.7111 28.1104 14.2064C28.1104 13.7964 28.0864 13.4323 28.0519 13.0895C27.4076 5.57415 20.3697 -0.200973 12.1653 0.826106C5.87894 1.61399 0.811603 6.57423 0.0938286 12.6243C-0.786485 20.0619 4.63388 26.4685 11.8883 27.5458C13.0105 27.7141 13.7406 28.7619 13.4273 29.8109L11.8064 35.2546Z" fill="#02040F"/>
+                    <path d="M47.6959 35.2546C46.8637 36.8391 48.0217 38.7075 49.8701 38.7075C50.5891 38.7075 51.2679 38.4068 51.7386 37.8838C54.3724 34.9501 63.0065 24.7101 63.9089 15.6974C63.9649 15.2077 64 14.7111 64 14.2064C64 13.7964 63.9759 13.4323 63.9414 13.0895C63.2971 5.57415 56.2592 -0.200973 48.0542 0.826106C41.7678 1.61399 36.7005 6.57423 35.9833 12.625C35.1037 20.0619 40.5241 26.4685 47.7785 27.5458C48.9007 27.7141 49.6308 28.7619 49.3174 29.8109L47.6959 35.2546Z" fill="#02040F"/>
+                </svg>                
+            </div>
+            {% endif %}
+            <div class="reviews__inner_item__header flex flex-col items-center gap-y-3">
+                <picture class="reviews__inner_item___header__avatar flex w-[53px] h-[53px] rounded-full overflow-hidden">
+                    {% if review.profil_picture.src %}
+                        {% set loadingAttr = review.profil_picture.loading != 'disabled' ? 'loading="{{ review.profil_picture.loading|escape_attr }}"' : '' %}
+                        <img class="object-cover" src="{{ review.profil_picture.src|escape_url }}" alt="{{ review.profil_picture.alt|escape_attr }}" {{ loadingAttr }}>
+                    {% endif %}               
+                </picture>
+                <h3 class="reviews__inner_item___header__name">
+                    <b>{{ review.full_name }}</b>
+                </h3>
+                <div class="reviews__inner_item___header__rank flex gap-x-1">
+                {% set rank = review.rank|int %}
+                {% for number in range(rank)%}
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.74997 10L3.60524 6.30263L0.736816 3.81579L4.52629 3.48684L5.99997 0L7.47366 3.48684L11.2631 3.81579L8.39471 6.30263L9.24998 10L5.99997 8.03947L2.74997 10Z" fill="#02040F"/>
+                </svg>                    
+                {% endfor %}
+                </div>
+            </div>
+            <p class="reviews__inner_item__content body-small-display">{{ review.content }}</p>
+        </article>
+            {% endfor %}
+    </div>
+</div>
+{% require_css %}
+    <style>
+        #{{ name }} .reviews__inner_item___header__name {
+            font-size: 1.125rem;
+        }
+
+        #{{ name }} .reviews__inner_item {
+            {% if module.style.background_color != 'transparent' %}
+            background: var({{ module.style.background_color }});
+            {% endif %}
+            {% if module.style.border_color != 'transparent' %}
+            border: 1px solid var({{ module.style.border_color }});
+            {% endif %}        
+            {{ module.style.desktop.items_spacing.css }}
+            {% if module.style.border_radius != 0 %}
+            border-radius: {{ module.style.border_radius ~ 'px' }};
+            {% endif %}
+        }
+    </style>
+{% end_require_css %}

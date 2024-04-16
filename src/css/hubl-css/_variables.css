@@ -1,0 +1,26 @@
+:root {
+    --span1-width: 8.333%;
+    --span2-width: 16.666%;
+    --span3-width: 25%;
+    --span4-width: 33.333%;
+    --span5-width: 41.666%;
+    --span6-width: 50%;
+    --span7-width: 58.333%;
+    --span8-width: 66.666%;
+    --span9-width: 75%;
+    --span10-width: 83.333%;
+    --span11-width: 91.666%;
+    --span12-width: 100%;       
+    --primary-color: {{ theme.colors.primary.color }};
+    --secondary-color: {{ theme.colors.secondary.color }};
+    --secondary-dark: {{ theme.colors.secondary_dark.color }};
+    --black: {{ theme.colors.black.color }};
+    --grey: {{ theme.colors.grey.color }};
+    --grey-dark: {{ theme.colors.grey_dark.color }};
+    --grey-accent: {{ theme.colors.grey_accent.color }};
+    --grey-medium: {{ theme.colors.grey_medium.color }};
+    --body-color: {{ theme.colors.body_default.color }};
+    --white: {{ theme.colors.white.color }};
+    --white-accent: {{ theme.colors.white_accent.color }};
+    --gradient: {{ theme.colors.gradient.css }};
+}

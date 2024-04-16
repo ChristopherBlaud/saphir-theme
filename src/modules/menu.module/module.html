@@ -12,7 +12,7 @@
 {% require_css%}
 <style>
     #{{ name }} li.hs-item-has-children > a::after {
-        color: {{ theme.colors.primary.color }};
+        color: var(--primary-color);
     }
     
     .dnd-module:has(#{{ name }}) {
@@ -21,7 +21,7 @@
   
     @media (max-width: 1024px) {
       #{{ name }} .hs-menu-wrapper {
-        background: {{ theme.colors.white_accent.color }};      
+        background: var(--white-accent);      
       }
 
       #{{ name }} .hs-menu-wrapper ul {

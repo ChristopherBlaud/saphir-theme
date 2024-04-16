@@ -1,12 +1,12 @@
 button, .button {
-    background: {{ theme.buttons.background_color }};
+    background: var({{ theme.buttons.background_color }});
     {% if theme.buttons.border_width > 0 %}
-    border: {{ theme.buttons.border_width ~ 'px' }} solid {{ theme.buttons.border_color }};
+    border: {{ theme.buttons.border_width ~ 'px' }} solid var({{ theme.buttons.border_color }});
     {% endif %}
     {% if theme.buttons.border_radius > 0 %}
     border-radius: {{ theme.buttons.border_radius ~ 'px' }};
     {% endif %}
-    color: {{ theme.buttons.text_color }};
+    color: var({{ theme.buttons.text_color }});
     font-weight: {{ theme.buttons.font_weight }};
     white-space: nowrap;
     overflow: hidden;
@@ -22,7 +22,7 @@ button, .button {
     height: 300%;
     top: 50%;
     transform: translate(400%, -50%) skew(-45deg);
-    background-color: {{ theme.colors.white.color }};
+    background-color: var(--white);
     filter: blur(4px);
     opacity: 0.4;
 }

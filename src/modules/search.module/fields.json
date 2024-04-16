@@ -156,19 +156,19 @@
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "transparent", "None" ], [ "{{ theme.colors.Primary.color }}", "Primary color" ], [ "{{ theme.colors.secondary.color }}", "Secondary color" ], [ "{{ theme.colors.body_default.color }}", "Body (default) color" ], [ "{{ theme.colors.black.color }}", "Black" ], [ "{{ theme.colors.grey.color }}", "Grey" ], [ "{{ theme.colors.white.color }}", "White" ], [ "{{ theme.colors.white_accent.color }}", "White accent" ] ],
+      "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--body-color", "Body (default) color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "{{ theme.colors.body_default.color }}"
+      "default" : "--body-color"
     } ],
     "tab" : "STYLE",
     "expanded" : false,
     "type" : "group",
     "default" : {
       "width" : 20,
-      "color" : "{{ theme.colors.body_default.color }}"
+      "color" : "--body-color"
     }
   } ],
   "tab" : "STYLE",
@@ -177,7 +177,7 @@
   "default" : {
     "icon" : {
       "width" : 20,
-      "color" : "{{ theme.colors.body_default.color }}"
+      "color" : "--body-color"
     }
   }
 }, {

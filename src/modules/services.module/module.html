@@ -76,12 +76,12 @@
 
   #{{ name }} .swiper-button-prev,
   #{{ name }} .swiper-button-next {
-      color: {{ theme.colors.grey.color }};
+      color: var(--grey);
   }
 
   #{{ name }} .swiper-button-prev:hover,
   #{{ name }} .swiper-button-next:hover {
-    color: {{ theme.colors.grey_dark.color }};
+    color: var(--grey);
   }  
 
   #{{ name }} .swiper-pagination-bullet {
@@ -89,7 +89,7 @@
   }
 
   #{{ name }} .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: {{ theme.colors.grey_dark.color }};
+    background: var(--grey);
   }
 
   @media (max-width: 1024px) {

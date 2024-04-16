@@ -987,48 +987,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.body_default.color }}"
+                  "default": "--body-color"
                 },
                 {
                   "label": "Text transform",
@@ -1116,48 +1120,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.body_default.color }}"
+                  "default": "--body-color"
                 },
                 {
                   "label": "Text transform",
@@ -1246,48 +1254,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -1388,48 +1400,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -1530,48 +1546,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -1672,48 +1692,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -1802,48 +1826,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -1932,48 +1960,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -2070,48 +2102,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.body_default.color }}"
+                  "default": "--body-color"
                 },
                 {
                   "label": "Text transform",
@@ -2199,48 +2235,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.body_default.color }}"
+                  "default": "--body-color"
                 },
                 {
                   "label": "Text transform",
@@ -2329,48 +2369,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -2471,48 +2515,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -2613,48 +2661,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -2755,48 +2807,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -2885,48 +2941,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -3015,48 +3075,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -3153,48 +3217,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.body_default.color }}"
+                  "default": "--body-color"
                 },
                 {
                   "label": "Text transform",
@@ -3282,48 +3350,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.body_default.color }}"
+                  "default": "--body-color"
                 },
                 {
                   "label": "Text transform",
@@ -3412,48 +3484,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -3542,48 +3618,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -3672,48 +3752,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -3802,48 +3886,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -3932,48 +4020,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -4062,48 +4154,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "{{ theme.colors.black.color }}"
+                  "default": "--black"
                 },
                 {
                   "label": "Text transform",
@@ -4209,48 +4305,52 @@
                       "None"
                     ],
                     [
-                      "{{ theme.colors.primary.color }}",
+                      "--primary-color",
                       "Primary color"
                     ],
                     [
-                      "{{ theme.colors.secondary.color }}",
+                      "--secondary-color",
                       "Secondary color"
                     ],
                     [
-                      "{{ theme.colors.black.color }}",
+                      "--secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "--black",
                       "Black"
                     ],
                     [
-                      "{{ theme.colors.grey.color }}",
+                      "--grey",
                       "Grey"
                     ],
                     [
-                      "{{ theme.colors.grey_accent.color }}",
+                      "--grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "{{ theme.colors.grey_dark.color }}",
+                      "--grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "{{ theme.colors.body_default.color }}",
+                      "--body-color",
                       "Body color"
                     ],                                               
                     [
-                      "{{ theme.colors.white.color }}",
+                      "--white-color",
                       "White"
                     ],
                     [
-                      "{{ theme.colors.white_accent.color }}",
+                      "--white-accent",
                       "White accent"
                     ],
-                   [
-                      "{{ theme.colors.gradient.css }}",
+                    [
+                      "--gradient",
                       "Gradient"
                     ]
                   ],
           "display": "select",
-          "default": "{{ theme.colors.gradient.css }}"
+          "default": "--gradient"
         },
         {
           "label": "Text color",
@@ -4286,20 +4386,20 @@
               "Body (default) color"
             ],
             [
-              "{{ theme.colors.black.color }}",
+              "--black",
               "Black"
             ],
             [
-              "{{ theme.colors.grey.color }}",
+              "--grey",
               "Grey"
             ],
             [
-              "{{ theme.colors.white.color }}",
+              "--white",
               "White"
             ]
           ],
           "display": "select",
-          "default": "{{ theme.colors.white.color }}"
+          "default": "--white"
         },
         {
           "label": "Font weight",
@@ -4373,20 +4473,20 @@
               "Body (default) color"
             ],
             [
-              "{{ theme.colors.black.color }}",
+              "--black",
               "Black"
             ],
             [
-              "{{ theme.colors.grey.color }}",
+              "--grey",
               "Grey"
             ],
             [
-              "{{ theme.colors.white.color }}",
+              "--white",
               "White"
             ]
           ],
           "display": "select",
-          "default": "{{ theme.colors.grey.color }}"
+          "default": "--grey"
         },
         {
           "label": "Border radius",
@@ -4549,7 +4649,7 @@
                   "None"
                 ],
                 [
-                  "{{ theme.colors.Primary.color }}",
+                  "--primary-color",
                   "Primary color"
                 ],
                 [
@@ -4557,28 +4657,28 @@
                   "Secondary color"
                 ],
                 [
-                  "{{ theme.colors.body_default.color }}",
+                  "--body-color",
                   "Body (default) color"
                 ],
                 [
-                  "{{ theme.colors.black.color }}",
+                  "--black",
                   "Black"
                 ],
                 [
-                  "{{ theme.colors.grey.color }}",
+                  "--grey",
                   "Grey"
                 ],
                 [
-                  "{{ theme.colors.white.color }}",
+                  "--white",
                   "White"
                 ],
                 [
-                  "{{ theme.colors.white_accent.color }}",
+                  "{--white-accent",
                   "White accent"
                 ]
               ],
               "display": "select",
-              "default": "{{ theme.colors.grey.color }}"
+              "default": "--grey"
             },
             {
               "label": "Background color",
@@ -4590,7 +4690,7 @@
                   "None"
                 ],
                 [
-                  "{{ theme.colors.Primary.color }}",
+                  "--primary-color",
                   "Primary color"
                 ],
                 [
@@ -4598,28 +4698,28 @@
                   "Secondary color"
                 ],
                 [
-                  "{{ theme.colors.body_default.color }}",
+                  "--body-color",
                   "Body (default) color"
                 ],
                 [
-                  "{{ theme.colors.black.color }}",
+                  "--black",
                   "Black"
                 ],
                 [
-                  "{{ theme.colors.grey.color }}",
+                  "--grey",
                   "Grey"
                 ],
                 [
-                  "{{ theme.colors.white.color }}",
+                  "--white",
                   "White"
                 ],
                 [
-                  "{{ theme.colors.white_accent.color }}",
+                  "{--white-accent",
                   "White accent"
                 ]
               ],
               "display": "select",
-              "default": "{{ theme.colors.white.color }}"
+              "default": "--white"
             },        
             {
               "label": "Focus border color",
@@ -4631,7 +4731,7 @@
                   "None"
                 ],
                 [
-                  "{{ theme.colors.Primary.color }}",
+                  "--primary-color",
                   "Primary color"
                 ],
                 [
@@ -4639,28 +4739,28 @@
                   "Secondary color"
                 ],
                 [
-                  "{{ theme.colors.body_default.color }}",
+                  "--body-color",
                   "Body (default) color"
                 ],
                 [
-                  "{{ theme.colors.black.color }}",
+                  "--black",
                   "Black"
                 ],
                 [
-                  "{{ theme.colors.grey.color }}",
+                  "--grey",
                   "Grey"
                 ],
                 [
-                  "{{ theme.colors.white.color }}",
+                  "--white",
                   "White"
                 ],
                 [
-                  "{{ theme.colors.white_accent.color }}",
+                  "{--white-accent",
                   "White accent"
                 ]
               ],
               "display": "select",
-              "default": "{{ theme.colors.white.color }}"
+              "default": "--white"
             },
             {
               "label": "Border radius",
@@ -5023,7 +5123,7 @@
                 "None"
               ],
               [
-                "{{ theme.colors.primary.color }}",
+                "--primary-color",
                 "Primary color"
               ],
               [
@@ -5031,36 +5131,36 @@
                 "Secondary color"
               ],
               [
-                "{{ theme.colors.black.color }}",
+                "--black",
                 "Black"
               ],
               [
-                "{{ theme.colors.grey.color }}",
+                "--grey",
                 "Grey"
               ],
               [
-                "{{ theme.colors.grey_accent.color }}",
+                "--grey-accent",
                 "Grey accent"
               ],   
               [
-                "{{ theme.colors.grey_dark.color }}",
+                "--grey-dark",
                 "Grey dark"
               ],    
               [
-                "{{ theme.colors.body_default.color }}",
+                "--body-color",
                 "Body color"
               ],                                               
               [
-                "{{ theme.colors.white.color }}",
+                "--white",
                 "White"
               ],
               [
-                "{{ theme.colors.white_accent.color }}",
+                "--white-accent",
                 "White accent"
               ]
             ],
           "display": "select",
-          "default": "{{ theme.colors.white_accent.color }}"
+          "default": "--white-accent"
         },
         {
           "label": "Border color",
@@ -5073,7 +5173,7 @@
                 "None"
               ],
               [
-                "{{ theme.colors.primary.color }}",
+                "--primary-color",
                 "Primary color"
               ],
               [
@@ -5081,36 +5181,36 @@
                 "Secondary color"
               ],
               [
-                "{{ theme.colors.black.color }}",
+                "--black",
                 "Black"
               ],
               [
-                "{{ theme.colors.grey.color }}",
+                "--grey",
                 "Grey"
               ],
               [
-                "{{ theme.colors.grey_accent.color }}",
+                "--grey-accent",
                 "Grey accent"
               ],   
               [
-                "{{ theme.colors.grey_dark.color }}",
+                "--grey-dark",
                 "Grey dark"
               ],    
               [
-                "{{ theme.colors.body_default.color }}",
+                "--body-color",
                 "Body color"
               ],                                               
               [
-                "{{ theme.colors.white.color }}",
+                "--white",
                 "White"
               ],
               [
-                "{{ theme.colors.white_accent.color }}",
+                "{--white-accent",
                 "White accent"
               ]
             ],
           "display": "select",
-          "default": "{{ theme.colors.grey.color }}"
+          "default": "--grey"
         },
         {
           "label": "Border width",

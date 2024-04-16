@@ -1,18 +1,3 @@
-:root {
-    --span1-width: 8.333%;
-    --span2-width: 16.666%;
-    --span3-width: 25%;
-    --span4-width: 33.333%;
-    --span5-width: 41.666%;
-    --span6-width: 50%;
-    --span7-width: 58.333%;
-    --span8-width: 66.666%;
-    --span9-width: 75%;
-    --span10-width: 83.333%;
-    --span11-width: 91.666%;
-    --span12-width: 100%;    
-}
-
 .span1 { 
     flex: 0 0 var(--span1-width); 
     width: var(--span1-width); 
