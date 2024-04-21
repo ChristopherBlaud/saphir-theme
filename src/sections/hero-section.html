@@ -12,7 +12,7 @@ description: A section displaying a text with and button with an image on right 
                 path='../modules/custom-text' 
             %}
             {% module_attribute "html" %}
-                {{ context.text.content ? context.text.content : '<h1 style="color: var(--black)"><strong>Build your <span style="color: {{ theme.colors.secondary.color }}">website</span> with a <span style="color: {{ theme.colors.secondary.color }}">beautiful</span> and <span style="color: {{ theme.colors.secondary.color }}">powerful</span> theme</strong></h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti nullam.</p>' }}
+                {{ context.text.content ? context.text.content : '<h1 style="color: --black)"><strong>Build your <span style="color: {{ theme.colors.secondary.color }}">website</span> with a <span style="color: {{ theme.colors.secondary.color }}">beautiful</span> and <span style="color: {{ theme.colors.secondary.color }}">powerful</span> theme</strong></h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti nullam.</p>' }}
             {% end_module_attribute %}
             {% end_dnd_module %}
         {% end_dnd_row %}        

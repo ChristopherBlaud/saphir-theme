@@ -13,12 +13,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ], [ "--gradient", "Gradient" ] ],
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ], [ "gradient", "Gradient" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--white"
+    "default" : "white"
   }, {
     "id" : "a660c1f5-a23b-654a-6bea-6431d3c16a55",
     "name" : "border_color",
@@ -27,12 +27,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--black"
+    "default" : "black"
   }, {
     "id" : "b2c3609c-a923-d6d2-702d-ec6821981ac4",
     "name" : "hover_border_color",
@@ -41,12 +41,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--secondary-color"
+    "default" : "secondary-color"
   }, {
     "id" : "85bdf0d3-d006-dbbc-d3e0-08bc85d69fe3",
     "name" : "header_color",
@@ -55,12 +55,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--black"
+    "default" : "black"
   }, {
     "id" : "2d538095-b23d-9b6b-2f9b-0a3be1b59a60",
     "name" : "hover_header_color",
@@ -69,12 +69,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--secondary-color"
+    "default" : "secondary-color"
   }, {
     "id" : "2837327e-8aed-bd6c-25c5-5f4e7ebdc034",
     "name" : "content_color",
@@ -83,12 +83,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--black"
+    "default" : "black"
   }, {
     "id" : "43801e57-e0f6-e8a8-fa9d-b457af41bb07",
     "name" : "hover_content_color",
@@ -97,12 +97,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--grey-accent", "Grey accent" ], [ "{{ theme.colors.grey_medium.color }}", "Grey medium" ], [ "--grey-dark", "Grey dark" ], [ "--body-color", "Body color" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "--black"
+    "default" : "black"
   }, {
     "id" : "3d30cff2-3ad1-822f-eadd-7c9f058177c3",
     "name" : "border_radius",
@@ -499,7 +499,7 @@
       "display" : "toggle",
       "type" : "boolean",
       "default" : true
-    },{
+    }, {
       "id" : "744a0292-186f-74dc-ee14-89bfb703b05e",
       "name" : "animation_delay",
       "display_width" : null,
@@ -541,13 +541,13 @@
   "expanded" : false,
   "type" : "group",
   "default" : {
-    "background_color" : "--white",
-    "border_color" : "--black",
-    "hover_border_color" : "--secondary-color",
-    "header_color" : "--black",
-    "hover_header_color" : "--secondary-color",
-    "content_color" : "--black",
-    "hover_content_color" : "--black",
+    "background_color" : "white",
+    "border_color" : "black",
+    "hover_border_color" : "secondary-color",
+    "header_color" : "black",
+    "hover_header_color" : "secondary-color",
+    "content_color" : "black",
+    "hover_content_color" : "black",
     "border_radius" : 8,
     "desktop" : {
       "spacing" : { },

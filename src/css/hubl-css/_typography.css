@@ -14,7 +14,7 @@ body, body .body-display {
     {% if theme.typography.xl.body_default.text_transform != 'none' %}
     text-transform: {{ theme.typography.xl.body_default.text_transform }};
     {% endif %}
-    color: var({{ theme.typography.xl.body_default.color }});
+    color: var(--{{ theme.typography.xl.body_default.color }});
 }
 
 .body body b, .body body strong {
@@ -28,7 +28,7 @@ body .body-small-display {
     {% if theme.typography.xl.body_small.text_transform != 'none' %}
     text-transform: {{ theme.typography.xl.body_small.text_transform }};
     {% endif %}
-    color: var({{ theme.typography.xl.body_small.color }});
+    color: var(--{{ theme.typography.xl.body_small.color }});
 }
 
 body .body-small-display b,
@@ -44,7 +44,7 @@ body h1, body .h1-display {
     text-transform: {{ theme.typography.xl.h1.text_transform }};
     {% endif %}
     letter-spacing: {{ theme.typography.xl.h1.letter_spacing ~ 'px' }};
-    color: var({{ theme.typography.xl.h1.color }});
+    color: var(--{{ theme.typography.xl.h1.color }});
 }
 
 body h1 b, body .h1-display b,
@@ -60,7 +60,7 @@ body h2, body .h2-display {
     text-transform: {{ theme.typography.xl.h2.text_transform }};
     {% endif %}
     letter-spacing: {{ theme.typography.xl.h2.letter_spacing ~ 'px' }};
-    color: var({{ theme.typography.xl.h2.color }});
+    color: var(--{{ theme.typography.xl.h2.color }});
 }
 
 body h2 b, body .h2-display b,
@@ -76,7 +76,7 @@ body h3, body .h3-display {
     text-transform: {{ theme.typography.xl.h3.text_transform }};
     {% endif %}
     letter-spacing: {{ theme.typography.xl.h3.letter_spacing ~ 'px' }};
-    color: var({{ theme.typography.xl.h3.color }});
+    color: var(--{{ theme.typography.xl.h3.color }});
 }
 
 body h3 b, body .h3-display b,
@@ -108,7 +108,7 @@ body h5, body .h5-display {
     text-transform: {{ theme.typography.xl.h5.text_transform }};
     {% endif %}
     letter-spacing: {{ theme.typography.xl.h5.letter_spacing ~ 'px' }};
-    color: var({{ theme.typography.xl.h5.color }});
+    color: var(--{{ theme.typography.xl.h5.color }});
 }
 
 body h5 b, body .h5-display b,
@@ -124,7 +124,7 @@ body h6, body .h6-display {
     text-transform: {{ theme.typography.xl.h6.text_transform }};
     {% endif %}
     letter-spacing: {{ theme.typography.xl.h6.letter_spacing ~ 'px' }};
-    color: var({{ theme.typography.xl.h6.color }});
+    color: var(--{{ theme.typography.xl.h6.color }});
 }
 
 body h6 b, body .h6-display b,
@@ -140,7 +140,7 @@ body h6 strong, body .h6-display strong {
         text-transform: {{ theme.typography.md.h1.text_transform }};
         {% endif %}
         letter-spacing: {{ theme.typography.md.h1.letter_spacing ~ 'px' }};
-        color: var({{ theme.typography.md.h1.color }});
+        color: var(--{{ theme.typography.md.h1.color }});
     }
 }
 
@@ -152,6 +152,6 @@ body h6 strong, body .h6-display strong {
         text-transform: {{ theme.typography.xs.h1.text_transform }};
         {% endif %}
         letter-spacing: {{ theme.typography.xs.h1.letter_spacing ~ 'px' }};
-        color: var({{ theme.typography.xs.h1.color }});
+        color: var(--{{ theme.typography.xs.h1.color }});
     }
 }

@@ -21,10 +21,10 @@
 
       #{{ name }} .reviews__inner_item__inner {
         {% if module.style.background_color != 'transparent' %}
-        background: var({{ module.style.background_color }});
+        background: var(--{{ module.style.background_color }});
         {% endif %}
         {% if module.style.border_color != 'transparent' %}
-        border: 1px solid var({{ module.style.border_color }}); 
+        border: 1px solid var(--{{ module.style.border_color }}); 
         {% endif %}        
         {{ module.style.desktop.items_spacing.css }}
         {% if module.style.border_radius != 0 %}
@@ -33,28 +33,28 @@
       }
       
       #{{ name }} .reviews__inner_item__inner:hover {
-        border-color: var({{ module.style.hover_border_color }});
+        border-color: var(--{{ module.style.hover_border_color }});
       }
       
       #{{ name }} .reviews__inner_item__inner .reviews__inner_item___header__name {
         transition: color 10ms ease-in-out;
-        color: var({{ module.style.header_color }});
+        color: var(--{{ module.style.header_color }});
       }
       
       #{{ name }} .reviews__inner_item__inner svg path {
-        fill: var({{ module.style.header_color }});
+        fill: var(--{{ module.style.header_color }});
       }  
       
       #{{ name }} .reviews__inner_item__inner:hover .reviews__inner_item___header__name {
-        color: var({{ module.style.hover_header_color }});
+        color: var(--{{ module.style.hover_header_color }});
       }
       
       #{{ name }} .reviews__inner_item__inner:hover svg path {
-        fill: var({{ module.style.hover_header_color }});
+        fill: var(--{{ module.style.hover_header_color }});
       }       
       
       #{{ name }} .reviews__inner_item__inner:hover .reviews__inner_item__content {
-        color: var({{ module.style.hover_content_color }});
+        color: var(--{{ module.style.hover_content_color }});
       }
       
       @media (max-width: 1024px) {

@@ -156,19 +156,19 @@
       "required" : false,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "transparent", "None" ], [ "--primary-color", "Primary color" ], [ "--secondary-color", "Secondary color" ], [ "--body-color", "Body (default) color" ], [ "--black", "Black" ], [ "--grey", "Grey" ], [ "--white", "White" ], [ "{--white-accent", "White accent" ] ],
+      "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "body-color", "Body (default) color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "--body-color"
+      "default" : "body-color"
     } ],
     "tab" : "STYLE",
     "expanded" : false,
     "type" : "group",
     "default" : {
       "width" : 20,
-      "color" : "--body-color"
+      "color" : "body-color"
     }
   } ],
   "tab" : "STYLE",
@@ -177,7 +177,7 @@
   "default" : {
     "icon" : {
       "width" : 20,
-      "color" : "--body-color"
+      "color" : "body-color"
     }
   }
 }, {

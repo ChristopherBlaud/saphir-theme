@@ -987,11 +987,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -999,40 +999,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--body-color"
+                  "default": "body-color"
                 },
                 {
                   "label": "Text transform",
@@ -1120,11 +1120,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -1132,40 +1132,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--body-color"
+                  "default": "body-color"
                 },
                 {
                   "label": "Text transform",
@@ -1254,11 +1254,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -1266,40 +1266,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -1400,11 +1400,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -1412,40 +1412,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -1546,11 +1546,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -1558,40 +1558,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -1692,11 +1692,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -1704,40 +1704,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -1826,11 +1826,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -1838,40 +1838,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -1960,11 +1960,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -1972,40 +1972,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -2102,11 +2102,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -2114,40 +2114,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--body-color"
+                  "default": "body-color"
                 },
                 {
                   "label": "Text transform",
@@ -2235,11 +2235,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -2247,40 +2247,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--body-color"
+                  "default": "body-color"
                 },
                 {
                   "label": "Text transform",
@@ -2369,11 +2369,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -2381,40 +2381,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -2515,11 +2515,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -2527,40 +2527,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -2661,11 +2661,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -2673,40 +2673,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -2807,11 +2807,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -2819,40 +2819,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -2941,11 +2941,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -2953,40 +2953,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -3075,11 +3075,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -3087,40 +3087,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -3217,11 +3217,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -3229,40 +3229,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--body-color"
+                  "default": "body-color"
                 },
                 {
                   "label": "Text transform",
@@ -3350,11 +3350,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -3362,40 +3362,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--body-color"
+                  "default": "body-color"
                 },
                 {
                   "label": "Text transform",
@@ -3484,11 +3484,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -3496,40 +3496,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -3618,11 +3618,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -3630,40 +3630,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -3752,11 +3752,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -3764,40 +3764,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -3886,11 +3886,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -3898,40 +3898,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -4020,11 +4020,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -4032,40 +4032,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -4154,11 +4154,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -4166,40 +4166,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
                   "display": "select",
-                  "default": "--black"
+                  "default": "black"
                 },
                 {
                   "label": "Text transform",
@@ -4305,11 +4305,11 @@
                       "None"
                     ],
                     [
-                      "--primary-color",
+                      "primary-color",
                       "Primary color"
                     ],
                     [
-                      "--secondary-color",
+                      "secondary-color",
                       "Secondary color"
                     ],
                     [
@@ -4317,40 +4317,40 @@
                       "Secondary dark"
                     ],
                     [
-                      "--black",
+                      "black",
                       "Black"
                     ],
                     [
-                      "--grey",
+                      "grey",
                       "Grey"
                     ],
                     [
-                      "--grey-accent",
+                      "grey-accent",
                       "Grey accent"
                     ],   
                     [
-                      "--grey-dark",
+                      "grey-dark",
                       "Grey dark"
                     ],    
                     [
-                      "--body-color",
+                      "body-color",
                       "Body color"
                     ],                                               
                     [
-                      "--white-color",
+                      "white-color",
                       "White"
                     ],
                     [
-                      "--white-accent",
+                      "white-accent",
                       "White accent"
                     ],
                     [
-                      "--gradient",
+                      "gradient",
                       "Gradient"
                     ]
                   ],
           "display": "select",
-          "default": "--gradient"
+          "default": "gradient"
         },
         {
           "label": "Text color",
@@ -4386,20 +4386,20 @@
               "Body (default) color"
             ],
             [
-              "--black",
+              "black",
               "Black"
             ],
             [
-              "--grey",
+              "grey",
               "Grey"
             ],
             [
-              "--white",
+              "white",
               "White"
             ]
           ],
           "display": "select",
-          "default": "--white"
+          "default": "white"
         },
         {
           "label": "Font weight",
@@ -4473,20 +4473,20 @@
               "Body (default) color"
             ],
             [
-              "--black",
+              "black",
               "Black"
             ],
             [
-              "--grey",
+              "grey",
               "Grey"
             ],
             [
-              "--white",
+              "white",
               "White"
             ]
           ],
           "display": "select",
-          "default": "--grey"
+          "default": "grey"
         },
         {
           "label": "Border radius",
@@ -4649,7 +4649,7 @@
                   "None"
                 ],
                 [
-                  "--primary-color",
+                  "primary-color",
                   "Primary color"
                 ],
                 [
@@ -4657,28 +4657,28 @@
                   "Secondary color"
                 ],
                 [
-                  "--body-color",
+                  "body-color",
                   "Body (default) color"
                 ],
                 [
-                  "--black",
+                  "black",
                   "Black"
                 ],
                 [
-                  "--grey",
+                  "grey",
                   "Grey"
                 ],
                 [
-                  "--white",
+                  "white",
                   "White"
                 ],
                 [
-                  "{--white-accent",
+                  "white-accent",
                   "White accent"
                 ]
               ],
               "display": "select",
-              "default": "--grey"
+              "default": "grey"
             },
             {
               "label": "Background color",
@@ -4690,7 +4690,7 @@
                   "None"
                 ],
                 [
-                  "--primary-color",
+                  "primary-color",
                   "Primary color"
                 ],
                 [
@@ -4698,28 +4698,28 @@
                   "Secondary color"
                 ],
                 [
-                  "--body-color",
+                  "body-color",
                   "Body (default) color"
                 ],
                 [
-                  "--black",
+                  "black",
                   "Black"
                 ],
                 [
-                  "--grey",
+                  "grey",
                   "Grey"
                 ],
                 [
-                  "--white",
+                  "white",
                   "White"
                 ],
                 [
-                  "{--white-accent",
+                  "white-accent",
                   "White accent"
                 ]
               ],
               "display": "select",
-              "default": "--white"
+              "default": "white"
             },        
             {
               "label": "Focus border color",
@@ -4731,7 +4731,7 @@
                   "None"
                 ],
                 [
-                  "--primary-color",
+                  "primary-color",
                   "Primary color"
                 ],
                 [
@@ -4739,28 +4739,28 @@
                   "Secondary color"
                 ],
                 [
-                  "--body-color",
+                  "body-color",
                   "Body (default) color"
                 ],
                 [
-                  "--black",
+                  "black",
                   "Black"
                 ],
                 [
-                  "--grey",
+                  "grey",
                   "Grey"
                 ],
                 [
-                  "--white",
+                  "white",
                   "White"
                 ],
                 [
-                  "{--white-accent",
+                  "white-accent",
                   "White accent"
                 ]
               ],
               "display": "select",
-              "default": "--white"
+              "default": "white"
             },
             {
               "label": "Border radius",
@@ -5123,7 +5123,7 @@
                 "None"
               ],
               [
-                "--primary-color",
+                "primary-color",
                 "Primary color"
               ],
               [
@@ -5131,36 +5131,36 @@
                 "Secondary color"
               ],
               [
-                "--black",
+                "black",
                 "Black"
               ],
               [
-                "--grey",
+                "grey",
                 "Grey"
               ],
               [
-                "--grey-accent",
+                "grey-accent",
                 "Grey accent"
               ],   
               [
-                "--grey-dark",
+                "grey-dark",
                 "Grey dark"
               ],    
               [
-                "--body-color",
+                "body-color",
                 "Body color"
               ],                                               
               [
-                "--white",
+                "white",
                 "White"
               ],
               [
-                "--white-accent",
+                "white-accent",
                 "White accent"
               ]
             ],
           "display": "select",
-          "default": "--white-accent"
+          "default": "white-accent"
         },
         {
           "label": "Border color",
@@ -5173,7 +5173,7 @@
                 "None"
               ],
               [
-                "--primary-color",
+                "primary-color",
                 "Primary color"
               ],
               [
@@ -5181,36 +5181,36 @@
                 "Secondary color"
               ],
               [
-                "--black",
+                "black",
                 "Black"
               ],
               [
-                "--grey",
+                "grey",
                 "Grey"
               ],
               [
-                "--grey-accent",
+                "grey-accent",
                 "Grey accent"
               ],   
               [
-                "--grey-dark",
+                "grey-dark",
                 "Grey dark"
               ],    
               [
-                "--body-color",
+                "body-color",
                 "Body color"
               ],                                               
               [
-                "--white",
+                "white",
                 "White"
               ],
               [
-                "{--white-accent",
+                "white-accent",
                 "White accent"
               ]
             ],
           "display": "select",
-          "default": "--grey"
+          "default": "grey"
         },
         {
           "label": "Border width",

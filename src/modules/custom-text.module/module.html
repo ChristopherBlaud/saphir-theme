@@ -22,24 +22,24 @@
     <style>
         {% if  module.style.label_field.border_color != 'transparent' %}
         #{{ name }} .custom-text__inner__label {
-            border: 1px solid var({{ module.style.label_field.border_color }});
+            border: 1px solid var(--{{ module.style.label_field.border_color }});
         }
         {% endif %}
 
         {% if  module.style.label_field.background_color != 'transparent' %}
         #{{ name }} .custom-text__inner__label {
-            background: var({{ module.style.label_field.background_color }});
+            background: var(--{{ module.style.label_field.background_color }});
         }        
         {% endif %}
 
         {% if  module.style.label_field.logo_background_color != 'transparent' %}
         #{{ name }} .custom-text__inner__label__logo {
-            background: var({{ module.style.label_field.logo_background_color }});
+            background: var(--{{ module.style.label_field.logo_background_color }});
         }
         {% endif %}
 
         #{{ name }} .custom-text__inner__label__text {
-            color: var({{ module.style.label_field.text_color }});
+            color: var(--{{ module.style.label_field.text_color }});
         }
     </style>
 {% end_require_css %}
