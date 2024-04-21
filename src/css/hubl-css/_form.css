@@ -1,5 +1,5 @@
 .container-fluid input {
-    border-color: --{{ theme.forms.field.border_color }});
+    border-color: var(--{{ theme.forms.field.border_color }});
     border-top-width: {{ theme.forms.field.borders_width.top ~ 'px' }};
     border-bottom-width: {{ theme.forms.field.borders_width.bottom ~ 'px' }};
     border-left-width: {{ theme.forms.field.borders_width.left ~ 'px' }};

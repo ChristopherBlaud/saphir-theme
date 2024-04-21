@@ -14,8 +14,12 @@
     {% endif %}    
     {{ theme.header.layout.xs.container_spacing.css }}
     {% if theme.header.border_color != "none" %}
-    border: {{ theme.header.border_width ~ 'px' }} solid var(--{{ theme.header.border_color }});
-    border-radius: {{ theme.header.border_radius ~ 'px' }};
+    border-color: var(--{{ theme.header.border_color }});
+    border-top-width: {{ theme.header.layout.xl.border_top_width ~ 'px' }};
+    border-bottom-width: {{ theme.header.layout.xl.border_bottom_width ~ 'px' }};
+    border-left-width: {{ theme.header.layout.xl.border_left_width ~ 'px' }};
+    border-right-width: {{ theme.header.layout.xl.border_right_width ~ 'px' }};
+    border-radius: {{ theme.header.layout.xl.border_radius ~ 'px' }};
     {% endif %}
     margin-inline: auto;
 }
@@ -35,8 +39,13 @@
         background: var(--{{ theme.header.background_color }});
         {% endif %}    
         {% if theme.header.border_color != "none" %}
-        border-bottom: {{ theme.header.border_width ~ 'px' }} solid var(--{{ theme.header.border_color }});
-        {% endif %}        
+        border-color: var(--{{ theme.header.border_color }});
+        border-top-width: {{ theme.header.layout.md.border_top_width ~ 'px' }};
+        border-bottom-width: {{ theme.header.layout.md.border_bottom_width ~ 'px' }};
+        border-left-width: {{ theme.header.layout.md.border_left_width ~ 'px' }};
+        border-right-width: {{ theme.header.layout.md.border_right_width ~ 'px' }};
+        border-radius: {{ theme.header.layout.md.border_radius ~ 'px' }}; 
+        {% endif %}
         top: 0;
         left: 0;
         transform: unset;
@@ -46,6 +55,7 @@
         max-width: {{ theme.layout.md.max_width ~ 'px' }};
         border-radius: 0;
         border: none;
+        {{ theme.header.layout.md.container_spacing.css }}
     }
 
     #header .header-container .dnd-row .row-fluid .span6:first-of-type {
@@ -54,9 +64,15 @@
     }
 }
 
-@media (min-width: 768px) {
-    #header .header-container {
-        {{ theme.header.layout.md.container_spacing.css }}
+@media (max-width: 768px) {
+    #header {
+        {% if theme.header.border_color != "none" %}
+        border-top-width: {{ theme.header.layout.xs.border_top_width ~ 'px' }};
+        border-bottom-width: {{ theme.header.layout.xs.border_bottom_width ~ 'px' }};
+        border-left-width: {{ theme.header.layout.xs.border_left_width ~ 'px' }};
+        border-right-width: {{ theme.header.layout.xs.border_right_width ~ 'px' }};
+        border-radius: {{ theme.header.layout.xs.border_radius ~ 'px' }};  
+        {% endif %}      
     }
 }
 
