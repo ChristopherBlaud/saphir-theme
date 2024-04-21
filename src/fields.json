@@ -5031,9 +5031,9 @@
                   "name": "border_radius",
                   "type": "number",
                   "display": "slider",
-                  "max": 50,
+                  "max": 200,
                   "min": 0,
-                  "default": 8
+                  "default": 54
                 }                                                                    
               ]
             },
@@ -5158,10 +5158,10 @@
                   "name": "border_radius",
                   "type": "number",
                   "display": "slider",
-                  "max": 50,
+                  "max": 200,
                   "min": 0,
                   "default": 0
-                }                  
+                }                         
               ]
             },
             {
@@ -5272,10 +5272,10 @@
                   "name": "border_radius",
                   "type": "number",
                   "display": "slider",
-                  "max": 50,
+                  "max": 200,
                   "min": 0,
                   "default": 0
-                }                   
+                }                        
               ]
             }
           ]
@@ -5387,18 +5387,130 @@
         {
           "label": "Link color",
           "name": "link_color",
-          "type": "color",
-          "visibility": {
-            "hidden_subfields": {
-              "opacity": true
-            }
-          },
-          "inherited_value": {
-            "property_value_paths": {
-              "color": "theme.colors.black.color"
-            }
-          }
+          "type": "choice",
+            "choices": [
+              [
+                "transparent",
+                "None"
+              ],
+              [
+                "primary-color",
+                "Primary color"
+              ],
+              [
+                "secondary-color",
+                "Secondary color"
+              ],
+              [
+                "black",
+                "Black"
+              ],
+              [
+                "grey",
+                "Grey"
+              ],
+              [
+                "grey-accent",
+                "Grey accent"
+              ],   
+              [
+                "grey-medium",
+                "Grey medium"
+              ],   
+              [
+                "grey-dark",
+                "Grey dark"
+              ],    
+              [
+                "body-color",
+                "Body color"
+              ],                                               
+              [
+                "white",
+                "White"
+              ],
+              [
+                "white-accent",
+                "White accent"
+              ]
+            ],
+          "display": "select",
+          "default": "body-color"
         },
+        {
+          "label": "Link hover color",
+          "name": "link_hover_color",
+          "type": "choice",
+            "choices": [
+              [
+                "transparent",
+                "None"
+              ],
+              [
+                "primary-color",
+                "Primary color"
+              ],
+              [
+                "secondary-color",
+                "Secondary color"
+              ],
+              [
+                "black",
+                "Black"
+              ],
+              [
+                "grey",
+                "Grey"
+              ],
+              [
+                "grey-accent",
+                "Grey accent"
+              ],   
+              [
+                "grey-medium",
+                "Grey medium"
+              ],   
+              [
+                "grey-dark",
+                "Grey dark"
+              ],    
+              [
+                "body-color",
+                "Body color"
+              ],                                               
+              [
+                "white",
+                "White"
+              ],
+              [
+                "white-accent",
+                "White accent"
+              ]
+            ],
+          "display": "select",
+          "default": "secondary-color"
+        },
+        {
+          "label": "Link font weight",
+          "name": "link_font_weight",
+          "type": "choice",
+            "choices": [
+              [
+                "{{ theme.fonts.primary.font_weight.variant }}",
+                "Regular"
+              ],
+              [
+                "{{ theme.fonts.primary.medium_variation.variant }}",
+                "Medium"
+              ],
+              [
+                "{{ theme.fonts.primary.bold_variation.variant }}",
+                "Bold"
+              ]
+            ],
+          "display": "select",
+          "default": "{{ theme.fonts.primary.medium_variation.variant }}"
+        },         
         {
           "label": "Spacing",
           "name": "spacing",

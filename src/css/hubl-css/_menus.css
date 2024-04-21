@@ -1,0 +1,12 @@
+a {
+    transition: color var(--transition-time) var(--transition-easing);
+}
+
+#header a:not(.button) {
+    color: var(--{{ theme.header.link_color }});
+    font-weight: {{ theme.header.link_font_weight }};
+}
+
+#header a:not(.button):hover {
+    color: var(--{{ theme.header.link_hover_color }});
+}

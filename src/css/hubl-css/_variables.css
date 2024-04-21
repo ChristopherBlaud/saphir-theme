@@ -25,6 +25,8 @@
     --white: {{ theme.colors.white.color }};
     --white-accent: {{ theme.colors.white_accent.color }};
     --gradient: {{ theme.colors.gradient.css }};
+    --transition-time: 250ms;
+    --transition-easing: ease-in-out;
 }
 
 @media (max-width: 1024px) {
