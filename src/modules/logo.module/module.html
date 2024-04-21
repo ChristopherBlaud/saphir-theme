@@ -30,3 +30,43 @@
     </ul>
   </div>
 </div>
+{% require_css %}
+  <style>
+  #{{ name }} .logo-slider__inner {
+  {% if module.style.desktop.container.border_width > 0 %}
+    border: {{ module.style.desktop.container.border_width ~ 'px' }} solid var(--{{ module.style.desktop.container.border_color }});
+    border-radius: {{ module.style.desktop.container.border_radius ~ 'px' }};
+  {% endif %}
+  {% if module.style.desktop.container.background_color != 'transparent' %}
+    background: var(--{{ module.style.desktop.container.background_color }});
+  {% endif %}
+  {{ module.style.desktop.container.spacing.css }}
+  }
+
+  @media (max-width: 1024px) {
+  #{{ name }} .logo-slider__inner {
+  {% if module.style.tablet.container.border_width > 0 %}
+    border: {{ module.style.tablet.container.border_width ~ 'px' }} solid var(--{{ module.style.tablet.container.border_color }});
+    border-radius: {{ module.style.tablet.container.border_radius ~ 'px' }};
+  {% endif %}
+  {% if module.style.tablet.container.background_color != 'transparent' %}
+    background: var(--{{ module.style.tablet.container.background_color }});
+  {% endif %}
+  {{ module.style.tablet.container.spacing.css }}
+  }
+  }
+
+  @media (max-width: 768px) {
+  #{{ name }} .logo-slider__inner {
+  {% if module.style.mobile.container.border_width > 0 %}
+    border: {{ module.style.mobile.container.border_width ~ 'px' }} solid var(--{{ module.style.mobile.container.border_color }});
+    border-radius: {{ module.style.mobile.container.border_radius ~ 'px' }};
+  {% endif %}
+  {% if module.style.mobile.container.background_color != 'transparent' %}
+    background: var(--{{ module.style.mobile.container.background_color }});
+  {% endif %}
+  {{ module.style.mobile.container.spacing.css }}
+  }  
+  }
+  </style>
+{% end_require_css%}

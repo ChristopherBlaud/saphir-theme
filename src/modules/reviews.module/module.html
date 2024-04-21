@@ -33,19 +33,21 @@
       }
       
       #{{ name }} .reviews__inner_item__inner:hover {
+        transition: border var(--transition-time) var(--transition-easing);
         border-color: var(--{{ module.style.hover_border_color }});
       }
       
       #{{ name }} .reviews__inner_item__inner .reviews__inner_item___header__name {
-        transition: color 10ms ease-in-out;
-        color: var(--{{ module.style.header_color }});
+      color: var(--{{ module.style.header_color }});
       }
       
       #{{ name }} .reviews__inner_item__inner svg path {
-        fill: var(--{{ module.style.header_color }});
+      transition: fill var(--transition-time) var(--transition-easing);
+      fill: var(--{{ module.style.header_color }});
       }  
       
       #{{ name }} .reviews__inner_item__inner:hover .reviews__inner_item___header__name {
+        transition: color var(--transition-time) var(--transition-easing);
         color: var(--{{ module.style.hover_header_color }});
       }
       
