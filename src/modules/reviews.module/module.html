@@ -1,34 +1,36 @@
 {% import '../../macros/_reviews.html' %}
+{% import '../../macros/_style.html' %}
 
-<div id="{{ name }}" class="reviews">
+<div id="{{ name }}" class="reviews{{ ' animated' if module.style.animated_module }}"
+  {{ setAnimationAttr(module.style) }}>
 <div class="dnd-row">
-    <div class="reviews__inner row-fluid justify-center">    
-        {% if module.get_google_reviews %}
-        {{ generateGoogleReviews(module, name, "{{module.google_place_id}}" , "{{module.google_api_key}}") }}
-        {% else%}
+    <div class="reviews__inner row-fluid flex justify-center">    
         {{ generateReview(module, module.review) }}
-        {% endif %}
     </div>
 </div>
 </div>
 {% require_css %}
     <style>
-        #{{ name }} .reviews__inner_item___header__name {
-            font-size: 1.125rem;
-        }
+      #{{ name }} .reviews__inner_item___header__name {
+          font-size: 1.125rem;
+      }
 
-        #{{ name }} .reviews__inner_item__inner {
-            {% if module.style.background_color != 'transparent' %}
-            background: var({{ module.style.background_color }});
-            {% endif %}
-            {% if module.style.border_color != 'transparent' %}
-            border: 1px solid var({{ module.style.border_color }}); 
-            {% endif %}        
-            {{ module.style.desktop.items_spacing.css }}
-            {% if module.style.border_radius != 0 %}
-            border-radius: {{ module.style.border_radius ~ 'px' }};
-            {% endif %}
-        }
+      #{{ name }} .reviews__inner {
+        {{ module.style.desktop.spacing.css }}
+      }
+
+      #{{ name }} .reviews__inner_item__inner {
+        {% if module.style.background_color != 'transparent' %}
+        background: var({{ module.style.background_color }});
+        {% endif %}
+        {% if module.style.border_color != 'transparent' %}
+        border: 1px solid var({{ module.style.border_color }}); 
+        {% endif %}        
+        {{ module.style.desktop.items_spacing.css }}
+        {% if module.style.border_radius != 0 %}
+        border-radius: {{ module.style.border_radius ~ 'px' }};
+        {% endif %}
+      }
       
       #{{ name }} .reviews__inner_item__inner:hover {
         border-color: var({{ module.style.hover_border_color }});
@@ -53,6 +55,26 @@
       
       #{{ name }} .reviews__inner_item__inner:hover .reviews__inner_item__content {
         color: var({{ module.style.hover_content_color }});
+      }
+      
+      @media (max-width: 1024px) {
+      #{{ name }} .reviews__inner {
+        {{ module.style.tablet.spacing.css }}
+      }
+
+      #{{ name }} .reviews__inner_item__inner {       
+          {{ module.style.tablet.items_spacing.css }}
+      }        
+      }
+    
+      @media (max-width: 768px) {
+      #{{ name }} .reviews__inner {
+        {{ module.style.mobile.spacing.css }}
+      }
+
+      #{{ name }} .reviews__inner_item__inner {       
+          {{ module.style.mobile.items_spacing.css }}
+      }          
       }
     </style>
 {% end_require_css %}

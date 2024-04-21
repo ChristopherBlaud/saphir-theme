@@ -43,6 +43,40 @@ description: A section displaying a text with a slider to display many reviews o
         {% dnd_row %}
             {% dnd_module 
                 path='../modules/reviews'
+                style={{ context.reviews.style ?
+                    context.reviews.style : {
+                        'desktop': {
+                            'spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' }, 'left': { 'value': 64,  'units': 'px' }, 'right': { 'value': 64, 'units': 'px' } }
+                            },
+                            'items_spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 24, 'units': 'px' }, 'bottom': { 'value': 24, 'units': 'px' }, 'left': { 'value': 24,  'units': 'px' }, 'right': { 'value': 24, 'units': 'px' } }
+                            } 
+                        },
+                        'tablet': {
+                            'spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' }, 'left': { 'value': 32,  'units': 'px' }, 'right': { 'value': 32, 'units': 'px' } }
+                            },
+                            'items_spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 24, 'units': 'px' }, 'bottom': { 'value': 24, 'units': 'px' }, 'left': { 'value': 24,  'units': 'px' }, 'right': { 'value': 24, 'units': 'px' } }
+                            } 
+                        },
+                        'mobile': {
+                            'spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' }, 'left': { 'value': 0,  'units': 'px' }, 'right': { 'value': 0, 'units': 'px' } }
+                            },
+                            'items_spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 24, 'units': 'px' }, 'bottom': { 'value': 24, 'units': 'px' }, 'left': { 'value': 24,  'units': 'px' }, 'right': { 'value': 24, 'units': 'px' } }
+                            } 
+                        } 
+                    }
+                }}
             %}
             {% end_dnd_module %}
         {% end_dnd_row %}    

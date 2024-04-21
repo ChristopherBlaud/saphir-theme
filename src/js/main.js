@@ -1,7 +1,6 @@
-require("../css/main.css");
-
 import { gsap } from "./lib/gsap.min.js";    
 import { ScrollTrigger } from "./lib/ScrollTrigger.min.js";
+require("../css/main.css");
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
                 skewY = parseInt(module.dataset.skewY, 10) || 0,
                 opacity = (parseInt(module.dataset.opacity, 10) / 100) || 1,
                 delay = parseInt(module.dataset.animationDelay, 10) || 0,
-                bindOnScroll = JSON.parse(module.dataset.bindOnScroll);
+                bindOnScroll = Boolean(module.dataset.bindOnScroll);
 
             module.closest('.dnd-section').style.overflow = 'hidden';
 
@@ -36,7 +35,7 @@ gsap.registerPlugin(ScrollTrigger);
                     end: `center bottom-=${delay}`,
                     scrub: bindOnScroll
                 }
-            });
+            });           
         });
     }; 
 })();
