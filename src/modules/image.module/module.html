@@ -11,12 +11,6 @@
       >
     </a>
     {% endif %}
-    {% if module.device_variant.mobile.image_field.src %}
-      <source media="(max-width: 768px)" srcset="{{ module.device_variant.mobile.image_field.src|escape_url }}">
-    {% endif %}  
-    {% if module.device_variant.tablet.image_field.src %}
-      <source media="(max-width: 1024px)" srcset="{{ module.device_variant.tablet.image_field.src|escape_url }}">
-    {% endif %}
     {% if module.image_field.src %}
     {% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}"' %}
     {% if module.image_field.size_type == 'auto' %}

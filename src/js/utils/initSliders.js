@@ -2,7 +2,7 @@
     const logosSliders = document.querySelectorAll('.swiper');
 
     logosSliders && logosSliders.forEach(slider => {
-        
+        const slides = slider.querySelectorAll('.swiper-slide');
         const itemsSpacingXL = slider.dataset.itemsSpacingXl,
             itemsSpacingMD = slider.dataset.itemsSpacingMd,
             itemsSpacingXS = slider.dataset.itemsSpacingXs,
@@ -51,6 +51,11 @@
                     autoplay: autoplayMD && { delay: autoplayDelayMD },
                 }
             }            
+        });
+
+        slides.forEach(slide => {
+            slide.role = 'listitem';
+            slide.ariaLabel = null;
         });
     });
 })();

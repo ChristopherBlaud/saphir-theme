@@ -40,14 +40,7 @@
       "show_loading" : false,
       "type" : "image",
       "default" : {
-        "size_type" : "auto",
-        "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-        "alt" : "apple-1",
-        "loading" : "lazy",
-        "width" : 88,
-        "height" : 30,
-        "max_width" : 88,
-        "max_height" : 30
+        "src" : ""
       }
     } ],
     "tab" : "CONTENT",
@@ -55,14 +48,7 @@
     "type" : "group",
     "default" : {
       "image_field" : {
-        "size_type" : "auto",
-        "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-        "alt" : "apple-1",
-        "loading" : "lazy",
-        "width" : 88,
-        "height" : 30,
-        "max_width" : 88,
-        "max_height" : 30
+        "src" : ""
       }
     }
   }, {
@@ -84,14 +70,7 @@
       "show_loading" : false,
       "type" : "image",
       "default" : {
-        "size_type" : "auto",
-        "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-        "alt" : "apple-1",
-        "loading" : "lazy",
-        "width" : 88,
-        "height" : 30,
-        "max_width" : 88,
-        "max_height" : 30
+        "src" : ""
       }
     } ],
     "tab" : "CONTENT",
@@ -99,14 +78,7 @@
     "type" : "group",
     "default" : {
       "image_field" : {
-        "size_type" : "auto",
-        "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-        "alt" : "apple-1",
-        "loading" : "lazy",
-        "width" : 88,
-        "height" : 30,
-        "max_width" : 88,
-        "max_height" : 30
+        "src" : ""
       }
     }
   } ],
@@ -116,26 +88,12 @@
   "default" : {
     "tablet" : {
       "image_field" : {
-        "size_type" : "auto",
-        "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-        "alt" : "apple-1",
-        "loading" : "lazy",
-        "width" : 88,
-        "height" : 30,
-        "max_width" : 88,
-        "max_height" : 30
+        "src" : ""
       }
     },
     "mobile" : {
       "image_field" : {
-        "size_type" : "auto",
-        "src" : "https://143533460.fs1.hubspotusercontent-eu1.net/hubfs/143533460/apple-1.svg",
-        "alt" : "apple-1",
-        "loading" : "lazy",
-        "width" : 88,
-        "height" : 30,
-        "max_width" : 88,
-        "max_height" : 30
+        "src" : ""
       }
     }
   }

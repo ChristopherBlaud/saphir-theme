@@ -9,6 +9,7 @@
                     <a href="{{ href|escape_url }}" class="inline-flex absolute top-0 left-0 w-full h-full"
                         {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
                         {% if module.link_field.rel %}rel="{{ module.link_field.rel|escape_attr }}"{% endif %}
+                        aria-label="{{ review.full_name }} review's"
                         >
                     </a>
                     {% if module.display_quote %}

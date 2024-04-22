@@ -12,7 +12,7 @@
           {% if item.link.url.url.type is equalto "EMAIL_ADDRESS" %}
             {% set href = "mailto:" + href %}
           {% endif %}
-          <a class="inline-flex absolute z-30 w-full h-full top-0 left-O"href="{{ href|escape_url }}"
+          <a class="inline-flex absolute z-30 w-full h-full top-0 left-O" href="{{ href|escape_url }}" aria-label="{{ item.description|sanitize_html('STRIP') }}"
             {% if item.link.url.open_in_new_tab %}target="_blank"{% endif %}
             {% if item.link.url.rel %}rel="{{ item.link.url.rel|escape_attr }}"{% endif %}
             >
@@ -81,15 +81,15 @@
 
   #{{ name }} .swiper-button-prev:hover,
   #{{ name }} .swiper-button-next:hover {
-    color: var(--grey);
+    color: var(--body-color);
   }  
 
   #{{ name }} .swiper-pagination-bullet {
-    background: {{ theme.colors.grey_night.color }};
+    background: var(--grey-dark);
   }
 
   #{{ name }} .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: var(--grey);
+    background: var(--body-color);
   }
 
   @media (max-width: 1024px) {
