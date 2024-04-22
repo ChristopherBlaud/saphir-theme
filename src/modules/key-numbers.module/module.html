@@ -1,0 +1,108 @@
+<div id="{{ name }}" class="key-numbers dnd-row">
+    <div class="key-numbers__inner row-fluid">
+    {% for item in module.key_number %}
+        <div class="key-numbers__inner__item span4">
+        <div class="key-numbers__inner__item__inner flex flex-col">
+            <span class="key-numbers__inner__item__inner__number inline-flex title-display" data-type="{{ item.type }}">
+                <b class="key-numbers__inner__item__inner__number__value"{% if item.type == 'number' %} data-number="{{ item.number_field }}" data-duration="{{ item.animation_duration }}">{% endif%}{{ item.text_field if item.type == 'text' }}</b>
+                <b class="key-numbers__inner__item__inner__number__symbol">{{ item.symbol if item.display_symbol }}</b>
+            </span>
+            <span class="key-numbers__inner__item__inner__description">{{ item.description }}</span>
+        </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% require_css %}
+    <style> 
+        #{{ name }} {
+            {{ module.style.desktop.spacing.css }}
+        }
+
+        #{{ name }} .key-numbers__inner__item__inner {
+            gap: {{ module.style.desktop.gap ~ 'px' }};
+            {% if module.style.desktop.background_color != 'transparent' %}
+            background-color: var(--{{ module.style.desktop.background_color }});
+            {% endif %}
+            {% if module.style.desktop.border.width > 0 %}
+            border: {{ module.style.desktop.border.width ~ 'px' }} solid var(--{{ module.style.desktop.border.color }});
+            border-radius: {{ module.style.desktop.border.radius ~ 'px' }};
+            {% endif %}
+            {{ module.style.desktop.card_spacing.css }}
+        }
+
+        #{{ name }} .key-numbers__inner__item__inner__number {
+            font-size: {{ module.style.desktop.number.font_size ~ 'px' }};
+            line-height: {{ module.style.desktop.number.line_height ~ 'px' }};
+            font-weight: {{ module.style.desktop.number.font_weight }};
+            color: var(--{{ module.style.number_color }});
+        }
+
+        #{{ name }} .key-numbers__inner__item__inner__description {
+            font-size: {{ module.style.desktop.description.font_size ~ 'px' }};
+            line-height: {{ module.style.desktop.description.line_height ~ 'px' }};
+            font-weight: {{ module.style.desktop.description.font_weight }};
+            color: var(--{{ module.style.description_color }});
+        }        
+
+        @media (max-width: 1024px) {
+        #{{ name }} {
+            {{ module.style.tablet.spacing.css }}
+        }
+
+        #{{ name }} .key-numbers__inner__item__inner {
+            gap: {{ module.style.tablet.gap ~ 'px' }};
+            {% if module.style.tablet.background_color != 'transparent' %}
+            background-color: var(--{{ module.style.tablet.background_color }});
+            {% endif %}            
+            {% if module.style.tablet.border.width > 0 %}
+            border: {{ module.style.tablet.border.width ~ 'px' }} solid var(--{{ module.style.tablet.border.color }});
+            border-radius: {{ module.style.tablet.border.radius ~ 'px' }};
+            {% endif %}            
+            {{ module.style.tablet.card_spacing.css }}
+        }
+
+        #{{ name }} .key-numbers__inner__item__inner__number {
+            font-size: {{ module.style.tablet.number.font_size ~ 'px' }};
+            line-height: {{ module.style.tablet.number.line_height ~ 'px' }};
+            font-weight: {{ module.style.tablet.number.font_weight }};
+        }  
+
+        #{{ name }} .key-numbers__inner__item__inner__description {
+            font-size: {{ module.style.tablet.description.font_size ~ 'px' }};
+            line-height: {{ module.style.tablet.description.line_height ~ 'px' }};
+            font-weight: {{ module.style.tablet.description.font_weight }};
+        }                      
+        }
+
+        @media (max-width: 768px) {
+        #{{ name }} {
+            {{ module.style.mobile.spacing.css }}
+        }
+
+        #{{ name }} .key-numbers__inner__item__inner {
+            gap: {{ module.style.mobile.gap ~ 'px' }};
+            {% if module.style.mobile.background_color != 'transparent' %}
+            background-color: var(--{{ module.style.mobile.background_color }});
+            {% endif %}            
+            {% if module.style.mobile.border.width > 0 %}
+            border: {{ module.style.mobile.border.width ~ 'px' }} solid var(--{{ module.style.mobile.border.color }});
+            border-radius: {{ module.style.mobile.border.radius ~ 'px' }};
+            {% endif %}                
+            {{ module.style.mobile.card_spacing.css }}
+        }
+
+        #{{ name }} .key-numbers__inner__item__inner__number {
+            font-size: {{ module.style.mobile.number.font_size ~ 'px' }};
+            line-height: {{ module.style.mobile.number.line_height ~ 'px' }};
+            font-weight: {{ module.style.mobile.number.font_weight }};
+        }    
+        
+        #{{ name }} .key-numbers__inner__item__inner__description {
+            font-size: {{ module.style.mobile.description.font_size ~ 'px' }};
+            line-height: {{ module.style.mobile.description.line_height ~ 'px' }};
+            font-weight: {{ module.style.mobile.description.font_weight }};
+        }                
+        }        
+    </style>
+{% end_require_css %}
