@@ -1,1 +1,1 @@
-.buttons{display:flex}
+.buttons a.button:before{content:"";display:flex;height:100%;left:0;position:absolute;top:0;transition:background-color var(--transition-time) var(--transition-easing);width:100%;z-index:1}

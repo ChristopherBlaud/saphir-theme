@@ -1,0 +1,57 @@
+{% macro createButton(button, id) %} 
+    {% set href = button.url.url.href %}
+    {% if button.url.url.type is equalto "EMAIL_ADDRESS" %}
+    {% set href = "mailto:" + href %}
+    {% endif %}
+    <a class="button inline-flex relative" href="{{ href|escape_url }}"
+    {% if button.url.open_in_new_tab %}target="_blank"{% endif %}
+    {% if button.url.rel %}rel="{{ button.url.rel|escape_attr }}"{% endif %}
+    id="{{ id }}"
+    >
+        <span class="relative z-10">{{ button.text }}</span>
+    </a>
+    {% require_css %}
+        <style>
+            {% if button.border_color != 'default' || button.text_color != 'default' || button.background_color == 'transparent' %}
+            #{{ id }}  {
+            {% if button.border_color != 'default' %}
+                border: 1px solid var(--{{ button.border_color }});
+            {% endif %}
+            {% if button.text_color != 'default' %}
+                color: var(--{{ button.text_color }});
+            {% endif %}    
+            {{ 'background: transparent;' if button.background_color == 'transparent' }}
+            }
+            {% endif %}
+
+            {% if button.hover_border_color != 'default' ||button.hover_text_color != 'default'%}
+            #{{ id }}:hover {
+            {% if button.hover_border_color != 'default' %}
+                border: 1px solid var(--{{ button.hover_border_color }});
+            {% endif %}
+            {% if button.hover_text_color != 'default' %}
+                color: var(--{{ button.hover_text_color }});
+            {% endif %}    
+            }
+            {% endif %}
+
+            {% if button.background_color != 'default' %}
+            #{{ id }}::before {
+                background-color: var(--{{ button.background_color }});
+            }
+            {% endif %}
+
+            {% if button.hover_background_color != 'default' %}
+            #{{ id }}:hover::before {
+                background-color: var(--{{ button.hover_background_color }});
+            }
+            {% endif %}                    
+
+            {% if button.display_light_ray_on_hover == false %}
+                #{{ id }}::after {
+                    display: none;
+                }
+            {% endif %}
+        </style>
+    {% end_require_css %}
+{% endmacro %}

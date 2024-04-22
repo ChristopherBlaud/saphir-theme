@@ -29,6 +29,10 @@ body {
     border-color: var(--{{ theme.layout.horizontal_strokes_section.border_color }});
 }
 
+.dnd-module:has(.vertical-align-top-xl) { justify-content: flex-start; }
+.dnd-module:has(.vertical-align-center-xl) { justify-content: center; }
+.dnd-module:has(.vertical-align-bottom-xl) { justify-content: flex-end; }
+
 .dnd-section.all-strokes {
     border: {{ theme.layout.all_strokes_section.border_width ~ 'px' }} solid var(--{{ theme.layout.all_strokes_section.border_color }})
 }

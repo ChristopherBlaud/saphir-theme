@@ -19,6 +19,40 @@ description: A section displaying a text with and button with an image on right 
         {% dnd_row %}
             {% dnd_module 
                 path='../modules/buttons'
+                button={{ context.buttons.button ?
+                    context.buttons.button : [
+                        {
+                            'text': 'Contact us',
+                            'url': {
+                                'url': {
+                                    'href': 'https://www.example.com'
+                                }
+                            },
+                            'display_light_ray_on_hover': True,
+                            'background_color': 'default',
+                            'hover_background_color': 'default',
+                            'border_color': 'default',
+                            'hover_border_color': 'default',
+                            'text_color': 'default',
+                            'hover_text_color': 'default'                                                        
+                        },
+                        {
+                            'text': 'Get my website!',
+                            'url': {
+                                'url': {
+                                    'href': 'https://www.example.com'
+                                }
+                            },
+                            'display_light_ray_on_hover': False,
+                            'background_color': 'transparent',
+                            'hover_background_color': 'black',
+                            'border_color': 'secondary-color',
+                            'hover_border_color': 'black',
+                            'text_color': 'secondary-color',
+                            'hover_text_color': 'white'                              
+                        }                        
+                    ]
+                }}
                 style={{ context.buttons.style ?
                     context.buttons.style : {
                         'desktop': {

@@ -1,38 +1,44 @@
-<div id="{{ name }}" class="buttons">
-  <div class="buttons__inner flex">
+{% import '../../macros/_buttons.html' %}
+
+<div id="{{ name }}" class="buttons flex{{ ' vertical-align-' ~ module.style.desktop.vertical_alignment ~ '-xl' }}{{ ' vertical-align-' ~ module.style.tablet.vertical_alignment ~ '-md' }}"{{ ' vertical-align-' ~ module.style.mobile.vertical_alignment ~ '-xs' }}>
+  <div class="buttons__inner flex flex-row flex-wrap">
     {% for item in module.button %}
-    {% set href = item.url.url.href %}
-    {% if item.url.url.type is equalto "EMAIL_ADDRESS" %}
-    {% set href = "mailto:" + href %}
-    {% endif %}
-    <a class="button inline-flex relative" href="{{ href|escape_url }}"
-       {% if item.url.open_in_new_tab %}target="_blank"{% endif %}
-       {% if item.url.rel %}rel="{{ item.url.rel|escape_attr }}"{% endif %}
-       >
-      <span class="relative z-10">{{ item.text }}</span>
-    </a>
+      {{ createButton(item, name ~ '-button-' ~ loop.index) }}
     {% endfor %}
   </div>
 </div>
 {% require_css %}
 <style>
   #{{ name }} {
-    justify-content: {{ module.style.mobile.horizontal_alignment }};
-    {{ module.style.mobile.spacing.css }}
+    justify-content: {{ module.style.desktop.horizontal_alignment }};
+    {{ module.style.desktop.spacing.css }}
+  }
+    
+  #{{ name }} .buttons__inner {
+    gap: {{ module.style.desktop.gap ~ 'px' }};    
   }
 
-  @media (min-width: 768px) {
+  @media (max-width: 1024px) {
     #{{ name }} {
       justify-content: {{ module.style.tablet.horizontal_alignment }};
       {{ module.style.tablet.spacing.css }}
+    } 
+
+    #{{ name }} .buttons__inner {
+      gap: {{ module.style.tablet.gap ~ 'px' }};    
+    }    
+  }  
+
+  @media (max-width: 768px) {
+    #{{ name }} {
+      justify-content: {{ module.style.mobile.horizontal_alignment }};
+      {{ module.style.mobile.spacing.css }}
     }  
+
+    #{{ name }} .buttons__inner {
+      gap: {{ module.style.mobile.gap ~ 'px' }};    
+    }        
   }
   
-  @media (min-width: 1024px) {
-    #{{ name }} {
-      justify-content: {{ module.style.desktop.horizontal_alignment }};
-      {{ module.style.desktop.spacing.css }}
-    }  
-  }  
 </style>
 {% end_require_css %}
