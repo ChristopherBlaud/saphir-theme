@@ -9,7 +9,7 @@ description: A section displaying a text with many logos in a slider below.
     background_color={{ context.section.background_color ? 
         context.section.background_color : theme.colors.grey_medium.color
     }}
-    class={{ context.section.class ? context.section.class : 'small' }}
+    class={{ context.section.class ? context.section.class : 'small horizontal-strokes' }}
 %}
     {% dnd_column  %}
         {% dnd_row %}
@@ -39,7 +39,7 @@ description: A section displaying a text with many logos in a slider below.
         {% end_dnd_row %} 
         {% dnd_row %}
             {% dnd_module 
-                path='../modules/logo' 
+                path='../modules/logos-slider' 
                 logo={{ context.logos.logo ?
                     context.logos.logo : [
                         {

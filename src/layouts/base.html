@@ -37,12 +37,14 @@
         {% global_partial path='../templates/partials/header.html' %}
       {% endblock header %}    
     </header>
+    <main id="main">
       {% block body %}
-      {% endblock body %}
+      {% endblock body %}    
+    </main>
       <footer id="footer">
         {% block footer %}
           {% global_partial path='../templates/partials/footer.html' %}
-        {% endblock footer %}      
+        {% endblock footer %}            
       </footer>
     </div>
     {{ require_js(get_asset_url('../js/main.js')) }}

@@ -42,9 +42,41 @@ description: A section displaying a text with and button with an image on right 
                 path='../modules/image' 
                 image_field={{ context.image.image_field ?
                     context.image.image_field : {
-                        'src': get_asset_url('../images/visuals/heros.svg'),
+                        'src': get_asset_url('../images/visuals/illustration.svg'),
                         'loading': 'eager',
-                        'alt': 'illustration of man and women'
+                        'alt': 'illustration of man and women',
+                        'width': 589,
+                        'height': 480
+                    }
+                }}
+                device_variant={{ context.image.device_variant ?
+                    context.image.device_variant : {
+                        'tablet': {
+                            'image_field': {
+                                'src': get_asset_url('../images/visuals/illustration-md.svg')
+                            }
+                        },
+                        'mobile': {
+                            'image_field': {
+                                'src': get_asset_url('../images/visuals/illustration-xs.svg')
+                            }                            
+                        }
+                    }
+                }}
+                set_overflow={{ context.image.set_overflow ? context.image.set_overflow : True }} 
+                overflow_from={{ context.image.overflow_from ? context.image.overflow_from : 'bottom' }}   
+                overflow_value={{ context.image.overflow_value ? context.image.overflow_value : 32 }}            
+                style={{ context.image.style ?
+                    context.image.style : {
+                        'desktop': {
+                            'horizontal_alignment': 'center'
+                        },
+                        'tablet': {
+                            'horizontal_alignment': 'center'
+                        },
+                        'mobile': {
+                            'horizontal_alignment': 'center'
+                        }                         
                     }
                 }}
             %}

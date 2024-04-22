@@ -591,7 +591,7 @@
                   "max": 100,
                   "min": 0,
                   "suffix": "px",
-                  "default": 32
+                  "default": 16
                 }, {
                   "label": "Column gap",
                   "name": "column_gap",
@@ -635,8 +635,108 @@
               "default": 1280
             }
           ]
-        },
-        {
+        }, {
+          "label": "Mobile",
+          "name": "xs",
+          "type": "group",
+          "children": [
+            {
+              "label": "First section",
+              "name": "first_section",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 128,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
+            },               
+            {
+              "label": "Sections",
+              "name": "sections",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }                
+              ]
+            }, {
+              "label": "Rows gap",
+              "name": "rows_gap",
+              "type": "number",
+              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 24
+            },
+            {
+              "label": "Column gap",
+              "name": "column_gap",
+              "type": "number",
+              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 16
+            }
+          ]
+        }, {
           "label": "Tablet",
           "name": "md",
           "type": "group",
@@ -801,107 +901,133 @@
               "default": 520
             }
           ]
-        },
-        {
-          "label": "Mobile",
-          "name": "xs",
+        }, {
+          "label": "Horizontal strokes section",
+          "name": "horizontal_strokes_section",
           "type": "group",
           "children": [
             {
-              "label": "First section",
-              "name": "first_section",
-              "type": "group",
-              "children": [
-                {
-                  "label": "Spacing",
-                  "name": "spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 128,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 48,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                }                
-              ]
-            },               
-            {
-              "label": "Sections",
-              "name": "sections",
-              "type": "group",
-              "children": [
-                {
-                  "label": "Spacing",
-                  "name": "spacing",
-                  "type": "spacing",
-                  "visibility": {
-                    "hidden_subfields": {
-                      "margin": true
-                    }
-                  },
-                  "default": {
-                    "padding": {
-                      "top": {
-                        "value": 48,
-                        "units": "px"
-                      },
-                      "right": {
-                        "value": 0,
-                        "units": "px"
-                      },
-                      "bottom": {
-                        "value": 48,
-                        "units": "px"
-                      },
-                      "left": {
-                        "value": 0,
-                        "units": "px"
-                      }
-                    }              
-                  }
-                }                
-              ]
-            }, {
-              "label": "Rows gap",
-              "name": "rows_gap",
+              "label": "Border width",
+              "name": "border_width",
               "type": "number",
-              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
               "display": "slider",
-              "max": 100,
+              "max": 20,
               "min": 0,
-              "suffix": "px",
-              "default": 24
+              "default": 1
             },
             {
-              "label": "Column gap",
-              "name": "column_gap",
+              "label": "Border color",
+              "name": "border_color",
+              "type": "choice",
+              "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "{{ theme.colors.first.color }}",
+                  "First color"
+                ],
+                [
+                  "{{ theme.colors.second.color }}",
+                  "Second color"
+                ],
+                [
+                  "{{ theme.colors.third.color }}",
+                  "Third color"
+                ],
+                [
+                  "{{ theme.colors.fourth.color }}",
+                  "Fourth color"
+                ],
+                [
+                  "{{ theme.colors.fifth.color }}",
+                  "Fifth color"
+                ],
+                [
+                  "{{ theme.colors.default.color }}",
+                  "Body (default) color"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "white",
+                  "White"
+                ]
+              ],
+              "display": "select",
+              "default": "grey"
+            }            
+          ]
+        }, {
+          "label": "All strokes section",
+          "name": "all_strokes_section",
+          "type": "group",
+          "children": [
+            {
+              "label": "Border width",
+              "name": "border_width",
               "type": "number",
-              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
               "display": "slider",
-              "max": 100,
+              "max": 20,
               "min": 0,
-              "suffix": "px",
-              "default": 16
-            }
+              "default": 1
+            },
+            {
+              "label": "Border color",
+              "name": "border_color",
+              "type": "choice",
+              "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "{{ theme.colors.first.color }}",
+                  "First color"
+                ],
+                [
+                  "{{ theme.colors.second.color }}",
+                  "Second color"
+                ],
+                [
+                  "{{ theme.colors.third.color }}",
+                  "Third color"
+                ],
+                [
+                  "{{ theme.colors.fourth.color }}",
+                  "Fourth color"
+                ],
+                [
+                  "{{ theme.colors.fifth.color }}",
+                  "Fifth color"
+                ],
+                [
+                  "{{ theme.colors.default.color }}",
+                  "Body (default) color"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "white",
+                  "White"
+                ]
+              ],
+              "display": "select",
+              "default": "grey"
+            }            
           ]
         }
       ]

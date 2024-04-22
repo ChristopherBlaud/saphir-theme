@@ -343,7 +343,7 @@
         "reordering_enabled" : true,
         "preset" : null,
         "type" : "choice",
-        "default" : "grey-accent"
+        "default" : "grey"
       }, {
         "id" : "f0d656b2-320c-8415-78cd-96a32ad67470",
         "name" : "border_radius",
@@ -385,7 +385,7 @@
         },
         "border_width" : 1,
         "background_color" : "white",
-        "border_color" : "grey-accent",
+        "border_color" : "grey",
         "border_radius" : 71
       }
     } ],
@@ -423,7 +423,7 @@
         },
         "border_width" : 1,
         "background_color" : "white",
-        "border_color" : "grey-accent",
+        "border_color" : "grey",
         "border_radius" : 71
       }
     }
@@ -602,7 +602,7 @@
         "reordering_enabled" : true,
         "preset" : null,
         "type" : "choice",
-        "default" : "grey-accent"
+        "default" : "grey"
       }, {
         "id" : "f0d656b2-320c-8415-78cd-96a32ad67471",
         "name" : "border_radius",
@@ -644,7 +644,7 @@
         },
         "border_width" : 1,
         "background_color" : "white",
-        "border_color" : "grey-accent",
+        "border_color" : "grey",
         "border_radius" : 71
       }
     } ],
@@ -854,7 +854,7 @@
         "reordering_enabled" : true,
         "preset" : null,
         "type" : "choice",
-        "default" : "grey-accent"
+        "default" : "grey"
       }, {
         "id" : "f0d656b2-320c-8415-78cd-96a32ad67472",
         "name" : "border_radius",
@@ -896,7 +896,7 @@
         },
         "border_width" : 1,
         "background_color" : "white",
-        "border_color" : "grey-accent",
+        "border_color" : "grey",
         "border_radius" : 71
       }
     } ],
@@ -1137,7 +1137,7 @@
         },
         "border_width" : 1,
         "background_color" : "white",
-        "border_color" : "grey-accent",
+        "border_color" : "grey",
         "border_radius" : 71
       }
     },

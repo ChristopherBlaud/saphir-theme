@@ -18,6 +18,21 @@ body {
     justify-content: flex-end;
 }
 
+.dnd-section:has(.hs_cos_wrapper > .has-overflow) {
+    overflow: hidden;
+}
+
+.dnd-section.horizontal-strokes {
+    border-top-width: {{ theme.layout.horizontal_strokes_section.border_width ~ 'px' }};
+    border-bottom-width: {{ theme.layout.horizontal_strokes_section.border_width ~ 'px' }};
+    border-style: normal;
+    border-color: var(--{{ theme.layout.horizontal_strokes_section.border_color }});
+}
+
+.dnd-section.all-strokes {
+    border: {{ theme.layout.all_strokes_section.border_width ~ 'px' }} solid var(--{{ theme.layout.all_strokes_section.border_color }})
+}
+
 @media (max-width: 768px) {
     .dnd-section .dnd-column .hide-on-mobile {
         display: none;
