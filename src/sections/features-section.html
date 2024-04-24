@@ -59,7 +59,57 @@ description: A section displaying text and button with many features on right si
     {% end_dnd_column %}
     {% dnd_column width="6" offset="6"%}  
         {% dnd_row %}  
-    {% dnd_module path="../modules/features"%}      
+    {% dnd_module 
+        path="../modules/features"
+        feature={{ context.features.feature ?
+            context.features.feature : [
+                {
+                    'icon_field': { 
+                        'src': get_asset_url('../images/icons/ear.svg'),
+                        'width': 23,
+                        'height': 23,
+                        'alt': "icon look likes an ear",
+                        'loading': 'lazy'
+                    },                
+                    'title': 'Technical assistance',
+                    'description': 'Need support or have questions about our theme? We are here to help you.'
+                },
+                {
+                'icon_field': { 
+                    'src': get_asset_url('../images/icons/headphone.svg'),
+                    'width': 23,
+                    'height': 23,
+                    'alt': "icon look likes a headphone",
+                    'loading': 'lazy'
+                },              
+                    'title': 'Customer Support',
+                    'description': 'Our team is available to answer all your questions and provide technical assistance.'
+                },
+                {
+                'icon_field': { 
+                    'src': get_asset_url('../images/icons/calendar.svg'),
+                    'width': 23,
+                    'height': 23,
+                    'alt': "icon look likes a calendar",
+                    'loading': 'lazy'
+                },                
+                    'title': 'Free consultation',
+                    'description': 'Contact us to book a free consultation.'
+                },
+                {
+                'icon_field': { 
+                    'src': get_asset_url('../images/icons/settings.svg'),
+                    'width': 23,
+                    'height': 23,
+                    'alt': "icon look likes a calendar",
+                    'loading': 'lazy'
+                },                   
+                    'title': 'Personalized services',
+                    'description': 'We offer personalized services to meet your specific needs.'
+                }                                                   
+            ]
+        }}
+    %}      
     {% end_dnd_module %}
         {% end_dnd_row %}        
     {% end_dnd_column %}

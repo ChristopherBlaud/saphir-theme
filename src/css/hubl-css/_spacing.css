@@ -98,7 +98,14 @@
 
 .container-fluid:not(.header-container) .dnd-section.small {
     {{ theme.layout.xl.small_sections.spacing.css }}
-}           
+}         
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .container-fluid:not(.header-container) .dnd-section > .row-fluid {
+        max-width: {{ theme.layout.md.max_width ~ 'px' }};
+    }    
+}
+
 @media (max-width: 1024px) {
     .container-fluid:not(.header-container) .dnd-section:first-of-type {
         {{ theme.layout.md.first_section.spacing.css }}
@@ -110,7 +117,7 @@
         {{ theme.layout.md.small_sections.spacing.css }}
     }               
     .container-fluid:not(.header-container) .dnd-section > .row-fluid {
-        max-width: {{ theme.layout.md.max_width ~ 'px' }};
+        max-width: {{ theme.layout.xs.max_width ~ 'px' }};
     }
     .dnd-section .row-fluid {
         row-gap: {{ theme.layout.md.rows_gap ~ 'px' }};

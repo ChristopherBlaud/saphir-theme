@@ -734,6 +734,14 @@
               "min": 0,
               "suffix": "px",
               "default": 16
+            }, {
+              "label": "Maximum content width",
+              "name": "max_width",
+              "type": "number",
+              "display": "slider",
+              "max": 2500,
+              "min": 500,
+              "default": 520
             }
           ]
         }, {
@@ -898,7 +906,7 @@
               "display": "slider",
               "max": 2500,
               "min": 500,
-              "default": 520
+              "default": 960
             }
           ]
         }, {
