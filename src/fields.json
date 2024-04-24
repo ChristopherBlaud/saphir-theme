@@ -722,7 +722,7 @@
               "max": 100,
               "min": 0,
               "suffix": "px",
-              "default": 24
+              "default": 48
             },
             {
               "label": "Column gap",

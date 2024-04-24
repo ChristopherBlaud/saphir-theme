@@ -20,9 +20,9 @@
     "default" : 2
   }, {
     "id" : "a660c1f5-a23b-654a-6bea-6431d3c16a55",
-    "name" : "number_color",
+    "name" : "title_color",
     "display_width" : null,
-    "label" : "Number color",
+    "label" : "Title color",
     "required" : false,
     "locked" : false,
     "display" : "select",
@@ -249,8 +249,8 @@
       "expanded" : false,
       "type" : "group",
       "default" : {
-        "font_size" : 58,
-        "line_height" : 69.6,
+        "font_size" : 36,
+        "line_height" : 48,
         "font_weight" : "400"
       }
     }, {
@@ -303,8 +303,8 @@
       "expanded" : false,
       "type" : "group",
       "default" : {
-        "font_size" : 16,
-        "line_height" : 27.2,
+        "font_size" : 14,
+        "line_height" : 21,
         "font_weight" : 400
       }
     } ],
@@ -343,13 +343,13 @@
         "color" : "body-color"
       },
       "number" : {
-        "font_size" : 58,
-        "line_height" : 69.6,
+        "font_size" : 36,
+        "line_height" : 48,
         "font_weight" : "400"
       },
       "description" : {
-        "font_size" : 16,
-        "line_height" : 27.2,
+        "font_size" : 14,
+        "line_height" : 21,
         "font_weight" : 400
       }
     }
@@ -555,7 +555,7 @@
       "expanded" : false,
       "type" : "group",
       "default" : {
-        "font_size" : 58,
+        "font_size" : 36,
         "font_weight" : "700"
       }
     }, {
@@ -608,8 +608,8 @@
       "expanded" : false,
       "type" : "group",
       "default" : {
-        "font_size" : 16,
-        "line_height" : 27.2,
+        "font_size" : 14,
+        "line_height" : 21,
         "font_weight" : "400"
       }
     } ],
@@ -648,12 +648,12 @@
         "color" : "body-color"
       },
       "number" : {
-        "font_size" : 58,
+        "font_size" : 36,
         "font_weight" : "700"
       },
       "description" : {
-        "font_size" : 16,
-        "line_height" : 27.2,
+        "font_size" : 14,
+        "line_height" : 21,
         "font_weight" : "400"
       }
     }
@@ -860,8 +860,8 @@
       "expanded" : false,
       "type" : "group",
       "default" : {
-        "font_size" : 58,
-        "line_height" : 69.6,
+        "font_size" : 36,
+        "line_height" : 48,
         "font_weight" : "700"
       }
     }, {
@@ -912,7 +912,10 @@
       "tab" : "STYLE",
       "expanded" : false,
       "type" : "group",
-      "default" : { }
+      "default" : {
+        "font_size" : 14,
+        "line_height" : 21
+      }
     } ],
     "tab" : "STYLE",
     "expanded" : false,
@@ -949,18 +952,22 @@
         "color" : "body-color"
       },
       "number" : {
-        "font_size" : 58,
-        "line_height" : 69.6,
+        "font_size" : 36,
+        "line_height" : 48,
         "font_weight" : "700"
       },
-      "description" : { }
+      "description" : {
+        "font_size" : 14,
+        "line_height" : 21
+      }
     }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
   "type" : "group",
   "default" : {
-    "number_color" : "black",
+    "items_per_row" : 2,
+    "title_color" : "secondary-color",
     "description_color" : "body-color",
     "desktop" : {
       "horizontal_alignment" : "flex-start",
@@ -994,13 +1001,13 @@
         "color" : "body-color"
       },
       "number" : {
-        "font_size" : 58,
-        "line_height" : 69.6,
+        "font_size" : 36,
+        "line_height" : 48,
         "font_weight" : "400"
       },
       "description" : {
-        "font_size" : 16,
-        "line_height" : 27.2,
+        "font_size" : 14,
+        "line_height" : 21,
         "font_weight" : 400
       }
     },
@@ -1036,12 +1043,12 @@
         "color" : "body-color"
       },
       "number" : {
-        "font_size" : 58,
+        "font_size" : 36,
         "font_weight" : "700"
       },
       "description" : {
-        "font_size" : 16,
-        "line_height" : 27.2,
+        "font_size" : 14,
+        "line_height" : 21,
         "font_weight" : "400"
       }
     },
@@ -1077,160 +1084,51 @@
         "color" : "body-color"
       },
       "number" : {
-        "font_size" : 58,
-        "line_height" : 69.6,
+        "font_size" : 36,
+        "line_height" : 48,
         "font_weight" : "700"
       },
-      "description" : { }
+      "description" : {
+        "font_size" : 14,
+        "line_height" : 21
+      }
     }
   }
 }, {
-  "id" : "48f6b3bd-110a-c11f-256a-7c2bb1ae26bb",
-  "name" : "key_number",
+  "id" : "882f5493-135a-e7dc-a4da-f8fe2bdedf84",
+  "name" : "feature",
   "display_width" : null,
-  "label" : "Key number",
+  "label" : "Feature",
   "required" : false,
   "locked" : false,
-  "occurrence" : {
-    "min" : 1,
-    "max" : null,
-    "sorting_label_field" : null,
-    "default" : 3
-  },
   "children" : [ {
-    "id" : "2f24af4f-2e89-b6cd-152b-1dad6d804f3c",
-    "name" : "type",
+    "id" : "dbc87347-830c-e054-c2e2-8fe2dc6f53ce",
+    "name" : "icon_field",
     "display_width" : null,
-    "label" : "Type",
+    "label" : "Icon",
     "required" : false,
     "locked" : false,
-    "display" : "select",
-    "choices" : [ [ "number", "Number" ], [ "text", "Text" ] ],
-    "multiple" : false,
-    "reordering_enabled" : true,
-    "preset" : null,
-    "type" : "choice",
-    "default" : "number"
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "default" : {
+      "name" : "Ear Listen",
+      "unicode" : "f2a2",
+      "type" : "SOLID"
+    }
   }, {
-    "id" : "113d36f0-aa8b-b527-185b-41184d8fd60d",
-    "name" : "number_field",
+    "id" : "c360a085-0e14-a457-9b96-349a9770de9b",
+    "name" : "title",
     "display_width" : null,
-    "label" : "Number",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "key_number.type",
-      "controlling_value_regex" : "number",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "display" : "text",
-    "step" : 1,
-    "type" : "number",
-    "default" : 17
-  }, {
-    "id" : "d2f0c19b-31b6-7770-b8f9-6d401f06e0b5",
-    "name" : "text_field",
-    "display_width" : null,
-    "label" : "Text",
+    "label" : "Title",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "key_number.type",
-      "controlling_value_regex" : "text",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text"
-  }, {
-    "id" : "e2068912-4358-b45b-8614-25da160151fc",
-    "name" : "display_symbol",
-    "display_width" : null,
-    "label" : "Display symbol",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : true
-  }, {
-    "id" : "f3ef2a4d-3bb4-1245-d31c-7a4971b2c995",
-    "name" : "symbol_before_number",
-    "display_width" : null,
-    "label" : "Symbol before number",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "key_number.display_symbol",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "+"
+    "default" : "Technical assistance"
   }, {
-    "id" : "f3ef2a4d-3bb4-1245-d31c-7a4971b2c996",
-    "name" : "symbol_after_number",
-    "display_width" : null,
-    "label" : "Symbol after number",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "key_number.display_symbol",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "+"
-  }, {
-    "id" : "9dc588d0-81d8-4bda-c4f5-21d42cfc8643",
-    "name" : "animated",
-    "display_width" : null,
-    "label" : "Animated",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : true
-  }, {
-    "id" : "10fa642f-feff-ca26-e81f-7c3c520a3d52",
-    "name" : "animation_duration",
-    "display_width" : null,
-    "label" : "Animation duration",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "key_number.animated",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "display" : "text",
-    "step" : 1,
-    "suffix" : "ms",
-    "type" : "number",
-    "default" : 50
-  }, {
-    "id" : "109a2a13-7823-10af-aadb-11055a4f96c5",
+    "id" : "1bb7a2c0-2df2-f558-2baf-c9da3d54778a",
     "name" : "description",
     "display_width" : null,
     "label" : "Description",
@@ -1240,34 +1138,18 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "years of experience in this field."
+    "default" : "Need support or have questions about our theme? We are here to help you."
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
-  "default" : [ {
-    "type" : "number",
-    "number_field" : 17,
-    "display_symbol" : true,
-    "symbol" : "+",
-    "animated" : true,
-    "animation_duration" : 50,
-    "description" : "years of experience in this field."
-  }, {
-    "type" : "number",
-    "number_field" : 17,
-    "display_symbol" : true,
-    "symbol" : "+",
-    "animated" : true,
-    "animation_duration" : 50,
-    "description" : "years of experience in this field."
-  }, {
-    "type" : "number",
-    "number_field" : 17,
-    "display_symbol" : true,
-    "symbol" : "+",
-    "animated" : true,
-    "animation_duration" : 50,
-    "description" : "years of experience in this field."
-  } ]
+  "default" : {
+    "icon_field" : {
+      "name" : "Ear Listen",
+      "unicode" : "f2a2",
+      "type" : "SOLID"
+    },
+    "title" : "Technical assistance",
+    "description" : "Need support or have questions about our theme? We are here to help you."
+  }
 } ]

@@ -1,14 +1,19 @@
 <div id="{{ name }}" class="key-numbers dnd-row">
     <div class="key-numbers__inner row-fluid">
     {% for item in module.key_number %}
-        <div class="key-numbers__inner__item span4">
-        <div class="key-numbers__inner__item__inner flex flex-col">
-            <span class="key-numbers__inner__item__inner__number inline-flex title-display" data-type="{{ item.type }}">
-                <b class="key-numbers__inner__item__inner__number__value"{% if item.type == 'number' %} data-number="{{ item.number_field }}" data-duration="{{ item.animation_duration }}">{% endif%}{{ item.text_field if item.type == 'text' }}</b>
-                <b class="key-numbers__inner__item__inner__number__symbol">{{ item.symbol if item.display_symbol }}</b>
-            </span>
-            <span class="key-numbers__inner__item__inner__description">{{ item.description }}</span>
-        </div>
+        <div class="key-numbers__inner__item span{{ 12 / module.style.items_per_row|round }}">
+            <div class="key-numbers__inner__item__inner flex flex-col">
+                <span class="key-numbers__inner__item__inner__number inline-flex" data-type="{{ item.type }}">
+                {% if item.symbol_before_number %}
+                    <b class="key-numbers__inner__item__inner__number__before-symbol">{{ item.symbol_before_number }}</b>                
+                {% endif %}
+                    <b class="key-numbers__inner__item__inner__number__value"{% if item.type == 'number' %} data-number="{{ item.number_field }}" data-duration="{{ item.animation_duration }}">{% endif%}{{ item.text_field if item.type == 'text' }}</b>
+                {% if item.symbol_after_number %}
+                    <b class="key-numbers__inner__item__inner__number__after-symbol">{{ item.symbol_after_number }}</b>                    
+                {% endif %}
+                </span>
+                <span class="key-numbers__inner__item__inner__description">{{ item.description }}</span>
+            </div>
         </div>
     {% endfor %}
     </div>
@@ -16,6 +21,7 @@
 {% require_css %}
     <style> 
         #{{ name }} {
+            text-wrap: wrap;
             {{ module.style.desktop.spacing.css }}
         }
 
@@ -32,6 +38,7 @@
         }
 
         #{{ name }} .key-numbers__inner__item__inner__number {
+            font-family: {{ theme.fonts.secondary.font_family.font ~ ',' ~ theme.fonts.secondary.font_family.fallback }};
             font-size: {{ module.style.desktop.number.font_size ~ 'px' }};
             line-height: {{ module.style.desktop.number.line_height ~ 'px' }};
             font-weight: {{ module.style.desktop.number.font_weight }};
@@ -52,13 +59,9 @@
 
         #{{ name }} .key-numbers__inner__item__inner {
             gap: {{ module.style.tablet.gap ~ 'px' }};
-            {% if module.style.tablet.background_color != 'transparent' %}
             background-color: var(--{{ module.style.tablet.background_color }});
-            {% endif %}            
-            {% if module.style.tablet.border.width > 0 %}
             border: {{ module.style.tablet.border.width ~ 'px' }} solid var(--{{ module.style.tablet.border.color }});
-            border-radius: {{ module.style.tablet.border.radius ~ 'px' }};
-            {% endif %}            
+            border-radius: {{ module.style.tablet.border.radius ~ 'px' }};         
             {{ module.style.tablet.card_spacing.css }}
         }
 
@@ -82,13 +85,9 @@
 
         #{{ name }} .key-numbers__inner__item__inner {
             gap: {{ module.style.mobile.gap ~ 'px' }};
-            {% if module.style.mobile.background_color != 'transparent' %}
             background-color: var(--{{ module.style.mobile.background_color }});
-            {% endif %}            
-            {% if module.style.mobile.border.width > 0 %}
             border: {{ module.style.mobile.border.width ~ 'px' }} solid var(--{{ module.style.mobile.border.color }});
-            border-radius: {{ module.style.mobile.border.radius ~ 'px' }};
-            {% endif %}                
+            border-radius: {{ module.style.mobile.border.radius ~ 'px' }};         
             {{ module.style.mobile.card_spacing.css }}
         }
 

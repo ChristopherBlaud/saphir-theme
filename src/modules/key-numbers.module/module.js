@@ -15,7 +15,7 @@
                 numberContainer.textContent = start;
 
                 if (start >= value - 4) {
-                    duration += 30;
+                    duration += 10;
                     clearInterval(interval);
                     interval = setInterval(increment, duration)
                 }
@@ -27,7 +27,21 @@
                 }
             };
 
-            interval = setInterval(increment, duration)
-        }
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0
+              };
+
+            const numberObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      interval = setInterval(increment, duration)
+                  }
+                });
+            }, options);
+
+            numberObserver.observe(number);
+        };
     });
 })();

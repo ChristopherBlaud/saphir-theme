@@ -748,6 +748,10 @@ video {
   white-space: nowrap !important;
 }
 
+.text-wrap {
+  text-wrap: wrap !important;
+}
+
 .rounded-2xl {
   border-radius: 1rem !important;
 }
