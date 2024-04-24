@@ -12,6 +12,17 @@ description: A section displaying a text with a slider to display your services.
                 path='../modules/custom-text'
                 display_label={{ context.text.display_label ? context.text.display_label : true }}
                 label_text={{ context.text.label ? context.text.display_label : 'Our services' }}
+                style={{ context.text.style ?
+                    context.text.style : {
+                    'animated_module': True,
+                    'animation_settings': {
+                        'position_on_y': 100,
+                        'opacity': 10,
+                        'animation_delay': 100,
+                        'bind_animation_on_scroll': true                                                              
+                    }                       
+                    }
+                }}
             %}
             {% module_attribute "html" %}
                 {{ context.text.content ? context.text.content : '<h2><b>Communicate <span style="color: {{ theme.colors.secondary.color }}">effectively</span> with your customers</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti nullam.</p>' }}
@@ -48,7 +59,14 @@ description: A section displaying a text with a slider to display your services.
                             'animation_duration': 2000,
                             'autoplay': true,
                             'autoplay_delay': 2000                            
-                        }
+                        },
+                        'animated_module': True,
+                        'animation_settings': {
+                            'position_on_y': 100,
+                            'opacity': 10,
+                            'animation_delay': 100,
+                            'bind_animation_on_scroll': true                                                              
+                        }    
                     }
                 }}                
             %}

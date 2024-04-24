@@ -1,5 +1,8 @@
+{% import '../../macros/_style.html' %}
+
 <div id="{{ name }}" class="image flex relative z-30{{ ' has-overflow' if module.style.desktop.set_overflow}}">
-  <picture class="image__inner relative">
+  <picture class="image__inner relative{{ ' animated' if module.style.animated_module }}"
+  {{ setAnimationAttr(module.style) }}>
     {% if module.set_link %}
     {% set href = module.url.url.href %}
     {% if module.url.url.type is equalto "EMAIL_ADDRESS" %}

@@ -1,7 +1,8 @@
 {% import '../../macros/_style.html' %}
 
 <div id="{{ name }}" class="custom-text">
-    <div class="custom-text__inner flex flex-col gap-y-4">
+    <div class="custom-text__inner flex flex-col gap-y-4{{ ' animated' if module.style.animated_module }}"
+    {{ setAnimationAttr(module.style) }}>
         {% if module.display_label %}
         <div class="custom-text__inner__label flex items-center gap-x-3 p-1 pr-3 rounded-[50px]">
             <div class="custom-text__inner__label__logo flex items-center justify-center w-[30px] h-[30px] rounded-full">

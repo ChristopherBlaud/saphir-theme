@@ -1,9 +1,9 @@
 {% import '../../macros/_reviews.html' %}
 {% import '../../macros/_style.html' %}
 
-<div id="{{ name }}" class="reviews{{ ' animated' if module.style.animated_module }}"
-  {{ setAnimationAttr(module.style) }}>
-<div class="dnd-row">
+<div id="{{ name }}" class="reviews">
+<div class="dnd-row{{ ' animated' if module.style.animated_module }}"
+{{ setAnimationAttr(module.style) }}>
     <div class="reviews__inner row-fluid flex justify-center">    
         {{ generateReview(module, module.review) }}
     </div>

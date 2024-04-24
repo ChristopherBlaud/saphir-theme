@@ -1,20 +1,16 @@
+{% import '../../macros/_style.html' %}
+
 <div id="{{ name }}" class="features dnd-row">
-  <div class="features__inner row-fluid">
+  <div class="features__inner row-fluid{{ ' animated' if module.style.animated_module }}"
+  {{ setAnimationAttr(module.style) }}>
     {% for item in module.feature %}
     <div class="features__inner__item span{{ 12 / module.style.items_per_row|round }}">
       <div class="features__inner__item__inner flex flex-col md:flex-row ">
-        <div class="features__inner__item__inner__icon flex h-fit w-fit shrink-0 p-4">
-          {% if item.icon_field.src %}
-          {% set sizeAttrs = 'width="{{ item.icon_field.width|escape_attr }}" height="{{ item.icon_field.height|escape_attr }}"' %}
-          {% if item.icon_field.size_type == 'auto' %}
-          {% set sizeAttrs = 'width="{{ item.icon_field.width|escape_attr }}" height="{{ item.icon_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-          {% elif item.icon_field.size_type == 'auto_custom_max' %}
-          {% set sizeAttrs = 'width="{{ item.icon_field.max_width|escape_attr }}" height="{{ item.icon_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-          {% endif %}
-          {% set loadingAttr = item.icon_field.loading != 'disabled' ? 'loading="{{ item.icon_field.loading|escape_attr }}"' : '' %}
-          <img src="{{ item.icon_field.src|escape_url }}" alt="{{ item.icon_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
-          {% endif %}
-        </div>
+      {% if item.icon_field.src %}
+        <picture class="features__inner__item__inner__icon flex h-fit w-fit shrink-0">
+          <img src="{{ item.icon_field.src|escape_url }}" alt="{{ item.icon_field.alt|escape_attr }}" loading="lazy" width="{{ module.style.icon_width }}" height="{{ module.style.icon_width }}">
+        </picture>
+        {% endif %}
         <div class="features__inner__item__inner__text flex flex-col">
           <span class="features__inner__item__inner__text__title title-display">{{ item.title }}</span>
           <span class="features__inner__item__inner__text__description">{{ item.description }}</span>
@@ -28,7 +24,7 @@
 <style>
   #{{ name }}  {
     text-align: {{ module.style.desktop.text_alignment }};
-    {{ module.style.desktop.spacing.css }}  
+    {{ module.style.desktop.spacing.css }}
   }
 
   #{{ name }} .features__inner__item__inner {
@@ -41,18 +37,19 @@
 
   #{{ name }} .features__inner__item__inner__icon {
     background-color: var(--{{ module.style.icon_background_color }});
-    {% if module.style.icon_border_radius > 0 %}
-    border-radius: {{ module.style.icon_border_radius ~ 'px' }};
+    {% if module.style.border.radius > 0 %}
+    border-radius: {{ module.style.border.radius ~ 'px' }};
+    {% endif %}    
+    {% if module.style.border.width > 0 %}
+    border: {{ module.style.border.width ~ 'px' }} solid var(--{{ module.style.border.color }});
     {% endif %}
+    {{ module.style.icon_spacing.css }}    
   }
 
-  #{{ name }} .features__inner__item__inner__icon svg {
-    width: {{ module.style.desktop.icon_width ~ 'px' }}
-  }            
-
-  #{{ name }} .features__inner__item__inner__icon svg path {
-    fill: var(--{{ module.style.icon_color }});
-  }        
+  #{{ name }} .features__inner__item__inner__icon img {
+    width: {{ module.style.icon_width ~ 'px' }};
+    height: {{ module.style.icon_width ~ 'px' }};
+  } 
 
   #{{ name }} .features__inner__item__inner__text__title {
     font-size: {{ module.style.desktop.title.font_size ~ 'px' }};
@@ -92,11 +89,7 @@
       font-size: {{ module.style.tablet.description.font_size ~ 'px' }};
       line-height: {{ module.style.tablet.description.line_height ~ 'px' }};
       font-weight: {{ module.style.tablet.description.font_weight }};
-    }          
-
-    #{{ name }} .features__inner__item__inner__icon svg {
-      width: {{ module.style.tablet.icon_width ~ 'px' }}
-    }                      
+    }                       
   }
 
   @media (max-width: 768px) {
@@ -123,11 +116,7 @@
       font-size: {{ module.style.mobile.description.font_size ~ 'px' }};
       line-height: {{ module.style.mobile.description.line_height ~ 'px' }};
       font-weight: {{ module.style.mobile.description.font_weight }};
-    }          
-
-    #{{ name }} .features__inner__item__inner__icon svg {
-      width: {{ module.style.mobile.icon_width ~ 'px' }}
-    }                      
+    }                          
   }
 </style>
 {% end_require_css %}

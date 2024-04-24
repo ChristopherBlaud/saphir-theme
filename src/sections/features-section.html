@@ -12,6 +12,17 @@ description: A section displaying text and button with many features on right si
                 path='../modules/custom-text'
                 display_label={{ context.text.display_label ? context.text.display_label : True }}
                 label_text={{ context.text.label ? context.text.label : "Request" }}
+                style={{ context.text.style ?
+                context.text.style : {
+                    'animated_module': True,
+                    'animation_settings': {
+                        'position_on_y': 100,
+                        'opacity': 10,
+                        'animation_delay': 100,
+                        'bind_animation_on_scroll': true                                                              
+                    }            
+                }
+                }}                
             %}
             {% module_attribute "html" %}
                 {{ context.text.content ? context.text.content : '<h2 style="color: {{ theme.colors.black.color }}"><b>We are <span style="color: {{ theme.colors.secondary.color }}">listening</span> to you</b></h2><p>Contact us if you have specific questions about supporting your website request or if you need assistance.</p>' }}
@@ -50,7 +61,7 @@ description: A section displaying text and button with many features on right si
                         },
                         'mobile': {
                             'horizontal_alignment': 'flex-start'
-                        }                                
+                        }                                                     
                     }
                 }}
             %}
@@ -108,6 +119,17 @@ description: A section displaying text and button with many features on right si
                     'description': 'We offer personalized services to meet your specific needs.'
                 }                                                   
             ]
+        }}
+        style={{ context.features.style ?
+            context.features.style : {
+            'animated_module': True,
+            'animation_settings': {
+                'position_on_y': 100,
+                'opacity': 10,
+                'animation_delay': 100,
+                'bind_animation_on_scroll': true                                                              
+            }            
+            }
         }}
     %}      
     {% end_dnd_module %}
