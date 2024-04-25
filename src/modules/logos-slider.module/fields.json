@@ -169,6 +169,38 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
+    "id" : "e8f4f3af-9282-8506-0bce-8d5af292ca9e",
+    "name" : "display_shadow",
+    "display_width" : null,
+    "label" : "Display shadow",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "d6582c91-531f-ad91-b249-3d51af21d50d",
+    "name" : "shadow_color",
+    "display_width" : null,
+    "label" : "Shadow color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "style.display_shadow",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ], [ "gradient", "Gradient" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "grey-medium"
+  }, {
     "id" : "3c9f7735-6566-210b-f0a8-bfa82745adc5",
     "name" : "desktop",
     "display_width" : null,
@@ -317,6 +349,25 @@
         "type" : "number",
         "default" : 1
       }, {
+        "id" : "d6582c91-531f-ad91-b249-3d51af21d50dd",
+        "name" : "shadow_width",
+        "display_width" : null,
+        "label" : "Shadow width",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "style.display_shadow",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "default" : 150
+      }, {
         "id" : "d6582c91-531f-ad91-b249-3d51af21d50c",
         "name" : "background_color",
         "display_width" : null,
@@ -331,7 +382,7 @@
         "type" : "choice",
         "default" : "white"
       }, {
-        "id" : "d6582c91-531f-ad91-b249-3d51af21d50d",
+        "id" : "d6582c91-531f-ad91-b249-3d51af21d50z",
         "name" : "border_color",
         "display_width" : null,
         "label" : "Border color",
@@ -384,6 +435,7 @@
           }
         },
         "border_width" : 1,
+        "shadow_width" : 150,
         "background_color" : "white",
         "border_color" : "grey",
         "border_radius" : 71
@@ -422,6 +474,7 @@
           }
         },
         "border_width" : 1,
+        "shadow_width" : 150,
         "background_color" : "white",
         "border_color" : "grey",
         "border_radius" : 71
@@ -575,6 +628,25 @@
         "suffix" : "px",
         "type" : "number",
         "default" : 1
+      },{
+        "id" : "d6582c91-531f-ad91-b249-3d51af21d50de",
+        "name" : "shadow_width",
+        "display_width" : null,
+        "label" : "Shadow width",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "style.display_shadow",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "default" : 150
       }, {
         "id" : "d6582c91-531f-ad91-b249-3d51af21d50e",
         "name" : "background_color",
@@ -658,7 +730,33 @@
       "animation_duration" : 6,
       "autoplay" : true,
       "autoplay_delay" : 3000,
-      "spacing" : { }
+      "spacing" : { },
+      "container" : {
+        "spacing" : {
+          "padding" : {
+            "top" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "bottom" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "left" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "right" : {
+              "value" : 24,
+              "units" : "px"
+            }
+          }
+        },
+        "border_width" : 1,
+        "background_color" : "white",
+        "border_color" : "grey",
+        "border_radius" : 71
+      }
     }
   }, {
     "id" : "39c60a4a-529b-3d9e-0052-530f1c89239e",
@@ -828,6 +926,25 @@
         "type" : "number",
         "default" : 1
       }, {
+        "id" : "d6582c91-531f-ad91-b249-3d51af21d50df",
+        "name" : "shadow_width",
+        "display_width" : null,
+        "label" : "Shadow width",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "style.display_shadow",
+          "controlling_value_regex" : "true",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "text",
+        "step" : 1,
+        "type" : "number",
+        "default" : 100
+      }, {
         "id" : "d6582c91-531f-ad91-b249-3d51af21d50f",
         "name" : "background_color",
         "display_width" : null,
@@ -929,6 +1046,32 @@
             "units" : "px"
           }
         }
+      },
+      "container" : {
+        "spacing" : {
+          "padding" : {
+            "top" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "bottom" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "left" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "right" : {
+              "value" : 24,
+              "units" : "px"
+            }
+          }
+        },
+        "border_width" : 1,
+        "background_color" : "white",
+        "border_color" : "grey",
+        "border_radius" : 71
       }
     }
   }, {
@@ -1106,6 +1249,8 @@
   "expanded" : false,
   "type" : "group",
   "default" : {
+    "display_shadow" : true,
+    "shadow_color" : "grey-medium",
     "desktop" : {
       "items_spacing" : 16,
       "images_max_height" : 45,
@@ -1136,6 +1281,7 @@
           }
         },
         "border_width" : 1,
+        "shadow_width" : 150,
         "background_color" : "white",
         "border_color" : "grey",
         "border_radius" : 71
@@ -1148,7 +1294,33 @@
       "animation_duration" : 6,
       "autoplay" : true,
       "autoplay_delay" : 3000,
-      "spacing" : { }
+      "spacing" : { },
+      "container" : {
+        "spacing" : {
+          "padding" : {
+            "top" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "bottom" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "left" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "right" : {
+              "value" : 24,
+              "units" : "px"
+            }
+          }
+        },
+        "border_width" : 1,
+        "background_color" : "white",
+        "border_color" : "grey",
+        "border_radius" : 71
+      }
     },
     "mobile" : {
       "items_spacing" : 16,
@@ -1176,6 +1348,32 @@
             "units" : "px"
           }
         }
+      },
+      "container" : {
+        "spacing" : {
+          "padding" : {
+            "top" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "bottom" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "left" : {
+              "value" : 24,
+              "units" : "px"
+            },
+            "right" : {
+              "value" : 24,
+              "units" : "px"
+            }
+          }
+        },
+        "border_width" : 1,
+        "background_color" : "white",
+        "border_color" : "grey",
+        "border_radius" : 71
       }
     },
     "animated_module" : true,

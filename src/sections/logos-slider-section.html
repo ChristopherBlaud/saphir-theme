@@ -107,13 +107,19 @@ description: A section displaying a text with many logos in a slider below.
                 }}
                 style={{ context.logos.style ? 
                     context.logos.style : {
+                       'shadow_color': 'grey-medium',
                         'desktop': {
                             'slides_per_view': 5,
                             'items_spacing': 0,
                             'images_max_height': 45,
                             'animation_duration': 4000,
                             'autoplay': true,
-                            'autoplay_delay': 0
+                            'autoplay_delay': 0,
+                            'container': {
+                                'border_width': 0,
+                                'background_color': 'transparent',
+                                'shadow_width': 150 
+                            }
                         },
                         'tablet': {
                             'slides_per_view': 3,
@@ -121,7 +127,12 @@ description: A section displaying a text with many logos in a slider below.
                             'images_max_height': 40,
                             'animation_duration': 4000,
                             'autoplay': true,
-                            'autoplay_delay': 0                            
+                            'autoplay_delay': 0,
+                            'container': {
+                                'border_width': 0,
+                                'background_color': 'transparent',
+                                'shadow_width': 100 
+                            }                            
                         },
                         'mobile': {
                             'slides_per_view': 2,
@@ -129,7 +140,12 @@ description: A section displaying a text with many logos in a slider below.
                             'images_max_height': 30,
                             'animation_duration': 7000,
                             'autoplay': true,
-                            'autoplay_delay': 0                            
+                            'autoplay_delay': 0,
+                            'container': {
+                                'border_width': 0,
+                                'background_color': 'transparent',
+                                'shadow_width': 100 
+                            }                            
                         },
                         'animated_module': True,
                         'animation_settings': {

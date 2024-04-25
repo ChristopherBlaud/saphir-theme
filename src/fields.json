@@ -1470,7 +1470,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 58
+                  "default": 46
                 },
                 {
                   "label": "Font weight",
@@ -1492,7 +1492,7 @@
                   "min": 100,
                   "step": 100,
                   "suffix": "px",
-                  "default": 600
+                  "default": 700
                 },                  
                 {
                   "label": "Line height",
@@ -1503,7 +1503,7 @@
                   "max": 200,
                   "step": 1,
                   "suffix": "px",
-                  "default": 69.6
+                  "default": 55.2
                 },
                 {
                   "label": "Letter spacing",
@@ -1515,7 +1515,7 @@
                   "min": -10,
                   "step": 0.01,
                   "suffix": "px",
-                  "default": -1.74
+                  "default": -1.84
                 }                     
               ]
             },
@@ -5643,7 +5643,7 @@
               ]
             ],
           "display": "select",
-          "default": "{{ theme.fonts.primary.medium_variation.variant }}"
+          "default": "{{ theme.fonts.primary.font_weight.variant }}"
         },         
         {
           "label": "Spacing",

@@ -43,6 +43,21 @@
   {{ module.style.desktop.container.spacing.css }}
   }
 
+  {% if module.style.display_shadow %}
+  #{{ name }} .logo-slider__inner::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: {{ module.style.desktop.container.shadow_width ~ 'px' }} 0px 50px -40px var(--{{ module.style.shadow_color }}) inset,
+       -{{ module.style.desktop.container.shadow_width ~ 'px' }} 0px 50px -40px var(--{{ module.style.shadow_color }}) inset;
+  }
+  {% endif %}
+
   @media (max-width: 1024px) {
   #{{ name }} .logo-slider__inner {
   {% if module.style.tablet.container.border_width > 0 %}
@@ -54,6 +69,13 @@
   {% endif %}
   {{ module.style.tablet.container.spacing.css }}
   }
+
+  {% if module.style.display_shadow %}
+  #{{ name }} .logo-slider__inner::after {
+    box-shadow: {{ module.style.tablet.container.shadow_width ~ 'px' }} 0px 50px -40px var(--{{ module.style.shadow_color }}) inset,
+      -{{ module.style.tablet.container.shadow_width ~ 'px' }} 0px 50px -40px var(--{{ module.style.shadow_color }}) inset;
+  }
+  {% endif %}
   }
 
   @media (max-width: 768px) {
@@ -67,6 +89,12 @@
   {% endif %}
   {{ module.style.mobile.container.spacing.css }}
   }  
+  {% if module.style.display_shadow %}
+  #{{ name }} .logo-slider__inner::after {
+    box-shadow: {{ module.style.mobile.container.shadow_width ~ 'px' }} 0px 50px -40px var(--{{ module.style.shadow_color }}) inset,
+      -{{ module.style.mobile.container.shadow_width ~ 'px' }} 0px 50px -40px var(--{{ module.style.shadow_color }}) inset;
+  }
+  {% endif %}  
   }
   </style>
 {% end_require_css%}

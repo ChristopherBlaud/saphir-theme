@@ -587,7 +587,7 @@
       "bind_animation_on_scroll" : true,
       "animation_delay" : 0
     }
-  }  ],
+  } ],
   "tab" : "STYLE",
   "expanded" : false,
   "type" : "group",
