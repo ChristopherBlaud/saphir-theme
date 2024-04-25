@@ -500,7 +500,7 @@
                         "units": "px"
                       },
                       "bottom": {
-                        "value": 0,
+                        "value": 64,
                         "units": "px"
                       },
                       "left": {

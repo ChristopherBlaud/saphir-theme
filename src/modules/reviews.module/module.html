@@ -3,7 +3,7 @@
 
 <div id="{{ name }}" class="reviews">
 <div class="dnd-row{{ ' animated' if module.style.animated_module }}"
-{{ setAnimationAttr(module.style) }}>
+{{ setAnimationAttr(module.style) if module.style.animated_module }}>
     <div class="reviews__inner row-fluid flex justify-center">    
         {{ generateReview(module, module.review) }}
     </div>

@@ -3,7 +3,7 @@
 
 <div id="{{ name }}" class="buttons flex{{ ' vertical-align-' ~ module.style.desktop.vertical_alignment ~ '-xl' }}{{ ' vertical-align-' ~ module.style.tablet.vertical_alignment ~ '-md' }}"{{ ' vertical-align-' ~ module.style.mobile.vertical_alignment ~ '-xs' }}>
   <div class="buttons__inner flex flex-row flex-wrap{{ ' animated' if module.style.animated_module }}"
-  {{ setAnimationAttr(module.style) }}>
+  {{ setAnimationAttr(module.style) if module.style.animated_module }}>
     {% for item in module.button %}
       {{ createButton(item, name ~ '-button-' ~ loop.index) }}
     {% endfor %}

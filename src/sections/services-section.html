@@ -25,7 +25,7 @@ description: A section displaying a text with a slider to display your services.
                 }}
             %}
             {% module_attribute "html" %}
-                {{ context.text.content ? context.text.content : '<h2><b>Communicate <span style="color: {{ theme.colors.secondary.color }}">effectively</span> with your customers</b></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti nullam.</p>' }}
+                {{ context.text.content ? context.text.content : '<h2><b>Communicate <span style="color: {{ theme.colors.secondary.color }}">effectively</span> with your customers</b></h2><p>Save time and improve your online visibility with our theme optimized for loading speed and search engine optimization.</p>' }}
             {% end_module_attribute %}
             {% end_dnd_module %}
         {% end_dnd_row %}        
@@ -34,6 +34,85 @@ description: A section displaying a text with a slider to display your services.
         {% dnd_row %}
             {% {% dnd_module 'name'
                 path='../modules/services'
+                service={{ context.services.service ?
+                    context.services.service : [
+                        {
+                            'description': '<h3 style="color: var(--white)"><b>Highlight your services with a simple click</b></h3>',
+                            'image_field': {
+                                'src': get_asset_url('../images/visuals/card-2.png'),
+                                'alt': "photo of a business woman",
+                                'loading': 'lazy'
+                            },
+                            'device_variant': {
+                                'tablet': {
+                                    'image_field': {
+                                        'src': get_asset_url('../images/visuals/card-2-md.png')
+                                    }
+                                },
+                                'mobile': {
+                                    'image_field': {
+                                        'src': get_asset_url('../images/visuals/card-2-xs.png')
+                                    }                            
+                                }
+                            },                            
+                            'display_link': true,
+                            'link': {
+                                'url': {
+                                    'url': {
+                                        'href': 'https://www.example.com'                                     
+                                    }
+                                },
+                                'icon_field': { 
+                                    'name': 'arrow-up',
+                                    "unicode" : "f062",
+                                    "type" : "SOLID"            
+                                }                            
+                            }
+                        },
+                        {
+                            'description': '<h3 style="color: var(--white)"><b>Tell to your prospects why choose you</b></h3>',
+                            'image_field': {
+                                'src': get_asset_url('../images/visuals/card-3.png'),
+                                'alt': "photo of a business woman",
+                                'loading': 'lazy'
+                            },
+                            'display_link': true,
+                            'link': {
+                                'url': {
+                                    'url': {
+                                        'href': 'https://www.example.com'                                     
+                                    }
+                                },
+                                'icon_field': { 
+                                    'name': 'arrow-up',
+                                    "unicode" : "f062",
+                                    "type" : "SOLID"            
+                                }                            
+                            }
+                        },
+                        {
+                            'description': '<h3 style="color: var(--white)"><b>Increase their confidence and give them the solution</b></h3>',
+                            'image_field': {
+                                'src': get_asset_url('../images/visuals/card-1.png'),
+                                'alt': "photo of a business woman",
+                                'loading': 'lazy'
+                            },
+                            'display_link': true,
+                            'link': {
+                                'url': {
+                                    'url': {
+                                        'href': 'https://www.example.com'                                     
+                                    }
+                                },
+                                'icon_field': { 
+                                    'name': 'arrow-up',
+                                    "unicode" : "f062",
+                                    "type" : "SOLID"            
+                                }                            
+                            }
+                        }                                                
+                    ]
+                }}
                 style={{ context.services.style ? 
                     context.services.style : {
                         'desktop': {

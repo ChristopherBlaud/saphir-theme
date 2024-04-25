@@ -2,7 +2,7 @@
 
 <div id="{{ name }}" class="image flex relative z-30{{ ' has-overflow' if module.style.desktop.set_overflow}}">
   <picture class="image__inner relative{{ ' animated' if module.style.animated_module }}"
-  {{ setAnimationAttr(module.style) }}>
+  {{ setAnimationAttr(module.style) if module.style.animated_module }}>
     {% if module.set_link %}
     {% set href = module.url.url.href %}
     {% if module.url.url.type is equalto "EMAIL_ADDRESS" %}
@@ -14,6 +14,12 @@
       >
     </a>
     {% endif %}
+    {% if module.device_variant.mobile.image_field.src %}
+    <source media="(max-width: 768px)" srcset="{{ module.device_variant.mobile.image_field.src }}">
+    {% endif %}
+    {% if module.device_variant.tablet.image_field.src %}
+    <source media="(max-width: 1024px)" srcset="{{ module.device_variant.tablet.image_field.src }}">
+    {% endif %}        
     {% if module.image_field.src %}
     {% set sizeAttrs = 'width="{{ module.image_field.width|escape_attr }}" height="{{ module.image_field.height|escape_attr }}"' %}
     {% if module.image_field.size_type == 'auto' %}

@@ -278,7 +278,7 @@
     "locked" : false,
     "display" : "toggle",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "933fcc5d-1eb2-41f9-ba4c-21465f47b582",
     "name" : "animation_settings",

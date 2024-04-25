@@ -1,0 +1,116 @@
+{% import '../../macros/_style.html' %}
+
+<div id="{{ name }}" class="social-proof">
+    <div class="social-proof__inner flex items-center flex-wrap gap-4{{ ' animated' if module.style.animated_module }}"
+    {{ setAnimationAttr(module.style) if module.style.animated_module }}>
+        <div class="social-proof__inner__users flex flex-row">
+        {% for item in module.user_avatar %}
+            {% if item.src %}
+                 {% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading|escape_attr }}"' : '' %}
+                <picture class="social-proof__inner__users__avatar flex rounded-full overflow-hidden shrink-0 grow-0">
+                    <img class="max-w-full max-h-full" src="{{ item.src|escape_url }}" alt="{{ item.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>                
+                </picture>
+            {% endif %}
+        {% endfor %}        
+        </div>
+        <div class="social-proof__inner__content flex max-md:flex-col max-md:items-start flex-wrap items-center gap-2">
+            <div class="social-proof__inner__content__rank flex items-center">
+            {% set rate =  module.rate.rate|int %}
+            {% for number in range(rate) %}
+                <span class="social-proof__inner__content__rank__icon flex">
+                {% icon
+                    class="blolb"
+                    name="{{ module.rate.icon_field.name }}"
+                    style="{{ module.rate.icon_field.type }}"
+                    unicode="{{ module.rate.icon_field.unicode }}"
+                    icon_set="{{ module.rate.icon_field.icon_set }}"
+                %}
+                </span>
+            {% endfor %}
+            </div>
+            {% if module.set_link %}
+            {% set href = module.link_field.url.href %}
+            {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href|escape_url }}"
+                {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                {% if module.link_field.rel %}rel="{{ module.link_field.rel|escape_attr }}"{% endif %}
+            >
+            {% endif %}
+                <span class="social-proof__inner__content__text">{{ module.text }}</span>
+            {% if module.set_link %}
+            </a>
+            {% endif %}
+        </div>    
+    </div>
+</div>
+{% require_css %}
+    <style>
+        #{{ name }} {
+        {{ module.style.desktop.spacing.css }};
+        }        
+        #{{ name }} .social-proof__inner {
+            justify-content: {{ module.style.desktop.horizontal_alignment }};        
+        }
+        #{{ name }} .social-proof__inner__users {
+            margin-right: -{{ module.style.avatars_size ~ 'px' }};
+        }
+        #{{ name }} .social-proof__inner__users__avatar {
+            width: {{ module.style.avatars_size ~ 'px' }};
+            height: {{ module.style.avatars_size ~ 'px' }};
+            {% if  module.style.border.width > 0 %}
+            border: {{ module.style.border.width ~ 'px' }} solid var(--{{ module.style.border.color }});
+            {% endif %}
+        }
+        #{{ name }} .social-proof__inner__content__rank__icon svg {
+            width: {{ module.style.icon_width ~ 'px' }};
+            opacity: {{ module.style.icon_color.opacity / 100 }};
+        }
+        #{{ name }} .social-proof__inner__content__rank__icon svg path {
+            fill: {{ module.style.icon_color.color }};
+        }
+        #{{ name }} .social-proof__inner__content__text {
+            font-size: {{ module.style.desktop.text.font_size ~ 'px' }};
+            line-height: {{ module.style.desktop.text.line_height ~ 'px' }};
+            font-weight: {{ module.style.desktop.text.font_weight }};
+        }
+
+        {% if module.set_link %}
+        #{{ name }} a:has(.social-proof__inner__content__text) {
+            transition: color var(--transition-time) var(--transition-easing);
+        }
+        #{{ name }} a:has(.social-proof__inner__content__text):hover {
+            color: var(--{{ module.style.text_hover_color }})
+        }
+        {% endif %}
+
+        @media (max-width: 1024px) {
+        #{{ name }} {
+            {{ module.style.tablet.spacing.css }};
+        }
+        #{{ name }} .social-proof__inner {
+            justify-content: {{ module.style.tablet.horizontal_alignment }};        
+        }
+        #{{ name }} .social-proof__inner__content__text {
+            font-size: {{ module.style.tablet.text.font_size ~ 'px' }};
+            line-height: {{ module.style.tablet.text.line_height ~ 'px' }};
+            font-weight: {{ module.style.tablet.text.font_weight }};
+        }        
+        }
+
+        @media (max-width: 768px) {
+        #{{ name }} {
+            {{ module.style.mobile.spacing.css }};
+        }
+        #{{ name }} .social-proof__inner {
+            justify-content: {{ module.style.mobile.horizontal_alignment }};        
+        }        
+        #{{ name }} .social-proof__inner__content__text {
+            font-size: {{ module.style.mobile.text.font_size ~ 'px' }};
+            line-height: {{ module.style.mobile.text.line_height ~ 'px' }};
+            font-weight: {{ module.style.mobile.text.font_weight }};
+        }        
+        }
+    </style>
+{% end_require_css %}

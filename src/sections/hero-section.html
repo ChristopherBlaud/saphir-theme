@@ -18,6 +18,44 @@ description: A section displaying a text with and button with an image on right 
         {% end_dnd_row %}        
         {% dnd_row %}
             {% dnd_module 
+                path="../modules/social-proof"
+                user_avatar={{ context.social_proof.user_avatars ?
+                    context.social_proof.user_avatars : [
+                        {
+                            'src': get_asset_url('../images/visuals/avatar-1.png'),
+                            'alt': "profil picture's avatar",
+                            'loading': 'eager'
+                        },
+                        {
+                            'src': get_asset_url('../images/visuals/avatar-2.png'),
+                            'alt': "profil picture's avatar",
+                            'loading': 'eager'
+                        },
+                        {
+                            'src': get_asset_url('../images/visuals/avatar-3.png'),
+                            'alt': "profil picture's avatar",
+                            'loading': 'eager'
+                        }                                                
+                    ]
+                }}
+                style={{ context.social_proof.style ?
+                    context.social_proof.style : {
+                        'avatar_size': 35,
+                        'text_color': 'grey-medium',
+                        'text_hover_color': 'secondary-color',
+                        'icon_width': 16,
+                        'icon_color': {
+                            'color': '#f7b801',
+                            'opacity': 100
+                        },
+                        'animated_module': false                         
+                    }
+                }}
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+            {% dnd_module 
                 path='../modules/buttons'
                 button={{ context.buttons.button ?
                     context.buttons.button : [
@@ -79,8 +117,8 @@ description: A section displaying a text with and button with an image on right 
                         'src': get_asset_url('../images/visuals/illustration.svg'),
                         'loading': 'eager',
                         'alt': 'illustration of man and women',
-                        'width': 589,
-                        'height': 480
+                        'width': 592,
+                        'height': 483
                     }
                 }}
                 device_variant={{ context.image.device_variant ?

@@ -3,7 +3,7 @@
 <div id="{{ name }}" class="services relative">
   <div class="services__inner swiper{{ ' animated' if module.style.animated_module }}"
   {{ setSliderAttr(module.style) }}
-  {{ setAnimationAttr(module.style) }}>
+  {{ setAnimationAttr(module.style) if module.style.animated_module }}>
     <ul class="services__inner__container swiper-wrapper flex">
     {% for item in module.service %}
       <li class="services__inner__container__item swiper-slide flex flex-col justify-end min-h-[472px] relative overflow-hidden border border-solid border-purple-950 rounded-2xl">
@@ -18,18 +18,24 @@
             >
           </a>
         {% endif %}
+        {% if item.image_field.src %}
         <picture class="services__inner__container__item__image-container flex absolute z-10 w-full h-full top-0 left-O">
-          {% if item.image_field.src %}
-            {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
-            {% if item.image_field.size_type == 'auto' %}
-              {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-            {% elif item.image_field.size_type == 'auto_custom_max' %}
-              {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
-            {% endif %}
-              {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
-            <img class="w-full h-full object-cover" src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% if item.device_variant.mobile.image_field.src %}
+          <source media="(max-width: 768px)" srcset="{{ item.device_variant.mobile.image_field.src }}">
+          {% endif %}
+          {% if item.device_variant.tablet.image_field.src %}
+          <source media="(max-width: 1024px)" srcset="{{ item.device_variant.tablet.image_field.src }}">
+          {% endif %}            
+          {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}"' %}
+          {% if item.image_field.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ item.image_field.width|escape_attr }}" height="{{ item.image_field.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+          {% elif item.image_field.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ item.image_field.max_width|escape_attr }}" height="{{ item.image_field.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading|escape_attr }}"' : '' %}
+          <img class="w-full h-full object-cover" src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          </picture>
           {% endif %}        
-        </picture>
         <div class="services__inner__container__item__description flex relative z-20 min-w-[240px] px-6 py-4">{{ item.description }}</div>
         <div class="services__inner__container__item__icon-container flex justify-center items-center absolute z-20 w-[35px] h-[35px] top-0 right-0 p-2 bg-purple rounded-bl-lg">
           {% icon
@@ -62,7 +68,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0px -189px 120px -99px #02040F inset;
+    box-shadow: 0px -189px 50px -99px #02040F inset;
     opacity: 0.4;
   }
 

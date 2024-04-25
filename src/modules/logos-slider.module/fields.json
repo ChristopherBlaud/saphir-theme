@@ -628,7 +628,7 @@
         "suffix" : "px",
         "type" : "number",
         "default" : 1
-      },{
+      }, {
         "id" : "d6582c91-531f-ad91-b249-3d51af21d50de",
         "name" : "shadow_width",
         "display_width" : null,
@@ -1083,7 +1083,7 @@
     "locked" : false,
     "display" : "toggle",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "933fcc5d-1eb2-41f9-ba4c-21465f47b582",
     "name" : "animation_settings",

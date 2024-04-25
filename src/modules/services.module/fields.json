@@ -489,7 +489,7 @@
     "locked" : false,
     "display" : "toggle",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "933fcc5d-1eb2-41f9-ba4c-21465f47b582",
     "name" : "animation_settings",
@@ -817,6 +817,89 @@
       "max_height" : 472
     }
   }, {
+    "id" : "23864f90-909d-c343-cefe-84275055a026",
+    "name" : "device_variant",
+    "display_width" : null,
+    "label" : "Device variant",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "5a4ad3de-763d-34f0-f5ca-55a60aa027b8",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "c844e335-7662-d6fa-8745-37ea470ac6b6",
+        "name" : "image_field",
+        "display_width" : null,
+        "label" : "Image",
+        "required" : false,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "src" : ""
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "image_field" : {
+          "src" : ""
+        }
+      }
+    }, {
+      "id" : "1f2d0973-182d-3816-ce0b-2dccd547d8ef",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "1e4b0c66-8170-a5e0-ac98-60945cbda8c3",
+        "name" : "image_field",
+        "display_width" : null,
+        "label" : "Image",
+        "required" : false,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "src" : ""
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "image_field" : {
+          "src" : ""
+        }
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "tablet" : {
+        "image_field" : {
+          "src" : ""
+        }
+      },
+      "mobile" : {
+        "image_field" : {
+          "src" : ""
+        }
+      }
+    }
+  },{
     "id" : "79e45b16-8883-520c-0c52-c355f829660d",
     "name" : "display_link",
     "display_width" : null,

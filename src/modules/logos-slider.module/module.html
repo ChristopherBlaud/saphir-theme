@@ -3,7 +3,7 @@
 <div id="{{ name }}" class="logo-slider">
   <div class="logo-slider__inner swiper{{ ' animated' if module.style.animated_module }}"
   {{ setSliderAttr(module.style) }}
-  {{ setAnimationAttr(module.style) }}> 
+  {{ setAnimationAttr(module.style) if module.style.animated_module }}> 
     <ul class="logo-slider__inner__container swiper-wrapper">
       {% for item in module.logo %}
         <li class="logo-slider__inner__container__item swiper-slide">

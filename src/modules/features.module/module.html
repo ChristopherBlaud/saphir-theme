@@ -2,7 +2,7 @@
 
 <div id="{{ name }}" class="features dnd-row">
   <div class="features__inner row-fluid{{ ' animated' if module.style.animated_module }}"
-  {{ setAnimationAttr(module.style) }}>
+  {{ setAnimationAttr(module.style) if module.style.animated_module }}>
     {% for item in module.feature %}
     <div class="features__inner__item span{{ 12 / module.style.items_per_row|round }}">
       <div class="features__inner__item__inner flex flex-col md:flex-row ">
