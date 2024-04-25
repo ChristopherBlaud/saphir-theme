@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
                 skewY = parseInt(module.dataset.skewY, 10) || 0,
                 opacity = (parseInt(module.dataset.opacity, 10) / 100) || 1,
                 delay = parseInt(module.dataset.animationDelay, 10) || 0,
-                bindOnScroll = Boolean(module.dataset.bindOnScroll);
+                bindOnScroll = JSON.parse(module.dataset.bindOnScroll);
 
             module.closest('.dnd-section').style.overflow = 'hidden';
 
