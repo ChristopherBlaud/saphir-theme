@@ -1,0 +1,7 @@
+.dnd-section:has(.background-image__inner svg) {
+    position: relative;
+}
+
+.background-image .background-image__inner svg {
+    position: absolute;
+}

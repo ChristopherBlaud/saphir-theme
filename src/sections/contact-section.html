@@ -11,6 +11,10 @@ description: A section displaying text and many links with a form on right side.
 %}
     {% dnd_column width="5" %}
         {% dnd_row %}
+            {% dnd_module path="../modules/background-image"%}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
             {% dnd_module 
                 path='../modules/custom-text'
                 display_label={{ context.text.display_label ? context.text.display_label : True }}

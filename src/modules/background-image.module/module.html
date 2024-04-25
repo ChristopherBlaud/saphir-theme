@@ -1,0 +1,6 @@
+{% import '../../macros/_style.html' %}
+
+<div id="{{ name }}" class="background-image dnd-row">
+  <div class="background-image__inner{{ ' animated' if module.style.animated_module }}" data-src="{{ module.image_field.src|escape_url }}">
+  </div>
+</div>

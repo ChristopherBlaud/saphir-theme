@@ -684,16 +684,12 @@ video {
   min-width: 240px !important;
 }
 
-.max-w-xs {
-  max-width: 20rem !important;
-}
-
 .max-w-full {
   max-width: 100% !important;
 }
 
-.max-w-8 {
-  max-width: 2rem !important;
+.max-w-xs {
+  max-width: 20rem !important;
 }
 
 .shrink-0 {
@@ -796,10 +792,6 @@ video {
 
 .rounded-full {
   border-radius: 9999px !important;
-}
-
-.rounded {
-  border-radius: 0.25rem !important;
 }
 
 .rounded-bl-lg {
