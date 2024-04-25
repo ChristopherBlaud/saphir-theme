@@ -1,11 +1,118 @@
-.container-fluid input {
+.container-fluid .form__inner {
+    background-color: var(--{{  theme.forms.background_color }});
+    {% if theme.forms.border_radius > 0 %}
+    border-radius: {{ theme.forms.border_radius ~ 'px' }};
+    {% endif %}
+    {% if theme.forms.border_width > 0 %}
+    border: {{ theme.forms.border_width ~ 'px' }} solid var(--{{ theme.forms.border_color }});
+    {% endif %}
+    {{ theme.forms.desktop.spacing.css }}
+}
+
+.container-fluid .form__inner .hs-form {
+    display: flex;
+    flex-flow: column;
+    row-gap: {{ theme.forms.desktop.rows_gap ~ 'px' }};
+}
+
+.container-fluid .form__inner input:not([type="submit"]),
+.container-fluid .form__inner textarea,
+.container-fluid .form__inner select {
+    font-size: {{ theme.forms.field.text.font_size ~ 'px' }};
+    line-height: {{ theme.forms.field.text.line_height ~ 'px' }};
+    font-weight: {{ theme.forms.field.text.font_weight }};
     border-color: var(--{{ theme.forms.field.border_color }});
     border-top-width: {{ theme.forms.field.borders_width.top ~ 'px' }};
     border-bottom-width: {{ theme.forms.field.borders_width.bottom ~ 'px' }};
     border-left-width: {{ theme.forms.field.borders_width.left ~ 'px' }};
     border-right-width: {{ theme.forms.field.borders_width.right ~ 'px' }};
     border-radius: {{ theme.forms.field.border_radius ~ 'px' }};
+    color: var(--{{ theme.forms.field.text.color }});
     background: var(--{{ theme.forms.field.background_color }});
+    width: 100%;
+    {% if theme.forms.field.max_width > 0 %}
+    max-width: {{ theme.forms.field.max_width ~ 'px' }};
+    {% endif %}
     {{ theme.forms.field.spacing.css }}
-    max-height: 40px;
+}
+
+.container-fluid .form__inner input:not([type="submit"]):focus,
+.container-fluid .form__inner textarea:focus,
+.container-fluid .form__inner select:focus {
+    outline: 1px solid var(--{{ theme.forms.field.focus_border_color }});
+} 
+
+.container-fluid .form__inner input::placeholder,
+.container-fluid .form__inner textarea::placeholder,
+.container-fluid .form__inner select::placeholder {
+    font-size: {{ theme.forms.field.placeholder.font_size ~ 'px' }};
+    line-height: {{ theme.forms.field.placeholder.line_height ~ 'px' }};
+    font-weight: {{ theme.forms.field.placeholder.font_weight }}; 
+    color: var(--{{ theme.forms.field.placeholder.color }});    
+}
+
+.container-fluid .form__inner textarea {
+    resize: none;
+    border-radius: calc({{ theme.forms.field.border_radius ~ 'px' }} / 2);
+}
+
+.container-fluid .form__inner label {
+    font-size: {{ theme.forms.field.label_text.font_size ~ 'px' }};
+    line-height: {{ theme.forms.field.label_text.line_height ~ 'px' }};
+    font-weight: {{ theme.forms.field.label_text.font_weight }}; 
+    color: var(--{{ theme.forms.field.label_text.color }});       
+}
+
+.container-fluid .form__inner label.hs-error-msg {
+    font-size: {{ theme.forms.field.error_text.font_size ~ 'px' }};
+    line-height: {{ theme.forms.field.error_text.line_height ~ 'px' }};
+    font-weight: {{ theme.forms.field.error_text.font_weight }}; 
+    color: {{ theme.forms.field.error_text.color.color }};       
+}
+
+.container-fluid .form__inner .hs-button {
+    color: var(--{{ theme.forms.field.button.color }});
+    background-color: var(--{{ theme.forms.field.button.background_color }});
+    {% if theme.forms.field.button.border_radius > 0 %}
+    border-radius: {{ theme.forms.field.button.border_radius ~ 'px' }};
+    {% endif %}
+    cursor: pointer;
+    transition: color var(--transition-time) var(--transition-easing),
+                background-color var(--transition-time) var(--transition-easing);
+            
+    {{ theme.forms.field.button.spacing.css }}
+}
+
+.container-fluid .form__inner .hs-button:hover {
+    color: var(--{{ theme.forms.field.button.hover_color }});
+    background: var(--{{ theme.forms.field.button.hover_background_color }});
+}
+
+.container-fluid .form__inner select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem top 50%;
+    background-size: 0.65rem auto;    
+}
+
+@media (max-width: 1024px) {
+    .container-fluid .form__inner {
+        {{ theme.forms.tablet.spacing.css }}
+    }
+    
+    .container-fluid .form__inner .hs-form {
+        row-gap: {{ theme.forms.tablet.rows_gap ~ 'px' }};
+    }    
+}
+
+@media (max-width: 768px) {
+    .container-fluid .form__inner {
+        {{ theme.forms.mobile.spacing.css }}
+    }
+    
+    .container-fluid .form__inner .hs-form {
+        row-gap: {{ theme.forms.mobile.rows_gap ~ 'px' }};
+    }    
 }

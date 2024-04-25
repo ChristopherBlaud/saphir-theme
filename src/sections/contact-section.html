@@ -1,0 +1,42 @@
+<!--
+templateType: section
+isAvailableForNewContent: true
+label: Contact section
+description: A section displaying text and many links with a form on right side.
+-->
+
+{% dnd_section 
+    vertical_alignment="TOP" 
+    background_color={{ context.section.background_color ? context.section.background_color : theme.colors.grey_medium.color }}
+%}
+    {% dnd_column width="5" %}
+        {% dnd_row %}
+            {% dnd_module 
+                path='../modules/custom-text'
+                display_label={{ context.text.display_label ? context.text.display_label : True }}
+                label_text={{ context.text.label ? context.text.label : "Contact" }}
+                style={{ context.text.style ?
+                context.text.style : {
+                    'animated_module': True,
+                    'animation_settings': {
+                        'position_on_y': 100,
+                        'opacity': 10,
+                        'animation_delay': 100,
+                        'bind_animation_on_scroll': true                                                              
+                    }            
+                }
+                }}                
+            %}
+            {% module_attribute "html" %}
+                {{ context.text.content ? context.text.content : "<h2 style='color: {{ theme.colors.black.color }}'><b>Let's speak with <span style='color: {{ theme.colors.secondary.color }}'>expert</span> in the field.</b></h2><p>For any inquiries or to obtain further information, please complete the form below. Please do not hesitate to contact us if you have any additional questions or would like to discuss your needs.</p>" }}
+            {% end_module_attribute %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}         
+    {% end_dnd_column %}
+    {% dnd_column width="6" offset="6"%}  
+        {% dnd_row %}  
+            {% dnd_module path='../modules/form' %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}        
+    {% end_dnd_column %}
+{% end_dnd_section %}

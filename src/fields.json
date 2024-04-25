@@ -927,50 +927,9 @@
               "label": "Border color",
               "name": "border_color",
               "type": "choice",
-              "choices": [
-                [
-                  "transparent",
-                  "None"
-                ],
-                [
-                  "{{ theme.colors.first.color }}",
-                  "First color"
-                ],
-                [
-                  "{{ theme.colors.second.color }}",
-                  "Second color"
-                ],
-                [
-                  "{{ theme.colors.third.color }}",
-                  "Third color"
-                ],
-                [
-                  "{{ theme.colors.fourth.color }}",
-                  "Fourth color"
-                ],
-                [
-                  "{{ theme.colors.fifth.color }}",
-                  "Fifth color"
-                ],
-                [
-                  "{{ theme.colors.default.color }}",
-                  "Body (default) color"
-                ],
-                [
-                  "black",
-                  "Black"
-                ],
-                [
-                  "grey",
-                  "Grey"
-                ],
-                [
-                  "white",
-                  "White"
-                ]
-              ],
+              "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ], [ "gradient", "Gradient" ] ],
               "display": "select",
-              "default": "grey"
+              "default": "white-accent"
             }            
           ]
         }, {
@@ -1129,7 +1088,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -1153,7 +1112,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -1262,7 +1221,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -1286,7 +1245,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -1396,7 +1355,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -1420,7 +1379,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -1542,7 +1501,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -1566,7 +1525,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -1688,7 +1647,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -1712,7 +1671,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -1834,7 +1793,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -1858,7 +1817,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -1968,7 +1927,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -1992,7 +1951,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -2102,7 +2061,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -2126,7 +2085,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -2244,7 +2203,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -2268,7 +2227,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -2377,7 +2336,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -2401,7 +2360,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -2511,7 +2470,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -2535,7 +2494,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -2657,7 +2616,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -2681,7 +2640,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -2803,7 +2762,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -2827,7 +2786,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -2949,7 +2908,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -2973,7 +2932,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -3083,7 +3042,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -3107,7 +3066,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -3217,7 +3176,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -3241,7 +3200,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -3359,7 +3318,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -3383,7 +3342,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -3492,7 +3451,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -3516,7 +3475,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -3626,7 +3585,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -3650,7 +3609,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -3760,7 +3719,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -3784,7 +3743,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -3894,7 +3853,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -3918,7 +3877,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -4028,7 +3987,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -4052,7 +4011,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -4162,7 +4121,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -4186,7 +4145,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -4296,7 +4255,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -4320,7 +4279,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -4447,7 +4406,7 @@
                       "Secondary color"
                     ],
                     [
-                      "--secondary-dark",
+                      "secondary-dark",
                       "Secondary dark"
                     ],
                     [
@@ -4471,7 +4430,7 @@
                       "Body color"
                     ],                                               
                     [
-                      "white-color",
+                      "white",
                       "White"
                     ],
                     [
@@ -4490,48 +4449,56 @@
           "label": "Text color",
           "name": "text_color",
           "type": "choice",
-          "choices": [
-            [
-              "transparent",
-              "None"
-            ],
-            [
-              "{{ theme.colors.first.color }}",
-              "First color"
-            ],
-            [
-              "{{ theme.colors.second.color }}",
-              "Second color"
-            ],
-            [
-              "{{ theme.colors.third.color }}",
-              "Third color"
-            ],
-            [
-              "{{ theme.colors.fourth.color }}",
-              "Fourth color"
-            ],
-            [
-              "{{ theme.colors.fifth.color }}",
-              "Fifth color"
-            ],
-            [
-              "{{ theme.colors.default.color }}",
-              "Body (default) color"
-            ],
-            [
-              "black",
-              "Black"
-            ],
-            [
-              "grey",
-              "Grey"
-            ],
-            [
-              "white",
-              "White"
-            ]
-          ],
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "primary-color",
+                      "Primary color"
+                    ],
+                    [
+                      "secondary-color",
+                      "Secondary color"
+                    ],
+                    [
+                      "secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "black",
+                      "Black"
+                    ],
+                    [
+                      "grey",
+                      "Grey"
+                    ],
+                    [
+                      "grey-accent",
+                      "Grey accent"
+                    ],   
+                    [
+                      "grey-dark",
+                      "Grey dark"
+                    ],    
+                    [
+                      "body-color",
+                      "Body color"
+                    ],                                               
+                    [
+                      "white",
+                      "White"
+                    ],
+                    [
+                      "white-accent",
+                      "White accent"
+                    ],
+                    [
+                      "gradient",
+                      "Gradient"
+                    ]
+                  ],
           "display": "select",
           "default": "white"
         },
@@ -4577,48 +4544,56 @@
           "label": "Border color",
           "name": "border_color",
           "type": "choice",
-          "choices": [
-            [
-              "transparent",
-              "None"
-            ],
-            [
-              "{{ theme.colors.first.color }}",
-              "First color"
-            ],
-            [
-              "{{ theme.colors.second.color }}",
-              "Second color"
-            ],
-            [
-              "{{ theme.colors.third.color }}",
-              "Third color"
-            ],
-            [
-              "{{ theme.colors.fourth.color }}",
-              "Fourth color"
-            ],
-            [
-              "{{ theme.colors.fifth.color }}",
-              "Fifth color"
-            ],
-            [
-              "{{ theme.colors.default.color }}",
-              "Body (default) color"
-            ],
-            [
-              "black",
-              "Black"
-            ],
-            [
-              "grey",
-              "Grey"
-            ],
-            [
-              "white",
-              "White"
-            ]
-          ],
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "primary-color",
+                      "Primary color"
+                    ],
+                    [
+                      "secondary-color",
+                      "Secondary color"
+                    ],
+                    [
+                      "secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "black",
+                      "Black"
+                    ],
+                    [
+                      "grey",
+                      "Grey"
+                    ],
+                    [
+                      "grey-accent",
+                      "Grey accent"
+                    ],   
+                    [
+                      "grey-dark",
+                      "Grey dark"
+                    ],    
+                    [
+                      "body-color",
+                      "Body color"
+                    ],                                               
+                    [
+                      "white",
+                      "White"
+                    ],
+                    [
+                      "white-accent",
+                      "White accent"
+                    ],
+                    [
+                      "gradient",
+                      "Gradient"
+                    ]
+                  ],
           "display": "select",
           "default": "grey"
         },
@@ -4667,66 +4642,455 @@
       "label": "Forms",
       "name": "forms",
       "type": "group",
-      "children": [
+      "children": [ 
         {
-          "label": "background color",
+          "label": "Desktop",
+          "name": "desktop",
+          "type": "group",
+          "children": [
+              {
+                "label": "Spacing",
+                "name": "spacing",
+                "type": "spacing",
+                "visibility": {
+                  "hidden_subfields": {
+                    "margin": false
+                  }
+                },
+                "default": {
+                  "padding": {
+                    "top": {
+                      "value": 48,
+                      "units": "px"
+                    },
+                    "right": {
+                      "value": 48,
+                      "units": "px"
+                    },
+                    "bottom": {
+                      "value": 48,
+                      "units": "px"
+                    },
+                    "left": {
+                      "value": 48,
+                      "units": "px"
+                    }
+                  }              
+                }
+              },{
+                "label": "Rows gap",
+                "name": "rows_gap",
+                "type": "number",
+                "display": "text",
+                "step": 1,
+                "suffix": "px",
+                "default": 24
+              }          
+            ]
+        },
+        {
+          "label": "Tablet",
+          "name": "tablet",
+          "type": "group",
+          "children": [
+              {
+                "label": "Spacing",
+                "name": "spacing",
+                "type": "spacing",
+                "visibility": {
+                  "hidden_subfields": {
+                    "margin": false
+                  }
+                },
+                "default": {
+                  "padding": {
+                    "top": {
+                      "value": 48,
+                      "units": "px"
+                    },
+                    "right": {
+                      "value": 48,
+                      "units": "px"
+                    },
+                    "bottom": {
+                      "value": 48,
+                      "units": "px"
+                    },
+                    "left": {
+                      "value": 48,
+                      "units": "px"
+                    }
+                  }              
+                }
+              },{
+                "label": "Rows gap",
+                "name": "rows_gap",
+                "type": "number",
+                "display": "text",
+                "step": 1,
+                "suffix": "px",
+                "default": 24
+              }          
+            ]
+        },  
+        {
+          "label": "Mobile",
+          "name": "mobile",
+          "type": "group",
+          "children": [
+              {
+                "label": "Spacing",
+                "name": "spacing",
+                "type": "spacing",
+                "visibility": {
+                  "hidden_subfields": {
+                    "margin": false
+                  }
+                },
+                "default": {
+                  "padding": {
+                    "top": {
+                      "value": 32,
+                      "units": "px"
+                    },
+                    "right": {
+                      "value": 24,
+                      "units": "px"
+                    },
+                    "bottom": {
+                      "value": 32,
+                      "units": "px"
+                    },
+                    "left": {
+                      "value": 24,
+                      "units": "px"
+                    }
+                  }              
+                }
+              },{
+                "label": "Rows gap",
+                "name": "rows_gap",
+                "type": "number",
+                "display": "text",
+                "step": 1,
+                "suffix": "px",
+                "default": 24
+              }          
+            ]
+        },
+        {
+          "label": "Border radius",
+          "name": "border_radius",
+          "type": "number",
+          "display": "slider",
+          "max": 200,
+          "min": 0,
+          "default": 8
+        }, {
+          "label": "Border width",
+          "name": "border_width",
+          "type": "number",
+          "display": "slider",
+          "max": 200,
+          "min": 0,
+          "default": 1
+        }, {
+          "label": "Border color",
+          "name": "border_color",
+          "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "primary-color",
+                      "Primary color"
+                    ],
+                    [
+                      "secondary-color",
+                      "Secondary color"
+                    ],
+                    [
+                      "secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "black",
+                      "Black"
+                    ],
+                    [
+                      "grey",
+                      "Grey"
+                    ],
+                    [
+                      "grey-accent",
+                      "Grey accent"
+                    ],   
+                    [
+                      "grey-dark",
+                      "Grey dark"
+                    ],    
+                    [
+                      "body-color",
+                      "Body color"
+                    ],                                               
+                    [
+                      "white",
+                      "White"
+                    ],
+                    [
+                      "white-accent",
+                      "White accent"
+                    ],
+                    [
+                      "gradient",
+                      "Gradient"
+                    ]
+                  ],
+          "display": "select",
+          "default": "grey"
+        }, {
+          "label": "Background color",
           "name": "background_color",
-          "type": "color",
-          "inherited_value": {
-            "default_value_path": "theme.colors.primary"
-          },
-          "default": {
-            "opacity": 100
-          }
+          "type": "choice",
+                  "choices": [
+                    [
+                      "transparent",
+                      "None"
+                    ],
+                    [
+                      "primary-color",
+                      "Primary color"
+                    ],
+                    [
+                      "secondary-color",
+                      "Secondary color"
+                    ],
+                    [
+                      "secondary-dark",
+                      "Secondary dark"
+                    ],
+                    [
+                      "black",
+                      "Black"
+                    ],
+                    [
+                      "grey",
+                      "Grey"
+                    ],
+                    [
+                      "grey-accent",
+                      "Grey accent"
+                    ],   
+                    [
+                      "grey-dark",
+                      "Grey dark"
+                    ],    
+                    [
+                      "body-color",
+                      "Body color"
+                    ],                                               
+                    [
+                      "white",
+                      "White"
+                    ],
+                    [
+                      "white-accent",
+                      "White accent"
+                    ],
+                    [
+                      "gradient",
+                      "Gradient"
+                    ]
+                  ],
+          "display": "select",
+          "default": "white-accent"
         },
         {
           "label": "Header text color",
           "name": "header_text_color",
-          "type": "color",
-          "visibility": {
-            "hidden_subfields": {
-              "opacity": true
-            }
-          },
-          "inherited_value": {
-            "default_value_path": "theme.colors.primary"
-          }
-        },
-        {
-          "label": "Label color",
-          "name": "label_color",
-          "type": "color",
-          "visibility": {
-            "hidden_subfields": {
-              "opacity": true
-            }
-          },
-          "inherited_value": {
-            "property_value_paths": {
-              "color": "theme.colors.primary.color"
-            }
-          }
+          "type": "choice",
+          "choices": [
+            [
+              "transparent",
+              "None"
+            ],
+            [
+              "primary-color",
+              "Primary color"
+            ],
+            [
+              "secondary-color",
+              "Secondary color"
+            ],
+            [
+              "secondary-dark",
+              "Secondary dark"
+            ],
+            [
+              "black",
+              "Black"
+            ],
+            [
+              "grey",
+              "Grey"
+            ],
+            [
+              "grey-accent",
+              "Grey accent"
+            ],   
+            [
+              "grey-dark",
+              "Grey dark"
+            ],    
+            [
+              "body-color",
+              "Body color"
+            ],                                               
+            [
+              "white",
+              "White"
+            ],
+            [
+              "white-accent",
+              "White accent"
+            ],
+            [
+              "gradient",
+              "Gradient"
+            ]
+          ],
+          "display": "select",
+          "default": "body-color"
         },
         {
           "label": "Help text color",
           "name": "help_text_color",
-          "type": "color",
-          "visibility": {
-            "hidden_subfields": {
-              "opacity": true
-            }
-          },
-          "inherited_value": {
-            "property_value_paths": {
-              "color": "theme.colors.primary.color"
-            }
-          }
+          "type": "choice",
+          "choices": [
+            [
+              "transparent",
+              "None"
+            ],
+            [
+              "primary-color",
+              "Primary color"
+            ],
+            [
+              "secondary-color",
+              "Secondary color"
+            ],
+            [
+              "secondary-dark",
+              "Secondary dark"
+            ],
+            [
+              "black",
+              "Black"
+            ],
+            [
+              "grey",
+              "Grey"
+            ],
+            [
+              "grey-accent",
+              "Grey accent"
+            ],   
+            [
+              "grey-dark",
+              "Grey dark"
+            ],    
+            [
+              "body-color",
+              "Body color"
+            ],                                               
+            [
+              "white",
+              "White"
+            ],
+            [
+              "white-accent",
+              "White accent"
+            ],
+            [
+              "gradient",
+              "Gradient"
+            ]
+          ],
+          "display": "select",
+          "default": "grey-accent"
+        },
+        {
+          "label": "Error text color",
+          "name": "error_text_color",
+          "type": "choice",
+          "choices": [
+            [
+              "transparent",
+              "None"
+            ],
+            [
+              "primary-color",
+              "Primary color"
+            ],
+            [
+              "secondary-color",
+              "Secondary color"
+            ],
+            [
+              "secondary-dark",
+              "Secondary dark"
+            ],
+            [
+              "black",
+              "Black"
+            ],
+            [
+              "grey",
+              "Grey"
+            ],
+            [
+              "grey-accent",
+              "Grey accent"
+            ],   
+            [
+              "grey-dark",
+              "Grey dark"
+            ],    
+            [
+              "body-color",
+              "Body color"
+            ],                                               
+            [
+              "white",
+              "White"
+            ],
+            [
+              "white-accent",
+              "White accent"
+            ],
+            [
+              "gradient",
+              "Gradient"
+            ]
+          ],
+          "display": "select",
+          "default": "grey-accent"
         },
         {
           "label": "Field",
           "name": "field",
           "type": "group",
-          "children": [
+          "children": [ {
+            "label": "Max width",
+            "name": "max_width",
+            "type": "number",
+            "display": "text",
+            "step": 1,
+            "suffix": "px",
+            "default": 0
+          },
             {
               "label": "Borders width",
               "name": "borders_width",
@@ -4787,12 +5151,12 @@
                   "Primary color"
                 ],
                 [
-                  "{{ theme.colors.secondary.color }}",
+                  "secondary-color",
                   "Secondary color"
                 ],
                 [
-                  "body-color",
-                  "Body (default) color"
+                  "secondary-dark",
+                  "Secondary dark"
                 ],
                 [
                   "black",
@@ -4803,6 +5167,18 @@
                   "Grey"
                 ],
                 [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
                   "white",
                   "White"
                 ],
@@ -4812,7 +5188,7 @@
                 ]
               ],
               "display": "select",
-              "default": "grey"
+              "default": "grey-accent"
             },
             {
               "label": "Background color",
@@ -4828,7 +5204,7 @@
                   "Primary color"
                 ],
                 [
-                  "{{ theme.colors.secondary.color }}",
+                  "secondary-color",
                   "Secondary color"
                 ],
                 [
@@ -4869,7 +5245,7 @@
                   "Primary color"
                 ],
                 [
-                  "{{ theme.colors.secondary.color }}",
+                  "secondary-color",
                   "Secondary color"
                 ],
                 [
@@ -4894,7 +5270,7 @@
                 ]
               ],
               "display": "select",
-              "default": "white"
+              "default": "secondary-color"
             },
             {
               "label": "Border radius",
@@ -4934,7 +5310,634 @@
                   }
                 }              
               }
-            }                             
+            }, 
+            {
+              "label": "Text",
+              "name": "text",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 16
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },         
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 22
+                },
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "primary-color",
+                  "Primary color"
+                ],
+                [
+                  "secondary-color",
+                  "Secondary color"
+                ],
+                [
+                  "secondary-dark",
+                  "Secondary dark"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
+                  "white",
+                  "White"
+                ],
+                [
+                  "white-accent",
+                  "White accent"
+                ],
+                [
+                  "gradient",
+                  "Gradient"
+                ]
+                  ],
+                  "display": "select",
+                  "default": "black"
+                }                
+              ]
+            }, {
+              "label": "Placeholder",
+              "name": "placeholder",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 14
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },         
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 21
+                },
+                {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "primary-color",
+                  "Primary color"
+                ],
+                [
+                  "secondary-color",
+                  "Secondary color"
+                ],
+                [
+                  "secondary-dark",
+                  "Secondary dark"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
+                  "white",
+                  "White"
+                ],
+                [
+                  "white-accent",
+                  "White accent"
+                ],
+                [
+                  "gradient",
+                  "Gradient"
+                ]
+                  ],
+                  "display": "select",
+                  "default": "grey-accent"
+                }           
+              ]
+            }, {
+              "label": "Label",
+              "name": "label_text",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 14
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 500
+                },         
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 21
+                }, {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "primary-color",
+                  "Primary color"
+                ],
+                [
+                  "secondary-color",
+                  "Secondary color"
+                ],
+                [
+                  "secondary-dark",
+                  "Secondary dark"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
+                  "white",
+                  "White"
+                ],
+                [
+                  "white-accent",
+                  "White accent"
+                ],
+                [
+                  "gradient",
+                  "Gradient"
+                ]
+                  ],
+                  "display": "select",
+                  "default": "grey-dark"
+                }
+              ]
+            }, {
+              "label": "Error text",
+              "name": "error_text",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 14
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 400
+                },         
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 21
+                }, {
+                  "label": "Color",
+                  "name": "color",
+                  "type": "color",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "opacity": true
+                    }
+                  },
+                  "default": {
+                    "color": "#c3423f"
+                  }
+                }
+              ]
+            }, {
+              "label": "Button",
+              "name": "button",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Font size",
+                  "name": "font_size",
+                  "type": "number",
+                  "inline_help_text": "Set the element font size here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 14
+                },
+                {
+                  "label": "Font weight",
+                  "name": "font_weight",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 900,
+                  "min": 100,
+                  "step": 100,
+                  "suffix": "px",
+                  "default": 500
+                },         
+                {
+                  "label": "Line height",
+                  "name": "line_height",
+                  "type": "number",
+                  "inline_help_text": "Set the element line height here.",
+                  "display": "slider",
+                  "max": 200,
+                  "step": 1,
+                  "suffix": "px",
+                  "default": 21
+                },{
+                  "label": "Color",
+                  "name": "color",
+                  "type": "choice",
+                  "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "primary-color",
+                  "Primary color"
+                ],
+                [
+                  "secondary-color",
+                  "Secondary color"
+                ],
+                [
+                  "secondary-dark",
+                  "Secondary dark"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
+                  "white",
+                  "White"
+                ],
+                [
+                  "white-accent",
+                  "White accent"
+                ]
+                  ],
+                  "display": "select",
+                  "default": "white"
+                }, {
+                  "label": "Hover Color",
+                  "name": "hover_color",
+                  "type": "choice",
+                  "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "primary-color",
+                  "Primary color"
+                ],
+                [
+                  "secondary-color",
+                  "Secondary color"
+                ],
+                [
+                  "secondary-dark",
+                  "Secondary dark"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
+                  "white",
+                  "White"
+                ],
+                [
+                  "white-accent",
+                  "White accent"
+                ]
+                  ],
+                  "display": "select",
+                  "default": "white"
+                }, {
+                  "label": "Background color",
+                  "name": "background_color",
+                  "type": "choice",
+                  "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "primary-color",
+                  "Primary color"
+                ],
+                [
+                  "secondary-color",
+                  "Secondary color"
+                ],
+                [
+                  "secondary-dark",
+                  "Secondary dark"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
+                  "white",
+                  "White"
+                ],
+                [
+                  "white-accent",
+                  "White accent"
+                ]
+                  ],
+                  "display": "select",
+                  "default": "secondary-color"
+                }, {
+                  "label": "Hover background color",
+                  "name": "hover_background_color",
+                  "type": "choice",
+                  "choices": [
+                [
+                  "transparent",
+                  "None"
+                ],
+                [
+                  "primary-color",
+                  "Primary color"
+                ],
+                [
+                  "secondary-color",
+                  "Secondary color"
+                ],
+                [
+                  "secondary-dark",
+                  "Secondary dark"
+                ],
+                [
+                  "black",
+                  "Black"
+                ],
+                [
+                  "grey",
+                  "Grey"
+                ],
+                [
+                  "grey-accent",
+                  "Grey accent"
+                ],   
+                [
+                  "grey-dark",
+                  "Grey dark"
+                ],    
+                [
+                  "body-color",
+                  "Body color"
+                ],                                               
+                [
+                  "white",
+                  "White"
+                ],
+                [
+                  "white-accent",
+                  "White accent"
+                ],
+                [
+                  "gradient",
+                  "Gradient"
+                ]
+                  ],
+                  "display": "select",
+                  "default": "black"
+                }, {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": false
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 12,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 32,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 12,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 32,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                },  {
+                  "label": "Border radius",
+                  "name": "border_radius",
+                  "type": "number",
+                  "display": "slider",
+                  "max": 200,
+                  "min": 0,
+                  "default": 40
+                } 
+              ]
+            }
           ]
         }          
       ]
@@ -5429,7 +6432,7 @@
                 "Primary color"
               ],
               [
-                "{{ theme.colors.secondary.color }}",
+                "secondary-color",
                 "Secondary color"
               ],
               [

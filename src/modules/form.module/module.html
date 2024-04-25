@@ -1,0 +1,47 @@
+{% import '../../macros/_style.html' %}
+
+<div id="{{ name }}" class="form dnd-row">
+  <div class="form__inner flex flex-col row-fluid{{ ' animated' if module.style.animated_module }}"
+       {{ setAnimationAttr(module.style) if module.style.animated_module }}>
+       <h3 class="form__inner__title">{{ module.title }}</h3>
+       {% form
+        form_to_use="{{ module.form_field.form_id }}"
+        response_response_type="{{ module.form_field.response_type }}"
+        response_message="{{ module.form_field.message }}"
+        response_redirect_id="{{ module.form_field.redirect_id }}"
+        response_redirect_url="{{module.form_field.redirect_url}}"
+        gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+      %}     
+  </div>
+</div>
+{% require_css %}
+  <style>
+  {% if module.display_shadow %}
+    #{{ name }} .form__inner {
+      box-shadow: 0 0 40px -10px var(--{{ module.style.shadow_color }});
+    }
+  {% endif %}
+
+  #{{ name }} .form__inner__title {
+    font-size: {{ module.style.desktop.title.font_size ~ 'px' }};
+    line-height: {{ module.style.desktop.title.line_height ~ 'px' }};
+    font-weight: {{ module.style.desktop.title.font_weight }};
+  }
+
+  @media (max-width: 1024px) {
+  #{{ name }} .form__inner__title {
+    font-size: {{ module.style.tablet.title.font_size ~ 'px' }};
+    line-height: {{ module.style.tablet.title.line_height ~ 'px' }};
+    font-weight: {{ module.style.tablet.title.font_weight }};
+  }  
+  }
+
+  @media (max-width: 768px) {
+  #{{ name }} .form__inner__title {
+    font-size: {{ module.style.mobile.title.font_size ~ 'px' }};
+    line-height: {{ module.style.mobile.title.line_height ~ 'px' }};
+    font-weight: {{ module.style.mobile.title.font_weight }};
+  }  
+  }
+  </style>
+{% end_require_css %}

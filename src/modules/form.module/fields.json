@@ -1,0 +1,545 @@
+[ {
+  "id" : "d5cd490a-270d-e8ac-1988-022660c36598",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c7148a77-c038-816b-9c8a-c4ad5c83adb3",
+    "name" : "shadow_color",
+    "display_width" : null,
+    "label" : "Shadow color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "display_shadow",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "transparent", "None" ], [ "primary-color", "Primary color" ], [ "secondary-color", "Secondary color" ], [ "black", "Black" ], [ "grey", "Grey" ], [ "grey-accent", "Grey accent" ], [ "grey-medium", "Grey medium" ], [ "grey-dark", "Grey dark" ], [ "body-color", "Body color" ], [ "white", "White" ], [ "white-accent", "White accent" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "grey"
+  }, {
+    "id" : "3c9f7735-6566-210b-f0a8-bfa82745adc5",
+    "name" : "desktop",
+    "display_width" : null,
+    "label" : "Desktop",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "ea6db9da-b3a4-634e-bc71-fc75b2cf572f",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "b014fdd7-cfe3-c0b9-4ed2-39eba7e4b529",
+        "name" : "font_size",
+        "display_width" : null,
+        "label" : "Font size",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "suffix" : "px",
+        "type" : "number",
+        "default" : 23
+      }, {
+        "id" : "9c9ebd6c-bc94-fd67-a6bd-68264b94dfb5",
+        "name" : "line_height",
+        "display_width" : null,
+        "label" : "Line height",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "suffix" : "px",
+        "type" : "number",
+        "default" : 29
+      }, {
+        "id" : "09b6a5b0-bb04-01e6-97ea-0358d3d9d289",
+        "name" : "font_weight",
+        "display_width" : null,
+        "label" : "Font weight",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "400", "Regular" ], [ "500", "Medium" ], [ "600", "Semi bold" ], [ "700", "Bold" ], [ "800", "Extra bold" ], [ "900", "Black" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "600"
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "title" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    }
+  }, {
+    "id" : "3c9f7735-6566-210b-f0a8-bfa82745adc6",
+    "name" : "tablet",
+    "display_width" : null,
+    "label" : "Tablet",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "ea6db9da-b3a4-634e-bc71-fc75b2cf572e",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "b014fdd7-cfe3-c0b9-4ed2-39eba7e4b530",
+        "name" : "font_size",
+        "display_width" : null,
+        "label" : "Font size",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "suffix" : "px",
+        "type" : "number",
+        "default" : 23
+      }, {
+        "id" : "9c9ebd6c-bc94-fd67-a6bd-68264b94dfb6",
+        "name" : "line_height",
+        "display_width" : null,
+        "label" : "Line height",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "suffix" : "px",
+        "type" : "number",
+        "default" : 29
+      }, {
+        "id" : "09b6a5b0-bb04-01e6-97ea-0358d3d9d290",
+        "name" : "font_weight",
+        "display_width" : null,
+        "label" : "Font weight",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "400", "Regular" ], [ "500", "Medium" ], [ "600", "Semi bold" ], [ "700", "Bold" ], [ "800", "Extra bold" ], [ "900", "Black" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "600"
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "title" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    }
+  }, {
+    "id" : "3c9f7735-6566-210b-f0a8-bfa82745adc9",
+    "name" : "mobile",
+    "display_width" : null,
+    "label" : "Mobile",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "ea6db9da-b3a4-634e-bc71-fc75b2cf572g",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "b014fdd7-cfe3-c0b9-4ed2-39eba7e4b531",
+        "name" : "font_size",
+        "display_width" : null,
+        "label" : "Font size",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "suffix" : "px",
+        "type" : "number",
+        "default" : 23
+      }, {
+        "id" : "9c9ebd6c-bc94-fd67-a6bd-68264b94dfb7",
+        "name" : "line_height",
+        "display_width" : null,
+        "label" : "Line height",
+        "required" : false,
+        "locked" : false,
+        "display" : "text",
+        "step" : 1,
+        "suffix" : "px",
+        "type" : "number",
+        "default" : 29
+      }, {
+        "id" : "09b6a5b0-bb04-01e6-97ea-0358d3d9d291",
+        "name" : "font_weight",
+        "display_width" : null,
+        "label" : "Font weight",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "400", "Regular" ], [ "500", "Medium" ], [ "600", "Semi bold" ], [ "700", "Bold" ], [ "800", "Extra bold" ], [ "900", "Black" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "600"
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "title" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    }
+  }, {
+    "id" : "6c81c8d2-adf3-095c-2c61-507b96189521",
+    "name" : "animated_module",
+    "display_width" : null,
+    "label" : "Animated module",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "933fcc5d-1eb2-41f9-ba4c-21465f47b582",
+    "name" : "animation_settings",
+    "display_width" : null,
+    "label" : "Animation settings",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "style.animated_module",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "bd3cbaef-6665-dcb0-2529-7ba77d8120ca",
+      "name" : "position_on_x",
+      "display_width" : null,
+      "label" : "Position on X",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 0,
+      "max" : 1000,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 0
+    }, {
+      "id" : "a7483c4b-1a72-ae6a-e312-8669765ab8e7",
+      "name" : "position_on_y",
+      "display_width" : null,
+      "label" : "Position on Y",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 0,
+      "max" : 10000,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 0
+    }, {
+      "id" : "ab154e64-a886-32da-a20b-8649c44969ab",
+      "name" : "scale",
+      "display_width" : null,
+      "label" : "Scale",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 0,
+      "max" : 100,
+      "step" : 1,
+      "suffix" : "",
+      "type" : "number",
+      "default" : 0
+    }, {
+      "id" : "90f87b78-7492-7ee0-b84f-babb51a9ad03",
+      "name" : "rotate",
+      "display_width" : null,
+      "label" : "Rotate",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 0,
+      "max" : 360,
+      "step" : 1,
+      "suffix" : "deg",
+      "type" : "number",
+      "default" : 0
+    }, {
+      "id" : "70265b2e-30d8-cb07-8ba2-424ded143de9",
+      "name" : "skew_x",
+      "display_width" : null,
+      "label" : "Skew X",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 0,
+      "max" : 360,
+      "step" : 1,
+      "suffix" : "deg",
+      "type" : "number",
+      "default" : 0
+    }, {
+      "id" : "a3bcb2da-259e-9fff-6e8f-6f9f3dfe5e8b",
+      "name" : "skew_y",
+      "display_width" : null,
+      "label" : "Skew Y",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 0,
+      "max" : 360,
+      "step" : 1,
+      "suffix" : "deg",
+      "type" : "number",
+      "default" : 0
+    }, {
+      "id" : "e9df3a04-ba5c-581e-2005-736549a17f90",
+      "name" : "opacity",
+      "display_width" : null,
+      "label" : "Opacity",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 0,
+      "max" : 100,
+      "step" : 10,
+      "suffix" : "%",
+      "type" : "number",
+      "default" : 0
+    }, {
+      "id" : "7b3afe6d-a467-5c0a-d14c-c7ec8d8bd9b5",
+      "name" : "bind_animation_on_scroll",
+      "display_width" : null,
+      "label" : "Bind animation on scroll",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "744a0292-186f-74dc-ee14-89bfb703b05e",
+      "name" : "animation_delay",
+      "display_width" : null,
+      "label" : "Animation delay",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "style.animation_settings.bind_animation_on_scroll",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "slider",
+      "min" : 0,
+      "max" : 1000,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 0
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "position_on_x" : 0,
+      "position_on_y" : 0,
+      "scale" : 0,
+      "rotate" : 0,
+      "skew_x" : 0,
+      "skew_y" : 0,
+      "opacity" : 0,
+      "bind_animation_on_scroll" : true,
+      "animation_delay" : 0
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "shadow_color" : "grey",
+    "desktop" : {
+      "title" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    },
+    "tablet" : {
+      "title" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    },
+    "mobile" : {
+      "title" : {
+        "font_size" : 23,
+        "line_height" : 29,
+        "font_weight" : "600"
+      }
+    },
+    "animated_module" : false,
+    "animation_settings" : {
+      "position_on_x" : 0,
+      "position_on_y" : 0,
+      "scale" : 0,
+      "rotate" : 0,
+      "skew_x" : 0,
+      "skew_y" : 0,
+      "opacity" : 0,
+      "bind_animation_on_scroll" : true,
+      "animation_delay" : 0
+    }
+  }
+}, {
+  "id" : "7acaaf5a-73f1-2110-062e-f4819c9160c4",
+  "name" : "tablet",
+  "display_width" : null,
+  "label" : "Tablet",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7c9928bc-42a6-c913-3af0-9e536b561a2a",
+    "name" : "items_spacing",
+    "display_width" : null,
+    "label" : "Items spacing",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "default" : 16
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "items_spacing" : 16
+  }
+}, {
+  "id" : "847f7adc-e4ce-9fc0-bcbc-0f1de046d2f7",
+  "name" : "mobile",
+  "display_width" : null,
+  "label" : "Mobile",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "2bb45eb7-6982-01d9-abc5-391e53fb6082",
+    "name" : "items_spacing",
+    "display_width" : null,
+    "label" : "Items spacing",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "default" : 16
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "items_spacing" : 16
+  }
+}, {
+  "id" : "4d5afd0b-9cd7-65b6-b288-9213608a0a25",
+  "name" : "form_field",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "735b27d4-3a6d-4dd7-9a99-17f1202ed18d",
+    "response_type" : "inline",
+    "message" : "Merci d'avoir envoyé le formulaire.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "7cc5d100-4c10-dacc-2dac-ef513dee5c73",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Contact us"
+}, {
+  "id" : "0d6332f4-d422-d553-731e-554474224a40",
+  "name" : "display_shadow",
+  "display_width" : null,
+  "label" : "Display shadow",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+} ]
