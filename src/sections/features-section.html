@@ -6,14 +6,27 @@ description: A section displaying text and button with many features on right si
 -->
 
 {% dnd_section vertical_alignment="TOP"  %}
-    {% dnd_column width="5" %}
+    {% dnd_column %}
         {% dnd_row %}
             {% dnd_module 
                 path='../modules/custom-text'
+                horizontal_alignment="CENTER"
                 display_label={{ context.text.display_label ? context.text.display_label : True }}
                 label_text={{ context.text.label ? context.text.label : "Request" }}
                 style={{ context.text.style ?
                 context.text.style : {
+                'desktop': {
+                    'horizontal_alignment': 'center',
+                    'text_alignment': 'center'
+                },
+                'tablet': {
+                    'horizontal_alignment': 'center',
+                    'text_alignment': 'center'
+                },
+                'mobile': {
+                    'horizontal_alignment': 'center',
+                    'text_alignment': 'center'
+                },                  
                     'animated_module': True,
                     'animation_settings': {
                         'position_on_y': 100,
@@ -54,85 +67,84 @@ description: A section displaying text and button with many features on right si
                 style={{ context.buttons.style ?
                     context.buttons.style : {
                         'desktop': {
-                            'horizontal_alignment': 'flex-start'
+                            'horizontal_alignment': 'center'
                         },
                         'tablet': {
-                            'horizontal_alignment': 'flex-start'
+                            'horizontal_alignment': 'center'
                         },
                         'mobile': {
-                            'horizontal_alignment': 'flex-start'
+                            'horizontal_alignment': 'center'
                         }                                                     
                     }
                 }}
             %}
             {% end_dnd_module %}
         {% end_dnd_row %}         
-    {% end_dnd_column %}
-    {% dnd_column width="6" offset="6"%}  
         {% dnd_row %}  
-    {% dnd_module 
-        path="../modules/features"
-        feature={{ context.features.feature ?
-            context.features.feature : [
-                {
-                    'icon_field': { 
-                        'src': get_asset_url('../images/icons/ear.svg'),
-                        'width': 23,
-                        'height': 23,
-                        'alt': "icon look likes an ear",
-                        'loading': 'lazy'
-                    },                
-                    'title': 'Technical assistance',
-                    'description': 'Need support or have questions about our theme? We are here to help you.'
-                },
-                {
-                'icon_field': { 
-                    'src': get_asset_url('../images/icons/headphone.svg'),
-                    'width': 23,
-                    'height': 23,
-                    'alt': "icon look likes a headphone",
-                    'loading': 'lazy'
-                },              
-                    'title': 'Customer Support',
-                    'description': 'Our team is available to answer all your questions and provide technical assistance.'
-                },
-                {
-                'icon_field': { 
-                    'src': get_asset_url('../images/icons/calendar.svg'),
-                    'width': 23,
-                    'height': 23,
-                    'alt': "icon look likes a calendar",
-                    'loading': 'lazy'
-                },                
-                    'title': 'Free consultation',
-                    'description': 'Contact us to book a free consultation.'
-                },
-                {
-                'icon_field': { 
-                    'src': get_asset_url('../images/icons/settings.svg'),
-                    'width': 23,
-                    'height': 23,
-                    'alt': "icon look likes a calendar",
-                    'loading': 'lazy'
-                },                   
-                    'title': 'Personalized services',
-                    'description': 'We offer personalized services to meet your specific needs.'
-                }                                                   
-            ]
-        }}
-        style={{ context.features.style ?
-            context.features.style : {
-            'animated_module': True,
-            'animation_settings': {
-                'position_on_y': 100,
-                'opacity': 10,
-                'animation_delay': 100,
-                'bind_animation_on_scroll': true                                                              
-            }            
-            }
-        }}
-    %}      
-    {% end_dnd_module %}
-        {% end_dnd_row %}        
+            {% dnd_module 
+                path="../modules/features"
+                feature={{ context.features.feature ?
+                    context.features.feature : [
+                        {
+                            'icon_field': { 
+                                'src': get_asset_url('../images/icons/ear.svg'),
+                                'width': 23,
+                                'height': 23,
+                                'alt': "icon look likes an ear",
+                                'loading': 'lazy'
+                            },                
+                            'title': 'Technical assistance',
+                            'description': 'Need support or have questions about our theme? We are here to help you.'
+                        },
+                        {
+                            'icon_field': { 
+                                'src': get_asset_url('../images/icons/headphone.svg'),
+                                'width': 23,
+                                'height': 23,
+                                'alt': "icon look likes a headphone",
+                                'loading': 'lazy'
+                            },              
+                                'title': 'Customer Support',
+                                'description': 'Our team is available to answer all your questions and provide technical assistance.'
+                            },
+                        {
+                            'icon_field': { 
+                                'src': get_asset_url('../images/icons/calendar.svg'),
+                                'width': 23,
+                                'height': 23,
+                                'alt': "icon look likes a calendar",
+                                'loading': 'lazy'
+                            },                
+                                'title': 'Free consultation',
+                                'description': 'Contact us to book a free consultation.'
+                            },
+                        {
+                            'icon_field': { 
+                                'src': get_asset_url('../images/icons/settings.svg'),
+                                'width': 23,
+                                'height': 23,
+                                'alt': "icon look likes a calendar",
+                                'loading': 'lazy'
+                            },                   
+                                'title': 'Personalized services',
+                                'description': 'We offer personalized services to meet your specific needs.'
+                            }                                                   
+                    ]
+                }}
+                style={{ context.features.style ?
+                    context.features.style : {
+                    'items_per_row': 2,
+                    'animated_module': True,
+                    'animation_settings': {
+                        'position_on_y': 100,
+                        'opacity': 10,
+                        'animation_delay': 100,
+                        'bind_animation_on_scroll': true                                                              
+                    }            
+                    }
+                }}
+            %}      
+            {% end_dnd_module %}
+        {% end_dnd_row %}           
     {% end_dnd_column %}
 {% end_dnd_section %}
