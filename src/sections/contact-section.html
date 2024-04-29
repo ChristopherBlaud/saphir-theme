@@ -11,7 +11,26 @@ description: A section displaying text and many links with a form on right side.
 %}
     {% dnd_column width="5" %}
         {% dnd_row %}
-            {% dnd_module path="../modules/background-image"%}
+            {% dnd_module 
+                path="../modules/background-image"
+                background_image={{ context.background_image.images ?
+                    context.background_image.images : [
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/visuals/arrow.svg')
+                            },
+                            'column_width': 12,
+                            'vertical_position_from': 'top',
+                            'top': 80,
+                            'vertical_translation': True,
+                            'horizontal_position_from': 'left',
+                            'left': 60,
+                            'horizontal_translation': True,
+                            'position': 1
+                        }                       
+                    ]
+                }}
+            %}
             {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}

@@ -8,6 +8,8 @@ const fetchSVGContent = async (url, container) => {
 
         const result =  await response.text();
         container.innerHTML = result;
+        container.closest(".dnd-row").classList.add('full-screen');
+
     } catch (error) {
         console.error(error);
     };
@@ -22,7 +24,7 @@ const fetchSVGContent = async (url, container) => {
         if (url.endsWith('.svg')) {
             fetchSVGContent(url, container);
         } else {
-            container.textContent = "Error. Only the svg format is supported."
-        } 
+            container.textContent = "Error. Only the svg format is supported.";
+        };
     });
 })();

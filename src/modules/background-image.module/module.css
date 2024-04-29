@@ -1,7 +1,1 @@
-.dnd-section:has(.background-image__inner svg) {
-    position: relative;
-}
-
-.background-image .background-image__inner svg {
-    position: absolute;
-}
+.dnd-section:has(.background-image__inner svg){position:relative}.dnd-section .dnd-row.full-screen{height:100%;left:0;position:absolute;top:0;width:100%;z-index:1}.background-image__inner{max-height:100%;max-width:100%;position:absolute}.background-image__inner svg{width:100%}.dnd-section:has(.dnd-row.full-screen) .dnd-row:not(.full-screen){position:relative;z-index:2}

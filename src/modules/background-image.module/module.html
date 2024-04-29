@@ -1,6 +1,10 @@
 {% import '../../macros/_style.html' %}
 
-<div id="{{ name }}" class="background-image dnd-row">
-  <div class="background-image__inner{{ ' animated' if module.style.animated_module }}" data-src="{{ module.image_field.src|escape_url }}">
-  </div>
+<div id="{{ name }}" class="background-image">
+{% for item in module.background_image %}
+	{% if item.image_field.src %}
+      <div class="background-image__inner span{{ item.column_width}}" data-src="{{ item.image_field.src|escape_url }}" style="{{ item.vertical_position_from == 'top' ? 'top: ' ~ item.top ~ '%; ' : 'bottom: ' ~ item.bottom ~ '%; '}}{{ item.horizontal_position_from == 'left' ? 'left: ' ~ item.left ~ '%; ' : 'right: ' ~ item.right ~ '%; '}}{% if item.vertical_translation && item.horizontal_translation == false %}transform: translateX(-50%);{% endif %}{% if item.horizontal_translation && item.vertical_translation == false %}transform: translateY(-50%);{% endif %}{% if item.vertical_translation && item.horizontal_translation %}transform: translate(-50%, -50%);{% endif %}">
+      </div>	  
+    {% endif %}
+{% endfor %}
 </div>

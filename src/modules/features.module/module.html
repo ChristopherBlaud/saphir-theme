@@ -8,7 +8,7 @@
       <div class="features__inner__item__inner flex flex-col md:flex-row ">
       {% if item.icon_field.src %}
         <picture class="features__inner__item__inner__icon flex h-fit w-fit shrink-0">
-          <img src="{{ item.icon_field.src|escape_url }}" alt="{{ item.icon_field.alt|escape_attr }}" loading="lazy" width="{{ module.style.icon_width }}" height="{{ module.style.icon_width }}">
+          <img src="{{ item.icon_field.src|escape_url }}" alt="{{ item.icon_field.alt|escape_attr }}" loading="lazy" width="{{ module.style.desktop.icon.width }}" height="{{ module.style.desktop.icon.width }}">
         </picture>
         {% endif %}
         <div class="features__inner__item__inner__text flex flex-col">
@@ -28,27 +28,37 @@
   }
 
   #{{ name }} .features__inner__item__inner {
-    gap: {{ module.style.desktop.box_gap ~ 'px' }}
+    align-items: {{ module.style.desktop.alignment }};
+    gap: {{ module.style.desktop.feature.gap ~ 'px' }};
+    {% if module.style.desktop.feature.background_color != 'transparent' %}
+    background-color: var(--{{ module.style.desktop.feature.background_color }});
+    {% endif %}
+    {% if  module.style.desktop.feature.border.radius > 0 %}
+    border-radius: {{ module.style.desktop.feature.border.radius ~ 'px' }};
+    {% endif %}
+    {{ module.style.desktop.feature.border.style.css }}
+    {{ module.style.desktop.feature.spacing.css }}
   }
 
   #{{ name }} .features__inner__item__inner__text {
-    gap: {{ module.style.desktop.text_gap ~ 'px' }}
+    text-align: {{ module.style.desktop.text_alignment }};
+    gap: {{ module.style.desktop.feature.text_spacing ~ 'px' }}
   }
 
   #{{ name }} .features__inner__item__inner__icon {
-    background-color: var(--{{ module.style.icon_background_color }});
-    {% if module.style.border.radius > 0 %}
-    border-radius: {{ module.style.border.radius ~ 'px' }};
+    background-color: var(--{{ module.style.desktop.icon.background_color }});
+    {% if module.style.desktop.icon.border.radius > 0 %}
+    border-radius: {{ module.style.desktop.icon.border.radius ~ 'px' }};
     {% endif %}    
-    {% if module.style.border.width > 0 %}
-    border: {{ module.style.border.width ~ 'px' }} solid var(--{{ module.style.border.color }});
+    {% if module.style.desktop.icon.border.width > 0 %}
+    border: {{ module.style.desktop.icon.border.width ~ 'px' }} solid var(--{{ module.style.desktop.icon.border.color }});
     {% endif %}
-    {{ module.style.icon_spacing.css }}    
+    {{ module.style.desktop.icon.spacing.css }}    
   }
 
   #{{ name }} .features__inner__item__inner__icon img {
-    width: {{ module.style.icon_width ~ 'px' }};
-    height: {{ module.style.icon_width ~ 'px' }};
+    width: {{ module.style.desktop.icon.width ~ 'px' }};
+    height: {{ module.style.desktop.icon.width ~ 'px' }};
   } 
 
   #{{ name }} .features__inner__item__inner__text__title {
@@ -71,12 +81,29 @@
       {{ module.style.tablet.spacing.css }}
     }  
 
-    #{{ name }} .features__inner__inner__item {
-      gap: {{ module.style.tablet.box_gap ~ 'px' }};
+    #{{ name }} .features__inner__item__inner {
+      align-items: {{ module.style.tablet.alignment }};
+      gap: {{ module.style.tablet.feature.gap ~ 'px' }};
+      {% if module.style.tablet.feature.background_color != 'transparent' %}
+      background-color: var(--{{ module.style.tablet.feature.background_color }});
+      {% endif %}
+      {% if  module.style.tablet.feature.border.radius > 0 %}
+      border-radius: {{ module.style.tablet.feature.border.radius ~ 'px' }};
+      {% endif %}
+      border: unset;
+      {{ module.style.tablet.feature.border.style.css }}
+      {{ module.style.tablet.feature.spacing.css }}
     }
 
+    #{{ name }} .features__inner__item__inner__icon img {
+      width: {{ module.style.tablet.icon.width ~ 'px' }};
+      height: {{ module.style.tablet.icon.width ~ 'px' }};
+    } 
+
+
     #{{ name }} .features__inner__item__inner__text {
-      gap: {{ module.style.tablet.text_gap ~ 'px' }};
+      text-align: {{ module.style.desktop.text_alignment }};
+      gap: {{ module.style.tablet.feature.text_spacing ~ 'px' }};
     }       
 
     #{{ name }} .features__inner__item__inner__text__title {
@@ -99,11 +126,27 @@
     }           
 
     #{{ name }} .features__inner__item__inner {
-      gap: {{ module.style.mobile.box_gap ~ 'px' }};
+      align-items: {{ module.style.mobile.alignment }};
+      gap: {{ module.style.mobile.feature.gap ~ 'px' }};
+      {% if module.style.mobile.feature.background_color != 'transparent' %}
+      background-color: var(--{{ module.style.mobile.feature.background_color }});
+      {% endif %}
+      {% if  module.style.mobile.feature.border.radius > 0 %}
+      border-radius: {{ module.style.mobile.feature.border.radius ~ 'px' }};
+      {% endif %}
+      border: unset;
+      {{ module.style.mobile.feature.border.style.css }}
+      {{ module.style.mobile.feature.spacing.css }}
     }
 
+    #{{ name }} .features__inner__item__inner__icon img {
+      width: {{ module.style.mobile.icon.width ~ 'px' }};
+      height: {{ module.style.mobile.icon.width ~ 'px' }};
+    } 
+
     #{{ name }} .features__inner__item__inner__text {
-      gap: {{ module.style.mobile.text_gap ~ 'px' }};
+      text-align: {{ module.style.mobile.text_alignment }};
+      gap: {{ module.style.mobile.feature.text_spacing ~ 'px' }};
     }        
 
     #{{ name }} .features__inner__item__inner__text__title {
