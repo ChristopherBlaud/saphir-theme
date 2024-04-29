@@ -277,12 +277,11 @@
               "label": "Bold font weight",
               "name": "bold_variation",
               "type": "font",
-              "inline_help_text": "You can override the bold variant for this element here.",
               "inherited_value": {
                 "property_value_paths": {
                   "fallback": "theme.fonts.primary.font_family.font.fallback",
-                  "font": "theme.fonts.primary.font_family.font.font",
-                  "font_set": "theme.fonts.primary.font_family.font.font_set"
+                  "font": "theme.fonts.primary.font_family.font",
+                  "font_set": "theme.fonts.primary.font_family.font_set"
                 }
               },
               "visibility": {
@@ -465,6 +464,174 @@
         }
       ]
     },
+    {
+      "label": "Links",
+      "name": "links",
+      "type": "group",
+      "children": [
+        {
+          "label": "Font weight",
+          "name": "font",
+          "type": "font",
+          "inline_help_text": "You can set the font weight for this element here.",
+          "inherited_value": {
+            "property_value_paths": {
+              "fallback": "theme.fonts.primary.font_family.font.fallback",
+              "font": "theme.fonts.primary.font_family.font.font",
+              "font_set": "theme.fonts.primary.font_family.font.font_set"
+            }
+          },
+          "visibility": {
+            "hidden_subfields": {
+              "size": true,
+              "font": true,
+              "underline": true,
+              "color": true
+            }
+          },
+          "default": {
+            "variant": "600",
+            "styles": {
+              "text-decoration": "none"
+            }
+          }
+        },
+        {
+          "label": "Text transformation",
+          "name": "text_transform",
+          "type": "choice",
+          "inline_help_text": "Select an option below to change the display on links.",
+          "choices": [
+            [
+              "none",
+              "None"
+            ],
+            [
+              "capitalize",
+              "Capitalize"
+            ],
+            [
+              "uppercase",
+              "Uppercase"
+            ],
+            [
+              "lowercase",
+              "Lowercase"
+            ]
+          ],
+          "display": "select",
+          "default": "none"
+        },
+        {
+          "label": "Links color",
+          "name": "color",
+          "inline_help_text": "Set the links color here.",
+          "type": "choice",
+          "choices": [
+            [
+              "transparent",
+              "None"
+            ],
+            [
+              "{{ theme.colors.primary.color }}",
+              "Primary color"
+            ],
+            [
+              "{{ theme.colors.secondary.color }}",
+              "Secondary color"
+            ],
+            [
+              "{{ theme.colors.body_default.color }}",
+              "Body (default) color"
+            ],
+            [
+              "{{ theme.colors.black.color }}",
+              "Black"
+            ],
+            [
+              "{{ theme.colors.grey.color }}",
+              "Grey"
+            ],
+            [
+              "{{ theme.colors.grey_accent.color }}",
+              "Grey accent"
+            ],     
+            [
+              "{{ theme.colors.grey_medium.color }}",
+              "Grey medium"
+            ],                   
+            [
+              "{{ theme.colors.grey_dark.color }}",
+              "Grey dark"
+            ],            
+            [
+              "{{ theme.colors.greya_night.color }}",
+              "Grey night"
+            ],            
+            [
+              "{{ theme.colors.white.color }}",
+              "White"
+            ]
+          ],
+          "display": "select",
+          "default": "{{ theme.colors.white.color }}"
+        },
+        {
+          "label": "Links hover color",
+          "name": "hover_color",
+          "inline_help_text": "Set the links color on hover state here.",
+          "type": "choice",
+          "choices": [
+            [
+              "transparent",
+              "None"
+            ],
+            [
+              "{{ theme.colors.primary.color }}",
+              "Primary color"
+            ],
+            [
+              "{{ theme.colors.secondary.color }}",
+              "Secondary color"
+            ],
+            [
+              "{{ theme.colors.body_default.color }}",
+              "Body (default) color"
+            ],
+            [
+              "{{ theme.colors.black.color }}",
+              "Black"
+            ],
+            [
+              "{{ theme.colors.grey.color }}",
+              "Grey"
+            ],
+            [
+              "{{ theme.colors.grey_accent.color }}",
+              "Grey accent"
+            ],     
+            [
+              "{{ theme.colors.grey_medium.color }}",
+              "Grey medium"
+            ],                   
+            [
+              "{{ theme.colors.grey_dark.color }}",
+              "Grey dark"
+            ],            
+            [
+              "{{ theme.colors.greya_night.color }}",
+              "Grey night"
+            ],            
+            [
+              "{{ theme.colors.white.color }}",
+              "White"
+            ]
+          ],
+          "display": "select",
+          "default": "{{ theme.colors.black.color }}"
+        }
+      ]
+    },    
     {
       "label": "Layout",
       "name": "layout",
@@ -760,35 +927,62 @@
                   }
                 }                
               ]
-            }, {
-              "label": "Rows gap",
-              "name": "rows_gap",
-              "type": "number",
-              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 48
-            },
-            {
-              "label": "Column gap",
-              "name": "column_gap",
-              "type": "number",
-              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 16
-            }, {
-              "label": "Maximum content width",
-              "name": "max_width",
-              "type": "number",
-              "display": "slider",
-              "max": 2500,
-              "min": 500,
-              "default": 520
+            },{
+              "label": "Small sections",
+              "name": "small_sections",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }, {
+                  "label": "Rows gap",
+                  "name": "rows_gap",
+                  "type": "number",
+                  "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
+                  "display": "slider",
+                  "max": 100,
+                  "min": 0,
+                  "suffix": "px",
+                  "default": 32
+                }, {
+                  "label": "Column gap",
+                  "name": "column_gap",
+                  "type": "number",
+                  "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+                  "display": "slider",
+                  "max": 100,
+                  "min": 0,
+                  "suffix": "px",
+                  "default": 16
+                }                
+              ]
             }, {
               "label": "Rounded sections",
               "name": "rounded_sections",
@@ -836,7 +1030,36 @@
                   "default": 0
                 }                                 
               ]
-            } 
+            }, {
+              "label": "Rows gap",
+              "name": "rows_gap",
+              "type": "number",
+              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 48
+            },
+            {
+              "label": "Column gap",
+              "name": "column_gap",
+              "type": "number",
+              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 16
+            }, {
+              "label": "Maximum content width",
+              "name": "max_width",
+              "type": "number",
+              "display": "slider",
+              "max": 2500,
+              "min": 500,
+              "default": 520
+            }
           ]
         }, {
           "label": "Tablet",
@@ -972,36 +1195,7 @@
                   "default": 16
                 }                
               ]
-            },  {
-              "label": "Rows gap",
-              "name": "rows_gap",
-              "type": "number",
-              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 48
-            }, {
-              "label": "Column gap",
-              "name": "column_gap",
-              "type": "number",
-              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
-              "display": "slider",
-              "max": 100,
-              "min": 0,
-              "suffix": "px",
-              "default": 16
-            }, 
-            {
-              "label": "Maximum content width",
-              "name": "max_width",
-              "type": "number",
-              "display": "slider",
-              "max": 2500,
-              "min": 500,
-              "default": 960
-            }, {
+            },{
               "label": "Rounded sections",
               "name": "rounded_sections",
               "type": "group",
@@ -1048,6 +1242,35 @@
                   "default": 0
                 }                                 
               ]
+            }, {
+              "label": "Rows gap",
+              "name": "rows_gap",
+              "type": "number",
+              "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 48
+            }, {
+              "label": "Column gap",
+              "name": "column_gap",
+              "type": "number",
+              "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+              "display": "slider",
+              "max": 100,
+              "min": 0,
+              "suffix": "px",
+              "default": 16
+            }, 
+            {
+              "label": "Maximum content width",
+              "name": "max_width",
+              "type": "number",
+              "display": "slider",
+              "max": 2500,
+              "min": 500,
+              "default": 960
             }
           ]
         }, {
