@@ -128,6 +128,12 @@ body h6 strong, body .h6-display strong {
     font-weight: {{ theme.typography.xl.h6.font_weight_bold }};
 }
 
+body a {
+    font-size: {{ theme.links.font_size ~ 'px' }};
+    font-weight: {{ theme.links.font_weight }};
+    line-height: {{ theme.links.line_height ~ 'px' }};
+}
+
 @media (max-width: 1024px) {
     body h1, body .h1-display {
         font-size: {{ theme.typography.md.h1.font_size ~ 'px' }};
