@@ -605,6 +605,53 @@
                 }                
               ]
             }, {
+              "label": "Rounded sections",
+              "name": "rounded_sections",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 64,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }, 
+                {
+                  "label": "Border radius",
+                  "name": "border_radius",
+                  "type": "number",
+                  "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+                  "display": "slider",
+                  "max": 100,
+                  "min": 0,
+                  "suffix": "px",
+                  "default": 24
+                }                                 
+              ]
+            }, {
               "label": "Rows gap",
               "name": "rows_gap",
               "type": "number",
@@ -742,7 +789,54 @@
               "max": 2500,
               "min": 500,
               "default": 520
-            }
+            }, {
+              "label": "Rounded sections",
+              "name": "rounded_sections",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 0,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 48,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 0,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                },
+                {
+                  "label": "Border radius",
+                  "name": "border_radius",
+                  "type": "number",
+                  "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+                  "display": "slider",
+                  "max": 100,
+                  "min": 0,
+                  "suffix": "px",
+                  "default": 0
+                }                                 
+              ]
+            } 
           ]
         }, {
           "label": "Tablet",
@@ -907,6 +1001,53 @@
               "max": 2500,
               "min": 500,
               "default": 960
+            }, {
+              "label": "Rounded sections",
+              "name": "rounded_sections",
+              "type": "group",
+              "children": [
+                {
+                  "label": "Spacing",
+                  "name": "spacing",
+                  "type": "spacing",
+                  "visibility": {
+                    "hidden_subfields": {
+                      "margin": true
+                    }
+                  },
+                  "default": {
+                    "padding": {
+                      "top": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "right": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "bottom": {
+                        "value": 64,
+                        "units": "px"
+                      },
+                      "left": {
+                        "value": 64,
+                        "units": "px"
+                      }
+                    }              
+                  }
+                }, 
+                {
+                  "label": "Border radius",
+                  "name": "border_radius",
+                  "type": "number",
+                  "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
+                  "display": "slider",
+                  "max": 100,
+                  "min": 0,
+                  "suffix": "px",
+                  "default": 0
+                }                                 
+              ]
             }
           ]
         }, {
@@ -997,62 +1138,6 @@
             }            
           ]
         }
-      ]
-    }, {
-      "label": "Small sections",
-      "name": "small_sections",
-      "type": "group",
-      "children": [
-        {
-          "label": "Spacing",
-          "name": "spacing",
-          "type": "spacing",
-          "visibility": {
-            "hidden_subfields": {
-              "margin": true
-            }
-          },
-          "default": {
-            "padding": {
-              "top": {
-                "value": 64,
-                "units": "px"
-              },
-              "right": {
-                "value": 0,
-                "units": "px"
-              },
-              "bottom": {
-                "value": 64,
-                "units": "px"
-              },
-              "left": {
-                "value": 0,
-                "units": "px"
-              }
-            }              
-          }
-        }, {
-          "label": "Rows gap",
-          "name": "rows_gap",
-          "type": "number",
-          "inline_help_text": "Set the row gap here. Row gap is the horizontal space between each elements",
-          "display": "slider",
-          "max": 100,
-          "min": 0,
-          "suffix": "px",
-          "default": 32
-        }, {
-          "label": "Column gap",
-          "name": "column_gap",
-          "type": "number",
-          "inline_help_text": "Set the column gap here. Column gap is the vertical space between each elements",
-          "display": "slider",
-          "max": 100,
-          "min": 0,
-          "suffix": "px",
-          "default": 16
-        }                
       ]
     }, {
       "label": "Typography",

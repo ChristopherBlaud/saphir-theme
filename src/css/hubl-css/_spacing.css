@@ -100,6 +100,13 @@
     {{ theme.layout.xl.small_sections.spacing.css }}
 }         
 
+.container-fluid:not(.header-container) .dnd-section.rounded-section  {
+    max-width: {{ theme.layout.xl.max_width ~ 'px' }};
+    margin-inline: auto; 
+    border-radius: {{ theme.layout.xl.rounded_sections.border_radius ~ 'px' }};
+    {{ theme.layout.xl.rounded_sections.spacing.css }};
+}
+
 @media (min-width: 1024px) and (max-width: 1280px) {
     .container-fluid:not(.header-container) .dnd-section > .row-fluid {
         max-width: {{ theme.layout.md.max_width ~ 'px' }};
@@ -115,9 +122,15 @@
     }
     .container-fluid:not(.header-container) .dnd-section.small {
         {{ theme.layout.md.small_sections.spacing.css }}
+    }    
+    .container-fluid:not(.header-container) .dnd-section.rounded-section  {
+        max-width: {{ theme.layout.md.max_width ~ 'px' }};
+        margin-inline: auto;
+        border-radius: {{ theme.layout.md.rounded_sections.border_radius ~ 'px' }};
+        {{ theme.layout.md.rounded_sections.spacing.css }};
     }               
     .container-fluid:not(.header-container) .dnd-section > .row-fluid {
-        max-width: {{ theme.layout.xs.max_width ~ 'px' }};
+        max-width: {{ theme.layout.md.max_width ~ 'px' }};
     }
     .dnd-section .row-fluid {
         row-gap: {{ theme.layout.md.rows_gap ~ 'px' }};
@@ -137,7 +150,16 @@
     }
     .container-fluid:not(.header-container) .dnd-section.small {
         {{ theme.layout.xs.small_sections.spacing.css }}
-    }               
+    }   
+    .container-fluid:not(.header-container) .dnd-section.rounded-section  {
+        max-width: {{ theme.layout.xs.max_width ~ 'px' }};
+        margin-inline: auto;
+        border-radius: {{ theme.layout.xs.rounded_sections.border_radius ~ 'px' }};
+        {{ theme.layout.xs.rounded_sections.spacing.css }};
+    }      
+    .container-fluid:not(.header-container) .dnd-section > .row-fluid {
+        max-width: {{ theme.layout.xs.max_width ~ 'px' }};
+    }              
     .dnd-section .row-fluid {
         row-gap: {{ theme.layout.xs.rows_gap ~ 'px' }};
     }    

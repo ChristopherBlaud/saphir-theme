@@ -223,17 +223,7 @@
           "locked" : false,
           "allow_custom_border_sides" : true,
           "type" : "border",
-          "default" : {
-            "left" : {
-              "style" : "solid",
-              "color" : "#ECEBF3",
-              "opacity" : 100,
-              "width" : {
-                "value" : 3,
-                "units" : "px"
-              }
-            }
-          }
+          "default" : {}
         } ],
         "tab" : "STYLE",
         "expanded" : false,
@@ -815,17 +805,7 @@
           "locked" : false,
           "allow_custom_border_sides" : true,
           "type" : "border",
-          "default" : {
-            "left" : {
-              "style" : "solid",
-              "color" : "#ECEBF3",
-              "opacity" : 100,
-              "width" : {
-                "value" : 3,
-                "units" : "px"
-              }
-            }
-          }
+          "default" : {}
         } ],
         "tab" : "STYLE",
         "expanded" : false,
@@ -1385,17 +1365,7 @@
           "locked" : false,
           "allow_custom_border_sides" : true,
           "type" : "border",
-          "default" : {
-            "left" : {
-              "style" : "solid",
-              "color" : "#ECEBF3",
-              "opacity" : 100,
-              "width" : {
-                "value" : 3,
-                "units" : "px"
-              }
-            }
-          }
+          "default" : {}
         } ],
         "tab" : "STYLE",
         "expanded" : false,

@@ -54,11 +54,3 @@ body {
         display: none;
     }
 }
-
-@media (min-width: 1024px) {
-    .dnd-section.rounded-section  {
-        max-width: {{ theme.layout.xl.max_width ~ 'px' }};
-        margin-inline: auto;
-        border-radius: 1.5rem;
-    }
-}
