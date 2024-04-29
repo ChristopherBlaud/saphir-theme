@@ -1,0 +1,104 @@
+<!--
+templateType: section
+isAvailableForNewContent: true
+label: Faq section
+description: A section displaying text and image with many accordions.
+-->
+
+{% dnd_section 
+    vertical_alignment="TOP" 
+    background_color={{ context.section.background_color  }}
+%}
+    {% dnd_column width="4" %}
+        {% dnd_row %}
+            {% dnd_module 
+                path='../modules/custom-text'
+                display_label={{ context.text.display_label ? context.text.display_label : True }}
+                label_text={{ context.text.label ? context.text.label : "FAQ" }}
+                style={{ context.text.style ?
+                context.text.style : {
+                    'animated_module': True,
+                    'animation_settings': {
+                        'position_on_y': 100,
+                        'opacity': 10,
+                        'animation_delay': 100,
+                        'bind_animation_on_scroll': true                                                              
+                    }            
+                }
+                }}                
+            %}
+            {% module_attribute "html" %}
+                {{ context.text.content ? context.text.content : "<h2 style='color: {{ theme.colors.black.color }}'><b>Frequently asked questions</b></h2><p>Find answers to frequently asked questions about the theme and its implementation here.</p>" }}
+            {% end_module_attribute %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}  
+        {% dnd_row %}       
+            {% dnd_module 
+                path='../modules/image' 
+                image_field={{ context.image.image_field ?
+                    context.image.image_field : {
+                        'src': get_asset_url('../images/visuals/illustration-faq.svg')
+                    }
+                }}
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row%}
+    {% end_dnd_column %}
+    {% dnd_column width="6" offset="6"%}  
+        {% dnd_row %}  
+            {% dnd_module 
+                path='../modules/accordions' 
+                accordion={{ context.accordions.accordion ?
+                    context.accordions.accordion : [
+                        {
+                            "icon_field": {
+                                "name": "circle-plus",
+                                "unicode": "f055",
+                                "type": "SOLID",
+                            },
+                            "title": "What is this theme for?",
+                            "description": "This theme is designed to allow you to create your website independently. It offers essential features for any business and is optimized for optimal loading speed and better search engine rankings."             
+                        },
+                        {
+                            "icon_field": {
+                                "name": "circle-plus",
+                                "unicode": "f055",
+                                "type": "SOLID",
+                            },
+                            "title": "How to use it?",
+                            "description": "To use this theme, simply install it on your hubspot account using the marketplace and follow the instructions provided. You can then personalize your site according to your needs and preferences."             
+                        },
+                        {
+                            "icon_field": {
+                                "name": "circle-plus",
+                                "unicode": "f055",
+                                "type": "SOLID",
+                            },
+                            "title": "Is it SEO optimized?",
+                            "description": "Yes, this theme is specially optimized for better SEO on search engines. This will allow you to improve the visibility of your website and attract more visitors."             
+                        },
+                        {
+                            "icon_field": {
+                                "name": "circle-plus",
+                                "unicode": "f055",
+                                "type": "SOLID",
+                            },
+                            "title": "What features are included?",
+                            "description": "This theme includes all the essential features for any business, such as page management, blog posts, image galleries, contact forms, and more. You will also be able to choose from a variety of layouts and designs"             
+                        },
+                        {
+                            "icon_field": {
+                                "name": "circle-plus",
+                                "unicode": "f055",
+                                "type": "SOLID",
+                            },
+                            "title": "Is it easy to use?",
+                            "description": "Yes, this theme is designed to be user-friendly and easy to use, even for people without web development experience. You will be able to create and manage your website with ease."             
+                        }                                                                                                  
+                    ]
+                }}
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}        
+    {% end_dnd_column %}
+{% end_dnd_section %}

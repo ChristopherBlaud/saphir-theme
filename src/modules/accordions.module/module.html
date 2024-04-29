@@ -1,0 +1,262 @@
+{% import '../../macros/_style.html' %}
+
+<div id="{{ name }}" class="accordions dnd-row">
+  <div class="accordions__inner row-fluid{{ ' animated' if module.style.animated_module }}"
+  {{ setAnimationAttr(module.style) if module.style.animated_module }}>
+    {% for item in module.accordion %}
+    <div class="accordions__inner__item span{{ 12 / module.style.items_per_row|round }}{{ ' accordion--open' if loop.index == 1 && module.make_first_accordion_open }}">
+      <div class="accordions__inner__item__inner flex flex-col">
+        <div class="accordions__inner__item__inner__title flex w-full justify-between items-center">
+          <span class="accordions__inner__item__inner__title__text title-display">{{ item.title }}</span>
+          <div class="accordions__inner__item__inner__title__icon cursor-pointer" role="button">
+            {% icon
+            name="{{ item.icon_field.name }}"
+            style="{{ item.icon_field.type }}"
+            unicode="{{ item.icon_field.unicode }}"
+            icon_set="{{ item.icon_field.icon_set }}"
+            %}        
+          </div>
+        </div>
+        <span class="accordions__inner__item__inner__description overflow-hidden">{{ item.description }}</span>
+      </div>
+    </div>
+    {% endfor %}    
+  </div>
+</div>
+{% require_css %}
+<style>
+  #{{ name }}  {
+    text-align: {{ module.style.desktop.text_alignment }};
+    {{ module.style.desktop.spacing.css }}
+  }
+
+  #{{ name }} .accordions__inner {
+    row-gap: {{ module.style.desktop.items_spacing ~ 'px' }};
+  }
+
+  #{{ name }} .accordions__inner__item__inner {
+    {% if module.style.desktop.accordion.background_color != 'transparent' %}
+    background-color: var(--{{ module.style.desktop.accordion.background_color }});
+    {% endif %}
+    {% if  module.style.desktop.accordion.border.radius > 0 %}
+    border-radius: {{ module.style.desktop.accordion.border.radius ~ 'px' }};
+    {% endif %}
+    {{ module.style.desktop.accordion.border.style.css }}
+    {{ module.style.desktop.accordion.spacing.css }}
+  }
+
+  #{{ name }} .accordions__inner__item__inner__title {
+    gap: {{ module.style.desktop.accordion.gap ~ 'px' }};  
+  }
+
+  #{{ name }} .accordions__inner__item__inner__text {
+    text-align: {{ module.style.desktop.text_alignment }};
+    gap: {{ module.style.desktop.accordion.text_spacing ~ 'px' }}
+  }
+
+  #{{ name }} .accordions__inner__item__inner__title__icon {
+    {% if  module.style.desktop.icon.background_color != 'transparent' %}
+    background-color: var(--{{ module.style.desktop.icon.background_color }});
+    {% endif %}
+    {% if module.style.desktop.icon.border.radius > 0 %}
+    border-radius: {{ module.style.desktop.icon.border.radius ~ 'px' }};
+    {% endif %}    
+    {{ module.style.desktop.icon.border.style.css }}
+    {{ module.style.desktop.icon.spacing.css }}    
+  }
+
+  {% if  module.style.desktop.icon.hover_background_color != 'transparent' %}
+  #{{ name }} .accordions__inner__item__inner__title__icon:hover {    
+    background-color: var(--{{ module.style.desktop.icon.hover_background_color }});
+  }
+  {% endif %}  
+
+  #{{ name }} .accordions__inner__item__inner__title__icon svg {
+    width: {{ module.style.desktop.icon.width ~ 'px' }};
+  } 
+
+  {% if module.style.desktop.icon.color != 'default' %}
+  #{{ name }} .accordions__inner__item__inner__title__icon svg path {
+    fill: var(--{{ module.style.desktop.icon.color }});
+  }
+  {% endif %}  
+
+  {% if  module.style.desktop.icon.hover_color != 'transparent' %}
+  #{{ name }} .accordions__inner__item__inner__title__icon:hover svg path {    
+    fill: var(--{{ module.style.desktop.icon.hover_color }});
+  }
+  {% endif %}   
+
+  #{{ name }} .accordions__inner__item__inner__title__text {
+    font-size: {{ module.style.desktop.title.font_size ~ 'px' }};
+    line-height: {{ module.style.desktop.title.line_height ~ 'px' }};
+    font-weight: {{ module.style.desktop.title.font_weight }};
+    color: var(--{{ module.style.desktop.title_color }});
+  }   
+
+  #{{ name }} .accordions__inner__item__inner__text__description {
+    font-size: {{ module.style.desktop.description.font_size ~ 'px' }};
+    line-height: {{ module.style.desktop.description.line_height ~ 'px' }};
+    font-weight: {{ module.style.desktop.description.font_weight }};
+    color: var(--{{ module.style.desktop.description_color }});
+  }           
+
+  @media (max-width: 1024px) {
+    #{{ name }}  {
+      text-align: {{ module.style.tablet.text_alignment }};
+      {{ module.style.tablet.spacing.css }}
+    }  
+
+    #{{ name }} .accordions__inner {
+      row-gap: {{ module.style.tablet.items_spacing ~ 'px' }};
+    } 
+
+    #{{ name }} .accordions__inner__item__inner {
+      {% if module.style.tablet.accordion.background_color != 'transparent' %}
+      background-color: var(--{{ module.style.tablet.accordion.background_color }});
+      {% endif %}
+      {% if  module.style.tablet.accordion.border.radius > 0 %}
+      border-radius: {{ module.style.tablet.accordion.border.radius ~ 'px' }};
+      {% endif %}
+      border: unset;
+      {{ module.style.tablet.accordion.border.style.css }}
+      {{ module.style.tablet.accordion.spacing.css }}
+    }
+
+    #{{ name }} .accordions__inner__item__inner__title {
+      gap: {{ module.style.tablet.accordion.gap ~ 'px' }};  
+    }    
+
+    #{{ name }} .accordions__inner__item__inner__title__icon {
+      {% if  module.style.tablet.icon.background_color != 'transparent' %}
+      background-color: var(--{{ module.style.tablet.icon.background_color }});
+      {% endif %}
+      {% if module.style.tablet.icon.border.radius > 0 %}
+      border-radius: {{ module.style.tablet.icon.border.radius ~ 'px' }};
+      {% endif %}    
+      {{ module.style.tablet.icon.border.style.css }}
+      {{ module.style.tablet.icon.spacing.css }}    
+    }    
+
+    {% if  module.style.tablet.icon.hover_background_color != 'transparent' %}
+    #{{ name }} .accordions__inner__item__inner__title__icon:hover {    
+      background-color: var(--{{ module.style.tablet.icon.hover_background_color }});
+    }
+    {% endif %}      
+
+    #{{ name }} .accordions__inner__item__inner__title__icon svg {
+      width: {{ module.style.tablet.icon.width ~ 'px' }};
+    } 
+
+    {% if  module.style.tablet.icon.hover_color != 'transparent' %}
+    #{{ name }} .accordions__inner__item__inner__title__icon:hover svg path {    
+      fill: var(--{{ module.style.tablet.icon.hover_color }});
+    }
+    {% endif %}       
+
+    {% if module.style.tablet.icon.color != 'default' %}
+    #{{ name }} .accordions__inner__item__inner__title__icon svg path {
+      fill: var(--{{ module.style.tablet.icon.color }});
+    }
+    {% endif %}
+
+    #{{ name }} .accordions__inner__item__inner__text {
+      text-align: {{ module.style.desktop.text_alignment }};
+      gap: {{ module.style.tablet.accordion.text_spacing ~ 'px' }};
+    }       
+
+    #{{ name }} .accordions__inner__item__inner__title__text {
+      font-size: {{ module.style.tablet.title.font_size ~ 'px' }};
+      line-height: {{ module.style.tablet.title.line_height ~ 'px' }};
+      font-weight: {{ module.style.tablet.title.font_weight }};
+      color: var(--{{ module.style.tablet.title_color }});
+    }   
+
+    #{{ name }} .accordions__inner__item__inner__text__description {
+      font-size: {{ module.style.tablet.description.font_size ~ 'px' }};
+      line-height: {{ module.style.tablet.description.line_height ~ 'px' }};
+      font-weight: {{ module.style.tablet.description.font_weight }};
+      color: var(--{{ module.style.tablet.description_color }});
+    }                       
+  }
+
+  @media (max-width: 768px) {
+    #{{ name }}  {
+      text-align: {{ module.style.mobile.text_alignment }};
+      {{ module.style.mobile.spacing.css }}
+    }   
+    
+    #{{ name }} .accordions__inner {
+      row-gap: {{ module.style.mobile.items_spacing ~ 'px' }};
+    }    
+
+    #{{ name }} .accordions__inner__item__inner {
+      {% if module.style.mobile.accordion.background_color != 'transparent' %}
+      background-color: var(--{{ module.style.mobile.accordion.background_color }});
+      {% endif %}
+      {% if  module.style.mobile.accordion.border.radius > 0 %}
+      border-radius: {{ module.style.mobile.accordion.border.radius ~ 'px' }};
+      {% endif %}
+      border: unset;
+      {{ module.style.mobile.accordion.border.style.css }}
+      {{ module.style.mobile.accordion.spacing.css }}
+    }
+
+    #{{ name }} .accordions__inner__item__inner__title {
+      gap: {{ module.style.mobile.accordion.gap ~ 'px' }};  
+    }    
+
+    #{{ name }} .accordions__inner__item__inner__title__icon {
+      {% if  module.style.mobile.icon.background_color != 'transparent' %}
+      background-color: var(--{{ module.style.mobile.icon.background_color }});
+      {% endif %}
+      {% if module.style.mobile.icon.border.radius > 0 %}
+      border-radius: {{ module.style.mobile.icon.border.radius ~ 'px' }};
+      {% endif %}    
+      {{ module.style.mobile.icon.border.style.css }}
+      {{ module.style.mobile.icon.spacing.css }}    
+    }        
+
+    {% if  module.style.tablet.icon.hover_background_color != 'transparent' %}
+    #{{ name }} .accordions__inner__item__inner__title__icon:hover {    
+      background-color: var(--{{ module.style.tablet.icon.hover_background_color }});
+    }
+    {% endif %}  
+
+    #{{ name }} .accordions__inner__item__inner__title__icon svg {
+      width: {{ module.style.mobile.icon.width ~ 'px' }};
+    } 
+
+    {% if  module.style.mobile.icon.hover_color != 'transparent' %}
+    #{{ name }} .accordions__inner__item__inner__title__icon:hover svg path {    
+      fill: var(--{{ module.style.mobile.icon.hover_color }});
+    }
+    {% endif %}       
+
+    {% if module.style.mobile.icon.color != 'default' %}
+    #{{ name }} .accordions__inner__item__inner__title__icon svg path {
+      fill: var(--{{ module.style.mobile.icon.color }});
+    }
+    {% endif %}    
+
+    #{{ name }} .accordions__inner__item__inner__text {
+      text-align: {{ module.style.mobile.text_alignment }};
+      gap: {{ module.style.mobile.accordion.text_spacing ~ 'px' }};
+    }        
+
+    #{{ name }} .accordions__inner__item__inner__title__text {
+      font-size: {{ module.style.mobile.title.font_size ~ 'px' }};
+      line-height: {{ module.style.mobile.title.line_height ~ 'px' }};
+      font-weight: {{ module.style.mobile.title.font_weight }};
+      color: var(--{{ module.style.mobile.title_color }});
+    }   
+
+    #{{ name }} .accordions__inner__item__inner__text__description {
+      font-size: {{ module.style.mobile.description.font_size ~ 'px' }};
+      line-height: {{ module.style.mobile.description.line_height ~ 'px' }};
+      font-weight: {{ module.style.mobile.description.font_weight }};
+      color: var(--{{ module.style.mobile.description_color }});
+    }                          
+  }
+</style>
+{% end_require_css %}

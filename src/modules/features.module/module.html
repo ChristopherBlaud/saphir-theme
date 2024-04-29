@@ -27,6 +27,10 @@
     {{ module.style.desktop.spacing.css }}
   }
 
+  #{{ name }} .features__inner {
+    row-gap: {{ module.style.desktop.items_spacing ~ 'px' }};
+  }
+
   #{{ name }} .features__inner__item__inner {
     align-items: {{ module.style.desktop.alignment }};
     gap: {{ module.style.desktop.feature.gap ~ 'px' }};
@@ -81,6 +85,10 @@
       {{ module.style.tablet.spacing.css }}
     }  
 
+    #{{ name }} .features__inner {
+      row-gap: {{ module.style.tablet.items_spacing ~ 'px' }};
+    }    
+
     #{{ name }} .features__inner__item__inner {
       align-items: {{ module.style.tablet.alignment }};
       gap: {{ module.style.tablet.feature.gap ~ 'px' }};
@@ -123,7 +131,11 @@
     #{{ name }}  {
       text-align: {{ module.style.mobile.text_alignment }};
       {{ module.style.mobile.spacing.css }}
-    }           
+    }         
+    
+    #{{ name }} .features__inner {
+      row-gap: {{ module.style.mobile.items_spacing ~ 'px' }};
+    }    
 
     #{{ name }} .features__inner__item__inner {
       align-items: {{ module.style.mobile.alignment }};
