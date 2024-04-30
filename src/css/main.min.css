@@ -614,10 +614,6 @@ video {
   z-index: 30 !important;
 }
 
-.mt-8 {
-  margin-top: 2rem !important;
-}
-
 .block {
   display: block !important;
 }
@@ -628,10 +624,6 @@ video {
 
 .inline-flex {
   display: inline-flex !important;
-}
-
-.table {
-  display: table !important;
 }
 
 .h-\[30px\] {
@@ -653,10 +645,6 @@ video {
 
 .h-full {
   height: 100% !important;
-}
-
-.h-0 {
-  height: 0px !important;
 }
 
 .max-h-full {
@@ -788,10 +776,6 @@ video {
   row-gap: 2rem !important;
 }
 
-.gap-y-2 {
-  row-gap: 0.5rem !important;
-}
-
 .overflow-hidden {
   overflow: hidden !important;
 }
@@ -873,6 +857,10 @@ video {
 
 .leading-6 {
   line-height: 1.5rem !important;
+}
+
+.underline {
+  text-decoration-line: underline !important;
 }
 
 .transition {

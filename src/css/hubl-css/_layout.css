@@ -14,6 +14,10 @@ body {
     justify-content: space-between;
 }
 
+.dnd-section .row-fluid > *:only-child {
+    margin-inline: auto;
+}
+
 .dnd-section .dnd-module {
     justify-content: flex-end;
 }

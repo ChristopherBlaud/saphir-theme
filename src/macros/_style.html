@@ -3,7 +3,7 @@ templateType: page
 isAvailableForNewContent: false
 -->
 
-{% macro generateClass(module_html, module_id, module_style) %}
+{% macro generateClass(module, module_id, module_style) %}
     {% set h1_classes = module_style.h1_display != 'default' ? module_style.h1_display ~ '-display' : "" %}
     {% set h2_classes = module_style.h2_display != 'default' ? module_style.h2_display ~ '-display' : "" %}
     {% set h3_classes = module_style.h3_display != 'default' ? module_style.h3_display ~ '-display' : "" %}
@@ -12,7 +12,7 @@ isAvailableForNewContent: false
     {% set h6_classes = module_style.h6_display != 'default' ? module_style.h6_display ~ '-display' : "" %}
     {% set body_classes = module_style.body_display != 'default' ? module_style.body_display ~ '-display' : "" %}                          
     
-    {% set html = module_html
+    {% set html = module.html
       |replace('<h1', h1_classes ? '<h1 class="' ~ h1_classes ~ '"' : '<h1')
       |replace('<h2', h2_classes ? '<h2 class="' ~ h2_classes ~ '"' : '<h2')
       |replace('<h3', h3_classes ? '<h3 class="' ~ h3_classes ~ '"' : '<h3')

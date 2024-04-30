@@ -662,7 +662,7 @@
                   "default": {
                     "padding": {
                       "top": {
-                        "value": 128,
+                        "value": 156,
                         "units": "px"
                       },
                       "right": {

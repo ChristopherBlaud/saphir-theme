@@ -223,7 +223,7 @@
           "locked" : false,
           "allow_custom_border_sides" : true,
           "type" : "border",
-          "default" : {}
+          "default" : { }
         } ],
         "tab" : "STYLE",
         "expanded" : false,
@@ -805,7 +805,7 @@
           "locked" : false,
           "allow_custom_border_sides" : true,
           "type" : "border",
-          "default" : {}
+          "default" : { }
         } ],
         "tab" : "STYLE",
         "expanded" : false,
@@ -1365,7 +1365,7 @@
           "locked" : false,
           "allow_custom_border_sides" : true,
           "type" : "border",
-          "default" : {}
+          "default" : { }
         } ],
         "tab" : "STYLE",
         "expanded" : false,

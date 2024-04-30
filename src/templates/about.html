@@ -1,0 +1,13 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About
+  screenshotPath: ../images/previews/home.png
+-->
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+  {% dnd_area 'home' label="Home" class="home" %}
+    {% include_dnd_partial path='../sections/hero-section-background.html' %}                    
+  {% end_dnd_area %}
+{% endblock body %}

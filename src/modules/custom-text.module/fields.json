@@ -622,7 +622,19 @@
     "h4_display" : "default",
     "h5_display" : "default",
     "h6_display" : "default",
-    "body_display" : "default"
+    "body_display" : "default",
+    "animated_module" : false,
+    "animation_settings" : {
+      "position_on_x" : 0,
+      "position_on_y" : 0,
+      "scale" : 0,
+      "rotate" : 0,
+      "skew_x" : 0,
+      "skew_y" : 0,
+      "opacity" : 0,
+      "bind_animation_on_scroll" : true,
+      "animation_delay" : 0
+    }
   }
 }, {
   "id" : "28d71f02-6bb9-8f2c-d38d-01800c7f72eb",

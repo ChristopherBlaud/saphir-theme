@@ -1,0 +1,116 @@
+<!--
+templateType: section
+isAvailableForNewContent: true
+label: Hero section background
+description: A section displaying a text with a background.
+-->
+
+{% dnd_section 
+    vertical_alignment="MIDDLE"  
+    background_color={{ context.section.background_color ? context.section.background_color : theme.colors.grey_medium.color }}
+%}
+    {% dnd_column width="6" %}
+        {% dnd_row %}
+            {% dnd_module 
+                path='../modules/custom-text'
+                display_label={{ context.text.display_label ? context.text.display_label : true }}
+                label_text={{ context.text.label ? context.text.display_label : 'Engagement' }}   
+                style={{ context.text.style ?
+                    context.text.style : {
+                        'desktop': {
+                            'text_alignment': 'center',
+                            'horizontal_alignment': 'center'
+                        },
+                        'tablet': {
+                            'text_alignment': 'center',
+                            'horizontal_alignment': 'center'
+                        },
+                        'mobile': {
+                            'text_alignment': 'center',
+                            'horizontal_alignment': 'center'
+                        }                         
+                    }
+                }}        
+            %}
+            {% module_attribute "html" %}
+                {{ context.text.content ? context.text.content : '<h1><b>Find out how it all started <span style="color: {{ theme.colors.secondary.color }}">with us.</span></b></h1><p>A company passionate about innovation and quality, with a strong focus on our dedication to creativity and excellence.</p>' }}
+            {% end_module_attribute %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}  
+            {% dnd_module 
+                path="../modules/background-image" 
+                background_image={{ context.background_image.files ?
+                    context.background_image.files : [
+                        {
+                            'image_field': {
+                                'src': get_asset_url('../images/visuals/logo-xxl.svg'),
+                                'column_width': 12
+                            },
+                            'vertical_position_from': 'top',
+                            'top': 50,
+                            'vertical_translation': True,
+                            'horizontal_position_from': 'left',
+                            'left': 0,
+                            'horizontal_translation': True                       
+                        }
+                    ]
+                }}
+            %}      
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+            {% dnd_module 
+                path='../modules/buttons'
+                button={{ context.buttons.button ?
+                    context.buttons.button : [
+                        {
+                            'text': 'Contact us',
+                            'url': {
+                                'url': {
+                                    'href': 'https://www.example.com'
+                                }
+                            },
+                            'display_light_ray_on_hover': True,
+                            'background_color': 'default',
+                            'hover_background_color': 'default',
+                            'border_color': 'default',
+                            'hover_border_color': 'default',
+                            'text_color': 'default',
+                            'hover_text_color': 'default'                                                        
+                        },
+                        {
+                            'text': 'Get my website!',
+                            'url': {
+                                'url': {
+                                    'href': 'https://www.example.com'
+                                }
+                            },
+                            'display_light_ray_on_hover': False,
+                            'background_color': 'transparent',
+                            'hover_background_color': 'black',
+                            'border_color': 'secondary-color',
+                            'hover_border_color': 'black',
+                            'text_color': 'secondary-color',
+                            'hover_text_color': 'white'                              
+                        }                        
+                    ]
+                }}
+                style={{ context.buttons.style ?
+                    context.buttons.style : {
+                        'desktop': {
+                            'horizontal_alignment': 'center'
+                        },
+                        'tablet': {
+                            'horizontal_alignment': 'center'
+                        },
+                        'mobile': {
+                            'horizontal_alignment': 'center'
+                        }                                
+                    }
+                }}
+            %}
+            {% end_dnd_module %}
+        {% end_dnd_row %}
+    {% end_dnd_column %}         
+{% end_dnd_section %}
