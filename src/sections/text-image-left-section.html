@@ -1,0 +1,169 @@
+<!--
+templateType: section
+isAvailableForNewContent: true
+label: Text image left section
+description: A section displaying a text with an image on left side.
+-->
+
+{% dnd_section 
+    vertical_alignment="TOP"  
+    background_color={{ context.section.background_color ? context.section.background_color : theme.colors.grey_medium.color }}
+%}  
+    {% dnd_module 
+        path="../modules/image" 
+        width="6"
+        image_field={{ context.image.image_field ?
+            context.image.image_field : {
+                'src': get_asset_url('../images/visuals/stat.png'),
+                'alt': "photo of staff in front of a screen",
+                'loading': 'lazy'
+            }
+        }}
+        device_variant={{ context.image.device_variant ?
+            context.image.device_variant : {
+                'tablet': {
+                    'image_field': {
+                        'src': get_asset_url('../images/visuals/stat.png')
+                    }
+                },
+                'mobile': {
+                    'image_field': {
+                        'src': get_asset_url('../images/visuals/stat-xs.png')
+                    }                            
+                }
+            }
+        }}   
+        style={{ context.image.style ?
+            context.image.style : {
+            'desktop': {
+                'horizontal_alignment': 'center'
+            },
+            'tablet': {
+                'horizontal_alignment': 'center'
+            },
+            'mobile': {
+                'horizontal_alignment': 'center'                         
+            },                         
+            'animated_module': True,
+            'animation_settings': {
+                'position_on_y': 100,
+                'opacity': 10,
+                'animation_delay': 100,
+                'bind_animation_on_scroll': true       
+            } 
+            }           
+        }}                             
+    %}    
+    {% end_dnd_module %}  
+    {% dnd_column 
+        width="5"
+        offset="6"  
+    %}
+        {% dnd_row %}
+            {% dnd_module 
+                path='../modules/custom-text'      
+                display_label={{ context.text.display_label ? context.text.display_label : true }}
+                label_text={{ context.text.label ? context.text.display_label : 'Statistics' }}
+                display_underline={{ context.text.display_underline ? context.display_underline : false }}                
+                style={{ context.text.style ?
+                    context.text.style : {
+                    'desktop': {
+                        'text_alignment': 'left',
+                        'horizontal_alignment': 'flex-start'
+                    },
+                    'tablet': {
+                        'text_alignment': 'left',
+                        'horizontal_alignment': 'flex-start'
+                    },
+                    'mobile': {
+                        'text_alignment': 'left',
+                        'horizontal_alignment': 'flex-start'
+                    },                         
+                    'animated_module': True,
+                    'animation_settings': {
+                        'position_on_y': 100,
+                        'opacity': 10,
+                        'animation_delay': 100,
+                        'bind_animation_on_scroll': true       
+                    }                                                       
+                    }                        
+                }}
+            %}
+            {% module_attribute "html" %}
+                {{ context.text.content ? context.text.content : "<h2><b>Key statistics demonstrating our growth and success</b></h2><p>We have experienced exceptional growth thanks to our innovative approach and dedicated team.</p>" }}
+            {% end_module_attribute %}
+            {% end_dnd_module %}  
+        {% end_dnd_row%}   
+        {% dnd_row %}  
+            {% dnd_module
+                path='../modules/key-numbers'
+                key_number={{ context.key_numbers.key_number ?
+                    context.key_numbers.key_number : [
+                        {
+                            'type': 'number',
+                            'number_field': 50,
+                            'display_symbol': True,
+                            'symbol_before_number': '+',
+                            'symbol_after_number': '%',
+                            'animated': True,
+                            'animation_duration': 25,
+                            'description': 'Increased sales of high quality services.'
+                        },
+                        {
+                            'type': 'number',
+                            'number_field': 50,
+                            'display_symbol': True,
+                            'symbol_before_number': '+',
+                            'symbol_after_number': '%',
+                            'animated': True,
+                            'animation_duration': 20,
+                            'description': 'Expanding our presence in international markets.'
+                        }                                            
+                    ]
+                }}
+                style={{ context.key_numbers.style ?
+                    context.key_numbers.style : {
+                        'desktop': {
+                            'background_color': 'transparent',
+                            'border': {
+                                'width': 0
+                            },
+                            'card_spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' }, 'left': { 'value': 0,  'units': 'px' }, 'right': { 'value': 0, 'units': 'px' } }
+                            },                            
+                        },
+                        'tablet': {
+                            'background_color': 'transparent',
+                            'border': {
+                                'width': 0
+                            },
+                            'card_spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' }, 'left': { 'value': 0,  'units': 'px' }, 'right': { 'value': 0, 'units': 'px' } }
+                            },                            
+                        },
+                        'mobile': {
+                            'background_color': 'transparent',
+                            'border': {
+                                'width': 0
+                            },
+                            'card_spacing': {
+                            'margin': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' } },
+                            'padding': { 'top': { 'value': 0, 'units': 'px' }, 'bottom': { 'value': 0, 'units': 'px' }, 'left': { 'value': 0,  'units': 'px' }, 'right': { 'value': 0, 'units': 'px' } }
+                            },                            
+                        },
+                        'animated_module': True,
+                        'animation_settings': {
+                            'position_on_y': 500,
+                            'opacity': 10,
+                            'animation_delay': 100,
+                            'bind_animation_on_scroll': true                                                              
+                        }                                                  
+                    }
+                }}
+            %}
+            {% end_dnd_module %}         
+        {% end_dnd_row %}            
+    {% end_dnd_column %}         
+{% end_dnd_section %}

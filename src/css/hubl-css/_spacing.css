@@ -98,7 +98,7 @@
 
 .container-fluid:not(.header-container) .dnd-section.small {
     {{ theme.layout.xl.small_sections.spacing.css }}
-}         
+}    
 
 .container-fluid:not(.header-container) .dnd-section.rounded-section  {
     max-width: {{ theme.layout.xl.max_width ~ 'px' }};

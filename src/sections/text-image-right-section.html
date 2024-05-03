@@ -1,0 +1,91 @@
+<!--
+templateType: section
+isAvailableForNewContent: true
+label: Text image right section
+description: A section displaying a text with an image on right side.
+-->
+
+{% dnd_section vertical_alignment="TOP"  %}
+    {% dnd_module 
+        path='../modules/custom-text'
+        width="5"
+        display_label={{ context.text.display_label ? context.text.display_label : true }}
+        label_text={{ context.text.label ? context.text.display_label : 'Vision' }}
+        display_underline={{ context.text.display_underline ? context.display_underline : false }}                
+        style={{ context.text.style ?
+            context.text.style : {
+            'desktop': {
+                'text_alignment': 'left',
+                'horizontal_alignment': 'flex-start'
+            },
+            'tablet': {
+                'text_alignment': 'left',
+                'horizontal_alignment': 'flex-start'
+            },
+            'mobile': {
+                'text_alignment': 'left',
+                'horizontal_alignment': 'flex-start'
+            },                         
+            'animated_module': False,
+            'animation_settings': {
+                'position_on_y': 100,
+                'opacity': 10,
+                'animation_delay': 100,
+                'bind_animation_on_scroll': true       
+            }                                                       
+            }                        
+        }}
+    %}
+    {% module_attribute "html" %}
+        {{ context.text.content ? context.text.content : "<h2><b>Our history and our vision</b></h2><p>We are a passionate company committed to providing innovative, high-quality solutions to our customers. Our mission is to improve people's lives by creating products and services that meet their needs.</p>" }}
+    {% end_module_attribute %}
+    {% end_dnd_module %}   
+    {% dnd_module 
+        path="../modules/image" 
+        width="6"
+        offset="6"
+        image_field={{ context.image.image_field ?
+            context.image.image_field : {
+                'src': get_asset_url('../images/visuals/vision.png'),
+                'alt': "photo of staff around a laptop",
+                'loading': 'lazy'
+            }
+        }}
+        image_first_on_mobile={{ context.image.image_first_on_mobile ? context.image.image_first_on_mobile : True }}
+        device_variant={{ context.image.device_variant ?
+            context.image.device_variant : {
+                'tablet': {
+                    'image_field': {
+                        'src': get_asset_url('../images/visuals/vision.png')
+                    }
+                },
+                'mobile': {
+                    'image_field': {
+                        'src': get_asset_url('../images/visuals/vision-xs.png')
+                    }                            
+                }
+            }
+        }}   
+        style={{ context.image.style ?
+            context.image.style : {
+            'desktop': {
+                'horizontal_alignment': 'center'
+            },
+            'tablet': {
+                'horizontal_alignment': 'center'
+            },
+            'mobile': {
+                'horizontal_alignment': 'center'                         
+            },                         
+            'animated_module': False,
+            'animation_settings': {
+                'position_on_y': 100,
+                'opacity': 10,
+                'animation_delay': 100,
+                'bind_animation_on_scroll': true       
+            } 
+            }           
+        }}                             
+    %}    
+    {% end_dnd_module %}   
+{% end_dnd_section %}

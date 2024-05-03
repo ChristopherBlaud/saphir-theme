@@ -7,7 +7,7 @@
   "required" : false,
   "locked" : false,
   "type" : "richtext",
-  "default" : "<h1>Add some text. Like a title for example</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim blandit volutpat maecenas volutpat.</p>"
+  "default" : "<h1>Add some text. Like a title for example</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim blandit volutpat maecenas volutpat.</p>"
 }, {
   "id" : "style",
   "name" : "style",
@@ -81,6 +81,7 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "background_color" : "grey-medium",
@@ -155,9 +156,22 @@
       "suffix" : "px",
       "type" : "number",
       "default" : 0
+    }, {
+      "id" : "b8fd482a-d2b5-44ae-0e5a-7fea5e345cbb",
+      "name" : "gap",
+      "display_width" : null,
+      "label" : "Gap (space between elements)",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 24
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "horizontal_alignment" : "flex-start",
@@ -232,9 +246,22 @@
       "suffix" : "px",
       "type" : "number",
       "default" : 0
+    }, {
+      "id" : "b8fd482a-d2b5-44ae-0e5a-7fea5e345cbc",
+      "name" : "gap",
+      "display_width" : null,
+      "label" : "Gap (space between elements)",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 16
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "horizontal_alignment" : "flex-start",
@@ -309,9 +336,22 @@
       "suffix" : "px",
       "type" : "number",
       "default" : 0
+    }, {
+      "id" : "b8fd482a-d2b5-44ae-0e5a-7fea5e345cbd",
+      "name" : "gap",
+      "display_width" : null,
+      "label" : "Gap (space between elements)",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number",
+      "default" : 16
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "horizontal_alignment" : "flex-start",
@@ -575,6 +615,7 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "position_on_x" : 0,
@@ -590,6 +631,7 @@
   } ],
   "tab" : "STYLE",
   "expanded" : false,
+  "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
     "label_field" : {
@@ -695,4 +737,31 @@
   "show_emoji_picker" : false,
   "type" : "text",
   "default" : "My label"
+}, {
+  "id" : "a7dfefc7-d3bf-031e-4947-56fb0dea2015",
+  "name" : "display_underline",
+  "display_width" : null,
+  "label" : "Display underline",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "a0459099-861d-1e24-ecd9-dc226a411c99",
+  "name" : "underline_shape",
+  "display_width" : null,
+  "label" : "Underline shape",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
 } ]

@@ -1,45 +1,82 @@
 {% import '../../macros/_style.html' %}
 
 <div id="{{ name }}" class="custom-text">
-    <div class="custom-text__inner flex relative flex-col gap-y-4{{ ' animated' if module.style.animated_module }}"
-    {{ setAnimationAttr(module.style) if module.style.animated_module }}{% if module.display_underline %}data-underline="true" data-text-to-underline="{{ module.underline.content_to_underline }}"{% endif %}>
-        {% if module.display_label %}
-        <div class="custom-text__inner__label flex items-center gap-x-3 p-1 pr-3 rounded-[50px]">
-            <div class="custom-text__inner__label__logo flex items-center justify-center w-[30px] h-[30px] rounded-full">
-            {% if module.image_field.src %}
-                 {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading|escape_attr }}"' : '' %}
-                <img src="{{ module.image_field.src|escape_url }}" alt="{{ module.image_field.alt|escape_attr }}" {{ loadingAttr }}>
-            {% endif %}            
-            </div>
-            <span class="custom-text__inner__label__text body-small-display">
-                <b>{{ module.label_text }}</b>
-            </span>
-        </div>
-        {% endif %}
-        {{ generateClass(module, name, module.style) }}        
+  <div class="custom-text__inner flex relative flex-col gap-y-4{{ ' animated' if module.style.animated_module }}"
+       {{ setAnimationAttr(module.style) if module.style.animated_module }}>
+    {% if module.display_label %}
+    <div class="custom-text__inner__label flex items-center gap-x-3 p-1 pr-3 rounded-[50px]">
+      <div class="custom-text__inner__label__logo flex items-center justify-center w-[30px] h-[30px] rounded-full">
+        {% if module.image_field.src %}
+        {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading|escape_attr }}"' : '' %}
+        <img src="{{ module.image_field.src|escape_url }}" alt="{{ module.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+        {% endif %}            
+      </div>
+      <span class="custom-text__inner__label__text body-small-display">
+        <b>{{ module.label_text }}</b>
+      </span>
     </div>
+    {% endif %}
+    <div class="custom-text__inner__content">
+      {{ generateClass(module, name, module.style) }}
+    </div>
+  </div>
 </div>
 {% require_css %}
-    <style>
-        {% if  module.style.label_field.border_color != 'transparent' %}
-        #{{ name }} .custom-text__inner__label {
-            border: 1px solid var(--{{ module.style.label_field.border_color }});
-        }
-        {% endif %}
-        {% if  module.style.label_field.background_color != 'transparent' %}
-        #{{ name }} .custom-text__inner__label {
-            background: var(--{{ module.style.label_field.background_color }});
-        }        
-        {% endif %}
+<style>
+  {% if  module.style.label_field.border_color != 'transparent' %}
+  #{{ name }} .custom-text__inner__label {
+    border: 1px solid var(--{{ module.style.label_field.border_color }});
+  }
+  {% endif %}
+  {% if  module.style.label_field.background_color != 'transparent' %}
+  #{{ name }} .custom-text__inner__label {
+    background: var(--{{ module.style.label_field.background_color }});
+  }        
+  {% endif %}
 
-        {% if  module.style.label_field.logo_background_color != 'transparent' %}
-        #{{ name }} .custom-text__inner__label__logo {
-            background: var(--{{ module.style.label_field.logo_background_color }});
-        }
-        {% endif %}
+  {% if  module.style.label_field.logo_background_color != 'transparent' %}
+  #{{ name }} .custom-text__inner__label__logo {
+    background: var(--{{ module.style.label_field.logo_background_color }});
+  }
+  {% endif %}
 
-        #{{ name }} .custom-text__inner__label__text {
-            color: var(--{{ module.style.label_field.text_color }});
-        }
-    </style>
+  #{{ name }} .custom-text__inner__label__text {
+    color: var(--{{ module.style.label_field.text_color }});
+  }
+
+  #{{ name }} .custom-text__inner span.hs_cos_wrapper > :not(:first-child) {
+    margin-top: {{ module.style.desktop.gap ~ 'px' }};
+  }  
+  
+  {% if module.display_underline %}
+    #{{ name }} .custom-text__inner__content .text-underlined {
+      position: relative;
+      white-space: nowrap;
+    }
+    #{{ name }} .custom-text__inner__content .text-underlined::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      bottom: -80%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("{{ module.underline_shape.src }}");
+      background-repeat: no-repeat;
+      background-size: 100%;      
+    }  
+  {% endif %}  
+
+  @media (max-width: 1024px) {
+  #{{ name }} .custom-text__inner span.hs_cos_wrapper > :not(:first-child) {
+    margin-top: {{ module.style.tablet.gap ~ 'px' }};
+  }   
+  } 
+  
+  @media (max-width: 768px) {
+  #{{ name }} .custom-text__inner span.hs_cos_wrapper > :not(:first-child) {
+    margin-top: {{ module.style.mobile.gap ~ 'px' }};
+  }   
+  } 
+</style>
 {% end_require_css %}

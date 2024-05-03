@@ -1,0 +1,152 @@
+{% import '../../macros/_style.html' %}
+
+<div id="{{ name }}" class="team-members relative">
+  <div class="team-members__inner{{ ' swiper' if module.display_in_a_carousel }}{{ ' animated' if module.style.animated_module }}"
+       {{ setSliderAttr(module.style) if module.display_in_a_carousel }}
+       {{ setAnimationAttr(module.style) if module.style.animated_module }}>
+    <ul class="team-members__inner__container{{ module.display_in_a_carousel ? ' swiper-wrapper' : ' row-fluid ' }}flex">
+      {% for item in module.members %}
+      <li class="team-members__inner__container__item span4">
+        <div class="team-members__inner__container__item__wrapper flex flex-col">
+          <picture class="team-members__inner__container__item__image max-w-full ms-4 me-4 mt-4 overflow-hidden">
+            {% if item.device_variant.tablet.image_field.src %}
+            <source media="(max-width: 768px)" srcset="{{ item.device_variant.tablet.image_field.src|escape_url }}">
+            {% endif %}
+            {% if item.device_variant.mobile.image_field.src %}
+            <source media="(max-width: 1024px)" src="{{ item.device_variant.mobile.image_field.src|escape_url }}">
+            {% endif %}        
+            {% if item.image_field.src %}
+            <img class="max-w-full w-full object-cover max-h-[296px]" src="{{ item.image_field.src|escape_url }}" alt="{{ item.image_field.alt|escape_attr }}" {{ loadingAttr }}>
+            {% endif %}        
+          </picture>
+          <div class="team-members__inner__container__item__content__wrapper p-6">
+            <div class="team-members__inner__container__item__content flex flex-col gap-y-4 items-center text-center">
+              <div class="team-members__inner__container__item__content__header flex flex-col gap-y-1">
+                <h3 class="team-members__inner__container__item__content__header__name"><b>{{ item.name_field }}</b></h3>
+                <span class="team-members__inner__container__item__content__header__job">{{ item.job }}</span>              
+              </div>
+              <span class="team-members__inner__container__item__content__description">{{ item.description }}</span>
+            </div>
+            <div class="team-members__inner__container__item__socials flex justify-center items-center mt-12">
+              {% for social in item.social_account %}
+              {% set href = social.link_field.url.href %}
+              {% if social.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href|escape_url }}"
+                {% if social.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                {% if social.link_field.rel %}rel="{{ social.link_field.rel|escape_attr }}"{% endif %}
+                >
+                {% icon
+                  name="{{ social.icon_field.name }}"
+                  style="{{ social.icon_field.type }}"
+                  unicode="{{ social.icon_field.unicode }}"
+                  icon_set="{{ social.icon_field.icon_set }}"
+                %}
+              </a>
+              {% endfor %}            
+            </div>          
+          </div>
+        </div>
+      </li>
+      {% endfor %}      
+    </ul>
+  </div>
+  {% if module.display_in_a_carousel %}
+  <div class="swiper-button-prev left-[-64px]"></div>
+  <div class="swiper-button-next right-[-64px]"></div>
+  <div class="swiper-pagination bottom-[-32px] flex left-0 text-start gap-x-2"></div>
+  {% endif %}
+</div> 
+{% require_css %}
+<style>
+  #{{ name }} {
+    {{ module.style.desktop.spacing.css }}
+  }
+
+  #{{ name }} .team-members__inner__container__item__wrapper {
+    background-color: var(--{{ module.style.background_color }});
+    {% if  module.style.border_radius > 0 %}
+      border-radius: {{ module.style.border_radius ~ 'px' }};
+    {% endif %}
+    {% if module.style.shadow_color != 'transparent' %}
+      box-shadow: 0 0 30px rgba({{ module.style.shadow_color.color|convert_rgb }}, {{ module.style.shadow_color.opacity / 100 }});
+    {% endif %}
+  }
+
+  #{{ name }} .team-members__inner__container__item__image {
+    border-radius: calc({{ module.style.border_radius ~ 'px' }} / 2);
+  }
+
+  #{{ name }} .team-members__inner__container__item__content__header__name {
+    font-size: {{ module.style.desktop.name_field.font_size ~ 'px' }};
+    line-height: {{ module.style.desktop.name_field.line_height ~ 'px' }};
+    font-weight: {{ module.style.desktop.name_field.font_weight }};
+    color: var(--{{ module.style.name_color }});
+  }
+
+  #{{ name }} .team-members__inner__container__item__content__header__job {
+    font-size: {{ module.style.desktop.job.font_size ~ 'px' }};
+    line-height: {{ module.style.desktop.job.line_height ~ 'px' }};
+    font-weight: {{ module.style.desktop.job.font_weight }};  
+    color: var(--{{ module.style.job_color }});
+  }  
+
+  #{{ name }} .team-members__inner__container__item__content__description {
+    font-size: {{ module.style.desktop.description.font_size ~ 'px' }};
+    line-height: {{ module.style.desktop.description.line_height ~ 'px' }};
+    font-weight: {{ module.style.desktop.description.font_weight }};  
+    color: var(--{{ module.style.description_color }});
+  }  
+
+  #{{ name }} .team-members__inner__container__item__socials svg {
+    width: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    #{{ name }} {
+      {{ module.style.tablet.spacing.css }}
+    }
+    #{{ name }} .team-members__inner__container__item__content__header__name {
+      font-size: {{ module.style.tablet.name_field.font_size ~ 'px' }};
+      line-height: {{ module.style.tablet.name_field.line_height ~ 'px' }};
+      font-weight: {{ module.style.tablet.name_field.font_weight }};
+    }
+
+    #{{ name }} .team-members__inner__container__item__content__header__job {
+      font-size: {{ module.style.tablet.job.font_size ~ 'px' }};
+      line-height: {{ module.style.tablet.job.line_height ~ 'px' }};
+      font-weight: {{ module.style.tablet.job.font_weight }};  
+    }  
+
+    #{{ name }} .team-members__inner__container__item__content__description {
+      font-size: {{ module.style.tablet.description.font_size ~ 'px' }};
+      line-height: {{ module.style.tablet.description.line_height ~ 'px' }};
+      font-weight: {{ module.style.tablet.description.font_weight }};  
+    }      
+  }
+
+  @media (max-width: 768px) {
+    #{{ name }} {
+      {{ module.style.mobile.spacing.css }}      
+    }
+    #{{ name }} .team-members__inner__container__item__content__header__name {
+      font-size: {{ module.style.mobile.name_field.font_size ~ 'px' }};
+      line-height: {{ module.style.mobile.name_field.line_height ~ 'px' }};
+      font-weight: {{ module.style.mobile.name_field.font_weight }};
+    }
+
+    #{{ name }} .team-members__inner__container__item__content__header__job {
+      font-size: {{ module.style.mobile.job.font_size ~ 'px' }};
+      line-height: {{ module.style.mobile.job.line_height ~ 'px' }};
+      font-weight: {{ module.style.mobile.job.font_weight }};  
+    }  
+
+    #{{ name }} .team-members__inner__container__item__content__description {
+      font-size: {{ module.style.mobile.description.font_size ~ 'px' }};
+      line-height: {{ module.style.mobile.description.line_height ~ 'px' }};
+      font-weight: {{ module.style.mobile.description.font_weight }};  
+    }          
+  }
+</style>
+{% end_require_css %}

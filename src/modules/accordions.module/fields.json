@@ -237,6 +237,7 @@
         } ],
         "tab" : "STYLE",
         "expanded" : false,
+        "group_occurrence_meta" : null,
         "type" : "group",
         "default" : {
           "radius" : 4,
@@ -255,6 +256,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "spacing" : {
@@ -443,6 +445,7 @@
         } ],
         "tab" : "STYLE",
         "expanded" : false,
+        "group_occurrence_meta" : null,
         "type" : "group",
         "default" : {
           "radius" : 100,
@@ -464,6 +467,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "background_color" : "transparent",
@@ -557,6 +561,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "font_size" : 18,
@@ -611,6 +616,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "font_size" : 14,
@@ -620,6 +626,7 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "items_spacing" : 16,
@@ -941,6 +948,7 @@
         } ],
         "tab" : "STYLE",
         "expanded" : false,
+        "group_occurrence_meta" : null,
         "type" : "group",
         "default" : {
           "radius" : 4,
@@ -959,6 +967,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "spacing" : {
@@ -1147,6 +1156,7 @@
         } ],
         "tab" : "STYLE",
         "expanded" : false,
+        "group_occurrence_meta" : null,
         "type" : "group",
         "default" : {
           "radius" : 100,
@@ -1168,6 +1178,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "background_color" : "transparent",
@@ -1260,6 +1271,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "font_size" : 18,
@@ -1313,6 +1325,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "font_size" : 14,
@@ -1322,6 +1335,7 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "items_spacing" : 16,
@@ -1623,6 +1637,7 @@
         } ],
         "tab" : "STYLE",
         "expanded" : false,
+        "group_occurrence_meta" : null,
         "type" : "group",
         "default" : {
           "radius" : 4,
@@ -1641,6 +1656,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "spacing" : {
@@ -1829,6 +1845,7 @@
         } ],
         "tab" : "STYLE",
         "expanded" : false,
+        "group_occurrence_meta" : null,
         "type" : "group",
         "default" : {
           "radius" : 100,
@@ -1850,6 +1867,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "background_color" : "transparent",
@@ -1943,6 +1961,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "font_size" : 18,
@@ -1996,6 +2015,7 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
+      "group_occurrence_meta" : null,
       "type" : "group",
       "default" : {
         "font_size" : 14,
@@ -2004,6 +2024,7 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "items_spacing" : 16,
@@ -2263,6 +2284,7 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
+    "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
       "position_on_x" : 0,
@@ -2278,6 +2300,7 @@
   } ],
   "tab" : "STYLE",
   "expanded" : false,
+  "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
     "items_per_row" : 1,
@@ -2668,6 +2691,7 @@
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
+  "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
     "title" : "Technical assistance",

@@ -14,7 +14,13 @@ description: A section displaying a text with a background.
             {% dnd_module 
                 path='../modules/custom-text'
                 display_label={{ context.text.display_label ? context.text.display_label : true }}
-                label_text={{ context.text.label ? context.text.display_label : 'Engagement' }}   
+                label_text={{ context.text.label ? context.text.display_label : 'Engagement' }}
+                display_underline={{ context.text.display_underline ? context.display_underline : True }}
+                underline_shape={{ context.text.underline_shape ? 
+                  context.text.underline_shape : {
+                    'src': get_asset_url('../images/visuals/underline.svg')
+                  }
+                }}
                 style={{ context.text.style ?
                     context.text.style : {
                         'desktop': {
@@ -33,7 +39,7 @@ description: A section displaying a text with a background.
                 }}        
             %}
             {% module_attribute "html" %}
-                {{ context.text.content ? context.text.content : '<h1><b>Find out how it all started <span style="color: {{ theme.colors.secondary.color }}">with us.</span></b></h1><p>A company passionate about innovation and quality, with a strong focus on our dedication to creativity and excellence.</p>' }}
+                {{ context.text.content ? context.text.content : '<h1><b>Find out how it all started <span style="text-decoration: underline;">with us.</span></b></h1><p>A company passionate about innovation and quality, with a strong focus on our dedication to creativity and excellence.</p>' }}
             {% end_module_attribute %}
             {% end_dnd_module %}
         {% end_dnd_row %}

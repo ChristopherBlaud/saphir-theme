@@ -1,6 +1,6 @@
 {% import '../../macros/_style.html' %}
 
-<div id="{{ name }}" class="image flex relative z-30{{ ' has-overflow' if module.style.desktop.set_overflow}}">
+<div id="{{ name }}" class="image flex relative z-30{{ ' has-overflow' if module.style.desktop.set_overflow}}{{ ' image--first-on-mobile' if module.image_first_on_mobile }}">
   <picture class="image__inner relative{{ ' animated' if module.style.animated_module }}"
   {{ setAnimationAttr(module.style) if module.style.animated_module }}>
     {% if module.set_link %}
@@ -56,6 +56,10 @@
     #{{ name }} {
       justify-content: {{ module.style.tablet.horizontal_alignment }};
     }
+
+    .dnd-section > .row-fluid:has( .image--first-on-mobile) {
+      flex-flow: column-reverse;
+    }    
     }
 
     @media (max-width: 768px) {

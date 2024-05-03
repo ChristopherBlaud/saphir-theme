@@ -4,75 +4,76 @@ isAvailableForNewContent: false
 -->
 
 {% macro generateClass(module, module_id, module_style) %}
-    {% set h1_classes = module_style.h1_display != 'default' ? module_style.h1_display ~ '-display' : "" %}
-    {% set h2_classes = module_style.h2_display != 'default' ? module_style.h2_display ~ '-display' : "" %}
-    {% set h3_classes = module_style.h3_display != 'default' ? module_style.h3_display ~ '-display' : "" %}
-    {% set h4_classes = module_style.h4_display != 'default' ? module_style.h4_display ~ '-display' : "" %}
-    {% set h5_classes = module_style.h5_display != 'default' ? module_style.h5_display ~ '-display' : "" %}
-    {% set h6_classes = module_style.h6_display != 'default' ? module_style.h6_display ~ '-display' : "" %}
-    {% set body_classes = module_style.body_display != 'default' ? module_style.body_display ~ '-display' : "" %}                          
-    
-    {% set html = module.html
-      |replace('<h1', h1_classes ? '<h1 class="' ~ h1_classes ~ '"' : '<h1')
-      |replace('<h2', h2_classes ? '<h2 class="' ~ h2_classes ~ '"' : '<h2')
-      |replace('<h3', h3_classes ? '<h3 class="' ~ h3_classes ~ '"' : '<h3')
-      |replace('<h4', h4_classes ? '<h4 class="' ~ h4_classes ~ '"' : '<h4')
-      |replace('<h5', h5_classes ? '<h5 class="' ~ h5_classes ~ '"' : '<h5')
-      |replace('<h6', h6_classes ? '<h6 class="' ~ h6_classes ~ '"' : '<h6')
-      |replace('<p ', body_classes ? '<p class="' ~ body_classes ~ '"' : '<p ')
-      |replace('<p>', body_classes ? '<p class="' ~ body_classes ~ '">' : '<p>')
-      |replace('<ul', body_classes ? '<ul class="' ~ body_classes ~ '"' : '<ul')
-      |replace('<blockquote', body_classes ? '<blockquote class="' ~ body_classes ~ '"' : '<blockquote')
-      |replace('<pre', body_classes ? '<pre class="' ~ body_classes ~ '"' : '<pre')
-    %}    
-    
-    {% rich_text field="html" value="{{ html }}" %}
-    {% require_css %}    
-      <style>
+  {% set h1_classes = module_style.h1_display != 'default' ? module_style.h1_display ~ '-display' : "" %}
+  {% set h2_classes = module_style.h2_display != 'default' ? module_style.h2_display ~ '-display' : "" %}
+  {% set h3_classes = module_style.h3_display != 'default' ? module_style.h3_display ~ '-display' : "" %}
+  {% set h4_classes = module_style.h4_display != 'default' ? module_style.h4_display ~ '-display' : "" %}
+  {% set h5_classes = module_style.h5_display != 'default' ? module_style.h5_display ~ '-display' : "" %}
+  {% set h6_classes = module_style.h6_display != 'default' ? module_style.h6_display ~ '-display' : "" %}
+  {% set body_classes = module_style.body_display != 'default' ? module_style.body_display ~ '-display' : "" %}                          
+  
+  {% set html = module.html
+    |replace('<h1', h1_classes ? '<h1 class="' ~ h1_classes ~ '"' : '<h1')
+    |replace('<h2', h2_classes ? '<h2 class="' ~ h2_classes ~ '"' : '<h2')
+    |replace('<h3', h3_classes ? '<h3 class="' ~ h3_classes ~ '"' : '<h3')
+    |replace('<h4', h4_classes ? '<h4 class="' ~ h4_classes ~ '"' : '<h4')
+    |replace('<h5', h5_classes ? '<h5 class="' ~ h5_classes ~ '"' : '<h5')
+    |replace('<h6', h6_classes ? '<h6 class="' ~ h6_classes ~ '"' : '<h6')
+    |replace('<p ', body_classes ? '<p class="' ~ body_classes ~ '"' : '<p ')
+    |replace('<p>', body_classes ? '<p class="' ~ body_classes ~ '">' : '<p>')
+    |replace('<ul', body_classes ? '<ul class="' ~ body_classes ~ '"' : '<ul')
+    |replace('<blockquote', body_classes ? '<blockquote class="' ~ body_classes ~ '"' : '<blockquote')
+    |replace('<pre', body_classes ? '<pre class="' ~ body_classes ~ '"' : '<pre')
+    |replace('<span ', '<span class="text-underlined" ')
+  %}    
+  
+  {% rich_text field="html" value="{{ html }}" %}
+  {% require_css %}    
+    <style>
+      #{{ module_id }} .custom-text__inner {
+        align-items: {{ module_style.desktop.horizontal_alignment }};
+        text-align: {{ module_style.desktop.text_alignment }};
+        {% if module.display_label %}
+        row-gap: {{ module.style.desktop.label_margin ~ 'px' }};
+        {% endif %}
+      }
+
+      @media (max-width: 1024px) {
         #{{ module_id }} .custom-text__inner {
-          align-items: {{ module_style.desktop.horizontal_alignment }};
-          text-align: {{ module_style.desktop.text_alignment }};
+          align-items: {{ module_style.tablet.horizontal_alignment }};<
+          text-align: {{ module_style.tablet.text_alignment }};
           {% if module.display_label %}
-          row-gap: {{ module.style.desktop.label_margin ~ 'px' }};
-          {% endif %}
+          row-gap: {{ module.style.tablet.label_margin ~ 'px' }};
+          {% endif %}            
         }
+      }        
 
-        @media (max-width: 1024px) {
-          #{{ module_id }} .custom-text__inner {
-            align-items: {{ module_style.tablet.horizontal_alignment }};
-            text-align: {{ module_style.tablet.text_alignment }};
-            {% if module.display_label %}
-            row-gap: {{ module.style.tablet.label_margin ~ 'px' }};
-            {% endif %}            
-          }
-        }        
-
-        @media (max-width: 768px) {
-          #{{ module_id }} .custom-text__inner {
-            align-items: {{ module_style.mobile.horizontal_alignment }};
-            text-align: {{ module_style.mobile.text_alignment }};
-            {% if module.display_label %}
-            row-gap: {{ module.style.mobile.label_margin ~ 'px' }};
-            {% endif %}             
-          }
+      @media (max-width: 768px) {
+        #{{ module_id }} .custom-text__inner {
+          align-items: {{ module_style.mobile.horizontal_alignment }};
+          text-align: {{ module_style.mobile.text_alignment }};
+          {% if module.display_label %}
+          row-gap: {{ module.style.mobile.label_margin ~ 'px' }};
+          {% endif %}             
         }
-        
-      </style>
-    {% end_require_css %}
+      }
+      
+    </style>
+  {% end_require_css %}
 {% endmacro %}
 
 {% macro setAnimationAttr(module_style) %}
-{% if module_style.animated_module %}
-{{ 'data-y-position="{{ module.style.animation_settings.position_on_y }}"' if module.style.animation_settings.position_on_y != 0 }}
-{{ ' data-x-position="{{ module.style.animation_settings.position_on_x }}"' if module.style.animation_settings.position_on_x != 0 }}
-{{ ' data-scale="{{ module.style.animation_settings.scale }}"' if module.style.animation_settings.scale != 1 }}
-{{ ' data-rotate="{{ module.style.animation_settings.rotate }}"' if module.style.animation_settings.rotate != 0 }}
-{{ ' data-skew-x="{{ module.style.animation_settings.skew_x }}"' if module.style.animation_settings.skew_x != 0 }}
-{{ ' data-skew-y="{{ module.style.animation_settings.skew_y }}"' if module.style.animation_settings.skew_y != 0 }}
-{{ ' data-opacity="{{ module.style.animation_settings.opacity }}"' if module.style.animation_settings.opacity != 1 }}
-{{ ' data-bind-on-scroll="{{ module.style.animation_settings.bind_animation_on_scroll }}"' }}
-{{ ' data-animation-delay="{{ module_style.animation_settings.animation_delay }}"' if module_style.animation_settings.animation_delay != 0 }}
-{% endif %}
+  {% if module_style.animated_module %}
+  {{ 'data-y-position="{{ module.style.animation_settings.position_on_y }}"' if module.style.animation_settings.position_on_y != 0 }}
+  {{ ' data-x-position="{{ module.style.animation_settings.position_on_x }}"' if module.style.animation_settings.position_on_x != 0 }}
+  {{ ' data-scale="{{ module.style.animation_settings.scale }}"' if module.style.animation_settings.scale != 1 }}
+  {{ ' data-rotate="{{ module.style.animation_settings.rotate }}"' if module.style.animation_settings.rotate != 0 }}
+  {{ ' data-skew-x="{{ module.style.animation_settings.skew_x }}"' if module.style.animation_settings.skew_x != 0 }}
+  {{ ' data-skew-y="{{ module.style.animation_settings.skew_y }}"' if module.style.animation_settings.skew_y != 0 }}
+  {{ ' data-opacity="{{ module.style.animation_settings.opacity }}"' if module.style.animation_settings.opacity != 1 }}
+  {{ ' data-bind-on-scroll="{{ module.style.animation_settings.bind_animation_on_scroll }}"' }}
+  {{ ' data-animation-delay="{{ module_style.animation_settings.animation_delay }}"' if module_style.animation_settings.animation_delay != 0 }}
+  {% endif %}
 {% endmacro %}
 
 {% macro setSliderAttr(module_style) %}

@@ -1,5 +1,8 @@
+{% import '../../macros/_style.html' %}
+    
 <div id="{{ name }}" class="key-numbers dnd-row">
-    <div class="key-numbers__inner row-fluid">
+    <div class="key-numbers__inner row-fluid{{ ' animated' if module.style.animated_module }}"
+    {{ setAnimationAttr(module.style) if module.style.animated_module }}>
     {% for item in module.key_number %}
         <div class="key-numbers__inner__item span{{ 12 / module.style.items_per_row|round }}">
             <div class="key-numbers__inner__item__inner flex flex-col">
